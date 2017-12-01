@@ -527,14 +527,14 @@
 <li><p>训练：对于每个 $y_k$：</p>
 <ol>
 <li>估计 $\pi_k (即P(Y = y_k))$</li>
-<li>对于 $X$ 的每一个属性 $X<em>i$，估计类条件均值和方差 $\mu</em>{i,k},\sigma_{i,k}$.</li>
+<li>对于 $X$ 的每一个属性 $X_i$，估计类条件均值和方差 $\mu_{i,k},\sigma_{i,k}$.</li>
 </ol>
 </li>
 <li><p>分类：</p>
 <ol>
-<li><p>$Y<em>{new} \leftarrow argmax</em>{y_k} \prod_i {P(X^{new}_i \mid Y = y_k)}$</p>
+<li><p>$Y_{new} \leftarrow argmax_{y_k} \prod_i {P(X^{new}_i \mid Y = y_k)}$</p>
 </li>
-<li><p>$Y<em>{new} \leftarrow argmax</em>{y<em>k} \pi_k \prod_i N(X^{new}_i,\mu</em>{i,k},\sigma_{i,k}) $</p>
+<li><p>$Y_{new} \leftarrow argmax_{y_k} \pi_k \prod_i N(X^{new}_i,\mu_{i,k},\sigma_{i,k}) $</p>
 </li>
 <li><p>对于均值和方差的计算如下：</p>
 <p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flvkhkdjluj315o0m20wb.jpg" alt=""><strong>一些问题</strong></p>
@@ -687,7 +687,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">8</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">8</span></a>
             </ul>
         </li>
         
@@ -705,7 +705,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/分布式计算/">分布式计算<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/异常检测/">异常检测<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/操作系统/">操作系统<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/随想/">随想<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/其余/">其余<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/分布式计算/">分布式计算<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/异常检测/">异常检测<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/操作系统/">操作系统<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/随想/">随想<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -719,7 +719,7 @@
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">9</span>
+                <span class="sidebar-badge">10</span>
             </a>
         </li>
         

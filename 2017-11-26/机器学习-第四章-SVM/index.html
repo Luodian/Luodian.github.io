@@ -513,7 +513,7 @@
 <li>当训练数据近似可分，通过软间隔最大化（soft margin maximization），也学习一个线性分类器。</li>
 <li>再则，当训练数据线性不可分时，通过引入核技巧（kernel trick）及软间隔最大化，学习非线性支持向量机。</li>
 </ul>
-<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>假设在给定的特征空间训练集如下：$T = {(x_1,y_1),…(x_n,y_n)}$，其中，$x_i \in \chi= \Re^n, y_i \in {1,-1}$</p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>假设在给定的特征空间训练集如下：$T = \{(x_1,y_1),…(x_n,y_n)\}$，其中，$x_i \in \chi= \Re^n, y_i \in \{1,-1\}$</p>
 <p>假设训练数据集是线性可分的，我们需要找到一个分离的超平面 $w \cdot x + b$ 能够将不同的实例分成两部分，我们利用间隔最大化求最优的分离超平面，这时，解是唯一的。</p>
 <h3 id="函数间隔和几何间隔"><a href="#函数间隔和几何间隔" class="headerlink" title="函数间隔和几何间隔"></a>函数间隔和几何间隔</h3><p><strong>函数间隔</strong>：</p>
 <ol>
@@ -535,8 +535,8 @@
 </blockquote>
 <p><strong>拉格朗日对偶</strong></p>
 <p>通过求解对偶问题的解来获取原问题的最优解，被称为Linear SVM的对偶算法，这样做的优点在于，一是，对偶问题往往更容易求解，二是，引入核函数，进而推广到非线性分类问题。</p>
-<p>定义拉格朗日函数：$L(w,b,\alpha) = \frac{1}{2} \mid \mid w \mid \mid^2 - \Sigma^N<em>{i} \alpha_i y_i(w \cdot x_i + b) + \Sigma^N</em>{i} \alpha_i$. </p>
-<p>对于支持向量需要尽量满足 $y<em>i(w  \cdot x_i + b) - 1 \geq0$，根据拉格朗日对偶性，原始问题的对偶问题是极大极小问题：$\max \limits</em>{\alpha} \cdot \min \limits_{w,b} {L(w,b,a)}$.</p>
+<p>定义拉格朗日函数：$L(w,b,\alpha) = \frac{1}{2} \mid \mid w \mid \mid^2 - \Sigma^N_{i} \alpha_i y_i(w \cdot x_i + b) + \Sigma^N_{i} \alpha_i$. </p>
+<p>对于支持向量需要尽量满足 $y_i(w  \cdot x_i + b) - 1 \geq0$，根据拉格朗日对偶性，原始问题的对偶问题是极大极小问题：$\max \limits_{\alpha} \cdot \min \limits_{w,b} \{L(w,b,a)\}$.</p>
 <h2 id="核技巧"><a href="#核技巧" class="headerlink" title="核技巧"></a>核技巧</h2><p>当输入空间为欧式空间或者离散集合，特征空间为希尔伯特空间时，核函数表示将输入从输入空间映射到特征空间得到的特征向量之间的内积，通过核函数可以学习到非线性支持向量机，等价于隐式地在高维的特征空间中学习线性支持向量机，这样的方法称为核技巧。</p>
 <p>概述的说，线性SVM+核技巧 = 非线性SVM。</p>
 <blockquote>
@@ -677,7 +677,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">8</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">8</span></a>
             </ul>
         </li>
         
@@ -695,7 +695,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/分布式计算/">分布式计算<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/异常检测/">异常检测<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/操作系统/">操作系统<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/随想/">随想<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/其余/">其余<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/分布式计算/">分布式计算<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/异常检测/">异常检测<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/操作系统/">操作系统<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/随想/">随想<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -709,7 +709,7 @@
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">9</span>
+                <span class="sidebar-badge">10</span>
             </a>
         </li>
         
