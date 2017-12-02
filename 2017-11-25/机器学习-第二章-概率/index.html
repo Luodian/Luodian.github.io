@@ -74,7 +74,7 @@
 
     
         <meta property="article:published_time" content="11月 25, 2017" />
-        <meta property="article:modified_time" content="11月 26, 2017" />
+        <meta property="article:modified_time" content="12月 02, 2017" />
     
 
     <!-- The Twitter Card protocol -->
@@ -115,7 +115,7 @@
     "headline": "机器学习复习-第二章-概率",
     "url": "https://www.luodian.ink/2017-11-25/机器学习-第二章-概率/index.html",
     "datePublished": "11月 25, 2017",
-    "dateModified": "11月 26, 2017",
+    "dateModified": "12月 02, 2017",
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -507,9 +507,9 @@
     
         <h3 id="几个公式"><a href="#几个公式" class="headerlink" title="几个公式"></a>几个公式</h3><ul>
 <li>贝叶斯公式：$P(B \mid A) = \frac{P(B)  \cdot  P(A \mid B)}{P(A)}$</li>
-<li>​</li>
+<li>全概率公式：$P(A) = \Sigma_{n} P(A \mid B_n) \cdot P(B_n)$.</li>
 </ul>
-<h3 id="生成模型与判别模型"><a href="#生成模型与判别模型" class="headerlink" title="生成模型与判别模型"></a>生成模型与判别模型</h3><p>监督学习的任务就是学习一个模型，应用这一模型，对给定的输入预测相应的输出，这个模型的一般形式为决策函数：$Y = f(x)​$，或者条件概率分布：$P(Y \mid X)​$</p>
+<h3 id="生成模型与判别模型"><a href="#生成模型与判别模型" class="headerlink" title="生成模型与判别模型"></a>生成模型与判别模型</h3><p>监督学习的任务就是学习一个模型，应用这一模型，对给定的输入预测相应的输出，这个模型的一般形式为决策函数：$Y = f(x)$，或者条件概率分布：$P(Y \mid X)$</p>
 <p>监督学习方法又可以分为生成方法（Generative Approach）和判别方法（Discriminative Approach），所学习到的模型分别称为生成模型和判别模型。</p>
 <h4 id="生成方法"><a href="#生成方法" class="headerlink" title="生成方法"></a><strong>生成方法</strong></h4><p>生成方法由数据学习联合概率分布 $P(X,Y)$，然后求出条件概率分布 $P(Y \mid X)$ 作为预测的模型.</p>
 <p>即生成模型：$P(Y \mid X) = \frac{P(X,Y)}{P(X)}$</p>
