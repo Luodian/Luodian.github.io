@@ -1,3 +1,3 @@
+https://www.luodian.ink/2017-12-04/操作系统-一些常用的Linux命令/
 https://www.luodian.ink/2017-12-04/天算计划-为什么Based-on-Spark/
 https://www.luodian.ink/2017-12-04/天算计划-Spark-操作记录/
-https://www.luodian.ink/2017-12-03/Kaggle实战-Mecari价格预测/
