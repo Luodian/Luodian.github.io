@@ -671,7 +671,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">8</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">8</span></a>
             </ul>
         </li>
         
@@ -689,7 +689,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Kaggle/">Kaggle<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Linux/">Linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/其余/">其余<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/分布式计算/">分布式计算<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/异常检测/">异常检测<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/操作系统/">操作系统<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/随想/">随想<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/Kaggle/">Kaggle<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Linux/">Linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/其余/">其余<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/分布式计算/">分布式计算<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/异常检测/">异常检测<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/操作系统/">操作系统<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/随想/">随想<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -703,7 +703,7 @@
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">16</span>
+                <span class="sidebar-badge">17</span>
             </a>
         </li>
         
@@ -954,7 +954,22 @@ console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viose
 </script>
 
                 </main>
-            </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-        </body>
+            </div>
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
     
 </html>

@@ -74,7 +74,7 @@
 
     
         <meta property="article:published_time" content="11月 30, 2017" />
-        <meta property="article:modified_time" content="12月 04, 2017" />
+        <meta property="article:modified_time" content="12月 05, 2017" />
     
 
     <!-- The Twitter Card protocol -->
@@ -115,7 +115,7 @@
     "headline": "天算计划-Ubuntu-Spark组网计划配置操作",
     "url": "https://www.luodian.ink/2017-11-30/天算计划-Ubuntu-Spark组网计划配置操作/index.html",
     "datePublished": "11月 30, 2017",
-    "dateModified": "12月 04, 2017",
+    "dateModified": "12月 05, 2017",
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -507,7 +507,7 @@
     
         <p>记录下组内环境的配置流程，目前我们需要实现五个人在Ubuntu环境下的Hadoop+Spark配置，配置流程如下。</p>
 <h3 id="SSH无密码互联"><a href="#SSH无密码互联" class="headerlink" title="SSH无密码互联"></a>SSH无密码互联</h3><ol>
-<li>使用<code>ssh-keygen -t rsa -P &quot;&quot;</code> 命令生成公钥，表示生成的公钥不含登录密码，只要A机器拿到B的公钥就可以实现A机器无密码登录B机器。</li>
+<li>使用<code>ssh-keygen -t rsa -P &quot;&quot;</code> 命令生成公钥，表示生成的公钥不含登录密码，只要A机器拿到B的公钥就可以实现 A 机器无密码登录 B 机器。</li>
 <li><code>cd $HOME/.ssh</code>目录下，使用<code>cat $HOME/.ssh/id_rsa.pub &gt;&gt; $HOME/.ssh/authorized_keys</code> 命令或者直接将<code>id_rsa.pub</code>中的最后一行复制到<code>authorized_keys</code>当中。</li>
 <li>最终保证五个人的电脑的中都有一份相同<code>authorized_keys</code>文件是最好的，这样就可以实现无密码登陆了（第一次可能需要输密码，这里建议咱们先都设置成12345678，方便实验）。</li>
 <li>两个人之间测试能否通过当前的内网IP互相登录，如<code>elrond@master</code>这种格式，使用<code>ssh &#39;inet IP&#39;@master</code>登录 elrond 的机器。</li>
@@ -721,7 +721,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">8</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">8</span></a>
             </ul>
         </li>
         
@@ -739,7 +739,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Kaggle/">Kaggle<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Linux/">Linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/其余/">其余<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/分布式计算/">分布式计算<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/异常检测/">异常检测<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/操作系统/">操作系统<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/随想/">随想<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/Kaggle/">Kaggle<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Linux/">Linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/其余/">其余<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/分布式计算/">分布式计算<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/异常检测/">异常检测<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/操作系统/">操作系统<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/随想/">随想<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -753,7 +753,7 @@
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">16</span>
+                <span class="sidebar-badge">17</span>
             </a>
         </li>
         
@@ -1004,7 +1004,22 @@ console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viose
 </script>
 
                 </main>
-            </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-        </body>
+            </div>
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
     
 </html>
