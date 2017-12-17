@@ -351,7 +351,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#概论"><span class="post-toc-number">1.</span> <span class="post-toc-text">概论</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#过程模型"><span class="post-toc-number">2.</span> <span class="post-toc-text">过程模型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GIT"><span class="post-toc-number">3.</span> <span class="post-toc-text">GIT</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#白盒测试"><span class="post-toc-number">4.</span> <span class="post-toc-text">白盒测试</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#软件架构设计"><span class="post-toc-number">5.</span> <span class="post-toc-text">软件架构设计</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#概论"><span class="post-toc-number">1.</span> <span class="post-toc-text">概论</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#过程模型"><span class="post-toc-number">2.</span> <span class="post-toc-text">过程模型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GIT"><span class="post-toc-number">3.</span> <span class="post-toc-text">GIT</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#白盒测试"><span class="post-toc-number">4.</span> <span class="post-toc-text">白盒测试</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#软件架构设计"><span class="post-toc-number">5.</span> <span class="post-toc-text">软件架构设计</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#软件需求"><span class="post-toc-number">6.</span> <span class="post-toc-text">软件需求</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#软件工程前沿"><span class="post-toc-number">7.</span> <span class="post-toc-text">软件工程前沿</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#服务化"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">服务化</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#面向服务的软件工程"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">面向服务的软件工程</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#OOA-与-OOD"><span class="post-toc-number">8.</span> <span class="post-toc-text">OOA 与 OOD</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#论坛"><span class="post-toc-number">9.</span> <span class="post-toc-text">论坛</span></a></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -553,6 +553,87 @@
 </ol>
 <h3 id="软件架构设计"><a href="#软件架构设计" class="headerlink" title="软件架构设计"></a>软件架构设计</h3><p>设计一个系统，自顶向下我们需要考虑如下的几种选择。</p>
 <p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fmgs3ekwyij31a40pgwiz.jpg" alt=""></p>
+<p>软件架构四大设计方案</p>
+<ol>
+<li>异步：层与层之间通过异步调用提升吞吐量。</li>
+<li>分层：各层次职责单一，提升可维护性。</li>
+<li>缓存：层与层之间通过缓存提高存取效率。</li>
+<li>并行：各层内通过分布式提升性能。</li>
+</ol>
+<h3 id="软件需求"><a href="#软件需求" class="headerlink" title="软件需求"></a>软件需求</h3><blockquote>
+<p>并非设计实现方案。</p>
+</blockquote>
+<ul>
+<li>业务需求</li>
+<li>用户需求</li>
+<li>功能需求（详细软件实现需求）</li>
+<li>非功能需求（效率，功能的需求）</li>
+</ul>
+<h3 id="软件工程前沿"><a href="#软件工程前沿" class="headerlink" title="软件工程前沿"></a>软件工程前沿</h3><h4 id="服务化"><a href="#服务化" class="headerlink" title="服务化"></a>服务化</h4><ul>
+<li><p>互联网驱动的IT企业所从事的创新业务。</p>
+<ul>
+<li>Internet 成为软件运行和软件发布的主体平台。</li>
+<li>Apple, Google, Amazon, Facebook.</li>
+</ul>
+</li>
+<li><p>政府及经济学家眼中的一种经济形态。</p>
+<ul>
+<li>针对特定的服务领域，业务驱动的特征更加明显。</li>
+<li>物流，仓储，医疗，教育，交通，金融。</li>
+</ul>
+</li>
+<li><p>新的软件架构和编程范式。</p>
+<ul>
+<li>从开发角度，软件本身的服务化能够引发新的SE技术。</li>
+<li>Web Services, ESB, SaaS</li>
+</ul>
+</li>
+</ul>
+<h4 id="面向服务的软件工程"><a href="#面向服务的软件工程" class="headerlink" title="面向服务的软件工程"></a>面向服务的软件工程</h4><ul>
+<li><p>Internet 环境下的协同开发。</p>
+<ul>
+<li>软件外包（高速度，高效率）</li>
+<li>开源团队开发（众包平台，群体智慧）</li>
+</ul>
+</li>
+<li><p>集成开发环境（软件全生命周期的管理平台）</p>
+<blockquote>
+<p>实时高效的协助团队开发流程。</p>
+</blockquote>
+<ul>
+<li>Visual Studio Team Foundation</li>
+</ul>
+</li>
+</ul>
+<h3 id="OOA-与-OOD"><a href="#OOA-与-OOD" class="headerlink" title="OOA 与 OOD"></a>OOA 与 OOD</h3><p>用例图的4个基本组件：参与者(Actor)、用例(Use Case)、关系(Relationship)和系统。 </p>
+<ul>
+<li><p>泛化(generalization)：泛化关系是一种继承关系，子用例将继承基用例的所有行为，关系和通信关系，也就是说在任何使用基用例的地方都可以用子用例来代替。泛化关系在用例图中使用空心的箭头表示，箭头方向从子用例指向基用例。 </p>
+</li>
+<li><p>扩展(extend)： extend关系是对基用例的扩展，基用例是一个完整的用例，即使没有子用例的参与，也可以完成一个完整的功能。</p>
+<p>extend的基用例中将存在一个扩展点，只有当扩展点被激活时，子用例才会被执行。 extend关系在用例图中使用带箭头的虚线表示(在线上标注&lt;<extend>&gt;)，箭头从子用例指向基用例。 </extend></p>
+</li>
+<li><p>包含(include)： include为包含关系，当两个或多个用例中共用一组相同的动作，这时可以将这组相同的动作抽出来作为一个独立的子用例，供多个基用例所共享。因为子用例被抽出，基用例并非一个完整的用例，所以include关系中的基用例必须和子用例一起使用才够完整，子用例也必然被执行。include关系在用例图中使用带箭头的虚线表示(在线上标注&lt;<include>&gt;)，箭头从基用例指向子用例。</include></p>
+</li>
+</ul>
+<h3 id="论坛"><a href="#论坛" class="headerlink" title="论坛"></a>论坛</h3><ol>
+<li><p>软件架构的目标</p>
+<p>正如同软件本身有其要达到的目标一样，<a href="https://baike.baidu.com/item/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1" target="_blank" rel="noopener">架构设计</a>要达到的目标是什么呢？一般而言，<a href="https://baike.baidu.com/item/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1" target="_blank" rel="noopener">软件架构设计</a>要达到如下的目标： 可靠性（Reliable）。软件系统对于用户的商业经营和管理来说极为重要，因此软件系统必须非常可靠。 安全性（Secure）。软件系统所承担的交易的商业价值极高，系统的安全性非常重要。 可伸缩性（SCAlable）。软件必须能够在用户的使用率、用户的数目增加很快的情况下，保持合理的性能。只有这样，才能适应用户的市场扩展得可能性。 可定制化（CuSTomizable）。同样的一套软件，可以根据客户群的不同和市场需求的变化进行调整。 可扩展性（Extensible）。在新技术出现的时候，一个软件系统应当允许导入新技术，从而对现有系统进行功能和性能的扩展。 可维护性（MAIntainable）。软件系统的维护包括两方面，一是排除现有的错误，二是将新的<a href="https://baike.baidu.com/item/%E8%BD%AF%E4%BB%B6%E9%9C%80%E6%B1%82" target="_blank" rel="noopener">软件需求</a>反映到现有系统中去。一个易于维护的系统可以有效地降低技术支持的花费。 客户体验（Customer Experience）。<a href="https://baike.baidu.com/item/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener">软件系统</a>必须易于使用。 市场时机（Time to Market）。软件用户要面临同业竞争，软件提供商也要面临同业竞争。以最快的速度争夺市场先机非常重要。</p>
+</li>
+<li><p>黑盒测试的优劣</p>
+<p>优点</p>
+<ol>
+<li>适用于各阶段的测试</li>
+<li>从产品功能角度的测试</li>
+<li>容易入手生成测试数据</li>
+</ol>
+<p>缺点</p>
+<ol>
+<li>某些代码得不到测试</li>
+<li>如果规格说明有误则无法发现</li>
+<li>不易进行充分性测试</li>
+</ol>
+</li>
+</ol>
 
     
 
@@ -571,6 +652,14 @@
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/2017-12-17/Ng-Cousera-Week-6-Bias-VS-Variance/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
     
 
     <!-- Section Spacer -->
@@ -680,7 +769,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">8</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">8</span></a>
             </ul>
         </li>
         
@@ -698,7 +787,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Kaggle/">Kaggle<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Linux/">Linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/其余/">其余<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/分布式计算/">分布式计算<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/异常检测/">异常检测<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/操作系统/">操作系统<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/软件工程/">软件工程<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/随想/">随想<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/Kaggle/">Kaggle<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Linux/">Linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/其余/">其余<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/分布式计算/">分布式计算<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/异常检测/">异常检测<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/操作系统/">操作系统<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/软件工程/">软件工程<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/随想/">随想<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -712,7 +801,7 @@
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">19</span>
+                <span class="sidebar-badge">20</span>
             </a>
         </li>
         
