@@ -74,7 +74,7 @@
 
     
         <meta property="article:published_time" content="12月 17, 2017" />
-        <meta property="article:modified_time" content="12月 17, 2017" />
+        <meta property="article:modified_time" content="12月 18, 2017" />
     
 
     <!-- The Twitter Card protocol -->
@@ -115,7 +115,7 @@
     "headline": "Ng'Cousera-Week 6-Bias vs Variance",
     "url": "https://www.luodian.ink/2017-12-17/Ng-Cousera-Week-6-Bias-VS-Variance/index.html",
     "datePublished": "12月 17, 2017",
-    "dateModified": "12月 17, 2017",
+    "dateModified": "12月 18, 2017",
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -351,7 +351,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Bias-VS-Variance"><span class="post-toc-number">1.</span> <span class="post-toc-text">Bias VS Variance</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Diagnosing-Neural-Networks"><span class="post-toc-number">2.</span> <span class="post-toc-text">Diagnosing Neural Networks</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Diagnosing-Bias-vs-Variance"><span class="post-toc-number">1.</span> <span class="post-toc-text">Diagnosing Bias vs. Variance</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Regularization"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">Regularization</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Decision"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">Decision</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Diagnosing-Neural-Networks"><span class="post-toc-number">2.</span> <span class="post-toc-text">Diagnosing Neural Networks</span></a></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -505,7 +505,28 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h3 id="Bias-VS-Variance"><a href="#Bias-VS-Variance" class="headerlink" title="Bias VS Variance"></a>Bias VS Variance</h3><p>Our decision process can be broken down as follows:</p>
+        <h1 id="Diagnosing-Bias-vs-Variance"><a href="#Diagnosing-Bias-vs-Variance" class="headerlink" title="Diagnosing Bias vs. Variance"></a>Diagnosing Bias vs. Variance</h1><p>In this section we examine the relationship between the degree of the polynomial d and the underfitting or overfitting of our hypothesis.</p>
+<ul>
+<li>We need to distinguish whether <strong>bias</strong> or <strong>variance</strong> is the problem contributing to bad predictions.</li>
+<li>High bias is underfitting and high variance is overfitting. Ideally, we need to find a golden mean between these two.</li>
+</ul>
+<p>The training error will tend to <strong>decrease</strong> as we increase the degree d of the polynomial.</p>
+<p>At the same time, the cross validation error will tend to <strong>decrease</strong> as we increase d up to a point, and then it will <strong>increase</strong> as d is increased, forming a convex curve.</p>
+<p><strong>High bias (underfitting)</strong>: both Jtrain(Θ) and JCV(Θ) will be high. Also, JCV(Θ)≈Jtrain(Θ).</p>
+<p><strong>High variance (overfitting)</strong>: Jtrain(Θ) will be low and JCV(Θ) will be much greater than Jtrain(Θ).</p>
+<p>The is summarized in the figure below:</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fmk9nubr83j308c073t8s.jpg" alt=""></p>
+<h3 id="Regularization"><a href="#Regularization" class="headerlink" title="Regularization"></a>Regularization</h3><p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fmk9pevgxgj30jj0ak74u.jpg" alt=""></p>
+<p>In the figure above, we see that as $\lambda$ increases, our fit becomes more rigid. On the other hand, as $\lambda$ approaches 0, we tend to over overfit the data. So how do we choose our parameter $\lambda$ to get it ‘just right’ ? In order to choose the model and the regularization term $\lambda$, we need to:</p>
+<ol>
+<li>Create a list of lambdas (i.e. $\lambda \in {0,0.01,0.02,0.04,0.08,0.16,0.32,0.64,1.28,2.56,5.12,10.24})$;</li>
+<li>Create a set of models with different degrees or any other variants.</li>
+<li>Iterate through the λs and for each λ go through all the models to learn some  $\theta$  .</li>
+<li>Compute the cross validation error using the learned  $\theta$   (computed with λ) on the $J_{CV}(\theta) $  <strong>without</strong> regularization or λ = 0.</li>
+<li>Select the best combo that produces the lowest error on the cross validation set.</li>
+<li>Using the best combo $\theta$  and λ, apply it on $J_{CV}(\theta) $ to see if it has a good generalization of the problem.</li>
+</ol>
+<h3 id="Decision"><a href="#Decision" class="headerlink" title="Decision"></a>Decision</h3><p>Our decision process can be broken down as follows:</p>
 <ul>
 <li><strong>Getting more training examples:</strong> Fixes high variance</li>
 </ul>
@@ -524,11 +545,14 @@
 <ul>
 <li><strong>Increasing λ:</strong> Fixes high variance.</li>
 </ul>
-<h3 id="Diagnosing-Neural-Networks"><a href="#Diagnosing-Neural-Networks" class="headerlink" title="Diagnosing Neural Networks"></a>Diagnosing Neural Networks</h3><ul>
+<h1 id="Diagnosing-Neural-Networks"><a href="#Diagnosing-Neural-Networks" class="headerlink" title="Diagnosing Neural Networks"></a>Diagnosing Neural Networks</h1><ul>
 <li>A neural network with fewer parameters is <strong>prone to underfitting</strong>. It is also <strong>computationally cheaper</strong>.</li>
 <li>A large neural network with more parameters is <strong>prone to overfitting</strong>. It is also <strong>computationally expensive</strong>. In this case you can use regularization (increase λ) to address the overfitting.</li>
 </ul>
 <p>Using a single hidden layer is a good starting default. You can train your neural network on a number of hidden layers using your cross validation set. You can then select the one that performs best. </p>
+<blockquote>
+<p>网络越大越好，不要因噎废食怕过拟合就用小网络。上大网络加正则化肯定比小网络好，因为大网络加正则化后的损失函数更容易优化到一个更小的局部极值点，对随机初始化的依赖更小。</p>
+</blockquote>
 <p><strong>Model Complexity Effects:</strong></p>
 <ul>
 <li>Lower-order polynomials (low model complexity) have high bias and low variance. In this case, the model fits poorly consistently.</li>
