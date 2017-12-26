@@ -74,7 +74,7 @@
 
     
         <meta property="article:published_time" content="12月 05, 2017" />
-        <meta property="article:modified_time" content="12月 06, 2017" />
+        <meta property="article:modified_time" content="12月 26, 2017" />
     
 
     <!-- The Twitter Card protocol -->
@@ -115,7 +115,7 @@
     "headline": "天算计划-为什么使用Docker",
     "url": "https://www.luodian.ink/2017-12-05/天算计划-为什么使用Docker/index.html",
     "datePublished": "12月 05, 2017",
-    "dateModified": "12月 06, 2017",
+    "dateModified": "12月 26, 2017",
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -351,7 +351,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍"><span class="post-toc-number">1.</span> <span class="post-toc-text">介绍</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#运行环境"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">运行环境</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍"><span class="post-toc-number">1.</span> <span class="post-toc-text">介绍</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常用命令"><span class="post-toc-number">2.</span> <span class="post-toc-text">常用命令</span></a></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -506,9 +506,16 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。</p>
-<h4 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h4><p>Docker运行Linux上可以原生无压力，Windows上需要装插件虚化一个Linux环境，感觉很麻烦。</p>
-<p>在 Docker 下安装镜像</p>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p>Docker运行Linux上可以原生无压力，Windows上需要装插件虚化一个Linux环境，感觉很麻烦。</p>
+<ol>
+<li><p>在 Docker 下安装镜像</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull uhopper/hadoop-spark</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在 Docker 中移除镜像</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker rm [container_id]</span><br><span class="line">docker rmi [image_id]</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ol>
 
     
 
