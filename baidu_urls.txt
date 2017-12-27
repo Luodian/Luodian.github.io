@@ -1,3 +1,3 @@
+https://www.luodian.ink/2017-12-27/股票技术资料/
 https://www.luodian.ink/2017-12-24/17周周报-使用Holt-Winters模型通过比对预测值进行异常检测/
 https://www.luodian.ink/2017-12-23/Mecari-Analysis-LB-0-4229-rank-17-1090/
-https://www.luodian.ink/2017-12-21/操作系统-文件系统/
