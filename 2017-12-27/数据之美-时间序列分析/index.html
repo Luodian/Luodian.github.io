@@ -74,7 +74,7 @@
 
     
         <meta property="article:published_time" content="12月 27, 2017" />
-        <meta property="article:modified_time" content="12月 27, 2017" />
+        <meta property="article:modified_time" content="12月 29, 2017" />
     
 
     <!-- The Twitter Card protocol -->
@@ -115,7 +115,7 @@
     "headline": "数据之美-时间序列分析",
     "url": "https://www.luodian.ink/2017-12-27/数据之美-时间序列分析/index.html",
     "datePublished": "12月 27, 2017",
-    "dateModified": "12月 27, 2017",
+    "dateModified": "12月 29, 2017",
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -507,7 +507,7 @@
     
         <h3 id="时间序列分析"><a href="#时间序列分析" class="headerlink" title="时间序列分析"></a>时间序列分析</h3><blockquote>
 <p>部分内容整理自：<a href="https://www.ricequant.com/community/topic/567/" target="_blank" rel="noopener">https://www.ricequant.com/community/topic/567/</a></p>
-<p>加入了自己正在处理的wind_machine的数据分析</p>
+<p>但是在这上面做了扩充，而且也纠正了它的排版和公式等。</p>
 </blockquote>
 <p>时间序列是指一个数据序列，特别是之由一段时间内采集的信号组成的序列，序列前面的信号表示采集的时间较早。比如一只股票（000056）在2015年一月一号到2015年12月一号的收盘价就是一个时间序列，我们用X表示这个序列并把它画在下图中。</p>
 <p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fmvd266cd3j30a607k74a.jpg" alt=""></p>
@@ -523,8 +523,11 @@
 <p>目前主要有以下两种方式：</p>
 <ol>
 <li><p>滑动平均（Moving Average）</p>
+<p>并不考虑数据的趋势性，单纯根据历史信息来求得当前点的滑动平均数值，参数 windowSize 决定了依赖历史的程度。</p>
 <p>我们用 $S$ 表示处理后的序列，那么 $S_t$ 等于 $X_{t−T+1}$ 到 $X_t$ 的平均值，即</p>
 <p> $S_t=\frac{1}{T}\Sigma^t_{i=t−T+1}X_i$</p>
+<p>我们使用 $S_t \simeq \hat{X_t}​$，下面我们使用滑动平均来预测 windmachine 的第一列的数据，并根据预测值进行异常检测。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fmvmepv069j31hc140772.jpg" alt=""></p>
 </li>
 <li><p>指数平均（Exponent Average）</p>
 <ol>
@@ -532,15 +535,15 @@
 <p>$S_0 = X_0$</p>
 <p>$S_t = \alpha X_t + (1−α)S_{t−1}  ,  for   t≥1$</p>
 <p>其中参数$\alpha \in (0,1)$</p>
-<p>可以看到 $S_t$ 是某种 weighted av eraging，而使用的权重服从几何分布，这也是这种平均方法被称为指数平均的原因（指数分布是几何分布的连续形式）。这种平均方法的一个重要特征就是，St用之前产生的所有信号有关，并且距离越近的信号所占权重越大。我们使用两个不同参数 $α=0.8$ 和 $α=0.3$对以上的股票价格序列进行处理，得到的结果如下图所示</p>
+<p>可以看到 $S_t​$ 是某种 weighted averaging，而使用的权重服从几何分布，这也是这种平均方法被称为指数平均的原因（指数分布是几何分布的连续形式）。这种平均方法的一个重要特征就是，St用之前产生的所有信号有关，并且距离越近的信号所占权重越大。我们使用两个不同参数 $α=0.8​$ 和 $α=0.3​$对以上的股票价格序列进行处理，得到的结果如下图所示</p>
 <p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fmvduyt3ovj30a607kmx7.jpg" alt=""></p>
 <p>同时，我们也可以使用指数平均对未来进行预测。在这里我们用当前得到的指数平均作为下一个时间的预测，假如对t+1时刻的预测用 $\hat{X}_{t+1}$ 表示，那么 $\hat{X}_{t+1} = S_t.$<br>为了更清楚地说明问题，我们画出一段时间的图像，如下图所示</p>
 <p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fmvf171aq1j30ap08it8n.jpg" alt=""></p>
 </li>
 <li><p>二阶指数平均</p>
-<p>我们可以看到，虽然指数平均在产生新的数列的时候考虑了所有的历史数据，但是仅仅考虑其静态值，即没有考虑时间序列当前的变化趋势。如果当前的股票处于<strong>上升趋势</strong>，那么当我们对明天的股票进行预测的时候，好的预测值不仅仅是对历史数据进行”平均“，而且要考虑到当前数据变化的<em>上升趋势</em>。同时考虑历史平均和变化趋势，这边是<strong>二阶指数平均</strong>。<br>我们先给出二阶指数平均的两种方法，如下</p>
+<p>我们可以看到，虽然指数平均在产生新的数列的时候考虑了所有的历史数据，但是仅仅考虑其静态值，即没有考虑时间序列当前的变化趋势。如果当前的股票处于<strong>上升趋势</strong>，那么当我们对明天的股票进行预测的时候，好的预测值不仅仅是对历史数据进行『平均』，而且要考虑到当前数据变化的<em>上升趋势</em>。同时考虑历史平均和变化趋势，这边是<strong>二阶指数平均</strong>。<br>我们先给出二阶指数平均的两种方法，如下</p>
 <ol>
-<li><p>$initialize$<br>$S_1 = X_1$<br>$b_1 = X_1−X_0$<br>$for  t &gt; 1$<br>$S_t = αX_t + (1−α) ( S_t−1+b_t−1)$<br>$b_t = β(S_t−S_t−1)+(1−β)b_t−1$<br>$end  for$</p>
+<li><p>$initialize$<br>$S_1 = X_1$<br>$b_1 = X_1−X_0$<br>$for  t &gt; 1​$<br>$S_t = αX_t + (1−α) ( S_t−1+b_t−1)$<br>$b_t = β(S_t−S_t−1)+(1−β)b_t−1$<br>$end  for$</p>
 <p>如果我们对 $X_{t+m}$ 之后的数值进行预测，那么我们的预测值为<br>$\hat{X}_{t+m} = S_t + mb_t$</p>
 </li>
 <li><p>$S′_0=X_0$<br>$S^{′′}_0=X_0$<br>$for  t \geq 1$<br>$\quad S^{‘}_t = \alpha X_t+(1-\alpha)S_{t-1}^{‘} \quad S^{‘’}_t = \alpha S^{‘}_t +(1-\alpha)S_{t-1}^{‘’}\quad S_t = 2S^{‘}_t-S^{‘’}_t$</p>
@@ -575,6 +578,14 @@
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
     
 
     <!-- Section Spacer -->
@@ -684,7 +695,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">17</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">8</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">18</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">8</span></a>
             </ul>
         </li>
         
@@ -702,7 +713,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Kaggle/">Kaggle<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Linux/">Linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/其余/">其余<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/分布式计算/">分布式计算<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/异常检测/">异常检测<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/投资/">投资<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/操作系统/">操作系统<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/软件工程/">软件工程<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/随想/">随想<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/Kaggle/">Kaggle<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Linux/">Linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/其余/">其余<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/分布式计算/">分布式计算<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/异常检测/">异常检测<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/投资/">投资<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/操作系统/">操作系统<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/时间序列/">时间序列<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/软件工程/">软件工程<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/随想/">随想<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -716,7 +727,7 @@
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">25</span>
+                <span class="sidebar-badge">26</span>
             </a>
         </li>
         
