@@ -1,1287 +1,859 @@
 <!DOCTYPE html>
-<html style="display: none;" lang="zh">
-    <head>
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <!--
-        © Material Theme
-        https://github.com/viosey/hexo-theme-material
-        Version: 1.4.0 -->
-    <script>window.materialVersion = "1.4.0"</script>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>Luodian.ink</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Luodian.ink">
+<meta property="og:url" content="https://www.luodian.ink/page/2/index.html">
+<meta property="og:site_name" content="Luodian.ink">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Luodian.ink">
+  
+    <link rel="alternate" href="/atom.xml" title="Luodian.ink" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
 
-    <!-- Title -->
-    
-    <title>
-        
-        Luodian.ink
-    </title>
-
-    <!-- dns prefetch -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-    
-    
-    
-    
-    
-        <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
-    
-    
-    
-    
-    
-    
-
-    <!-- Meta & Info -->
-    <meta http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="theme-color" content="#0097A7">
-    <meta name="author" content="Luodian">
-    <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="luodian">
-
-    <!-- Site Verification -->
-    
-    
-
-    <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" sizes="192x192" href="/img/favicon.png">
-    <link rel="apple-touch-icon" href="/img/favicon.png">
-
-    <!--iOS -->
-    <meta name="apple-mobile-web-app-title" content="Title">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="480">
-
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Luodian.ink">
-
-    <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://www.luodian.ink">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="Luodian.ink">
-    <meta property="og:image" content="/img/favicon.png" />
-    <meta property="og:description" content="">
-    
-
-    
-
-    <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="Luodian.ink">
-    <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="/img/favicon.png">
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://www.luodian.ink" />
-
-    <!-- Add canonical link for SEO -->
-    
-        <link rel="canonical" href="https://www.luodian.ink/page/2/index.html" />
-    
-
-    <!-- Structured-data for SEO -->
-    
-        
-
-
-
-    
-
-    <!--[if lte IE 9]>
-        <link rel="stylesheet" href="/css/ie-blocker.css">
-
-        
-            <script src="/js/ie-blocker.zhCN.js"></script>
-        
-    <![endif]-->
-
-    <!-- Import lsloader -->
-    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
-
-    <!-- Import CSS & jQuery -->
-    
-        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
-        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/css/style.min.css?oCSEO3ST+aEypEwttTDI9g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
-        
-        
-            <style>
-    
-    .footer-sns-facebook {
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNiA3OGMtMjIuNCA1LjItNTUuOCA0MC4yLTYwLjYgNjMuNC0xLjQgNi40LTIgMTI5LjgtMS42IDM2Ny42LjYgMjk4LjYgMSAzNTguOCAzLjQgMzYzIDExIDIwLjIgMjEuNiAzMi40IDM3LjIgNDMgMTUgMTAuMiAxNy40IDExLjIgMzMgMTMgMTEuMiAxLjQgMTM2IDIgMzY1IDEuNiAzMTQtLjYgMzQ4LjYtMSAzNTUtMy44IDE1LjgtNy4yIDMzLjgtMjIgNDMuMi0zNS40IDUuMi03LjQgMTAuOC0xNi42IDEyLjYtMjAuNCAyLjgtNi40IDMuMi00MC44IDMuOC0zNTQgLjQtMjIzLS4yLTM1My40LTEuNC0zNjUtMi0xNy0yLjYtMTguNi0xMy0zNC04LjYtMTIuNi0xNC4yLTE4LjQtMjUuMi0yNS44LTcuOC01LjQtMTcuNC0xMS0yMS42LTEyLjQtNi0yLjItNzIuOC0yLjYtMzY1LjQtMi42LTE5Ni44LjItMzYxIC44LTM2NC40IDEuOHptNjU3LjYgODcuOGw0LjggMy44djU1LjJjMCA1NC42IDAgNTUuMi00LjYgNTkuNi00LjQgNC40LTYgNC42LTUwLjIgNS42bC00NS42IDEtNy4yIDUuNmMtMTAuNCA4LTE2LjggMTcuMi0xOS4yIDI3LjQtMSA1LTEuOCAyNC44LTEuOCA0NCAuMiAzOCAxLjYgNDQuNiAxMC44IDQ4IDIuOCAxLjIgMjguNCAyIDU2LjggMiA0Ny44IDAgNTIgLjIgNTYuMiAzLjhsNC44IDMuOHY1NS4yYzAgNTQuNiAwIDU1LjItNC42IDU5LjYtNC40IDQuNi01LjQgNC42LTU3IDUuMi0yOC44LjItNTQuNC44LTU2LjggMS40LTIuNC42LTUuNiAzLTYuOCA1LjQtMS44IDMuMi0yLjQgNDEuNC0yLjYgMTQzLjJsLS4yIDEzOC44LTUuNiA0LjgtNS42IDQuOEg2MDljLTUyLjQgMC01Mi44IDAtNTguMi00LjZsLTUuNC00LjYtLjItMTQwLjYtLjItMTQwLjYtNC44LTMuOGMtNC4yLTMuNC04LTMuOC0zNS42LTMuOC0zMi44IDAtNDEtMS44LTQzLjYtMTAtLjYtMi4yLTEuMi0yNS40LTEuMi01MS40IDAtNjAuOC0uMi01NyAzLjQtNjEuNiAyLjgtMy42IDYtNCAzNy44LTUgMzMtMSAzNS4yLTEuMiAzOS40LTUuNiA0LjYtNC40IDQuNi01LjIgNS44LTcxIDEuMi03My40LjItNjcuMiAxNi42LTk5LjQgOC0xNS44IDEyLjgtMjIgMjgtMzcgMTUuMi0xNS4yIDIxLjQtMTkuNiAzOC4yLTI4IDExLTUuNCAyNC0xMSAyOS0xMi4yIDYuMi0xLjggMjguNi0yLjYgNzEuMi0yLjYgNTguNi0uMiA2Mi42IDAgNjcgMy42eiIvPjwvc3ZnPg==);
-    }
-    
-    
-    .footer-sns-twitter {
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNiA3OGMtMjIuNCA1LjItNTUuOCA0MC4yLTYwLjYgNjMuNC0xLjQgNi40LTIgMTI5LjgtMS42IDM2Ny42LjYgMjk4LjYgMSAzNTguOCAzLjQgMzYzIDExIDIwLjIgMjEuNiAzMi40IDM3LjIgNDMgMTUgMTAuMiAxNy40IDExLjIgMzMgMTMgMTEuMiAxLjQgMTM2IDIgMzY1IDEuNiAzMTQtLjYgMzQ4LjYtMSAzNTUtMy44IDE1LjgtNy4yIDMzLjgtMjIgNDMuMi0zNS40IDUuMi03LjQgMTAuOC0xNi42IDEyLjYtMjAuNCAyLjgtNi40IDMuMi00MC44IDMuOC0zNTQgLjQtMjIzLS4yLTM1My40LTEuNC0zNjUtMi0xNy0yLjYtMTguNi0xMy0zNC04LjYtMTIuNi0xNC4yLTE4LjQtMjUuMi0yNS44LTcuOC01LjQtMTcuNC0xMS0yMS42LTEyLjQtNi0yLjItNzIuOC0yLjYtMzY1LjQtMi42LTE5Ni44LjItMzYxIC44LTM2NC40IDEuOHptNTMyLjggMjA1YzEwIDQgMjMgMTAuOCAyOC44IDE1LjIgMTIuNiA5LjIgMTYuNiAxMC42IDI5LjQgOS40IDYuNi0uNiAxMy0zLjIgMjAuNC04LjIgMTEuMi03LjYgMTkuNC05LjIgMjMuNi01IDMuNiAzLjYgMi44IDktMi44IDE4LjYtNy4yIDEyLjQtNiAxOC44IDQuMiAyNC4yIDQuNCAyLjIgOC4yIDUuNiA4LjYgNy40IDEgNC44LTEyLjYgMjQuMi0yMiAzMS44LTExLjggOS4yLTE3LjIgMjIuNi0xOS42IDQ3LjgtNC44IDUwLjQtNy44IDY2LjYtMTYuNCA4NS40LTMgNy03IDE3LjgtOC44IDI0LTEuOCA2LjQtNSAxNC42LTcuNCAxOC40LTIuMiAzLjgtNy40IDEzLTExLjQgMjAuNC0xNy4yIDMwLjgtNDMuNCA2MS40LTcxLjQgODMuOC0yNS42IDIwLjQtNDYgMzMuMi02NC4yIDQwLjItOC40IDMuMi0xOCA3LjYtMjEuNCA5LjYtNy40IDQuNi0yMi40IDguNi01Ny4yIDE1LTYyLjIgMTEuNi03OS4yIDExLjQtMTM1LjYtMS0zMi40LTctMzguNi05LTUyLTE2LjgtMjEuNC0xMi42LTI0LjItMTQuOC0yNC4yLTE5LjQgMC02LjIgMTAuMi05LjIgMzUtMTAuNCAyMi40LTEgMjguNi0yLjYgNTctMTQuMiAyMy44LTkuOCAyOS40LTEyLjggMzAuNC0xNi44IDIuMi04LjItMy0xMy4yLTI2LjgtMjUuNC0yNS44LTEzLjItMzIuMi0xOC40LTQzLjgtMzUuOC05LTEzLjYtMTAtMjEuMi0zLjYtMzMuNiA1LjQtMTAuOCAzLjYtMTUtMTEuOC0yNS40LTktNi0xNC0xMS42LTIwLjgtMjIuNi0yMy40LTM3LjgtMjUtNTAuOC03LjItNTkuOCA0LjgtMi40IDkuNC01LjQgMTAuMi02LjYgMi44LTQuMi0uNC0xNS42LTguNC0yOS0xMS42LTE5LjYtMTMuMi0yNS44LTEzLjItNTUuMiAwLTI4LjggMi42LTM3LjggMTItNDAuMiA5LTIuMiAxNC44IDEgMzUuNiAyMC4yIDI0LjggMjIuOCA0My42IDM2LjYgNjIuOCA0NS44IDggMy44IDE3LjggOS4yIDIyIDEyIDQuMiAyLjggMTQuOCA3IDIzLjQgOS4yIDguNiAyLjIgMjQuMiA2LjggMzQuOCAxMC4yIDEzLjQgNC40IDIzLjYgNi40IDMzIDYuNiAxMi44LjIgMTQuMi0uMiAxOC42LTUuNCA0LTQuOCA0LjgtNy44IDQuOC0xOS4yIDAtMTQuNCA1LjYtMzkuNiAxMS4yLTUwLjYgNC4yLTguNCAyOS4yLTM0LjIgMzkuOC00MS40IDcuOC01LjQgMzUuNi0xNiA1Mi0yMCAxNC4yLTMuNiAzMi42LTEuMiA1Mi40IDYuOHoiLz48L3N2Zz4=);
-    }
-    
-    
-    .footer-sns-gplus {
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNiA3OGMtMjIuNCA1LjItNTUuOCA0MC4yLTYwLjYgNjMuNC0xLjQgNi40LTIgMTI5LjgtMS42IDM2Ny42LjYgMjk4LjYgMSAzNTguOCAzLjQgMzYzIDExIDIwLjIgMjEuNiAzMi40IDM3LjIgNDMgMTUgMTAuMiAxNy40IDExLjIgMzMgMTMgMTEuMiAxLjQgMTM2IDIgMzY1IDEuNiAzMTQtLjYgMzQ4LjYtMSAzNTUtMy44IDE1LjgtNy4yIDMzLjgtMjIgNDMuMi0zNS40IDUuMi03LjQgMTAuOC0xNi42IDEyLjYtMjAuNCAyLjgtNi40IDMuMi00MC44IDMuOC0zNTQgLjQtMjIzLS4yLTM1My40LTEuNC0zNjUtMi0xNy0yLjYtMTguNi0xMy0zNC04LjYtMTIuNi0xNC4yLTE4LjQtMjUuMi0yNS44LTcuOC01LjQtMTcuNC0xMS0yMS42LTEyLjQtNi0yLjItNzIuOC0yLjYtMzY1LjQtMi42LTE5Ni44LjItMzYxIC44LTM2NC40IDEuOHpNNDMwIDI5NS40YzQwLjYgMTUuNCA1Ni42IDIzLjggNzIuNiAzOC40IDYuOCA2LjIgNy4yIDE1LjIgMSAyMy40LTYuMiA4LTMzLjYgMzMuOC0zOSAzNi42LTUuNiAyLjgtMTcuNiAyLjgtMjMuMi0uMi0yLjQtMS4yLTguMi01LjItMTMtOC44LTExLjItOC42LTI0LjYtMTEuMi01NS4yLTExLjItMjcuNCAwLTQwLjYgMi42LTUyLjIgMTAuNC00LjQgMi44LTEyLjIgNy42LTE3LjIgMTAuNi0yMyAxMy4yLTUxLjQgNTUtNTUuOCA4Mi40LTIuNiAxNS42LTIuNCAzNC44LjIgNTEgMi44IDE3LjQgMTkuOCA0OC44IDM1LjIgNjUuMiAxNiAxNi42IDQ1IDMzLjYgNjIuOCAzNi42IDI2LjggNC40IDY1LjggMS42IDc5LjQtNS44IDIwLjYtMTEuNCAzMS0xOSA0MS0zMC40IDE4LjgtMjEuNiAyMy40LTM0LjIgMTUuNi00My44LTMuOC00LjgtNC40LTQuOC01MS01LjgtNjAuOC0xLjItNTYuMiAyLjItNTYuMi00My4yIDAtMzIuNC4yLTMzLjIgNC44LTM3IDQuNC0zLjYgOS0zLjggOTItMy44IDc5IDAgODcuOC40IDk0LjIgMy42IDExLjIgNS42IDEzIDExLjQgMTIuOCA0My40IDAgMjUuNC0uOCAzMC44LTcuNiA1OC00IDE2LjYtOS44IDM0LTEyLjYgMzktMi44IDUtOC4yIDE0LjItMTEuNiAyMC42LTguNCAxNS40LTI3LjIgMzYuOC00MC44IDQ2LjYtNS44IDQuNC0xMy44IDEwLjItMTcuNiAxMy4yLTMuOCAzLTExIDctMTYuMiA4LjgtNS4yIDEuOC0xNi4yIDYuNC0yNC40IDEwLTIyLjQgOS42LTM0LjggMTEuNi03MyAxMS42LTM3LjYuMi00Ny0xLjQtNzEtMTItOC4yLTMuNi0xNy42LTcuMi0yMC44LTgtMTUuOC0zLjgtNjctNDUuMi03Ny44LTYyLjgtMi4yLTMuOC03LjYtMTEuNi0xMS44LTE3LjItNC4yLTUuNC05LTE0LTEwLjYtMTktMS44LTQuOC02LjItMTYtMTAtMjQuOC0zLjYtOC44LTcuOC0yMi4yLTkuMi0yOS42LTMuMi0xOC44LTEuNC03OS40IDIuOC05MS40IDEzLjgtNDAuNiAzNS42LTc4IDU4LjgtMTAwLjIgMTQtMTMuNiA0Ny4yLTM2LjQgNTgtMzkuOCA0LjItMS40IDEzLjQtNS4yIDIwLjYtOC40IDIyLTEwIDMyLjgtMTEuNiA3Ni0xMSAzMy44LjYgNDAuNCAxLjIgNTAgNC44em0zNDAuOCA4MC44YzggMy42IDkuNiAxMS4yIDkuMiAzOS4yLS42IDM0LjQtLjYgMzQgNSAzOS42IDQuOCA1IDUuNCA1IDM3LjYgNSA0My40IDAgNDQuNC44IDQzLjIgMzYuMi0uOCAxNy0xLjIgMTguNC02LjQgMjMtNS40IDQuNi02LjYgNC44LTM3LjYgNC44LTMxLjIgMC0zMiAuMi0zNi44IDUtNS42IDUuNC01LjYgNC40LTUgNDEuMi40IDI2LjQuMiAyNy40LTQuNiAzMy00LjggNS42LTYgNS44LTI0LjQgNi40LTIwLjguOC0yOS42LTEuNC0zMy40LTguNC0xLjQtMi42LTItMTUuNi0xLjgtMzUuNi40LTMxLjIuNC0zMS42LTQuNi0zNi42cy01LjYtNS0zNi01Yy0xOC44IDAtMzMtLjgtMzYtMi4yLTcuNi0zLjYtOS42LTExLjItOC44LTMzLjguOC0yOC4yLjQtMjggNDEtMjggNDUuNCAwIDQ1LjQgMCA0NC42LTQyLjYtLjYtMzMtLjYtMzMgNS0zOC40IDQuNC00LjYgNi4yLTUgMjQuOC01IDExIDAgMjIuMiAxIDI1IDIuMnoiLz48L3N2Zz4=);
-    }
-    
-    
-    
-    
-    
-    .footer-sns-github {
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNCA3OGMtNi40IDEuNC0yNi40IDE0LjItMzYgMjIuOC04IDcuMi0yMiAyOS44LTI0LjQgMzkuMi0xLjYgNi40LTIgMTEzLjItMS42IDM2OCAuNiAyOTkuNCAxIDM1OS44IDMuNCAzNjQgMTEgMjAuMiAyMS42IDMyLjQgMzcuMiA0MyAxNS42IDEwLjYgMTcuMiAxMS4yIDM0LjIgMTMuMiAxMC42IDEuMiA2My40IDEuNiAxMjcuNiAxLjRsMTA5LjYtLjYgNi02LjggNi4yLTYuOC0xLjItMjUuMmMtLjgtMTUuOC0uMi0zMy40IDEuNC00Ny4yIDMtMjUuNCAxLjQtMzYuMi02LTQzLjItNS00LjYtNi4yLTQuOC0zMC42LTQuMi0yNy42LjgtMjQgMS42LTY4LjgtMTYtOC42LTMuNC0yMi42LTE4LTI4LjQtMjkuOC0xMS40LTIyLjgtMjctNDUtMzkuMi01NS42LTE0LTEyLjItMTkuOC0yMC44LTE5LjgtMjguNiAwLTExLjYgMTMuNi0xMi42IDMzLjItMi40IDE2LjYgOC44IDIwLjggMTIuNCA0MC44IDM2LjIgMjQuMiAyOC42IDMxIDMzLjYgNTQgMzkuNiAxNS4yIDQgNDIuMiAzIDUxLjQtMS44IDktNC42IDE4LTE1LjIgMjQuNC0yOS4yIDExLjQtMjQuMiA3LjQtMzEuMi0yMC42LTM2LjgtOS44LTItMjkuMi04LTQzLjQtMTMuNC00MC40LTE1LjgtNjQuNi0zNy40LTg1LjQtNzYuMi0xMS42LTIxLjgtMTUuNC0zMy0xOC4yLTUzLjYtNC4yLTMyLjItNC44LTYwLjItMS40LTg0IDMuNC0yMy44IDYuOC0zMi44IDIwLjItNTQgNC02IDguOC0xNS42IDExLTIxLjQgMy44LTEwIDMuOC0xMS42IDEtMzAtNS4yLTM0LjItMy4yLTUyLjQgNy42LTcwLjIgNy4yLTEyLjIgMTUtMTcuMiAyNC4yLTE1LjggMTIuOCAyLjIgNTIgMTcuNCA2Ni44IDI2LjIgMjYgMTUgMjkgMTUuNCA4Mi40IDcuMiAyNC42LTMuOCAzMy44LTQuMiA2MC0zLjIgMTcgLjYgNDEuNCAzIDU0IDUuMiAzOC40IDYuNiA0OS42IDUuMiA3My0xMCA2LjYtNC4yIDE3LjQtOS40IDI0LTExLjYgNi42LTIuMiAxNi01LjggMjEtOC4yIDEzLTYgMjgtNS42IDM1LjYuOCAxMi40IDEwLjQgMTguNiA0MS40IDE0LjQgNzEuNi00LjQgMzAuNi0zIDM5LjQgOC40IDUzLjggMy40IDQuNCAxMS4yIDE5LjIgMTcuNCAzMy4yTDc3NSA0NDN2NzhsLTEwIDI4Yy0xNS4yIDQzLjItMzYuOCA3My4yLTY2LjIgOTIuOC0xMy40IDguOC01NyAyNS40LTc2LjggMjktMjguMiA1LjItMzMuMiAxMi42LTIyIDMyLjIgMTEuMiAxOS40IDEyLjQgMzIuOCAxMS42IDEyOS42bC0uNiA4NS44IDUuNCA0LjZjMy42IDMgOS4yIDUuMiAxNiA2IDUuOC44IDYwLjIgMSAxMjAuNi42IDEwOC40LS42IDExMC4yLS42IDExOS01IDI0LTExLjYgNDAtMjcuNCA1MS42LTUwLjZsNS40LTExIC42LTM0N2MuNC0yMjMtLjItMzUzLjQtMS40LTM2NS0yLTE3LTIuNi0xOC42LTEzLTM0LTEwLjYtMTUuNC0yMi44LTI2LjItNDMuMi0zNy4yLTQuMi0yLjQtNjQuNi0yLjgtMzY2LTMuMi0xOTguNiAwLTM2NCAuNC0zNjcuNiAxLjR6Ii8+PC9zdmc+);
-    }
-    
-    
-    
-    .footer-sns-zhihu {
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzYuOCA3OC44Yy04LjYgMi44LTI0IDEyLjQtMzMuNiAyMS04LjYgNy44LTIxLjQgMjcuOC0yNC40IDM3LjgtNC4yIDE0LTQgNzIzLjQgMCA3MzMuNCA4LjYgMjAuNiAzNi44IDQ4LjYgNTYgNTUuNiA5IDMuNCA3NDcuNCAzLjQgNzU2LjQgMCAxOS44LTcuMiA0OS0zNi42IDU2LTU2LjIgMi4yLTYgMi42LTc1LjYgMi44LTM2Ni40IDAtMjMzLjgtLjYtMzYxLjQtMi0zNjYtMS4yLTMuOC02LjYtMTMuOC0xMi4yLTIyLjItOC4yLTEyLjItMTMuNC0xNy40LTI1LjgtMjUuNi04LjQtNS44LTE5LTExLjQtMjMuMi0xMi4yLTQuNi0xLjItMTYzLjItMS44LTM3NC44LTEuOC0yOTMgMC0zNjguNi42LTM3NS4yIDIuNnptMTkwIDE0NS42YzUuNCA3LjYgNCAxNy40LTQuOCAzMS42LTkuOCAxNi0xMC44IDI3LjQtMyAzNSAyLjYgMi44IDYuNCA1IDguNCA1czM3LjguNCA3OS42LjZjNjggLjQgNzYuNi44IDgyLjQgMy44IDkuMiA1IDEyLjYgMTEgMTIuNiAyMiAwIDctMS4yIDEwLjgtNC44IDE1bC00LjggNS40LTM4IC4yYy01My44IDAtNTMuOCAwLTU1LjQgNTEuMi0uNiAxOC0xLjYgNDIuOC0yLjIgNTUtMS4yIDIyLjguNiAzMS42IDcuNiAzNi4yIDEuNC44IDIyLjIgMiA0NiAyLjZsNDMuMiAxIDguOCA2YzE1LjQgMTAuOCAxNy44IDI5LjIgNSAzNy01LjggMy42LTEwLjIgNC01MS44IDQtMzEgMC00NyAuOC01MC42IDIuNC03IDMuMi0xNC4yIDE3LjYtMTcuMiAzNC40LTMuMiAxNi42LTEgMjEuOCA5LjYgMjUuMiAxMy40IDQuMiAyMS44IDExLjIgNDkgNDEuNCAzNSAzOC44IDM2LjYgNDEgNDEuOCA1OC44IDcgMjMuOCAyLjIgNDEuOC0xMS40IDQxLjgtNy42IDAtMTItMy0yMS0xNC42LTEzLjgtMTcuNC01NC40LTY1LjgtNjItNzMuOC0xNS4yLTE2LTI5LjQtNS44LTM4LjggMjcuNC0xLjggNi42LTguOCAyMy4yLTE1LjYgMzctMTAuOCAyMi0xNCAyNi44LTI3LjQgMzkuNi0xOS42IDE5LjItMjYuNCAyMy01My42IDI5LjYtMjcuMiA2LjQtMzcgNS42LTM4LTMuNi0xLTguNCA0LjQtMTYuNCAyMC0yOSAxNi0xMyAzNi44LTM2LjYgNDUuMi01MS40IDMtNS4yIDguMi0xMy44IDExLjYtMTkgMy40LTUgMTEuOC0yMC40IDE4LjYtMzQuMiAxMC0yMCAxMy42LTI5LjQgMTcuMi00NyAyLjYtMTIuMiA2LjItMjUuNCA3LjgtMjkuNCA0LTkuNCA0LTIxLjQuMi0yNy01LjItNy40LTE2LTguOC02Mi42LTguNC01MC40LjQtNTUuMi0uOC01Ny42LTEzLjItMS44LTEwLjQgNS44LTI0LjQgMTYuMi0yOS44IDcuNC0zLjggMTEuOC00LjIgNTYuMi00LjhsNDguNC0uOCA0LjYtNWM0LjgtNSA0LjgtNSA1LTYxLjYgMC0zNS4yLS44LTU5LjItMi02My4yLTMuOC0xMS4yLTExLTE0LjgtMzAuMi0xNC44cy0yMS40IDEuNC0zMS4yIDE4LjJjLTguMiAxNC40LTIwLjYgMjguOC0zMy4yIDM4LjgtMTMuMiAxMC40LTIxLjYgMTMtMjggOS04LjQtNS42LTUuMi0yMy4yIDguMi00My4yIDQtNi40IDkuMi0xOC42IDEyLjItMjkuNiAzLTEwLjIgNy40LTIzLjIgMTAtMjkgMi40LTUuNiA2LTE2LjggOC0yNC42IDUuNi0yMy42IDI0LTUwLjggMzkuNC01OC40IDExLjItNS40IDE4LjYtNS40IDIyLjQuMnptNDUyIDY4LjJjMTEuOCA3LjggMTEuNC0uOCAxMC44IDIxNi0uNiAxODEtLjggMTk4LjgtNCAyMDMtNy42IDEwLjgtOS44IDExLjQtNTMuNiAxMi40bC00MSAxLTE0IDcuOGMtNy42IDQuMi0yMS4yIDEzLTI5LjggMTkuNC0yNS44IDE5LjItMzUgMTkuOC00My40IDMuMi0xMS44LTIzLjItMjMuNi0zMy4yLTM5LjQtMzMuNC04LjggMC0xMy42LTIuOC0xNy4yLTkuOC0yLjYtNC44LTMtMzMuOC0yLjYtMjA4LjguNC0xOTkuOC40LTIwMyA0LjQtMjA3LjQgMi4yLTIuNCA1LjgtNS4yIDgtNi4yIDIuMi0uOCA1MS44LTEuNCAxMTAtMS4yIDk5IC40IDEwNi42LjYgMTExLjggNHoiLz48cGF0aCBkPSJNNjA2LjggMzM3LjRjLTIuNC40LTYuNCAzLTkgNS44bC00LjggNS4yLS42IDE1Ni40LS40IDE1Ni40IDYuNCA5LjRjMy42IDUuMiA5LjggMTUuMiAxMy42IDIxLjggOCAxNC4yIDE2LjggMjAuNiAyNS42IDE4LjYgMy4yLS42IDEzLjgtNyAyMy42LTE0LjIgMjMtMTcgMjcuOC0xOSA1MC4yLTIwLjIgMTYuNC0xIDE5LjItMS44IDIzLjYtNi4yIDIuOC0yLjggNS02LjQgNS4yLTguMlY1MDUuNmMwLTExNi0uNi0xNTQuNC0yLjYtMTU4LjYtNC44LTEwLjQtOC40LTExLTcwLTEwLjgtMzEuMi4yLTU4LjYuOC02MC44IDEuMnoiLz48L3N2Zz4=);
-    }
-    
-    
-    
-</style>
-
-        
-        <!-- Config CSS -->
-
-<!-- Other Styles -->
-<style>
-  body, html {
-    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-  }
-
-  a {
-    color: #00838F;
-  }
-
-  .mdl-card__media,
-  #search-label,
-  #search-form-label:after,
-  #scheme-Paradox .hot_tags-count,
-  #scheme-Paradox .sidebar_archives-count,
-  #scheme-Paradox .sidebar-colored .sidebar-header,
-  #scheme-Paradox .sidebar-colored .sidebar-badge{
-    background-color: #0097A7 !important;
-  }
-
-  /* Sidebar User Drop Down Menu Text Color */
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
-    color: #0097A7 !important;
-  }
-
-  #post_entry-right-info,
-  .sidebar-colored .sidebar-nav li:hover > a,
-  .sidebar-colored .sidebar-nav li:hover > a i,
-  .sidebar-colored .sidebar-nav li > a:hover,
-  .sidebar-colored .sidebar-nav li > a:hover i,
-  .sidebar-colored .sidebar-nav li > a:focus i,
-  .sidebar-colored .sidebar-nav > .open > a,
-  .sidebar-colored .sidebar-nav > .open > a:hover,
-  .sidebar-colored .sidebar-nav > .open > a:focus,
-  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
-    color: #0097A7 !important;
-  }
-
-  .toTop {
-    background: #757575 !important;
-  }
-
-  .material-layout .material-post>.material-nav,
-  .material-layout .material-index>.material-nav,
-  .material-nav a {
-    color: #757575;
-  }
-
-  #scheme-Paradox .MD-burger-layer {
-    background-color: #757575;
-  }
-
-  #scheme-Paradox #post-toc-trigger-btn {
-    color: #757575;
-  }
-
-  .post-toc a:hover {
-    color: #00838F;
-    text-decoration: underline;
-  }
-
-</style>
-
-
-<!-- Theme Background Related-->
-
-    <style>
-      body{
-        background-color: #F5F5F5;
-      }
-
-      /* blog_info bottom background */
-      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
-        background-color: #fff;
-      }
-    </style>
-
-
-
-
-<!-- Fade Effect -->
-
-    <style>
-      .fade {
-        transition: all 800ms linear;
-        -webkit-transform: translate3d(0,0,0);
-        -moz-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        -o-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-        opacity: 1;
-      }
-
-      .fade.out{
-        opacity: 0;
-      }
-    </style>
-
-
-<!-- Import Font -->
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
-
-
-        <script>lsloader.load("js/jquery.min.js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
-    
-    
-    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
-
-    <!-- Analytics -->
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-110144268-1', 'auto');ga('send', 'pageview');
-</script>
-
-    <!-- Custom Head --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-    
 </head>
 
-
-    
-        <body id="scheme-Paradox" class="lazy">
-            <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-                
-
-                <!-- Main Container -->
-                <main class="material-layout__content" id="main">
-
-                    <!-- Top Anchor -->
-                    <div id="top"></div>
-
-                    
-                        <!-- Hamburger Button -->
-                        <button class="MD-burger-icon sidebar-toggle">
-                            <span class="MD-burger-layer"></span>
-                        </button>
-                    
-
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
-
-    <!-- Pin on top -->
-    
-
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017-12-07/机器学习-拉格朗日函数与KKT条件/">机器学习-拉格朗日函数与KKT条件</a></p>
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Luodian.ink</a>
+      </h1>
+      
     </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
         
-            
+          <a class="main-nav-link" href="/">Home</a>
         
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017-12-07/机器学习-拉格朗日函数与KKT条件/" target="_self">阅读全文</a>
-        </span>
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://www.luodian.ink"></form>
+      </div>
     </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/my_face.png" width="44px" height="44px" alt="Luodian's avatar">
-            </div>
-            <div>
-                <strong>Luodian</strong>
-                <span>12月 07, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/机器学习/">机器学习</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-软件工程-复习总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017-12-12/软件工程-复习总结/" class="article-date">
+  <time datetime="2017-12-12T11:59:28.000Z" itemprop="datePublished">2017-12-12</time>
+</a>
     
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/软件工程/">软件工程</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
     
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
     
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017-12-05/天算计划-为什么使用Docker/">天算计划-为什么使用Docker</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+      <header class="article-header">
         
-            介绍Docker ...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017-12-05/天算计划-为什么使用Docker/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/my_face.png" width="44px" height="44px" alt="Luodian's avatar">
-            </div>
-            <div>
-                <strong>Luodian</strong>
-                <span>12月 05, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/分布式计算/">分布式计算</a>
-            </span>
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017-12-12/软件工程-复习总结/">软件工程-复习总结</a>
+    </h1>
+  
 
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
+      </header>
     
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017-12-05/天算计划-虚拟化与云计算/">天算计划-虚拟化与云计算</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-摘录于知乎
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017-12-05/天算计划-虚拟化与云计算/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/my_face.png" width="44px" height="44px" alt="Luodian's avatar">
-            </div>
-            <div>
-                <strong>Luodian</strong>
-                <span>12月 05, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/分布式计算/">分布式计算</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017-12-04/Linux：一些常用命令 /">Linux：一些常用的Linux命令</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            CP操作格式：
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017-12-04/Linux：一些常用命令 /" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/my_face.png" width="44px" height="44px" alt="Luodian's avatar">
-            </div>
-            <div>
-                <strong>Luodian</strong>
-                <span>12月 04, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/Linux/">Linux</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017-12-04/天算计划-为什么Based-on-Spark/">天算计划-为什么Based on Spark?</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Sp...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017-12-04/天算计划-为什么Based-on-Spark/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/my_face.png" width="44px" height="44px" alt="Luodian's avatar">
-            </div>
-            <div>
-                <strong>Luodian</strong>
-                <span>12月 04, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/分布式计算/">分布式计算</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017-12-04/天算计划-Spark-计算任务分发流程/">天算计划-Spark-计算任务分发流程</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017-12-04/天算计划-Spark-计算任务分发流程/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/my_face.png" width="44px" height="44px" alt="Luodian's avatar">
-            </div>
-            <div>
-                <strong>Luodian</strong>
-                <span>12月 04, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/分布式计算/">分布式计算</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017-12-03/Kaggle实战-Mecari价格预测/">Kaggle实战-Mecari价格预测</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            先从分析别人的visualization kernel入手。
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017-12-03/Kaggle实战-Mecari价格预测/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/my_face.png" width="44px" height="44px" alt="Luodian's avatar">
-            </div>
-            <div>
-                <strong>Luodian</strong>
-                <span>12月 03, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/Kaggle/">Kaggle</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017-12-03/隐狄利克雷分布/">隐狄利克雷分布</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            在做Mercari价格预测的比赛中遇到了相关的内容，之前没有接触过nlp，下学期又要去上刘挺老师...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017-12-03/隐狄利克雷分布/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/my_face.png" width="44px" height="44px" alt="Luodian's avatar">
-            </div>
-            <div>
-                <strong>Luodian</strong>
-                <span>12月 03, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/机器学习/">机器学习</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017-12-01/Hexo-Material主题中Mathjax的配置/">Hexo-Material主题中Mathjax的配置</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            最近Hexo无故始终出渲染的问题，删掉重建的过程中发现是因为操作系统-内存那节因为有些是从PPT里拷出来的，导致了无法识别符号，渲染失败。
-...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017-12-01/Hexo-Material主题中Mathjax的配置/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/my_face.png" width="44px" height="44px" alt="Luodian's avatar">
-            </div>
-            <div>
-                <strong>Luodian</strong>
-                <span>12月 01, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/其余/">其余</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017-12-01/随想-同谋（Complicit）/">随想-同谋（Complicit）</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017-12-01/随想-同谋（Complicit）/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/my_face.png" width="44px" height="44px" alt="Luodian's avatar">
-            </div>
-            <div>
-                <strong>Luodian</strong>
-                <span>12月 01, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/随想/">随想</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-    <!-- Index nav -->
-        <nav class="material-nav mdl-cell mdl-cell--12-col">
-            <a class="extend prev" rel="prev" href="/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button></a>
-        </nav>
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 32 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
-</script>
-
-    
-</div>
-
-
-                    
-                        <!-- Overlay For Active Sidebar -->
-<div class="sidebar-overlay"></div>
-
-<!-- Material sidebar -->
-<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
-    <div id="sidebar-main">
-        <!-- Sidebar Header -->
-        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
-    <!-- Top bar -->
-    <div class="top-bar"></div>
-
-    <!-- Sidebar toggle button -->
-    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
-        <i class="material-icons">clear_all</i>
-        <span class="mdl-button__ripple-container">
-            <span class="mdl-ripple">
-            </span>
-        </span>
-    </button>
-
-    <!-- Sidebar Avatar -->
-    <div class="sidebar-image">
-        <img src="/img/my_face.png" alt="Luodian's avatar">
-    </div>
-
-    <!-- Sidebar Email -->
-    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        drluodian@gmail.com
-        <b class="caret"></b>
-    </a>
-</div>
-
-
-        <!-- Sidebar Navigation  -->
-        <ul class="nav sidebar-nav">
-    <!-- User dropdown  -->
-    <li class="dropdown">
-        <ul id="settings-dropdown" class="dropdown-menu">
-            
-                <li>
-                    <a href="mailto: drluodian@gmail.com" target="_blank" title="Email Me">
-                        
-                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
-                        
-                        Email Me
-                    </a>
-                </li>
-            
-        </ul>
-    </li>
-
-    <!-- Homepage -->
-    
-        <li id="sidebar-first-li">
-            <a href="/">
-                
-                    <i class="material-icons sidebar-material-icons">home</i>
-                
-                主页
-            </a>
-        </li>
-        
-    
-
-    <!-- Archives  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">inbox</i>
-                
-                    归档
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-            <li>
-                <a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">18</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">8</span></a>
-            </ul>
-        </li>
-        
-    
-
-    <!-- Categories  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
-                
-                分类
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-                <li>
-                <a class="sidebar_archives-link" href="/categories/Codeforces/">Codeforces<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Kaggle/">Kaggle<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Linux/">Linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/其余/">其余<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/分布式计算/">分布式计算<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/异常检测/">异常检测<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/投资/">投资<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/操作系统/">操作系统<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/时间序列/">时间序列<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/软件工程/">软件工程<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/随想/">随想<span class="sidebar_archives-count">1</span></a>
-            </ul>
-        </li>
-        
-    
-
-    <!-- Pages  -->
-    
-
-    <!-- Article Number  -->
-    
-        <li>
-            <a href="/archives">
-                文章总数
-                <span class="sidebar-badge">28</span>
-            </a>
-        </li>
-        
-            <li class="divider"></li>
-        
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="概论"><a href="#概论" class="headerlink" title="概论"></a>概论</h3><p>软件工程：没有严格的数学模型，实践才是最正确的方式，前人只能告诉我们不能怎么做，并不能告诉我们应该怎么做。但是，建立原则，规范，开发者即使偏离，也不会有太多的误差。</p>
+<p>只有开发真实可用的软件时，遇到的困难，解决问题的方法，获取的经验才是真实有效的。</p>
+<h3 id="过程模型"><a href="#过程模型" class="headerlink" title="过程模型"></a>过程模型</h3><ol>
+<li>code-and-fix（泥瓦工式的搭房子，无文档，无测试）</li>
+<li>黑盒过程：需求会不断变化，最终结果可能会不容易满意。</li>
+<li>白盒过程：开发过程暴露给用户，允许用户拓展和变动，但是用户需求变动可能会导致工作量很大，开发团队效率降低。</li>
+<li>瀑布模型：<ul>
+<li>每个阶段有明确的文档和产出物；</li>
+<li>上一个阶段输出是下一个阶段的输入；</li>
+<li>上一个阶段结束下一个阶段才能开始；</li>
 </ul>
+</li>
+<li>增量模型：<ul>
+<li><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fmeagde01mj30v60hi0wm.jpg" alt=""></li>
+</ul>
+</li>
+<li>RAD 模型</li>
+</ol>
+<h3 id="GIT"><a href="#GIT" class="headerlink" title="GIT"></a>GIT</h3><p>文件的三种状态：commited, modified, staged. </p>
+<p>基本指令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git add *// 跟踪文件，放入暂存区，文件处于暂存状态</span><br><span class="line">git commit -m "commit message" // 提交一个版本</span><br><span class="line">git clone url // 从远程仓库拉下分支</span><br><span class="line">git status // 列出当前目录下的文件状态</span><br><span class="line">git diff // 比较的是工作区域当前文件和已经被缓存了的文件的差异</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1fmf559ardzj31300maqfn.jpg" alt=""></p>
+<p><strong>git diff</strong></p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1fmf4uysritj30z40m6n78.jpg" alt=""></p>
+<p><strong>撤销与回退</strong></p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fmf54wm44cj31460kwaqv.jpg" alt=""></p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1fmf559ardzj31300maqfn.jpg" alt=""></p>
+<p><strong>分支管理</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git fetch // 从远程仓库获取最新的数据</span><br><span class="line">git pull == git fetch + git merge(慎用)</span><br><span class="line">git log -decorate 查看当前各个分支的commit对象</span><br></pre></td></tr></table></figure>
+<p>分支切换，暂存区和工作目录文件跟着变动</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fmfb4adjrkj312m0pewhg.jpg" alt=""></p>
+<p><strong>git merge 和 rebase</strong></p>
+<p><strong>实例</strong></p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fmfbc8espaj313q0o20wj.jpg" alt=""></p>
+<h3 id="白盒测试"><a href="#白盒测试" class="headerlink" title="白盒测试"></a>白盒测试</h3><blockquote>
+<p>以内部逻辑来进行覆盖测试。</p>
+</blockquote>
+<p><strong>逻辑测试</strong></p>
+<ol>
+<li>语句覆盖</li>
+<li>判定覆盖</li>
+<li>条件覆盖</li>
+<li>判定/条件覆盖</li>
+<li>条件组合覆盖（主要是在测试条件语句的判定过程）</li>
+</ol>
+<h3 id="软件架构设计"><a href="#软件架构设计" class="headerlink" title="软件架构设计"></a>软件架构设计</h3><p>设计一个系统，自顶向下我们需要考虑如下的几种选择。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fmgs3ekwyij31a40pgwiz.jpg" alt=""></p>
+<p>软件架构四大设计方案</p>
+<ol>
+<li>异步：层与层之间通过异步调用提升吞吐量。</li>
+<li>分层：各层次职责单一，提升可维护性。</li>
+<li>缓存：层与层之间通过缓存提高存取效率。</li>
+<li>并行：各层内通过分布式提升性能。</li>
+</ol>
+<h3 id="软件需求"><a href="#软件需求" class="headerlink" title="软件需求"></a>软件需求</h3><blockquote>
+<p>并非设计实现方案。</p>
+</blockquote>
+<ul>
+<li>业务需求</li>
+<li>用户需求</li>
+<li>功能需求（详细软件实现需求）</li>
+<li>非功能需求（效率，功能的需求）</li>
+</ul>
+<h3 id="软件工程前沿"><a href="#软件工程前沿" class="headerlink" title="软件工程前沿"></a>软件工程前沿</h3><h4 id="服务化"><a href="#服务化" class="headerlink" title="服务化"></a>服务化</h4><ul>
+<li><p>互联网驱动的IT企业所从事的创新业务。</p>
+<ul>
+<li>Internet 成为软件运行和软件发布的主体平台。</li>
+<li>Apple, Google, Amazon, Facebook.</li>
+</ul>
+</li>
+<li><p>政府及经济学家眼中的一种经济形态。</p>
+<ul>
+<li>针对特定的服务领域，业务驱动的特征更加明显。</li>
+<li>物流，仓储，医疗，教育，交通，金融。</li>
+</ul>
+</li>
+<li><p>新的软件架构和编程范式。</p>
+<ul>
+<li>从开发角度，软件本身的服务化能够引发新的SE技术。</li>
+<li>Web Services, ESB, SaaS</li>
+</ul>
+</li>
+</ul>
+<h4 id="面向服务的软件工程"><a href="#面向服务的软件工程" class="headerlink" title="面向服务的软件工程"></a>面向服务的软件工程</h4><ul>
+<li><p>Internet 环境下的协同开发。</p>
+<ul>
+<li>软件外包（高速度，高效率）</li>
+<li>开源团队开发（众包平台，群体智慧）</li>
+</ul>
+</li>
+<li><p>集成开发环境（软件全生命周期的管理平台）</p>
+<blockquote>
+<p>实时高效的协助团队开发流程。</p>
+</blockquote>
+<ul>
+<li>Visual Studio Team Foundation</li>
+</ul>
+</li>
+</ul>
+<h3 id="OOA-与-OOD"><a href="#OOA-与-OOD" class="headerlink" title="OOA 与 OOD"></a>OOA 与 OOD</h3><p>用例图的4个基本组件：参与者(Actor)、用例(Use Case)、关系(Relationship)和系统。 </p>
+<ul>
+<li><p>泛化(generalization)：泛化关系是一种继承关系，子用例将继承基用例的所有行为，关系和通信关系，也就是说在任何使用基用例的地方都可以用子用例来代替。泛化关系在用例图中使用空心的箭头表示，箭头方向从子用例指向基用例。 </p>
+</li>
+<li><p>扩展(extend)： extend关系是对基用例的扩展，基用例是一个完整的用例，即使没有子用例的参与，也可以完成一个完整的功能。</p>
+<p>extend的基用例中将存在一个扩展点，只有当扩展点被激活时，子用例才会被执行。 extend关系在用例图中使用带箭头的虚线表示(在线上标注&lt;<extend>&gt;)，箭头从子用例指向基用例。 </extend></p>
+</li>
+<li><p>包含(include)： include为包含关系，当两个或多个用例中共用一组相同的动作，这时可以将这组相同的动作抽出来作为一个独立的子用例，供多个基用例所共享。因为子用例被抽出，基用例并非一个完整的用例，所以include关系中的基用例必须和子用例一起使用才够完整，子用例也必然被执行。include关系在用例图中使用带箭头的虚线表示(在线上标注&lt;<include>&gt;)，箭头从基用例指向子用例。</include></p>
+</li>
+</ul>
+<h2 id="讨论题目"><a href="#讨论题目" class="headerlink" title="讨论题目"></a>讨论题目</h2><ol>
+<li><p>软件架构的目标</p>
+<p>正如同软件本身有其要达到的目标一样，<a href="https://baike.baidu.com/item/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1" target="_blank" rel="noopener">架构设计</a>要达到的目标是什么呢？一般而言，<a href="https://baike.baidu.com/item/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1" target="_blank" rel="noopener">软件架构设计</a>要达到如下的目标： 可靠性（Reliable）。软件系统对于用户的商业经营和管理来说极为重要，因此软件系统必须非常可靠。 安全性（Secure）。软件系统所承担的交易的商业价值极高，系统的安全性非常重要。 可伸缩性（SCAlable）。软件必须能够在用户的使用率、用户的数目增加很快的情况下，保持合理的性能。只有这样，才能适应用户的市场扩展得可能性。 可定制化（CuSTomizable）。同样的一套软件，可以根据客户群的不同和市场需求的变化进行调整。 可扩展性（Extensible）。在新技术出现的时候，一个软件系统应当允许导入新技术，从而对现有系统进行功能和性能的扩展。 可维护性（MAIntainable）。软件系统的维护包括两方面，一是排除现有的错误，二是将新的<a href="https://baike.baidu.com/item/%E8%BD%AF%E4%BB%B6%E9%9C%80%E6%B1%82" target="_blank" rel="noopener">软件需求</a>反映到现有系统中去。一个易于维护的系统可以有效地降低技术支持的花费。 客户体验（Customer Experience）。<a href="https://baike.baidu.com/item/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener">软件系统</a>必须易于使用。 市场时机（Time to Market）。软件用户要面临同业竞争，软件提供商也要面临同业竞争。以最快的速度争夺市场先机非常重要。</p>
+</li>
+<li><p>黑盒测试的优劣</p>
+<p>优点</p>
+<ol>
+<li>适用于各阶段的测试</li>
+<li>从产品功能角度的测试</li>
+<li>容易入手生成测试数据</li>
+</ol>
+<p>缺点</p>
+<ol>
+<li>某些代码得不到测试</li>
+<li>如果规格说明有误则无法发现</li>
+<li>不易进行充分性测试</li>
+</ol>
+</li>
+</ol>
 
-
-        <!-- Sidebar Footer -->
-        <!--
-I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
-If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
-It will not impact the appearance and can give developers a lot of support :)
-
-很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
-如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
-它不会影响美观并可以给开发者很大的支持和动力。 :)
--->
-
-<!-- Sidebar Divider -->
-
-
-<!-- Theme Material -->
-
-
-<!-- Help & Support -->
-<!--
-
--->
-
-<!-- Feedback -->
-<!--
-
--->
-
-<!-- About Theme -->
-<!--
-
--->
-
+      
     </div>
+    <footer class="article-footer">
+      <a data-url="https://www.luodian.ink/2017-12-12/软件工程-复习总结/" data-id="cjeaokidk001zf51yl3h68fvk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
 
-    <!-- Sidebar Image -->
+
+  
+    <article id="post-机器学习-拉格朗日函数与KKT条件" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017-12-07/机器学习-拉格朗日函数与KKT条件/" class="article-date">
+  <time datetime="2017-12-07T01:35:03.000Z" itemprop="datePublished">2017-12-07</time>
+</a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
+  </div>
 
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017-12-07/机器学习-拉格朗日函数与KKT条件/">机器学习-拉格朗日函数与KKT条件</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.luodian.ink/2017-12-07/机器学习-拉格朗日函数与KKT条件/" data-id="cjeaokid3001lf51y4teeabro" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-天算计划-为什么使用Docker" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017-12-05/天算计划-为什么使用Docker/" class="article-date">
+  <time datetime="2017-12-05T05:31:17.000Z" itemprop="datePublished">2017-12-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/分布式计算/">分布式计算</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017-12-05/天算计划-为什么使用Docker/">天算计划-为什么使用Docker</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。</p>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p>Docker运行Linux上可以原生无压力，Windows上需要装插件虚化一个Linux环境，感觉很麻烦。</p>
+<ol>
+<li><p>在 Docker 下安装镜像</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull uhopper/hadoop-spark</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在 Docker 中移除镜像</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker rm [container_id]</span><br><span class="line">docker rmi [image_id]</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.luodian.ink/2017-12-05/天算计划-为什么使用Docker/" data-id="cjeaokice000rf51y6iiwdfjs" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-天算计划-虚拟化与云计算" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017-12-05/天算计划-虚拟化与云计算/" class="article-date">
+  <time datetime="2017-12-05T01:21:55.000Z" itemprop="datePublished">2017-12-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/分布式计算/">分布式计算</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017-12-05/天算计划-虚拟化与云计算/">天算计划-虚拟化与云计算</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>摘录于知乎<a href="https://www.zhihu.com/question/22793847" target="_blank" rel="noopener">https://www.zhihu.com/question/22793847</a></p>
+<p>组合了一些优秀答案</p>
+<p>咱们需要实现的也是虚拟化（Docker）+分布式计算（Hadoop）</p>
+</blockquote>
+<h3 id="虚拟化"><a href="#虚拟化" class="headerlink" title="虚拟化"></a>虚拟化</h3><p>对于主机上的虚拟化技术，其中一个可行的定义就是可以让IT系统的物理拓扑图与逻辑拓扑图无关，即解耦，我们暂时以商用虚拟化系统vmware举例为了实现拓扑解耦，它做的第一点就是让一台机器可以同时跑多个操作系统，即虚拟机，而且虚拟机还可以在物理机间来回转移，高可用，这样我们的操作系统就从物理机上彻底解放出来了，你可以把同一个虚拟机随时放到其他物理机上，实现了对硬件的高效资源利用，和系统的高度灵活，解除了大量人工劳动，便于实现大规模系统的方便管理，这种就是服务器虚拟化</p>
+<p>通过虚拟化技术将一台计算机虚拟为多台逻辑计算机。在一台计算机上同时运行多个逻辑计算机，每个逻辑计算机可运行不同的操作系统，并且应用程序都可以在相互独立的空间内运行而互不影响，从而显著提高计算机的工作效率。</p>
+<p>虚拟化使用软件的方法重新定义划分IT资源，可以实现IT资源的动态分配、灵活调度、跨域共享，提高IT资源利用率，使IT资源能够真正成为社会基础设施，服务于各行各业中灵活多变的应用需求。</p>
+<p>虚拟化是一个广义的术语，是指计算元件在虚拟的基础上而不是真实的基础上运行，是一个为了简化管理，优化资源的解决方案。如同空旷、通透的写字楼，整个楼层没有固定的墙壁，用户可以用同样的成本构建出更加自主适用的办公空间，进而节省成本，发挥空间最大利用率。这种把有限的固定的资源根据不同需求进行重新规划以达到最大利用率的思路，在IT领域就叫做虚拟化技术。</p>
+<p>虚拟化技术可以扩大硬件的容量，简化软件的重新配置过程。CPU的虚拟化技术可以单CPU模拟多CPU并行，允许一个平台同时运行多个操作系统，并且应用程序都可以在相互独立的空间内运行而互不影响，从而显著提高计算机的工作效率。</p>
+<p>虚拟化技术与多任务以及超线程技术是完全不同的。多任务是指在一个操作系统中多个程序同时并行运行，而在虚拟化技术中，则可以同时运行多个操作系统，而且每一个操作系统中都有多个程序运行，每一个操作系统都运行在一个虚拟的CPU或者是虚拟主机上；而超线程技术只是单CPU模拟双CPU来平衡程序运行性能，这两个模拟出来的CPU是不能分离的，只能协同工作。</p>
+<h3 id="云计算"><a href="#云计算" class="headerlink" title="云计算"></a>云计算</h3><p>云计算 （Cloud Computing）是基于互联网的相关服务的增加、使用和交付模式，通常涉及通过互联网来提供动态易扩展且经常是虚拟化的资源。云是网络、互联网的一种比喻说法。过去在图中往往用云来表示电信网，后来也用来表示互联网和底层基础设施的抽象。因此，云计算甚至可以让你体验每秒10万亿次的运算能力，拥有这么强大的计算能力可以模拟核爆炸、预测气候变化和市场发展趋势。用户通过电脑、笔记本、手机等方式接入数据中心，按自己的需求进行运算。</p>
+<p><strong>超大规模</strong></p>
+<p>“云”具有相当的规模，Google云计算已经拥有100多万台服务器， Amazon、IBM、微软、Yahoo等的“云”均拥有几十万台服务器。企业私有云一般拥有数百上千台服务器。“云”能赋予用户前所未有的计算能力。</p>
+<p><strong>虚拟化</strong></p>
+<p>云计算支持用户在任意位置、使用各种终端获取应用服务。所请求的资源来自“云”，而不是固定的有形的实体。应用在“云”中某处运行，但实际上用户无需了解、也不用担心应用运行的具体位置。只需要一台笔记本或者一个手机，就可以通过网络服务来实现我们需要的一切，甚至包括超级计算这样的任务。</p>
+<p><strong>高可靠性</strong></p>
+<p>“云”使用了数据多副本容错、计算节点同构可互换等措施来保障服务的高可靠性，使用云计算比使用本地计算机可靠。</p>
+<p><strong>通用性</strong></p>
+<p>云计算不针对特定的应用，在“云”的支撑下可以构造出千变万化的应用，同一个“云”可以同时支撑不同的应用运行。</p>
+<p><strong>高可扩展性</strong></p>
+<p>“云”的规模可以动态伸缩，满足应用和用户规模增长的需要。</p>
+<p><strong>按需服务</strong></p>
+<p>“云”是一个庞大的资源池，你按需购买，云可以像自来水，电，煤气那样计费。其还强调一个动态分配的特点，比如双11前后几天，电商部门需要比平时10倍的访问量，那就可以在那几天增加10倍的资源，过完又释放相关资源，而不是以前按最高性能要求来购买硬件，减少浪费，借助虚拟化（但不是必须）可以更加方便实现此目的； 其它特性，如服务自助，服务计量化，包括不同包装特性（IaaS,PaaS,Saas）只是在此基础上的增强派生而已。</p>
+<p><strong>极其廉价</strong></p>
+<p>由于“云”的特殊容错措施可以采用极其廉价的节点来构成云，“云”的自动化集中式管理使大量企业无需负担日益高昂的数据中心管理成本，“云”的通用性使资源的利用率较之传统系统大幅提升，因此用户可以充分享受“云”的低成本优势，经常只要花费几百美元、几天时间就能完成以前需要数万美元、数月时间才能完成的任务。</p>
+<p>云计算可以彻底改变人们未来的生活，但同时也要重视环境问题，这样才能真正为人类进步做贡献,而不是简单的技术提升。</p>
+<p><strong>潜在的危险性</strong></p>
+<p>云计算服务除了提供计算服务外，还必然提供了存储服务。但是云计算服务当前垄断在私人机构（企业）手中，而他们仅仅能够提供商业信用。对于政府机构、商业机构（特别像银行这样持有敏感数据的商业机构）对于选择云计算服务应保持足够的警惕。一旦商业用户大规模使用私人机构提供的云计算服务，无论其技术优势有多强，都不可避免地让这些私人机构以“数据（信息）”的重要性挟制整个社会。对于信息社会而言，“信息”是至关重要的。另一方面，云计算中的数据对于数据所有者以外的其他用户云计算用户是保密的，但是对于提供云计算的商业机构而言确实毫无秘密可言。所有这些潜在的危险，是商业机构和政府机构选择云计算服务、特别是国外机构提供的云计算服务时，不得不考虑的一个重要的前提。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.luodian.ink/2017-12-05/天算计划-虚拟化与云计算/" data-id="cjeaokicg000tf51yi8vp6zv1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Linux：一些常用命令 " class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017-12-04/Linux：一些常用命令 /" class="article-date">
+  <time datetime="2017-12-04T14:22:50.000Z" itemprop="datePublished">2017-12-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017-12-04/Linux：一些常用命令 /">Linux：一些常用的Linux命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="CP"><a href="#CP" class="headerlink" title="CP"></a>CP</h3><p>操作格式：<code>cp [选项]... 源… 目录</code></p>
+<p>命令作用：将源文件复制至目标文件，或将多个源文件复制至目标目录。</p>
+<p>命令参数：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">-a, --archive    等于-dR --preserve=all</span><br><span class="line">    --backup[=CONTROL    为每个已存在的目标文件创建备份</span><br><span class="line">-b                类似--backup 但不接受参数</span><br><span class="line">   --copy-contents        在递归处理是复制特殊文件内容</span><br><span class="line">-d                等于--no-dereference --preserve=links</span><br><span class="line">-f, --force        如果目标文件无法打开则将其移除并重试(当 -n 选项</span><br><span class="line">                    存在时则不需再选此项)</span><br><span class="line">-i, --interactive        覆盖前询问(使前面的 -n 选项失效)</span><br><span class="line">-H                跟随源文件中的命令行符号链接</span><br><span class="line">-l, --link            链接文件而不复制</span><br><span class="line">-L, --dereference   总是跟随符号链接</span><br><span class="line">-n, --no-clobber   不要覆盖已存在的文件(使前面的 -i 选项失效)</span><br><span class="line">-P, --no-dereference   不跟随源文件中的符号链接</span><br><span class="line">-p                等于--preserve=模式,所有权,时间戳</span><br><span class="line">    --preserve[=属性列表   保持指定的属性(默认：模式,所有权,时间戳)，如果</span><br><span class="line">               可能保持附加属性：环境、链接、xattr 等</span><br><span class="line">-R, -r, --recursive  复制目录及目录内的所有项目</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.luodian.ink/2017-12-04/Linux：一些常用命令 /" data-id="cjeaokic4000df51yocbu5u54" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-天算计划-为什么Based-on-Spark" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017-12-04/天算计划-为什么Based-on-Spark/" class="article-date">
+  <time datetime="2017-12-04T12:08:31.000Z" itemprop="datePublished">2017-12-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/分布式计算/">分布式计算</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017-12-04/天算计划-为什么Based-on-Spark/">天算计划-为什么Based on Spark?</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Spark简介"><a href="#Spark简介" class="headerlink" title="Spark简介"></a>Spark简介</h3><p><strong>Spark</strong>最初诞生于美国加州大学伯克利分校（UC Berkeley）的AMP实验室，是一个可应用于大规模数据处理的快速、通用引擎。2013年，Spark加入Apache孵化器项目后，开始获得迅猛的发展，如今已成为Apache软件基金会最重要的三大分布式计算系统开源项目之一（即Hadoop、Spark、Storm）。Spark最初的设计目标是使数据分析更快——不仅运行速度快，也要能快速、容易地编写程序。为了使程序运行更快，Spark提供了内存计算，减少了迭代计算时的IO开销；而为了使编写程序更为容易，Spark使用简练、优雅的Scala语言编写，基于Scala提供了交互式的编程体验。虽然，Hadoop已成为大数据的事实标准，但其MapReduce分布式计算模型仍存在诸多缺陷，而Spark不仅具备Hadoop MapReduce所具有的优点，且解决了Hadoop MapReduce的缺陷。Spark正以其结构一体化、功能多元化的优势逐渐成为当今大数据领域最热门的大数据计算平台。</p>
+<p>Spark支持使用Scala、Java、Python和R语言进行编程。由于Spark采用Scala语言进行开发，因此，建议采用Scala语言进行Spark应用程序的编写。Scala是一门现代的多范式编程语言，平滑地集成了面向对象和函数式语言的特性，旨在以简练、优雅的方式来表达常用编程模式。Scala语言的名称来自于“可伸展的语言”，从写个小脚本到建立个大系统的编程任务均可胜任。Scala运行于Java平台（JVM，Java 虚拟机）上，并兼容现有的Java程序。</p>
+<h3 id="Spark模式区分"><a href="#Spark模式区分" class="headerlink" title="Spark模式区分"></a>Spark模式区分</h3><p>在Spark中存在着多种运行模式，可使用本地模式运行、可使用伪分布式模式运行、使用分布式模式也存在多种模式如：Spark Mesos模式、Spark YARN模式。</p>
+<p><strong>Spark Mesos模式</strong>：官方推荐模式，通用集群管理，有两种调度模式：粗粒度模式（Coarse-grained Mode）与细粒度模式（Fine-grained Mode）。</p>
+<p><strong>Spark YARN模式</strong>：Hadoop YARN资源管理模式。</p>
+<p><strong>Standalone模式</strong>： 简单模式或称独立模式，可以单独部署到一个集群中，无依赖任何其他资源管理系统。不使用其他调度工具时会存在单点故障，使用Zookeeper等可以解决</p>
+<p>（我们之前配置的是standalone模式）</p>
+<p><strong>Local模式</strong>：本地模式，可以启动本地一个线程来运行job，可以启动N个线程或者使用系统所有核运行job。</p>
+<h3 id="RDD介绍"><a href="#RDD介绍" class="headerlink" title="RDD介绍"></a>RDD介绍</h3><p>Spark的核心是建立在统一的抽象RDD之上，使得Spark的各个组件可以无缝进行集成，在同一个应用程序中完成大数据计算任务。RDD的设计理念源自AMP实验室发表的论文《Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing》。</p>
+<h5 id="RDD设计背景"><a href="#RDD设计背景" class="headerlink" title="RDD设计背景"></a>RDD设计背景</h5><p>在实际应用中，存在许多迭代式算法（比如机器学习、图算法等）和交互式数据挖掘工具，目前的MapReduce框架都是把中间结果写入到HDFS中，带来了大量的数据复制、磁盘IO和序列化开销。虽然，类似Pregel等图计算框架也是将结果保存在内存当中，但是，这些框架只能支持一些特定的计算模式，并没有提供一种通用的数据抽象。RDD就是为了满足这种需求而出现的，它提供了一个抽象的数据架构，我们不必担心底层数据的分布式特性，只需将具体的应用逻辑表达为一系列转换处理，不同RDD之间的转换操作形成依赖关系，可以实现管道化，从而避免了中间结果的存储，大大降低了数据复制、磁盘IO和序列化开销。</p>
+<blockquote>
+<p>迭代式算法：下次计算依赖于上次结果，PageRank，单源最短路径是常常见的迭代式算法之一。</p>
+<p>交互式数据挖掘：数据库+可视化+数据挖掘算法</p>
+</blockquote>
+<h5 id="RDD-概念"><a href="#RDD-概念" class="headerlink" title="RDD 概念"></a>RDD 概念</h5><p>一个RDD就是一个分布式对象集合，本质上是一个只读的分区记录集合，每个RDD可以分成多个分区，每个分区就是一个数据集片段，并且一个RDD的不同分区可以被保存到集群中不同的节点上，从而可以在集群中的不同节点上进行并行计算。RDD提供了一种高度受限的共享内存模型，即RDD是只读的记录分区的集合，不能直接修改，只能基于稳定的物理存储中的数据集来创建RDD，或者通过在其他RDD上执行确定的转换操作（如map、join和groupBy）而创建得到新的RDD。RDD提供了一组丰富的操作以支持常见的数据运算，分为“行动”（Action）和“转换”（Transformation）两种类型，前者用于执行计算并指定输出的形式，后者指定RDD之间的相互依赖关系。两类操作的主要区别是，转换操作（比如map、filter、groupBy、join等）接受RDD并返回RDD，而行动操作（比如count、collect等）接受RDD但是返回非RDD（即输出一个值或结果）。RDD提供的转换接口都非常简单，都是类似map、filter、groupBy、join等粗粒度的数据转换操作，而不是针对某个数据项的细粒度修改。因此，RDD比较适合对于数据集中元素执行相同操作的批处理式应用，而不适合用于需要异步、细粒度状态的应用，比如Web应用系统、增量式的网页爬虫等。正因为这样，这种粗粒度转换接口设计，会使人直觉上认为RDD的功能很受限、不够强大。但是，实际上RDD已经被实践证明可以很好地应用于许多并行计算应用中，可以具备很多现有计算框架（比如MapReduce、SQL、Pregel等）的表达能力，并且可以应用于这些框架处理不了的交互式数据挖掘应用。<br>Spark用Scala语言实现了RDD的API，程序员可以通过调用API实现对RDD的各种操作。RDD典型的执行过程如下：</p>
+<ol>
+<li>RDD读入外部数据源（或者内存中的集合）进行创建；</li>
+<li>RDD经过一系列的“转换”操作，每一次都会产生不同的RDD，供给下一个“转换”使用；</li>
+<li>最后一个RDD经“行动”操作进行处理，并输出到外部数据源（或者变成Scala集合或标量）。<br>需要说明的是，RDD采用了惰性调用，即在RDD的执行过程中（如图9-8所示），真正的计算发生在RDD的“行动”操作，对于“行动”之前的所有“转换”操作，Spark只是记录下“转换”操作应用的一些基础数据集以及RDD生成的轨迹，即相互之间的依赖关系，而不会触发真正的计算。</li>
+</ol>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fm51zymadwj311x0ah74j.jpg" alt=""></p>
+<p>从输入中逻辑上生成A和C两个RDD，经过一系列“转换”操作，逻辑上生成了F（也是一个RDD），之所以说是逻辑上，是因为这时候计算并没有发生，Spark只是记录了RDD之间的生成和依赖关系。当F要进行输出时，也就是当F进行“行动”操作的时候，Spark才会根据RDD的依赖关系生成DAG，并从起点开始真正的计算。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fm520ym19kj30rv074t8q.jpg" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.luodian.ink/2017-12-04/天算计划-为什么Based-on-Spark/" data-id="cjeaokicc000nf51ysdp18gsn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-天算计划-Spark-计算任务分发流程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017-12-04/天算计划-Spark-计算任务分发流程/" class="article-date">
+  <time datetime="2017-12-04T09:47:26.000Z" itemprop="datePublished">2017-12-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/分布式计算/">分布式计算</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017-12-04/天算计划-Spark-计算任务分发流程/">天算计划-Spark-计算任务分发流程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Spark-Shell操作"><a href="#Spark-Shell操作" class="headerlink" title="Spark-Shell操作"></a>Spark-Shell操作</h3><p><strong>加载本地文件</strong></p>
+<p>在开始具体词频统计代码之前，需要解决一个问题，就是如何加载文件？</p>
+<p>要注意，文件可能位于本地文件系统中，也有可能存放在分布式文件系统HDFS中，所以，下面我们分别介绍如何加载本地文件，以及如何加载HDFS中的文件。</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> textFile = sc.textFile(<span class="string">"file:///usr/local/spark/mycode/wordcount/word123.txt"</span>)</span><br><span class="line"><span class="comment">//如果文件不存在会在执行诸如 textFile.first()指令时拒绝连接</span></span><br></pre></td></tr></table></figure>
+<p><strong>加载HDFS中的文件</strong></p>
+<p>为了能够读取 HDFS 中的文件，我们需要先启动 Hadoop 中的 HDFS 组件。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start-all</span><br></pre></td></tr></table></figure>
+<p>请使用下面命令创建用户名 hadoop 登录 Linux 系统。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/hdfs dfs -mkdir -p /user/hadoop</span><br></pre></td></tr></table></figure>
+<p>下面我们使用命令查看一下HDFS文件系统中的目录和文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./bin/hdfs dfs -ls .</span><br><span class="line">./bin/hdfs dfs -ls /user/hadoop</span><br><span class="line">//这两个命令等价</span><br></pre></td></tr></table></figure>
+<p>上面命令中，最后一个点号“.”，表示要查看Linux当前登录用户hadoop在HDFS文件系统中与hadoop对应的目录下的文件，也就是查看HDFS文件系统中“/user/hadoop/”目录下的文件</p>
+<p>如果要查看HDFS文件系统根目录下的内容，需要使用下面命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/hdfs dfs -ls /</span><br></pre></td></tr></table></figure>
+<p>下面我们使用<code>dfs -put</code>指令将文件上传到<code>hdfs</code>文件系统中</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/hdfs dfs -put &lt;path&gt; .</span><br></pre></td></tr></table></figure>
+<p>使用<code>-cat</code>指令查看文件内容</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/hdfs dfs -cat ./&lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<p>现在，让我们切换回到spark-shell窗口，编写语句从HDFS中加载word.txt文件，并显示第一行文本内容：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">scala&gt;</span> val textFile = sc.textFile("hdfs://localhost:9000/user/hadoop/&lt;filename&gt;")</span><br><span class="line"><span class="meta">scala&gt;</span> textFile.first()</span><br></pre></td></tr></table></figure>
+<p>如下三条语句也等价</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> textFile = sc.textFile(<span class="string">"hdfs://localhost:9000/user/hadoop/word.txt"</span>)</span><br><span class="line"><span class="keyword">val</span> textFile = sc.textFile(<span class="string">"/user/hadoop/word.txt"</span>)</span><br><span class="line"><span class="keyword">val</span> textFile = sc.textFile(<span class="string">"word.txt"</span>)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.luodian.ink/2017-12-04/天算计划-Spark-计算任务分发流程/" data-id="cjeaokica000mf51y49o82uld" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Kaggle实战-Mecari价格预测" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017-12-03/Kaggle实战-Mecari价格预测/" class="article-date">
+  <time datetime="2017-12-03T08:43:37.000Z" itemprop="datePublished">2017-12-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Kaggle/">Kaggle</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017-12-03/Kaggle实战-Mecari价格预测/">Kaggle实战-Mecari价格预测</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>先从分析别人的visualization kernel入手。</p>
+<h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><p>The training data has 1482535 observations with 7 features. The test data has 693359 rows that we need to predict. According to the competition description, the public leaderboard will be evaluated by ALL of the test data we have at the first stage.</p>
+<p>We can have a a rough look at the features (test data summary is hidden for simplicity)</p>
+<ol>
+<li><strong>train_id / test_id</strong>: A unique key for each item.</li>
+<li><strong>name</strong>: The item’s name as a string.</li>
+<li><strong>item_condition_id</strong>: A factor with 5 levels. As the plot below shows, <strong>the mean prices for different conditions are really close and it’s hard to guess which whether higher / lower condition id is better so far.</strong></li>
+<li><strong>category_name</strong>: The category of the item.</li>
+<li><strong>brand_name</strong>: The brand name of the item. Nearly half of the items do not have a brand.</li>
+<li><strong>shipping</strong>: A binary indicator of the shipping information. (<strong>1 if shipping fee is paid by seller and 0 by buyer</strong>)</li>
+<li><strong>item_description</strong>: A long string containing the raw text of the item description. ~5% of the items do not have a description.</li>
+</ol>
+<h2 id="Shipping"><a href="#Shipping" class="headerlink" title="Shipping"></a><strong>Shipping</strong></h2><p>The shipping cost burden is decently splitted between sellers and buyers with more than half of the items’ shipping fees are paid by the sellers (55%). In addition, the average price paid by users who have to pay for shipping fees is lower than those that don’t require additional shipping cost. This matches with our perception that the sellers need a lower price to compensate for the additional shipping.</p>
+<p>普遍来说：价格低的不怎么需要付邮费，而价格高的需要支付更多的邮费。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span>    <span class="number">0.552726</span></span><br><span class="line"><span class="number">1</span>    <span class="number">0.447274</span></span><br><span class="line">Name: shipping, dtype: float64</span><br></pre></td></tr></table></figure>
+<p><img src="https://www.kaggle.io/svf/1854426/8f395cd10b83bd4e2d2ae59d6a6c80ba/__results___files/__results___15_0.png" alt=""></p>
+<p>对于物品的状况<code>item_condition</code>来说，数值和价格关联不大，目前还不知道具体的作用是什么，处理的时候先扔掉（估计对于非常相似的物品，比较下它的状态或许能够给我们一些启发）。</p>
+<blockquote>
+<p>ID = 5时看起来四分位数和中位数都比较高。</p>
+</blockquote>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fm3o51uu04j30x00oqdfw.jpg" alt=""></p>
+<h3 id="Tokenlize"><a href="#Tokenlize" class="headerlink" title="Tokenlize"></a>Tokenlize</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">stop = set(stopwords.words(<span class="string">'english'</span>))</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tokenize</span><span class="params">(text)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    sent_tokenize(): segment text into sentences</span></span><br><span class="line"><span class="string">    word_tokenize(): break sentences into words</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">try</span>: </span><br><span class="line">        regex = re.compile(<span class="string">'['</span> +re.escape(string.punctuation) + <span class="string">'0-9\\r\\t\\n]'</span>)</span><br><span class="line">        text = regex.sub(<span class="string">" "</span>, text) <span class="comment"># remove punctuation</span></span><br><span class="line">        </span><br><span class="line">        tokens_ = [word_tokenize(s) <span class="keyword">for</span> s <span class="keyword">in</span> sent_tokenize(text)]</span><br><span class="line">        tokens = []</span><br><span class="line">        <span class="keyword">for</span> token_by_sent <span class="keyword">in</span> tokens_:</span><br><span class="line">            tokens += token_by_sent</span><br><span class="line">        tokens = list(filter(<span class="keyword">lambda</span> t: t.lower() <span class="keyword">not</span> <span class="keyword">in</span> stop, tokens))</span><br><span class="line">        filtered_tokens = [w <span class="keyword">for</span> w <span class="keyword">in</span> tokens <span class="keyword">if</span> re.search(<span class="string">'[a-zA-Z]'</span>, w)]</span><br><span class="line">        filtered_tokens = [w.lower() <span class="keyword">for</span> w <span class="keyword">in</span> filtered_tokens <span class="keyword">if</span> len(w)&gt;=<span class="number">3</span>]</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> filtered_tokens</span><br><span class="line">            </span><br><span class="line">    <span class="keyword">except</span> TypeError <span class="keyword">as</span> e: print(text,e)</span><br></pre></td></tr></table></figure>
+<h5 id="TF-IDF"><a href="#TF-IDF" class="headerlink" title="TF-IDF"></a>TF-IDF</h5><p>tf-idf（英语：term frequency–inverse document frequency）是一种用于信息检索与文本挖掘的常用加权技术。tf-idf是一种统计方法，用以评估一字词对于一个文件集或一个语料库中的其中一份文件的重要程度。字词的重要性随着它在文件中出现的次数成正比增加，但同时会随着它在语料库中出现的频率成反比下降。tf-idf加权的各种形式常被搜索引擎应用，作为文件与用户查询之间相关程度的度量或评级。除了tf-idf以外，互联网上的搜索引擎还会使用基于链接分析的评级方法，以确定文件在搜索结果中出现的顺序。</p>
+<p>有很多不同的数学公式可以用来计算tf-idf。这边的例子以上述的数学公式来计算。词频（tf）是一词语出现的次数除以该文件的总词语数。假如一篇文件的总词语数是100个，而词语“母牛”出现了3次，那么“母牛”一词在该文件中的词频就是3/100=0.03。而计算文件频率（DF）的方法是以文件集的文件总数，除以出现“母牛”一词的文件数。所以，如果“母牛”一词在1,000份文件出现过，而文件总数是10,000,000份的话，其逆向文件频率就是log（10,000,000 / 1,000）=4。最后的tf-idf的分数为0.03 * 4=0.12。</p>
+<p>tf-idf算法是创建在这样一个假设之上的：对区别文档最有意义的词语应该是那些在文档中出现频率高，而在整个文档集合的其他文档中出现频率少的词语，所以如果特征空间坐标系取tf词频作为测度，就可以体现同类文本的特点。另外考虑到单词区别不同类别的能力，tf-idf法认为一个单词出现的文本频数越小，它区别不同类别文本的能力就越大。因此引入了逆文本频度idf的概念，以tf和idf的乘积作为特征空间坐标系的取值测度，并用它完成对权值tf的调整，调整权值的目的在于突出重要单词，抑制次要单词。但是在本质上idf是一种试图抑制噪声的加权，并且单纯地认为文本频率小的单词就越重要，文本频率大的单词就越无用，显然这并不是完全正确的。idf的简单结构并不能有效地反映单词的重要程度和特征词的分布情况，使其无法很好地完成对权值调整的功能，所以tf-idf法的精度并不是很高。</p>
+<p>此外，在tf-idf算法中并没有体现出单词的位置信息，对于Web文档而言，权重的计算方法应该体现出HTML的结构特征。特征词在不同的标记符中对文章内容的反映程度不同，其权重的计算方法也应不同。因此应该对于处于网页不同位置的特征词分别赋予不同的系数，然后乘以特征词的词频，以提高文本表示的效果。</p>
+<h4 id="t-SNE"><a href="#t-SNE" class="headerlink" title="t-SNE"></a>t-SNE</h4><p>因为原理不同，导致，tsne 保留下的属性信息，更具代表性，也即最能体现样本间的差异，且TSNE 运行极慢，PCA 则相对较快。</p>
+<p>因此更为一般的处理，尤其在展示（可视化）高维数据时，常常先用 PCA 进行降维，再使用 tsne。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">data_pca = PCA(n_components=<span class="number">50</span>).fit_transform(data)</span><br><span class="line">data_pca_tsne = TSNE(n_components=<span class="number">2</span>).fit_transform(data_pca)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.luodian.ink/2017-12-03/Kaggle实战-Mecari价格预测/" data-id="cjeaokic3000af51yfd72c01r" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-隐狄利克雷分布" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017-12-03/隐狄利克雷分布/" class="article-date">
+  <time datetime="2017-12-03T06:58:55.000Z" itemprop="datePublished">2017-12-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017-12-03/隐狄利克雷分布/">隐狄利克雷分布</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在做<code>Mercari价格预测</code>的比赛中遇到了相关的内容，之前没有接触过<code>nlp</code>，下学期又要去上刘挺老师的创新研修，在这里积累一点相关的知识。</p>
+<h1 id="隐狄利克雷分布"><a href="#隐狄利克雷分布" class="headerlink" title="隐狄利克雷分布"></a>隐狄利克雷分布</h1><p>隐含狄利克雷分布简称LDA(Latent Dirichlet allocation)，是一种主题模型，它可以将文档集中每篇文档的主题按照概率分布的形式给出。同时它是一种无监督学习算法，在训练时不需要手工标注的训练集，需要的仅仅是文档集以及指定主题的数量k即可。此外LDA的另一个优点则是，对于每一个主题均可找出一些词语来描述它。</p>
+<p>LDA是一种典型的词袋模型，即它认为一篇文档是由一组词构成的一个集合，词与词之间没有顺序以及先后的关系。一篇文档可以包含多个主题，文档中每一个词都由其中的一个主题生成。</p>
+<ol>
+<li>etc/hostname</li>
+<li>etc/hosts</li>
+<li>~/.ssh/config</li>
+<li>~/.ssh/authorized_keys</li>
+<li>~/.ssh/</li>
+<li>​</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.luodian.ink/2017-12-03/隐狄利克雷分布/" data-id="cjeaokidp0026f51y3b9wa317" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Hexo-Material主题中Mathjax的配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017-12-01/Hexo-Material主题中Mathjax的配置/" class="article-date">
+  <time datetime="2017-12-01T07:17:26.000Z" itemprop="datePublished">2017-12-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/其余/">其余</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017-12-01/Hexo-Material主题中Mathjax的配置/">Hexo-Material主题中Mathjax的配置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近Hexo无故始终出渲染的问题，删掉重建的过程中发现是因为操作系统-内存那节因为有些是从PPT里拷出来的，导致了无法识别符号，渲染失败。</p>
+<p>在重建的过程中，最头疼的就是 Mathjax 的配置了，实现这个效果的插件似乎有很多个版本，有些也有时效性，而且挺多插件，针对于我当前使用的Material主题并无效果，如果使用最出名的Next主题似乎就要好很多。</p>
+<p>下面简单记录下配置Mathjax的过程。</p>
+<h3 id="修改默认的render"><a href="#修改默认的render" class="headerlink" title="修改默认的render"></a>修改默认的render</h3><p><code>hexo</code> 默认的渲染引擎是 <code>marked</code>，但是 <code>marked</code> 不支持 <code>mathjax</code>。 <code>kramed</code> 是在 <code>marked</code>的基础上进行修改。我们在工程目录下执行以下命令来安装 <code>kramed</code>。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br><span class="line">npm uninstall hexo-math --save</span><br><span class="line">npm install hexo-renderer-mathjax --save //这个使用来代替hexo-math的</span><br></pre></td></tr></table></figure>
+<p>执行了这两个操作这个，不用去<code>_config.yml</code>文件中改什么plugin之类的东西（这些是之前使用hexo-math才需要的操作）。</p>
+<h3 id="修改kramed的渲染细节"><a href="#修改kramed的渲染细节" class="headerlink" title="修改kramed的渲染细节"></a>修改kramed的渲染细节</h3><p>这一步不做其实也可以，但是会出现一些转义的bug.</p>
+<ol>
+<li><p>接下来在 <code>/node_modules/hexo-renderer-kramed/lib/renderer.js</code>，修改</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatText</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Fit kramed's rule: $$ + \1 + $$</span></span><br><span class="line">    <span class="keyword">return</span> text.replace(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">'$$$$$1$$$$'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 将上面的修改为如下的</span></span><br><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatText</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>到<code>&lt;path-to-your-project/node_modules/kramed/lib/rules/inline.js</code>，将11行的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">escape</span>: <span class="regexp">/^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/</span></span><br><span class="line">修改为</span><br><span class="line"><span class="built_in">escape</span>: <span class="regexp">/^\\([`*\[\]()# +\-.!_&gt;])/</span>,</span><br></pre></td></tr></table></figure>
+<p>将20行的：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">em: <span class="regexp">/^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span>,</span><br><span class="line">修改为</span><br><span class="line">em: <span class="regexp">/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span>,</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>配置Material主题的Mathjax加载的CDN链接：</p>
+<p>在<code>material/_config.yml</code>下添加如下的链接</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">vendors:</span><br><span class="line"># MaterialCDN</span><br><span class="line">#   You can load theme unique files from your private cdn or oss.</span><br><span class="line">#   The new src will have the base domain you configured below.</span><br><span class="line">#   For example</span><br><span class="line">#       materialcdn: https://cdn.jsdelivr.net/npm/hexo-material@1.4.0/source</span><br><span class="line">    materialcdn: https:<span class="comment">//cdn.jsdelivr.net/npm/hexo-material@1.4.0/source</span></span><br><span class="line">    # MathJax 2.7.0-2.7.1</span><br><span class="line">    mathjax: https:<span class="comment">//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js</span></span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.luodian.ink/2017-12-01/Hexo-Material主题中Mathjax的配置/" data-id="cjeaokibx0005f51yz1fwprby" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">__('next') &raquo;</a>
+  </nav>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Codeforces/">Codeforces</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Kaggle/">Kaggle</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/其余/">其余</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/分布式计算/">分布式计算</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/异常检测/">异常检测</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资/">投资</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/操作系统/">操作系统</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/时间序列/">时间序列</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/机器学习/">机器学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/软件工程/">软件工程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/量化交易/">量化交易</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随想/">随想</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/大数据异常检测/">大数据异常检测</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/机器学习/">机器学习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/大数据异常检测/" style="font-size: 10px;">大数据异常检测</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018-03-01/2018-MetaTrade-网格交易简述/">MetaTrader-网格交易简述</a>
+          </li>
+        
+          <li>
+            <a href="/2018-02-26/异常检测-2018春季第一周周报/">异常检测-2018春季第一周周报</a>
+          </li>
+        
+          <li>
+            <a href="/2018-01-24/Contest-911-D-Inversion-Counting/">Contest-911-D-Inversion Counting</a>
+          </li>
+        
+          <li>
+            <a href="/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/">基于统计方法进行时序数据预测的异常检测模型</a>
+          </li>
+        
+          <li>
+            <a href="/2017-12-27/数据之美-时间序列分析/">数据之美-时间序列分析</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
 </aside>
-
-                    
-
-                    
-                        <!-- Footer Top Button -->
-                        <div id="back-to-top" class="toTop-wrap">
-    <a href="#top" class="toTop">
-        <i class="material-icons footer_top-i">expand_less</i>
-    </a>
-</div>
-
-                    
-
-                    <!--Footer-->
-<footer class="mdl-mini-footer" id="bottom">
-    
-        <!-- Paradox Footer Left Section -->
-        <div class="mdl-mini-footer--left-section sns-list">
-    <!-- Twitter -->
-    
-        <a href="https://twitter.com/naidoul" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
-                <span class="visuallyhidden">Twitter</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Facebook -->
-    
-        <a href="https://www.facebook.com/profile.php?id=100010575373244" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
-                <span class="visuallyhidden">Facebook</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Google + -->
-    
-        <a href="https://plus.google.com/u/0/100896813044234592058" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
-                <span class="visuallyhidden">Google Plus</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Weibo -->
-    
-
-    <!-- Instagram -->
-    
-
-    <!-- Tumblr -->
-    
-
-    <!-- Github -->
-    
-        <a href="https://github.com/Luodian" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
-                <span class="visuallyhidden">Github</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- LinkedIn -->
-    
-
-    <!-- Zhihu -->
-    
-        <a href="https://www.zhihu.com/people/luo-dian-zhu-84/activities" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
-                <span class="visuallyhidden">Zhihu</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Bilibili -->
-    
-
-    <!-- Telegram -->
-    
-</div>
-
-
-        <!--Copyright-->
-        <div id="copyright">
-            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Luodian.ink
-        </div>
-
-        <!-- Paradox Footer Right Section -->
-
-        <!--
-        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
-        It will not impact the appearance and can give developers a lot of support :)
-
-        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
-        它不会影响美观并可以给开发者很大的支持。 :)
-        -->
-
-        <div class="mdl-mini-footer--right-section">
-            <div>
-                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
-                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
-            </div>
-        </div>
-    
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Luodian<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
 </footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-                    <!-- Import File -->
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-    <script>lsloader.load("js/lazyload.min.js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
-    <script>lsloader.load("js/js.min.js","/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
+<script src="/js/script.js"></script>
 
-
-
-    <script>lsloader.load("js/nprogress.js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
-
-
-<script type="text/ls-javascript" id="NProgress-script">
-    NProgress.configure({
-        showSpinner: true
-    });
-    NProgress.start();
-    $('#nprogress .bar').css({
-        'background': '#29d'
-    });
-    $('#nprogress .peg').css({
-        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
-    });
-    $('#nprogress .spinner-icon').css({
-        'border-top-color': '#29d',
-        'border-left-color': '#29d'
-    });
-    setTimeout(function() {
-        NProgress.done();
-        $('.fade').removeClass('out');
-    }, 800);
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- UC Browser Compatible -->
-<script>
-	var agent = navigator.userAgent.toLowerCase();
-	if(agent.indexOf('ucbrowser')>0) {
-		document.write('<link rel="stylesheet" href="/css/uc.css">');
-	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-	}
-</script>
-
-<!-- Window Load-->
-<script type="text/ls-javascript" id="window-load">
-    $(window).on('load', function() {
-        // Post_Toc parent position fixed
-        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
-    });
-</script>
-
-<!-- MathJax Load-->
-
-<script type="text/ls-javascript" id="lazy-load">
-    // Offer LazyLoad
-    queue.offer(function(){
-        $('.lazy').lazyload({
-            effect : 'show'
-        });
-    });
-
-    // Start Queue
-    $(document).ready(function(){
-        setInterval(function(){
-            queue.execNext();
-        },200);
-    });
-</script>
-
-<!-- Bing Background -->
-
-
-<script>
-    (function(){
-        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
-
-        for (var i = 0; i < scriptList.length; ++i) {
-            var item = scriptList[i];
-            lsloader.runInlineScript(item.id,item.id);
-        }
-    })()
-console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
-</script>
-
-                </main>
-            </div>
-        <script type="text/x-mathjax-config">
+  </div>
+<script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [ ["$","$"], ["\\(","\\)"] ],
@@ -1297,5 +869,4 @@ console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viose
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
-    
 </html>

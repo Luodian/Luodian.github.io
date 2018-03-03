@@ -1,1456 +1,1454 @@
 <!DOCTYPE html>
-<html style="display: none;" lang="zh">
-    <head>
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <!--
-        © Material Theme
-        https://github.com/viosey/hexo-theme-material
-        Version: 1.4.0 -->
-    <script>window.materialVersion = "1.4.0"</script>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>Luodian.ink</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Luodian.ink">
+<meta property="og:url" content="https://www.luodian.ink/index.html">
+<meta property="og:site_name" content="Luodian.ink">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Luodian.ink">
+  
+    <link rel="alternate" href="/atom.xml" title="Luodian.ink" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
 
-    <!-- Title -->
-    
-    <title>
-        
-        Luodian.ink
-    </title>
-
-    <!-- dns prefetch -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-    
-    
-    
-    
-    
-        <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
-    
-    
-    
-    
-    
-    
-
-    <!-- Meta & Info -->
-    <meta http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="theme-color" content="#0097A7">
-    <meta name="author" content="Luodian">
-    <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="luodian">
-
-    <!-- Site Verification -->
-    
-    
-
-    <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" sizes="192x192" href="/img/favicon.png">
-    <link rel="apple-touch-icon" href="/img/favicon.png">
-
-    <!--iOS -->
-    <meta name="apple-mobile-web-app-title" content="Title">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="480">
-
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Luodian.ink">
-
-    <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://www.luodian.ink">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="Luodian.ink">
-    <meta property="og:image" content="/img/favicon.png" />
-    <meta property="og:description" content="">
-    
-
-    
-
-    <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="Luodian.ink">
-    <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="/img/favicon.png">
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://www.luodian.ink" />
-
-    <!-- Add canonical link for SEO -->
-    
-        <link rel="canonical" href="https://www.luodian.ink" />
-    
-
-    <!-- Structured-data for SEO -->
-    
-        
-<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "Website",
-    "publisher": {
-        "@type": "Organization",
-        "name": "Luodian.ink",
-        "logo": "/img/favicon.png"
-    },
-    "url": "https://www.luodian.ink/index.html",
-    "image": {
-        "@type": "ImageObject",
-        "url": "/img/favicon.png"
-    },
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://www.luodian.ink"
-    },
-    "description": ""
-}
-</script>
-
-
-
-
-    
-
-    <!--[if lte IE 9]>
-        <link rel="stylesheet" href="/css/ie-blocker.css">
-
-        
-            <script src="/js/ie-blocker.zhCN.js"></script>
-        
-    <![endif]-->
-
-    <!-- Import lsloader -->
-    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
-
-    <!-- Import CSS & jQuery -->
-    
-        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
-        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/css/style.min.css?oCSEO3ST+aEypEwttTDI9g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
-        
-        
-            <style>
-    
-    .footer-sns-facebook {
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNiA3OGMtMjIuNCA1LjItNTUuOCA0MC4yLTYwLjYgNjMuNC0xLjQgNi40LTIgMTI5LjgtMS42IDM2Ny42LjYgMjk4LjYgMSAzNTguOCAzLjQgMzYzIDExIDIwLjIgMjEuNiAzMi40IDM3LjIgNDMgMTUgMTAuMiAxNy40IDExLjIgMzMgMTMgMTEuMiAxLjQgMTM2IDIgMzY1IDEuNiAzMTQtLjYgMzQ4LjYtMSAzNTUtMy44IDE1LjgtNy4yIDMzLjgtMjIgNDMuMi0zNS40IDUuMi03LjQgMTAuOC0xNi42IDEyLjYtMjAuNCAyLjgtNi40IDMuMi00MC44IDMuOC0zNTQgLjQtMjIzLS4yLTM1My40LTEuNC0zNjUtMi0xNy0yLjYtMTguNi0xMy0zNC04LjYtMTIuNi0xNC4yLTE4LjQtMjUuMi0yNS44LTcuOC01LjQtMTcuNC0xMS0yMS42LTEyLjQtNi0yLjItNzIuOC0yLjYtMzY1LjQtMi42LTE5Ni44LjItMzYxIC44LTM2NC40IDEuOHptNjU3LjYgODcuOGw0LjggMy44djU1LjJjMCA1NC42IDAgNTUuMi00LjYgNTkuNi00LjQgNC40LTYgNC42LTUwLjIgNS42bC00NS42IDEtNy4yIDUuNmMtMTAuNCA4LTE2LjggMTcuMi0xOS4yIDI3LjQtMSA1LTEuOCAyNC44LTEuOCA0NCAuMiAzOCAxLjYgNDQuNiAxMC44IDQ4IDIuOCAxLjIgMjguNCAyIDU2LjggMiA0Ny44IDAgNTIgLjIgNTYuMiAzLjhsNC44IDMuOHY1NS4yYzAgNTQuNiAwIDU1LjItNC42IDU5LjYtNC40IDQuNi01LjQgNC42LTU3IDUuMi0yOC44LjItNTQuNC44LTU2LjggMS40LTIuNC42LTUuNiAzLTYuOCA1LjQtMS44IDMuMi0yLjQgNDEuNC0yLjYgMTQzLjJsLS4yIDEzOC44LTUuNiA0LjgtNS42IDQuOEg2MDljLTUyLjQgMC01Mi44IDAtNTguMi00LjZsLTUuNC00LjYtLjItMTQwLjYtLjItMTQwLjYtNC44LTMuOGMtNC4yLTMuNC04LTMuOC0zNS42LTMuOC0zMi44IDAtNDEtMS44LTQzLjYtMTAtLjYtMi4yLTEuMi0yNS40LTEuMi01MS40IDAtNjAuOC0uMi01NyAzLjQtNjEuNiAyLjgtMy42IDYtNCAzNy44LTUgMzMtMSAzNS4yLTEuMiAzOS40LTUuNiA0LjYtNC40IDQuNi01LjIgNS44LTcxIDEuMi03My40LjItNjcuMiAxNi42LTk5LjQgOC0xNS44IDEyLjgtMjIgMjgtMzcgMTUuMi0xNS4yIDIxLjQtMTkuNiAzOC4yLTI4IDExLTUuNCAyNC0xMSAyOS0xMi4yIDYuMi0xLjggMjguNi0yLjYgNzEuMi0yLjYgNTguNi0uMiA2Mi42IDAgNjcgMy42eiIvPjwvc3ZnPg==);
-    }
-    
-    
-    .footer-sns-twitter {
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNiA3OGMtMjIuNCA1LjItNTUuOCA0MC4yLTYwLjYgNjMuNC0xLjQgNi40LTIgMTI5LjgtMS42IDM2Ny42LjYgMjk4LjYgMSAzNTguOCAzLjQgMzYzIDExIDIwLjIgMjEuNiAzMi40IDM3LjIgNDMgMTUgMTAuMiAxNy40IDExLjIgMzMgMTMgMTEuMiAxLjQgMTM2IDIgMzY1IDEuNiAzMTQtLjYgMzQ4LjYtMSAzNTUtMy44IDE1LjgtNy4yIDMzLjgtMjIgNDMuMi0zNS40IDUuMi03LjQgMTAuOC0xNi42IDEyLjYtMjAuNCAyLjgtNi40IDMuMi00MC44IDMuOC0zNTQgLjQtMjIzLS4yLTM1My40LTEuNC0zNjUtMi0xNy0yLjYtMTguNi0xMy0zNC04LjYtMTIuNi0xNC4yLTE4LjQtMjUuMi0yNS44LTcuOC01LjQtMTcuNC0xMS0yMS42LTEyLjQtNi0yLjItNzIuOC0yLjYtMzY1LjQtMi42LTE5Ni44LjItMzYxIC44LTM2NC40IDEuOHptNTMyLjggMjA1YzEwIDQgMjMgMTAuOCAyOC44IDE1LjIgMTIuNiA5LjIgMTYuNiAxMC42IDI5LjQgOS40IDYuNi0uNiAxMy0zLjIgMjAuNC04LjIgMTEuMi03LjYgMTkuNC05LjIgMjMuNi01IDMuNiAzLjYgMi44IDktMi44IDE4LjYtNy4yIDEyLjQtNiAxOC44IDQuMiAyNC4yIDQuNCAyLjIgOC4yIDUuNiA4LjYgNy40IDEgNC44LTEyLjYgMjQuMi0yMiAzMS44LTExLjggOS4yLTE3LjIgMjIuNi0xOS42IDQ3LjgtNC44IDUwLjQtNy44IDY2LjYtMTYuNCA4NS40LTMgNy03IDE3LjgtOC44IDI0LTEuOCA2LjQtNSAxNC42LTcuNCAxOC40LTIuMiAzLjgtNy40IDEzLTExLjQgMjAuNC0xNy4yIDMwLjgtNDMuNCA2MS40LTcxLjQgODMuOC0yNS42IDIwLjQtNDYgMzMuMi02NC4yIDQwLjItOC40IDMuMi0xOCA3LjYtMjEuNCA5LjYtNy40IDQuNi0yMi40IDguNi01Ny4yIDE1LTYyLjIgMTEuNi03OS4yIDExLjQtMTM1LjYtMS0zMi40LTctMzguNi05LTUyLTE2LjgtMjEuNC0xMi42LTI0LjItMTQuOC0yNC4yLTE5LjQgMC02LjIgMTAuMi05LjIgMzUtMTAuNCAyMi40LTEgMjguNi0yLjYgNTctMTQuMiAyMy44LTkuOCAyOS40LTEyLjggMzAuNC0xNi44IDIuMi04LjItMy0xMy4yLTI2LjgtMjUuNC0yNS44LTEzLjItMzIuMi0xOC40LTQzLjgtMzUuOC05LTEzLjYtMTAtMjEuMi0zLjYtMzMuNiA1LjQtMTAuOCAzLjYtMTUtMTEuOC0yNS40LTktNi0xNC0xMS42LTIwLjgtMjIuNi0yMy40LTM3LjgtMjUtNTAuOC03LjItNTkuOCA0LjgtMi40IDkuNC01LjQgMTAuMi02LjYgMi44LTQuMi0uNC0xNS42LTguNC0yOS0xMS42LTE5LjYtMTMuMi0yNS44LTEzLjItNTUuMiAwLTI4LjggMi42LTM3LjggMTItNDAuMiA5LTIuMiAxNC44IDEgMzUuNiAyMC4yIDI0LjggMjIuOCA0My42IDM2LjYgNjIuOCA0NS44IDggMy44IDE3LjggOS4yIDIyIDEyIDQuMiAyLjggMTQuOCA3IDIzLjQgOS4yIDguNiAyLjIgMjQuMiA2LjggMzQuOCAxMC4yIDEzLjQgNC40IDIzLjYgNi40IDMzIDYuNiAxMi44LjIgMTQuMi0uMiAxOC42LTUuNCA0LTQuOCA0LjgtNy44IDQuOC0xOS4yIDAtMTQuNCA1LjYtMzkuNiAxMS4yLTUwLjYgNC4yLTguNCAyOS4yLTM0LjIgMzkuOC00MS40IDcuOC01LjQgMzUuNi0xNiA1Mi0yMCAxNC4yLTMuNiAzMi42LTEuMiA1Mi40IDYuOHoiLz48L3N2Zz4=);
-    }
-    
-    
-    .footer-sns-gplus {
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNiA3OGMtMjIuNCA1LjItNTUuOCA0MC4yLTYwLjYgNjMuNC0xLjQgNi40LTIgMTI5LjgtMS42IDM2Ny42LjYgMjk4LjYgMSAzNTguOCAzLjQgMzYzIDExIDIwLjIgMjEuNiAzMi40IDM3LjIgNDMgMTUgMTAuMiAxNy40IDExLjIgMzMgMTMgMTEuMiAxLjQgMTM2IDIgMzY1IDEuNiAzMTQtLjYgMzQ4LjYtMSAzNTUtMy44IDE1LjgtNy4yIDMzLjgtMjIgNDMuMi0zNS40IDUuMi03LjQgMTAuOC0xNi42IDEyLjYtMjAuNCAyLjgtNi40IDMuMi00MC44IDMuOC0zNTQgLjQtMjIzLS4yLTM1My40LTEuNC0zNjUtMi0xNy0yLjYtMTguNi0xMy0zNC04LjYtMTIuNi0xNC4yLTE4LjQtMjUuMi0yNS44LTcuOC01LjQtMTcuNC0xMS0yMS42LTEyLjQtNi0yLjItNzIuOC0yLjYtMzY1LjQtMi42LTE5Ni44LjItMzYxIC44LTM2NC40IDEuOHpNNDMwIDI5NS40YzQwLjYgMTUuNCA1Ni42IDIzLjggNzIuNiAzOC40IDYuOCA2LjIgNy4yIDE1LjIgMSAyMy40LTYuMiA4LTMzLjYgMzMuOC0zOSAzNi42LTUuNiAyLjgtMTcuNiAyLjgtMjMuMi0uMi0yLjQtMS4yLTguMi01LjItMTMtOC44LTExLjItOC42LTI0LjYtMTEuMi01NS4yLTExLjItMjcuNCAwLTQwLjYgMi42LTUyLjIgMTAuNC00LjQgMi44LTEyLjIgNy42LTE3LjIgMTAuNi0yMyAxMy4yLTUxLjQgNTUtNTUuOCA4Mi40LTIuNiAxNS42LTIuNCAzNC44LjIgNTEgMi44IDE3LjQgMTkuOCA0OC44IDM1LjIgNjUuMiAxNiAxNi42IDQ1IDMzLjYgNjIuOCAzNi42IDI2LjggNC40IDY1LjggMS42IDc5LjQtNS44IDIwLjYtMTEuNCAzMS0xOSA0MS0zMC40IDE4LjgtMjEuNiAyMy40LTM0LjIgMTUuNi00My44LTMuOC00LjgtNC40LTQuOC01MS01LjgtNjAuOC0xLjItNTYuMiAyLjItNTYuMi00My4yIDAtMzIuNC4yLTMzLjIgNC44LTM3IDQuNC0zLjYgOS0zLjggOTItMy44IDc5IDAgODcuOC40IDk0LjIgMy42IDExLjIgNS42IDEzIDExLjQgMTIuOCA0My40IDAgMjUuNC0uOCAzMC44LTcuNiA1OC00IDE2LjYtOS44IDM0LTEyLjYgMzktMi44IDUtOC4yIDE0LjItMTEuNiAyMC42LTguNCAxNS40LTI3LjIgMzYuOC00MC44IDQ2LjYtNS44IDQuNC0xMy44IDEwLjItMTcuNiAxMy4yLTMuOCAzLTExIDctMTYuMiA4LjgtNS4yIDEuOC0xNi4yIDYuNC0yNC40IDEwLTIyLjQgOS42LTM0LjggMTEuNi03MyAxMS42LTM3LjYuMi00Ny0xLjQtNzEtMTItOC4yLTMuNi0xNy42LTcuMi0yMC44LTgtMTUuOC0zLjgtNjctNDUuMi03Ny44LTYyLjgtMi4yLTMuOC03LjYtMTEuNi0xMS44LTE3LjItNC4yLTUuNC05LTE0LTEwLjYtMTktMS44LTQuOC02LjItMTYtMTAtMjQuOC0zLjYtOC44LTcuOC0yMi4yLTkuMi0yOS42LTMuMi0xOC44LTEuNC03OS40IDIuOC05MS40IDEzLjgtNDAuNiAzNS42LTc4IDU4LjgtMTAwLjIgMTQtMTMuNiA0Ny4yLTM2LjQgNTgtMzkuOCA0LjItMS40IDEzLjQtNS4yIDIwLjYtOC40IDIyLTEwIDMyLjgtMTEuNiA3Ni0xMSAzMy44LjYgNDAuNCAxLjIgNTAgNC44em0zNDAuOCA4MC44YzggMy42IDkuNiAxMS4yIDkuMiAzOS4yLS42IDM0LjQtLjYgMzQgNSAzOS42IDQuOCA1IDUuNCA1IDM3LjYgNSA0My40IDAgNDQuNC44IDQzLjIgMzYuMi0uOCAxNy0xLjIgMTguNC02LjQgMjMtNS40IDQuNi02LjYgNC44LTM3LjYgNC44LTMxLjIgMC0zMiAuMi0zNi44IDUtNS42IDUuNC01LjYgNC40LTUgNDEuMi40IDI2LjQuMiAyNy40LTQuNiAzMy00LjggNS42LTYgNS44LTI0LjQgNi40LTIwLjguOC0yOS42LTEuNC0zMy40LTguNC0xLjQtMi42LTItMTUuNi0xLjgtMzUuNi40LTMxLjIuNC0zMS42LTQuNi0zNi42cy01LjYtNS0zNi01Yy0xOC44IDAtMzMtLjgtMzYtMi4yLTcuNi0zLjYtOS42LTExLjItOC44LTMzLjguOC0yOC4yLjQtMjggNDEtMjggNDUuNCAwIDQ1LjQgMCA0NC42LTQyLjYtLjYtMzMtLjYtMzMgNS0zOC40IDQuNC00LjYgNi4yLTUgMjQuOC01IDExIDAgMjIuMiAxIDI1IDIuMnoiLz48L3N2Zz4=);
-    }
-    
-    
-    
-    
-    
-    .footer-sns-github {
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNCA3OGMtNi40IDEuNC0yNi40IDE0LjItMzYgMjIuOC04IDcuMi0yMiAyOS44LTI0LjQgMzkuMi0xLjYgNi40LTIgMTEzLjItMS42IDM2OCAuNiAyOTkuNCAxIDM1OS44IDMuNCAzNjQgMTEgMjAuMiAyMS42IDMyLjQgMzcuMiA0MyAxNS42IDEwLjYgMTcuMiAxMS4yIDM0LjIgMTMuMiAxMC42IDEuMiA2My40IDEuNiAxMjcuNiAxLjRsMTA5LjYtLjYgNi02LjggNi4yLTYuOC0xLjItMjUuMmMtLjgtMTUuOC0uMi0zMy40IDEuNC00Ny4yIDMtMjUuNCAxLjQtMzYuMi02LTQzLjItNS00LjYtNi4yLTQuOC0zMC42LTQuMi0yNy42LjgtMjQgMS42LTY4LjgtMTYtOC42LTMuNC0yMi42LTE4LTI4LjQtMjkuOC0xMS40LTIyLjgtMjctNDUtMzkuMi01NS42LTE0LTEyLjItMTkuOC0yMC44LTE5LjgtMjguNiAwLTExLjYgMTMuNi0xMi42IDMzLjItMi40IDE2LjYgOC44IDIwLjggMTIuNCA0MC44IDM2LjIgMjQuMiAyOC42IDMxIDMzLjYgNTQgMzkuNiAxNS4yIDQgNDIuMiAzIDUxLjQtMS44IDktNC42IDE4LTE1LjIgMjQuNC0yOS4yIDExLjQtMjQuMiA3LjQtMzEuMi0yMC42LTM2LjgtOS44LTItMjkuMi04LTQzLjQtMTMuNC00MC40LTE1LjgtNjQuNi0zNy40LTg1LjQtNzYuMi0xMS42LTIxLjgtMTUuNC0zMy0xOC4yLTUzLjYtNC4yLTMyLjItNC44LTYwLjItMS40LTg0IDMuNC0yMy44IDYuOC0zMi44IDIwLjItNTQgNC02IDguOC0xNS42IDExLTIxLjQgMy44LTEwIDMuOC0xMS42IDEtMzAtNS4yLTM0LjItMy4yLTUyLjQgNy42LTcwLjIgNy4yLTEyLjIgMTUtMTcuMiAyNC4yLTE1LjggMTIuOCAyLjIgNTIgMTcuNCA2Ni44IDI2LjIgMjYgMTUgMjkgMTUuNCA4Mi40IDcuMiAyNC42LTMuOCAzMy44LTQuMiA2MC0zLjIgMTcgLjYgNDEuNCAzIDU0IDUuMiAzOC40IDYuNiA0OS42IDUuMiA3My0xMCA2LjYtNC4yIDE3LjQtOS40IDI0LTExLjYgNi42LTIuMiAxNi01LjggMjEtOC4yIDEzLTYgMjgtNS42IDM1LjYuOCAxMi40IDEwLjQgMTguNiA0MS40IDE0LjQgNzEuNi00LjQgMzAuNi0zIDM5LjQgOC40IDUzLjggMy40IDQuNCAxMS4yIDE5LjIgMTcuNCAzMy4yTDc3NSA0NDN2NzhsLTEwIDI4Yy0xNS4yIDQzLjItMzYuOCA3My4yLTY2LjIgOTIuOC0xMy40IDguOC01NyAyNS40LTc2LjggMjktMjguMiA1LjItMzMuMiAxMi42LTIyIDMyLjIgMTEuMiAxOS40IDEyLjQgMzIuOCAxMS42IDEyOS42bC0uNiA4NS44IDUuNCA0LjZjMy42IDMgOS4yIDUuMiAxNiA2IDUuOC44IDYwLjIgMSAxMjAuNi42IDEwOC40LS42IDExMC4yLS42IDExOS01IDI0LTExLjYgNDAtMjcuNCA1MS42LTUwLjZsNS40LTExIC42LTM0N2MuNC0yMjMtLjItMzUzLjQtMS40LTM2NS0yLTE3LTIuNi0xOC42LTEzLTM0LTEwLjYtMTUuNC0yMi44LTI2LjItNDMuMi0zNy4yLTQuMi0yLjQtNjQuNi0yLjgtMzY2LTMuMi0xOTguNiAwLTM2NCAuNC0zNjcuNiAxLjR6Ii8+PC9zdmc+);
-    }
-    
-    
-    
-    .footer-sns-zhihu {
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzYuOCA3OC44Yy04LjYgMi44LTI0IDEyLjQtMzMuNiAyMS04LjYgNy44LTIxLjQgMjcuOC0yNC40IDM3LjgtNC4yIDE0LTQgNzIzLjQgMCA3MzMuNCA4LjYgMjAuNiAzNi44IDQ4LjYgNTYgNTUuNiA5IDMuNCA3NDcuNCAzLjQgNzU2LjQgMCAxOS44LTcuMiA0OS0zNi42IDU2LTU2LjIgMi4yLTYgMi42LTc1LjYgMi44LTM2Ni40IDAtMjMzLjgtLjYtMzYxLjQtMi0zNjYtMS4yLTMuOC02LjYtMTMuOC0xMi4yLTIyLjItOC4yLTEyLjItMTMuNC0xNy40LTI1LjgtMjUuNi04LjQtNS44LTE5LTExLjQtMjMuMi0xMi4yLTQuNi0xLjItMTYzLjItMS44LTM3NC44LTEuOC0yOTMgMC0zNjguNi42LTM3NS4yIDIuNnptMTkwIDE0NS42YzUuNCA3LjYgNCAxNy40LTQuOCAzMS42LTkuOCAxNi0xMC44IDI3LjQtMyAzNSAyLjYgMi44IDYuNCA1IDguNCA1czM3LjguNCA3OS42LjZjNjggLjQgNzYuNi44IDgyLjQgMy44IDkuMiA1IDEyLjYgMTEgMTIuNiAyMiAwIDctMS4yIDEwLjgtNC44IDE1bC00LjggNS40LTM4IC4yYy01My44IDAtNTMuOCAwLTU1LjQgNTEuMi0uNiAxOC0xLjYgNDIuOC0yLjIgNTUtMS4yIDIyLjguNiAzMS42IDcuNiAzNi4yIDEuNC44IDIyLjIgMiA0NiAyLjZsNDMuMiAxIDguOCA2YzE1LjQgMTAuOCAxNy44IDI5LjIgNSAzNy01LjggMy42LTEwLjIgNC01MS44IDQtMzEgMC00NyAuOC01MC42IDIuNC03IDMuMi0xNC4yIDE3LjYtMTcuMiAzNC40LTMuMiAxNi42LTEgMjEuOCA5LjYgMjUuMiAxMy40IDQuMiAyMS44IDExLjIgNDkgNDEuNCAzNSAzOC44IDM2LjYgNDEgNDEuOCA1OC44IDcgMjMuOCAyLjIgNDEuOC0xMS40IDQxLjgtNy42IDAtMTItMy0yMS0xNC42LTEzLjgtMTcuNC01NC40LTY1LjgtNjItNzMuOC0xNS4yLTE2LTI5LjQtNS44LTM4LjggMjcuNC0xLjggNi42LTguOCAyMy4yLTE1LjYgMzctMTAuOCAyMi0xNCAyNi44LTI3LjQgMzkuNi0xOS42IDE5LjItMjYuNCAyMy01My42IDI5LjYtMjcuMiA2LjQtMzcgNS42LTM4LTMuNi0xLTguNCA0LjQtMTYuNCAyMC0yOSAxNi0xMyAzNi44LTM2LjYgNDUuMi01MS40IDMtNS4yIDguMi0xMy44IDExLjYtMTkgMy40LTUgMTEuOC0yMC40IDE4LjYtMzQuMiAxMC0yMCAxMy42LTI5LjQgMTcuMi00NyAyLjYtMTIuMiA2LjItMjUuNCA3LjgtMjkuNCA0LTkuNCA0LTIxLjQuMi0yNy01LjItNy40LTE2LTguOC02Mi42LTguNC01MC40LjQtNTUuMi0uOC01Ny42LTEzLjItMS44LTEwLjQgNS44LTI0LjQgMTYuMi0yOS44IDcuNC0zLjggMTEuOC00LjIgNTYuMi00LjhsNDguNC0uOCA0LjYtNWM0LjgtNSA0LjgtNSA1LTYxLjYgMC0zNS4yLS44LTU5LjItMi02My4yLTMuOC0xMS4yLTExLTE0LjgtMzAuMi0xNC44cy0yMS40IDEuNC0zMS4yIDE4LjJjLTguMiAxNC40LTIwLjYgMjguOC0zMy4yIDM4LjgtMTMuMiAxMC40LTIxLjYgMTMtMjggOS04LjQtNS42LTUuMi0yMy4yIDguMi00My4yIDQtNi40IDkuMi0xOC42IDEyLjItMjkuNiAzLTEwLjIgNy40LTIzLjIgMTAtMjkgMi40LTUuNiA2LTE2LjggOC0yNC42IDUuNi0yMy42IDI0LTUwLjggMzkuNC01OC40IDExLjItNS40IDE4LjYtNS40IDIyLjQuMnptNDUyIDY4LjJjMTEuOCA3LjggMTEuNC0uOCAxMC44IDIxNi0uNiAxODEtLjggMTk4LjgtNCAyMDMtNy42IDEwLjgtOS44IDExLjQtNTMuNiAxMi40bC00MSAxLTE0IDcuOGMtNy42IDQuMi0yMS4yIDEzLTI5LjggMTkuNC0yNS44IDE5LjItMzUgMTkuOC00My40IDMuMi0xMS44LTIzLjItMjMuNi0zMy4yLTM5LjQtMzMuNC04LjggMC0xMy42LTIuOC0xNy4yLTkuOC0yLjYtNC44LTMtMzMuOC0yLjYtMjA4LjguNC0xOTkuOC40LTIwMyA0LjQtMjA3LjQgMi4yLTIuNCA1LjgtNS4yIDgtNi4yIDIuMi0uOCA1MS44LTEuNCAxMTAtMS4yIDk5IC40IDEwNi42LjYgMTExLjggNHoiLz48cGF0aCBkPSJNNjA2LjggMzM3LjRjLTIuNC40LTYuNCAzLTkgNS44bC00LjggNS4yLS42IDE1Ni40LS40IDE1Ni40IDYuNCA5LjRjMy42IDUuMiA5LjggMTUuMiAxMy42IDIxLjggOCAxNC4yIDE2LjggMjAuNiAyNS42IDE4LjYgMy4yLS42IDEzLjgtNyAyMy42LTE0LjIgMjMtMTcgMjcuOC0xOSA1MC4yLTIwLjIgMTYuNC0xIDE5LjItMS44IDIzLjYtNi4yIDIuOC0yLjggNS02LjQgNS4yLTguMlY1MDUuNmMwLTExNi0uNi0xNTQuNC0yLjYtMTU4LjYtNC44LTEwLjQtOC40LTExLTcwLTEwLjgtMzEuMi4yLTU4LjYuOC02MC44IDEuMnoiLz48L3N2Zz4=);
-    }
-    
-    
-    
-</style>
-
-        
-        <!-- Config CSS -->
-
-<!-- Other Styles -->
-<style>
-  body, html {
-    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-  }
-
-  a {
-    color: #00838F;
-  }
-
-  .mdl-card__media,
-  #search-label,
-  #search-form-label:after,
-  #scheme-Paradox .hot_tags-count,
-  #scheme-Paradox .sidebar_archives-count,
-  #scheme-Paradox .sidebar-colored .sidebar-header,
-  #scheme-Paradox .sidebar-colored .sidebar-badge{
-    background-color: #0097A7 !important;
-  }
-
-  /* Sidebar User Drop Down Menu Text Color */
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
-    color: #0097A7 !important;
-  }
-
-  #post_entry-right-info,
-  .sidebar-colored .sidebar-nav li:hover > a,
-  .sidebar-colored .sidebar-nav li:hover > a i,
-  .sidebar-colored .sidebar-nav li > a:hover,
-  .sidebar-colored .sidebar-nav li > a:hover i,
-  .sidebar-colored .sidebar-nav li > a:focus i,
-  .sidebar-colored .sidebar-nav > .open > a,
-  .sidebar-colored .sidebar-nav > .open > a:hover,
-  .sidebar-colored .sidebar-nav > .open > a:focus,
-  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
-    color: #0097A7 !important;
-  }
-
-  .toTop {
-    background: #757575 !important;
-  }
-
-  .material-layout .material-post>.material-nav,
-  .material-layout .material-index>.material-nav,
-  .material-nav a {
-    color: #757575;
-  }
-
-  #scheme-Paradox .MD-burger-layer {
-    background-color: #757575;
-  }
-
-  #scheme-Paradox #post-toc-trigger-btn {
-    color: #757575;
-  }
-
-  .post-toc a:hover {
-    color: #00838F;
-    text-decoration: underline;
-  }
-
-</style>
-
-
-<!-- Theme Background Related-->
-
-    <style>
-      body{
-        background-color: #F5F5F5;
-      }
-
-      /* blog_info bottom background */
-      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
-        background-color: #fff;
-      }
-    </style>
-
-
-
-
-<!-- Fade Effect -->
-
-    <style>
-      .fade {
-        transition: all 800ms linear;
-        -webkit-transform: translate3d(0,0,0);
-        -moz-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        -o-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-        opacity: 1;
-      }
-
-      .fade.out{
-        opacity: 0;
-      }
-    </style>
-
-
-<!-- Import Font -->
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
-
-
-        <script>lsloader.load("js/jquery.min.js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
-    
-    
-    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
-
-    <!-- Analytics -->
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-110144268-1', 'auto');ga('send', 'pageview');
-</script>
-
-    <!-- Custom Head --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-    
 </head>
 
-
-    
-        <body id="scheme-Paradox" class="lazy">
-            <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-                
-
-                <!-- Main Container -->
-                <main class="material-layout__content" id="main">
-
-                    <!-- Top Anchor -->
-                    <div id="top"></div>
-
-                    
-                        <!-- Hamburger Button -->
-                        <button class="MD-burger-icon sidebar-toggle">
-                            <span class="MD-burger-layer"></span>
-                        </button>
-                    
-
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-        <!-- Paradox Header -->
-        <!-- Daily pic -->
-<div class="mdl-card mdl-shadow--2dp daily-pic mdl-cell mdl-cell--8-col index-top-block">
-
-    <!-- Pic & Slogan -->
-    <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/daily_pic.png)">
-        <p class="index-top-block-slogan"><a href="https://weather.com/weather/today">
-        
-            
-                Hello,my world
-            
-        
-        </a></p>
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Luodian.ink</a>
+      </h1>
+      
     </div>
-
-    <!-- Avatar & Name -->
-    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-        <!-- Author Avatar -->
-        <div id="author-avatar">
-            <img src="/img/my_face.png" width="32px" height="32px" alt="avatar">
-        </div>
-        <div>
-            <strong>Luodian</strong>
-        </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://www.luodian.ink"></form>
+      </div>
     </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-2018-MetaTrade-网格交易简述" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018-03-01/2018-MetaTrade-网格交易简述/" class="article-date">
+  <time datetime="2018-03-01T03:21:10.000Z" itemprop="datePublished">2018-03-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/量化交易/">量化交易</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018-03-01/2018-MetaTrade-网格交易简述/">MetaTrader-网格交易简述</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.luodian.ink/2018-03-01/2018-MetaTrade-网格交易简述/" data-id="cjeaokic10009f51ydvdtyubw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-异常检测-2018春季第一周周报" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018-02-26/异常检测-2018春季第一周周报/" class="article-date">
+  <time datetime="2018-02-26T11:14:27.000Z" itemprop="datePublished">2018-02-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/异常检测/">异常检测</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018-02-26/异常检测-2018春季第一周周报/">异常检测-2018春季第一周周报</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Anomaly-Detection-With-Sensor-Data-Based-On-Online-Predict-amp-Compare-Model-and-LSTM-Method"><a href="#Anomaly-Detection-With-Sensor-Data-Based-On-Online-Predict-amp-Compare-Model-and-LSTM-Method" class="headerlink" title="Anomaly Detection With Sensor Data Based On Online Predict &amp; Compare Model and LSTM Method"></a>Anomaly Detection With Sensor Data Based On Online Predict &amp; Compare Model and LSTM Method</h1><p><a href="">Anomaly Detection With Sensor Data Based On Online Predict &amp; Compare Model and LSTM Method</a><a href="">一、异常检测问题简述</a><a href="">1. 时间序列</a><a href="">2. 异常数据</a><a href="">3. 现有的异常检测的方法</a><a href="">4. 现有方法的缺陷</a><a href="">二、一种高效的在线异常检测框架</a><a href="">1. 框架简述</a><a href="">2. 框架探微</a><a href="">3. 基于统计方法的在线预测比较模型（OPCM）</a><a href="">3.1 对于时序数据的 $F_{t+m}$ 的预测方法</a><a href="">（1）MA(滑动平均模型)</a><a href="">（2）EA(指数平均模型)</a><a href="">3.2 用于修正的方法</a><a href="">布林通道</a><a href="">3.3 比较器</a><a href="">3.3.1 离散度Filter</a><a href="">3.3.2 阈值Filter</a><a href="">3.4 算法流程</a><a href="">3.5 实验效果</a><a href="">4. 基于RNN的模式异常检测</a><a href="">4.1 概述</a><a href="">4.2 模型的导出</a><a href="">4.2.1 RNN神经网络模型</a><a href="">4.2.2 LSTM模型</a><a href="">4.2.3 双向LSTM</a><a href="">4.3 训练集的选择</a><a href="">4.4 结构一览</a><a href="">6.1.输入与输出</a><a href="">6.2 层的组合</a><a href="">4.5 算法流程</a><a href="">4.6 实验效果</a><a href="">三、对比实验</a><a href="">1. 点异常检测</a><a href="">1.1 传统温度数据</a><a href="">1.2 当前工业数据</a><a href="">2. 模式异常检测</a><a href="">3. 实验结果分析</a><a href="">四、总结</a><a href="">如何调参？</a><a href="">1. 创新性</a><a href="">2. 不足</a></p>
+<h2 id="一、异常检测问题简述"><a href="#一、异常检测问题简述" class="headerlink" title="一、异常检测问题简述"></a>一、异常检测问题简述</h2><h3 id="1-时间序列"><a href="#1-时间序列" class="headerlink" title="1. 时间序列"></a>1. 时间序列</h3><p><strong>时间序列是指按照时间先后顺序排列的各个观测记录的有序集合</strong>，广泛存在于商业、经济、工程、社会科学和医学等领域。随着时间的推移 ，时问序列通常包含大量的信息，是建模和预测的主要依据。对时间序列进行分析，可以揭示事物运动、变化和发展的内在规律，对于人们正确认识事物并据此做出科学决策具有重要的现实意义。</p>
+<h3 id="2-异常数据"><a href="#2-异常数据" class="headerlink" title="2. 异常数据"></a>2. 异常数据</h3><p>在分析时间序列时，经常会发现一些特殊的数据或者数据段，它们的波动与数据集中其他数据的波动有着显著的不同，这种极少出现的数据点或者数据段就称为异常点。Box 等 (1994) 指出异常点对时间序列的模型识别 、参数估计 、诊断检验乃至预测都有重要的影响。若序列中含有异常点，就会使传统的建模，估计及检验方法陷入困境，从而给不出准确的预测和控制。因此，近年来关于时间序列中的异常点诊断问题受到统计学界的重视。</p>
+<p>在时间序列中，数据每一时期都受到多种因素的共同作用。通常产生异常点的原因主要包括：</p>
+<ol>
+<li>数据受到新机制的作用，如欺诈、入侵、疾病的爆发、不寻常的实验结果等。这些异常点出现是因为有新事物出现或者新情况发生，比如经济领域时间序列研究中，某种经济政策的出台；地质模型中某种可能含有矿藏的地层的发现；由于罢工、广告促销、突发性政治或经济重大事件、物理系统的突变等，这些因素会造成不同于寻常模式的观测结果。这类异常点通常蕴涵着具体的意义，也往往是研究者感兴趣 的，异常点诊断旨在识别出这些现象背后的本质起因。</li>
+<li>数据变化固有规律引起，这是自然发生的，反映了数据的分布特征，如气候变化、基因突变等。</li>
+<li><p>数据测量收集误差引起，主要是由于人为差错、测量仪器故障。</p>
+<p>自 1972 年 A.J-Fox[1] 在时间序列中首次定义异常点以来，国内外已有大量相关的研究文献。我们根据阅读的资料中的定义，大致将异常划分为如下几种。</p>
+</li>
+</ol>
+<p>按照异常的表现形式不同，线性时间和空问上时间序列的异常主要可以分为点异常（outlier）和模式异常（pattern）两种，它们都是用于发现一条时间序列上的异常情况的。事实上，点异常也可以视作长度为 1 的模式异常。</p>
+<p><strong>点异常</strong></p>
+<p>点异常[2]主要分为三种，分别为『加性异常点』，『革新异常点IO1』，『革新异常点IO2』。</p>
+<p>加性异常点的形态如下：</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fnwklf9mfej31hc0poab6.jpg" alt="img"></p>
+<p>其中革新异常点为如下两种形态：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fnwkkodaunj30vg0cogm2.jpg" alt="img"></p>
+<p>综上所述，我们可以分别进行形式化定义如下：</p>
+<ul>
+<li>我们假设段区间内滑动平均为  ，异常点  的值为  ，我们通过定义比较阈值  ，定义波动起始点为 ，延伸性阈值  。<ol>
+<li>加性异常点满足条件：</li>
+<li>革新异常点满足条件：</li>
+</ol>
+</li>
+</ul>
+<p><strong>模式异常</strong></p>
+<p>模式异常[3]主要分为『模式宽度异常』，『模式均值和方差异常』，『模式高度异常』三种情况，具体形态如下图所示。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fnwkoci2mej31i40feju9.jpg" alt="img"></p>
+<p>同样，我们进行形式化定义：</p>
+<ol>
+<li><p>模式高度异常</p>
+<p>设时间序列, 若存在   以及  ，满足</p>
+<ol>
+<li>~ 区间内外，周期相同，即<ul>
+<li>​</li>
+<li>时，</li>
+<li>时，</li>
+<li>时，</li>
+</ul>
+</li>
+<li>~ 区间内外，相同相位处，高度不同，即对于任意 0~1 的正数 , 以及 的正数 <ul>
+<li>​</li>
+<li>​</li>
+<li>对于任意满足 的正整数 ,  有</li>
+</ul>
+</li>
+</ol>
+<p>则称  ~ 区间 为<strong>模式高度异常</strong></p>
+</li>
+<li><p>模式长度异常</p>
+<p>设时间序列, 若存在   以及  ，满足</p>
+<p>~ 区间内外，周期不同，即</p>
+<ul>
+<li>​</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>时，</li>
+</ul>
+<ul>
+<li>时，</li>
+</ul>
+<ul>
+<li>时，</li>
+</ul>
+<ul>
+<li><p>则称  ~ 区间 为<strong>模式长度异常</strong></p>
+</li>
+</ul>
+<ol>
+<li><p>模式均值和标准差异常</p>
+<p>设时间序列, 若存在   以及  ，满足</p>
+<ol>
+<li>~ 区间内外，周期相同，即<ul>
+<li>​</li>
+<li>时，</li>
+<li>时，</li>
+<li>时，</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<ol>
+<li><p>~ 区间内外，均值或标准差不同</p>
+<ul>
+<li>时，average1 = \sum_{t_1-△t}^{t_1}{X(t)} / △t， $std1 = \sqrt{\sum_{t_1-△t}^{t_1}{(X(t)-average1)}/△t}$</li>
+<li>$t_2 &lt; t &lt; t_2 + △t $ 时，$average1 = \sum_{t_2}^{t_2 + △t}{X(t)} / △t$,$std1 = \sqrt{\sum_{t_2}^{t_2 + △t}{(X(t)-average1)}/△t}$</li>
+<li>$t_1 &lt; t &lt; t_1 + △t $ 时，$average2 = \sum_{t_1}^{t_1 + △t}{X(t)} / △t$,$std2 = \sqrt{\sum_{t_1}^{t_1 + △t}{(X(t)-average2)}/△t}$</li>
+<li>$average1 ≠ average2$ 或者 $std1≠ std2$</li>
+</ul>
+<p>则称 $t_1$ ~ $ t_2$区间 为<strong>模式均值及标准差异常</strong></p>
+</li>
+</ol>
+<p>在对异常进行了形式化的定义之后，我们可以根据我们对于工业数据的观察和分析，对于异常情况做出如下的推测：</p>
+<ul>
+<li>加性异常点：这类异常的出现可能因为某点数据突然没有获取到，从而导致在计算这一点的时候，因为程序编写的原因，会出现极值，零值的情况。如果这类异常频繁出现，最有可能的原因为传感器质量需要重新的评估或者更换。</li>
+<li>革新异常点：两类革新异常点，都并非偶然某点数据的异常，而是一段时间内异常点的累积和偏移，关于此类异常点是否被归为异常点，此处还需要斟酌，这种情况出现更多的是来自于外部条件的突然改变，导致传感器数据的异常，而这类异常最终如果能够恢复原来的正常水平，那么则生产流程和机器应该是没有问题的，如果异常数据最终没有恢复正常水平，则可能怀疑机器或者生产线除了问题。</li>
+<li>模式异常：大多出现的原因如上。</li>
+</ul>
+<h3 id="3-现有的异常检测的方法"><a href="#3-现有的异常检测的方法" class="headerlink" title="3. 现有的异常检测的方法"></a>3. 现有的异常检测的方法</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>离群点检测方法</th>
+<th>方法描述</th>
+<th>方法特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基于统计</td>
+<td>大部分的基于统计的离群点检测方法是构建一个概率分布模型，并计算对象符合该模型的概率，把具有低概率的对象视为离群点</td>
+<td>基于统计模型的离群点检测方法的前提是必须知道数据集服从什么分布；而对于高维的数据，可能每一维度服从的分布都不太一致，所以通常对高维数据来讲通常效果较差。</td>
+</tr>
+<tr>
+<td>基于邻近度</td>
+<td>通常可以在数据对象之间定义邻近性度量，把远离大部分点的对象视为离群点。</td>
+<td>算法假定离群点是离散的，低维数据我们可以作图观察，而高维数据我们无法观察，所以难以确定有效的参数和全局阈值，效果较差。</td>
+</tr>
+<tr>
+<td>基于聚类</td>
+<td>一种利用聚类检测离群点的方法是直接丢弃远离其他簇的小簇；另一种是对数据点属于簇的程度进行评价，去除得分较低的点。</td>
+<td>聚类算法产生的簇的质量对该算法产生的离群点的质量影响非常大，对数据的可分类性要求较高</td>
+</tr>
+</tbody>
+</table>
 </div>
-
-        <!-- Blog info -->
-<div class="mdl-card mdl-shadow--2dp something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop index-top-block">
-
-    <!-- Search -->
-    
-    <!-- Google -->
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action="">
-        <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
-            <i class="material-icons mdl-color-text--white" role="presentation">search</i>
-        </label>
-
-        <form autocomplete="off" id="search-form" method="get" action="//google.com/search" accept-charset="UTF-8" class="mdl-textfield__expandable-holder" target="_blank">
-            <input class="mdl-textfield__input search-input" type="search" name="q" id="search" placeholder="">
-            <label id="search-form-label" class="mdl-textfield__label" for="search"></label>
-
-            <input type="hidden" name="sitesearch" value="https://www.luodian.ink">
-        </form>
-    </div>
-
-
-
-
-
-
-
-    <!-- LOGO -->
-    <div class="something-else-logo mdl-color--white mdl-color-text--grey-600">
-        <a href="https://material.io/guidelines/" target="_blank">
-            <img src="/img/logo.png" alt="logo" />
-        </a>
-    </div>
-
-    <!-- Infomation -->
-    <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
-        <!-- Blog Title -->
-        <div>
-            <strong>Luodian.ink</strong>
-        </div>
-        <div class="section-spacer"></div>
-
-        <!-- Pages -->
-        <button id="show-pages-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">view_carousel</i>
-            <span class="visuallyhidden">Pages</span>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
-            
-        </ul>
-
-        <!-- Menu -->
-        <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">more_vert</i>
-            <span class="visuallyhidden">show menu</span>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
-            
-
-            
-                <a class="index_share-link" href="/atom.xml">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        文章 RSS
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Luodian.ink&url=https://www.luodian.ink/&pic=&searchPic=false&style=simple" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到微博
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="https://twitter.com/intent/tweet?text=Luodian.ink&url=https://www.luodian.ink/&via=Luodian" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Twitter
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://www.luodian.ink/index.html" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Facebook
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="https://plus.google.com/share?url=https://www.luodian.ink/" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Google+
-                    </li>
-                </a>
-            
-
-            
-
-            
-                <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Luodian.ink&title=Luodian.ink&summary=&pics=https://www.luodian.ink/img/favicon.png&url=https://www.luodian.ink/" target="_blank">
-                    <li class="mdl-menu__item">
-                        分享到 QQ
-                    </li>
-                </a>
-            
-
-            
-        </ul>
-    </div>
+<h3 id="4-现有方法的缺陷"><a href="#4-现有方法的缺陷" class="headerlink" title="4. 现有方法的缺陷"></a>4. 现有方法的缺陷</h3><p>现有统计方法用于异常检测，大多适用于周期性较强的数据，ARIMA方法需要指定周期才能够做出数据的预测，而且需要对于数据进行差分预处理，由于我们的数据没有明显的周期性和季节性，所以并不能很好的使用这类方法进行处理。</p>
+<p>基于距离的检测方法主要有DBSCAN，这是一种常用于温度数据的异常检测方法，同样需要先对数据进行逆季节性处理，将各季节的温度均一化到同一个 minmax 范围，才能够使用 DBSCAN 方法进行异常检测，同样DBSCAN算法是一种基于距离检测的算法，不能发现不同密度的簇， 只能发现密度不少于某一特定值的点组成的簇。</p>
+<p>基于密度的异常检测方法主要有K-MEANS、LOF等，这些方法要求数据先验（如已知分类数目K），要求各维度权值相等，且只能发现球状簇。</p>
+<p>另外的如基于划分的孤立森林方法用于异常检测，但是这种方法不能处理具有不同密度区域的数据集，即只对全局稀疏点敏感，不擅长处理局部的相对稀疏点 ，而且不适用于高维数据。</p>
+<p>还有当前流行的神经网络LSTM和GRU处理时序数据，如果说上述方法其实并没有很好地利用数据的时序特点，那么 RNN 就是天生适用于前后关联性较强的数据类型的，这类方法参数不受具体数据约束，模拟生物学习过程，扩展性好，记忆作用很好地利用了时序特性，这类方法检测的效果好，但是缺点在于时间效率低，而我们本文也利用了 RNN 网络，但是在其之前，我们先使用在线的方法为 RNN 筛选小量的需要检测的数据即可。</p>
+<p>另外上述的方法都是离线处理的，而且算法效率基本都不高。</p>
+<p>下面我们介绍一种，高效的在线异常检测框架，这种框架结合了点异常和模式异常的检测。</p>
+<blockquote>
+<p>这个框架效率很高，第一层的在线预测检测器可以直接内嵌到硬件传感器进行初次检测报警（如果了解 K 线的，联想一下交易网站的那些辅助线工具是如何帮助你判定股票涨跌的。）</p>
+</blockquote>
+<p>我们在第一层使用 RNN 对异常模式进行识别，通过第一层在线预测比较器（Online Predict &amp; Compare Model，OPCM）的筛选，将震荡区间的数据，以及初步判定异常数据的周围邻域点交给第二层的 （Recurrent Neural Network ，RNN） 进行计算，这样的处理简化了 RNN 需要处理的数据规模，同时能够使用 RNN 对于模式异常进行最可靠的判定。</p>
+<h2 id="二、一种高效的在线异常检测框架"><a href="#二、一种高效的在线异常检测框架" class="headerlink" title="二、一种高效的在线异常检测框架"></a>二、一种高效的在线异常检测框架</h2><h3 id="1-框架简述"><a href="#1-框架简述" class="headerlink" title="1. 框架简述"></a>1. 框架简述</h3><p>基于历史数据的预测，无非是根据收集过去时间的数据，建立一个模型，来计算未来时间的数据，建立的是一种数学或者统计模型，它能表现出已有数据的变化规律，因为大数定理的存在，定义了世间所有的行为都可以通过数字表示，并且存在一定的客观规律。</p>
+<p>对于股票市场中存在的量化交易这一概念，即是指以先进的数学模型替代人为的主观判断，利用计算机技术从庞大的历史数据中海选能带来超额收益的多种『大概率』事件以制定策略，极大地减少了投资者情绪波动的影响，避免在市场极度狂热或悲观的情况下作出非理性的投资决策。</p>
+<p>在这里我们从这个方向入手，通过传统股票市场的预测分析工具来进行我们的工业传感器数据分析，首先我简要分析其关联性：</p>
+<ol>
+<li>股票数据和传感器数据都具有趋势性，以及一定程度的随机性，趋势性保证了两者的数值会按照一定的规律变化，并且从长时间数据的角度看，其是较为连续的，因此我们可以使用ARIMA，EA等模型进行平滑处理，分析异常点。</li>
+<li>股票数据根据金融因素，考虑通货膨胀等原因，可能会存在不断起伏，但是大趋势增长的情况。但是对于传感器数据，大多会在一定范围内震荡（如温度，湿度等数据因为物理因素的原因，不会高出一定范围），所以我们可以在 EA（适用于渐进上升型数据）或者是ARIMA模型（适用于周期波动性数据）中进行决策。</li>
+<li>传感器数据可能存在一定的周期，但是股票数据不一定存在明显周期性，这一点也是需要对模型进行修正调整的考虑因素之一。</li>
+</ol>
+<h3 id="2-框架探微"><a href="#2-框架探微" class="headerlink" title="2. 框架探微"></a>2. 框架探微</h3><p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fnwmkkaemsj31a60nw75a.jpg" alt="img"></p>
+<p>我们对于数据先后使用在线预测器，对于新到来的数据，按照一定的间隔回溯历史信息进行预测，和真实数据进行比较，如果误差大于一定的阈值，我们就报这点为异常点，同时我们在线的使用布林通道，记录震荡，疑似周期的区间，输出给 RNN 去对小范围的段数据进行模式异常的检测。</p>
+<p>该模型主要分为点异常和模式异常检测，其中点异常使用 Online Predict &amp; Compare Model 进行检测，模式异常使用 RNN 进行检测。</p>
+<h3 id="3-基于统计方法的在线预测比较模型（OPCM）"><a href="#3-基于统计方法的在线预测比较模型（OPCM）" class="headerlink" title="3. 基于统计方法的在线预测比较模型（OPCM）"></a>3. 基于统计方法的在线预测比较模型（OPCM）</h3><p>时间序列分析一般假设我们获得的数据在时域上具有一定的相互依赖关系，通常，如果传感器数值在 $t$ 时刻很高，那么在 $t+1$ 时刻价格也有一定的概率会比较高，而时间序列分析的目的包含以下两个方面：</p>
+<ul>
+<li>发现这种隐含的依赖关系，并增加我们对此类时间序列的理解；</li>
+<li>对未观测到的或者尚未发生的时间序列进行预测。</li>
+</ul>
+<p>在接下来的分析中，我们认为时间序列 $X$ 由两部分组成，即 $X_t=\hat{X}_t+\epsilon_t$. 其中$\hat{X}_t$ 是有规律的序列而$ \epsilon_t$ 则无规律的噪声。有规律的 $X_t$ 包含我们想要发现的依赖关系（pattern），而 $\epsilon_t$ 我们认为在时间域内不存在相互依赖的关系，即 $\epsilon_t$ 和 $\epsilon_{t+1}$ 之间是相互独立的。</p>
+<p>一个最简单的模型就是我们假设 $\epsilon_t$ 是一个随机数，服从一定的概率分布 $f_t(\epsilon)$。</p>
+<p>可以发现，我们想要找到 $\hat{X}_t$ 而对 $ϵ_t$不怎么感兴趣。为了使有规律的 $\hat{X}_t$ 更加明显，我们通常希望能过滤到噪声，而最简单的过滤噪声的方法就是『取平均』。</p>
+<p>而问题来了，对于时间序列信号来说，我们该如何取平均呢？这里便引出了我们的基于历史数据平滑曲线的几种方法，也即我们的预测期。</p>
+<h4 id="3-1-对于时序数据的-F-t-m-的预测方法"><a href="#3-1-对于时序数据的-F-t-m-的预测方法" class="headerlink" title="3.1 对于时序数据的 $F_{t+m}$ 的预测方法"></a>3.1 对于时序数据的 $F_{t+m}$ 的预测方法</h4><h5 id="（1）MA-滑动平均模型"><a href="#（1）MA-滑动平均模型" class="headerlink" title="（1）MA(滑动平均模型)"></a>（1）MA(滑动平均模型)</h5><p>这种方法并不考虑数据的趋势性，单纯根据历史信息来求得当前点的滑动平均数值，参数 T（也即WindowSize） 决定了依赖历史的程度。</p>
+<p>我们用 $S$ 表示处理后的序列，那么 $S_t$ 等于 $X_{t−T+1}$ 到 $X_t$ 的平均值，即</p>
+<p> $S_t=\frac{1}{T}\Sigma^t_{i=t−T+1}X_i$</p>
+<p>我们使用 $S_t \simeq \hat{X_t}$，下面我们使用滑动平均来预测 windmachine 的第一列的数据，并根据预测值进行异常检测。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fmvmepv069j31hc140772.jpg" alt="img"></p>
+<h5 id="（2）EA-指数平均模型"><a href="#（2）EA-指数平均模型" class="headerlink" title="（2）EA(指数平均模型)"></a>（2）EA(指数平均模型)</h5><p>在这里我们使用二阶指数平均，二阶在一阶的基础上增加了对于趋势的考量，更符合我们的数据要求，而三阶需要依赖于周期性，这点和上述的 ARIMA 模型所依赖的周期性也是相同的，下一步我们也需要加入周期性的考量。</p>
+<p>我们可以看到，虽然指数平均在产生新的数列的时候考虑了所有的历史数据，但是仅仅考虑其静态值，即没有考虑时间序列当前的变化趋势。如果当前的股票处于<strong>上升趋势</strong>，那么当我们对明天的股票进行预测的时候，好的预测值不仅仅是对历史数据进行『平均』，而且要考虑到当前数据变化的<em>上升趋势</em>。同时考虑历史平均和变化趋势，这边是<strong>二阶指数平均</strong>。我们先给出二阶指数平均的两种方法，如下</p>
+<ol>
+<li><p>$initialize<script type="math/tex">S_1 = X_1</script>b_1 = X_1−X_0<script type="math/tex">for \ t > 1</script>S_t = αX_t + (1−α) ( S_t−1+b_t−1)<script type="math/tex">b_t = β(S_t−S_t−1)+(1−β)b_t−1</script>end  for$</p>
+<p>如果我们对 $X_{t+m}$ 之后的数值进行预测，那么我们的预测值为$\hat{X}_{t+m} = S_t + mb_t$</p>
+</li>
+<li><p>$S′_0=X_0<script type="math/tex">S^{′′}_0=X_0</script>for  t \geq 1$$\quad S^{‘}_t = \alpha X_t+(1-\alpha)S_{t-1}^{‘} \quad S^{‘’}_t = \alpha S^{‘}_t +(1-\alpha)S_{t-1}^{‘’}\quad S_t = 2S^{‘}_t-S^{‘’}_t$</p>
+<p>end for</p>
+<p>在方法二中，只有一个参数 $α$ 。其中$S^{‘}_t$为最基本的指数平均得到的结果，而 $S^{‘}_t - S^{“}_t$ 为变化的趋势.</p>
+<p>如果我们对 $X_{t+m}$ 之后的数值进行预测，那么我们的预测值为$\hat{X}_{t+m} = S_t +(m\frac{\alpha}{1-\alpha})(S^{‘}_t-S^{‘’}_{t})$</p>
+</li>
+</ol>
+<p>我们利用二阶指数平均对于数据进行处理及异常检测的结果如下：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fmxhde15csj31hc140wgw.jpg" alt="img"></p>
+<h4 id="3-2-用于修正的方法"><a href="#3-2-用于修正的方法" class="headerlink" title="3.2 用于修正的方法"></a>3.2 用于修正的方法</h4><h5 id="布林通道"><a href="#布林通道" class="headerlink" title="布林通道"></a>布林通道</h5><p>布林通道是一个在股票市场中经常使用的分析技术，它在应用上结合了移动平均和标准差的概念，其基本的型态是由三条轨道线组成的带状通道（中轨和上、下轨各一条）。上下轨分别由平均值加减二倍标准差（<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d113484745294ddf53ff5589762d9565d63b7c36" alt="img">）得到，<strong>中轨</strong>为股价的平均成本，<strong>上轨</strong>和<strong>下轨</strong>可分别视为股价的压力线和支撑线。</p>
+<blockquote>
+<p>下图中红线为上轨，绿线为下轨，蓝线为滑动平均值。</p>
+</blockquote>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fmxkgfdm6wj30je0fgmxo.jpg" alt="img"></p>
+<p>由大数定律以及高斯分布模型，我们可以获知在上下二倍标准差基本涵盖了数据变化的 95% 左右的情况，如果超出这个分布，那么极有可能是异常点，因此在我们的模型中我们结合布林通道进行了异常点的修正。</p>
+<p>使用布林通道修正可以判定当前的数据是否震荡较为严重，对于震荡严重的区间，布林通道带宽较大，我们给出和EA线比较是否异常的阈值 $p$ 要适当的放大，因为这时候可能数据即将进入周期区间，而布林通道带宽较小的数据段，比较阈值应相对较小，以防止突然的加性异常点和革新异常，模式转换等不能被很好的甄别到。</p>
+<p>且通过布林通道带宽大小的变化，我们可以判断数据出现震荡的时机，震荡即代表可能出现周期性，这时候我们需要把这段数据交给 RNN 做下一步的检验。</p>
+<p>同样，调整阈值的函数 $p = f(x)，p为比较阈值，|x -p| \geq 0则判定异常， x为布林通道带宽$.  也是在框架的检测时间效率，和检测效果之间做 Trade off.</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fmxkmds0frj30me0asmx7.jpg" alt="img"></p>
+<h4 id="3-3-比较器"><a href="#3-3-比较器" class="headerlink" title="3.3 比较器"></a>3.3 比较器</h4><p>预测器预测出当前时刻传感器的预测值后，还需要与真实值比较来判断当前时刻数据是否异常。一般的比较器都是通过阈值法，比如实际值超过预测值的一定比例就认为该点出现异常，进行报警。这种方式错误率比较大。在传感器数值模型的报警检测中没有使用这种方式，而是使用了两个串联的 Filter，只有当两个 Fliter 都认为该点异常时，才进行报警，下面简单介绍一下两个 Filter 的实现。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fmxgr0c6roj30y20m674f.jpg" alt="img"></p>
+<h5 id="3-3-1-离散度Filter"><a href="#3-3-1-离散度Filter" class="headerlink" title="3.3.1 离散度Filter"></a>3.3.1 离散度Filter</h5><p>根据预测误差曲线离散程度过滤出可能的异常点。一个序列的方差表示该序列离散的程度，方差越大，表明该序列波动越大。如果一个预测误差序列方差比较大，那么我们认为预测误差的报警阈值相对大一些才比较合理。离散度 filter 利用了这一特性，我们对于这个真实数据点的前 $N$ 个点求方差，下一步阈值 filter 的输入为方差 $\sigma$.</p>
+<p>在我们的方法中，离散度过滤器其实已经使用布林通道做了一个很好的 balance.</p>
+<h5 id="3-3-2-阈值Filter"><a href="#3-3-2-阈值Filter" class="headerlink" title="3.3.2 阈值Filter"></a>3.3.2 阈值Filter</h5><p>根据误差绝对值是否超过某个阈值过滤出可能的异常点。利用离散度 Filter 进行过滤时，报警阈值随着误差序列波动程度变大而变大，但是在输入数据比较小时，误差序列方差比较小，报警阈值也很小，容易出现误报。所以设计了根据方差 $\sigma$ 进行过滤的阈值 filter。阈值 filter 设计了一个分段阈值函数 $y=f(x)$，对于实际值 $x$ 和预测值 $p$ ，只有当 $|x-p|&gt;f(x)$ 时报警。实际使用中，可以根据数据寻找一个对数函数替换分段阈值函数，更易于参数调优。</p>
+<h4 id="3-4-算法流程"><a href="#3-4-算法流程" class="headerlink" title="3.4 算法流程"></a>3.4 算法流程</h4><p>二阶EA伪代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">Input: </span><br><span class="line">    data  // original data</span><br><span class="line">    alpha = 0.5 //by default</span><br><span class="line">Output:</span><br><span class="line">    X_predict // predicted value based on EA</span><br><span class="line"></span><br><span class="line">Algorithms:</span><br><span class="line"></span><br><span class="line">    if data is None:</span><br><span class="line">        return None</span><br><span class="line">    </span><br><span class="line">    S_one = [ data [ 0 ] ]</span><br><span class="line">    S_two = [ data [ 0 ] ]</span><br><span class="line">    </span><br><span class="line">    for i = 1 to len(data) :</span><br><span class="line">        S_one.append ( alpha * data [ i ] + (1 - alpha) * S_one [ i - 1 ] )</span><br><span class="line">        S_two.append ( alpha * S_one [ i ] + (1 - alpha) * S_two [ i - 1 ] )</span><br><span class="line">        S.append ( 2 * S_one [ i ] - S_two [ i ] )</span><br><span class="line"></span><br><span class="line">    for i = 0 to len ( S_one ) ) :</span><br><span class="line">        print ( 1 + alpha / ( 1 - alpha ) )</span><br><span class="line">        X_predict.append ( S_one [ i ] + (alpha / ( 1 - alpha )) * (S_one [ i ] - S_two [ i ]) )</span><br><span class="line">    </span><br><span class="line">    return X_predict</span><br></pre></td></tr></table></figure>
+<p>布林带检测震荡区间伪代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">    data  //original data</span><br><span class="line">    window = 5 //by default, moving window</span><br><span class="line">    K = 2 //by default, K standard deviation</span><br><span class="line">    max_band_width //we defines a sequence oscillated when bollinger band width exceed this value</span><br><span class="line">Output:</span><br><span class="line">    anomaly_matrix</span><br><span class="line">    </span><br><span class="line">Algorithms:</span><br><span class="line"></span><br><span class="line">    rolling_mean = caculate mean value for data</span><br><span class="line">    rolling_std = caculate std deviation value for data</span><br><span class="line">    upper_band = rolling_mean + (K * rolling_std)</span><br><span class="line">    lower_band = rolling_mean - (K * rolling_std)</span><br><span class="line">    </span><br><span class="line">    inc_flag = False // control flag avoid add more than once i in one circle.</span><br><span class="line">      </span><br><span class="line">    for i = 1 to len(data):</span><br><span class="line">        if upper_band [ i ] is not None and lower_band [ i ] is not None :</span><br><span class="line">            if upper_band [ i ] - lower_band [ i ] &gt; max_band_width :</span><br><span class="line">                for j = i to len(data):</span><br><span class="line"></span><br><span class="line">                    if upper_band [ j ] - lower_band [ j ] &gt; max_band_width:</span><br><span class="line">                        anomaly_seq.append(j)</span><br><span class="line">                    else:</span><br><span class="line">                        anomaly_matrix.append ( anomaly_seq.copy ( ) )</span><br><span class="line">                        i = j + 1</span><br><span class="line">                        inc_flag = True</span><br><span class="line">                        break</span><br><span class="line">                          </span><br><span class="line">        if inc_flag is False :</span><br><span class="line">            i = i + 1</span><br><span class="line">    </span><br><span class="line">    return anomaly_matrix</span><br></pre></td></tr></table></figure>
+<h4 id="3-5-实验效果"><a href="#3-5-实验效果" class="headerlink" title="3.5 实验效果"></a>3.5 实验效果</h4><p>下面是我们使用修正之后的模型结合EA方法进行异常检测的情况：</p>
+<p>对于我们拟定的数据，回测的效果如下，可以看到其中对于尖刺点能够识别，且波动情况会影响到后续的一些点的检测，我们认为这是一种粗糙化检测，不可放过一个异常点的做法，这种做法能够检测数据的波动情况，并且基于历史数据追踪当前的变动是否合理，从而给出是否为异常的判断。</p>
+<p>对于真实数据回测的效果如下：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fmxl1rstxaj31hc140whb.jpg" alt="img"></p>
+<h3 id="4-基于RNN的模式异常检测"><a href="#4-基于RNN的模式异常检测" class="headerlink" title="4. 基于RNN的模式异常检测"></a>4. 基于RNN的模式异常检测</h3><h4 id="4-1-概述"><a href="#4-1-概述" class="headerlink" title="4.1 概述"></a>4.1 概述</h4><p>在进行了基于统计学方法的异常检测之后，我们对那些不确定是否异常的区段，截取下来，利用双向LSTM进行进一步判断。</p>
+<p>在我们的模型中，利用逐一取训练集省略标注集合，利用LSTM保证长期记忆，利用 双向推算 达到上下文综合判断，利用多次预测的结果与实际误差作出误差轮廓图，利用实际误差图轮廓与 标准误差图的对比判断异常类型（后续可进一步判断异常原因，待补充），从而完成异常检测的过程。</p>
+<h4 id="4-2-模型的导出"><a href="#4-2-模型的导出" class="headerlink" title="4.2 模型的导出"></a>4.2 模型的导出</h4><h5 id="4-2-1-RNN神经网络模型"><a href="#4-2-1-RNN神经网络模型" class="headerlink" title="4.2.1 RNN神经网络模型"></a>4.2.1 RNN神经网络模型</h5><p>循环神经网络（RNN）是一种将按时序输入的结点之间依次相连的神经网络。基本结构如下图：将左侧的RNN展开后，可以看到：RNN中，隐藏层的计算反馈，除了进入当前时间步的输出端，还进入了下一时间步的隐藏层，从而影响下一个时间步上的输出结果。</p>
+<p><img src="http://ou3qtf5jl.bkt.clouddn.com/18-1-28/20121790.jpg" alt="img"></p>
+<p>含义如下：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>标记</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$x_t$</td>
+<td>时刻 t 的输入向量</td>
+</tr>
+<tr>
+<td>$o_t$</td>
+<td>时刻 t 的输出</td>
+</tr>
+<tr>
+<td>$U$</td>
+<td>输入层到隐藏层的权重</td>
+</tr>
+<tr>
+<td>$V$</td>
+<td>隐藏层到输出层的权重</td>
+</tr>
+<tr>
+<td>$W$</td>
+<td>当前隐藏层到下一隐藏层的权重，调度记忆</td>
+</tr>
+</tbody>
+</table>
 </div>
+<p>于是，对于基于时序的数据来说，时刻 $t$ 的输出由时刻 $t-1$ 的隐藏状态 $h_{t-1} $ 和 时刻 $t$ 的输入$x_t$ 共同决定。</p>
+<p>这样一来，就达到了一种记忆效果，从而可以根据前面的数据很好的预测出之后的数据趋势，之后我们就可以用这些预测值和真实值对比，计算误差，判断异常与否。</p>
+<p>相比一些基于统计的方法，比如基于 $time  window$ 的 $cumulative sum(CUSUM)$  和 $ exponentially  weighted  moving  average (EWMA)$ <strong>[1]</strong>  ,大都需要对$time window $ 之类的参数的大小进行预估和设置，但这些参数往往严重依赖于特定的数据集，因此对参数的设置往往是一个繁琐费力的过程。</p>
+<p>而RNN的结构不需要针对每一个特定的数据集都进行参数的调整，只要训练得当，采取默认参数往往也可达到很好的效果。</p>
+<h5 id="4-2-2-LSTM模型"><a href="#4-2-2-LSTM模型" class="headerlink" title="4.2.2 LSTM模型"></a>4.2.2 LSTM模型</h5><p>传统RNN存在两个很大的缺点：</p>
+<ul>
+<li><p><strong>梯度消失</strong></p>
+<p>上面我们说到RNN中当前输出由前一状态和当前输入共同决定，公式可以写为</p>
+<p>​                                $h_t = f(h_{t-1, x_t})$ </p>
+<p>其中 $f () $ 表示在仿射函数的外面加一层 $Sigmoid $, 根据求导的链式法则，最终的梯度表示为乘积的形式，并且乘数往往是小于1 的数字，所以造成了梯度很快逼近0。</p>
+<p>​</p>
+</li>
+<li><p><strong>不适合长期依赖</strong></p>
+<p>时间序列中往往存在一些周期性，如果这些周期较长，这就需要<strong>长期依赖</strong> ，即在一段较长时间内记住之前的数据，传统的RNN在这方面存在先天性的不足。</p>
+<p>​</p>
+</li>
+</ul>
+<p>长短时记忆循环网络（$Long Short-Term  Memory$， $LSTM$） <strong>[2]</strong>  进行了特殊的设计来解决这两个问题。</p>
+<p>二者对比图如下：</p>
+<p><img src="http://ou3qtf5jl.bkt.clouddn.com/18-1-28/78978493.jpg" alt="img"></p>
+<p>LSTM增加了3个门，功能具体表现为：</p>
+<ul>
+<li><p>采用<strong>累加形式</strong>计算当前状态：</p>
+<p>​                            $h_t = \sum_{m=1}^{t}\delta h_{m}$</p>
+<p>其中 $\delta h_m$ 显示依赖于输入 $x_m$ ，这种累加形式导致导数也是累加形式，因此<strong>避免了梯度消失</strong>。<strong>[3]、[4]</strong></p>
+</li>
+</ul>
+<ul>
+<li>LSTM中的 <strong>忘记门</strong>可以自行决定什么时候应该丢掉当前的记忆信息，什么时候应该存放记忆信息进入LSTM cell 中，因此LSTM可以达到长期记忆的效果。</li>
+</ul>
+<p>因此，LSTM对于大规模的序列数据来说，有着独到的优势，但是，据我们所知，将LSTM 应用到时间序列的异常检测中的实例，还非常罕见。</p>
+<h5 id="4-2-3-双向LSTM"><a href="#4-2-3-双向LSTM" class="headerlink" title="4.2.3 双向LSTM"></a>4.2.3 双向LSTM</h5><p>相比单纯的从过去预测未来，如果既能够从前向后预测，又能够从后向前预测，结果往往会更加贴合实际。</p>
+<p>比如判断下面这样一段话是否正确：</p>
+<blockquote>
+<p><strong>下雪了</strong> ， 小明<strong>很高兴</strong>， 他今天<strong>没有穿那件厚厚的棉衣</strong>。</p>
+</blockquote>
+<p>​    对于加黑的三个部分，如果从<strong>“ 下雪了”</strong> 去判断 <strong>“小明很高兴” </strong> ，这句话是很合理的；如果从<strong>“很高兴”</strong> 去判断 <strong>“没有穿厚厚的棉衣”</strong> ，也没有任何理由说这句话有问题，但如果能够从 <strong>“下雪”</strong> 和 <strong>“没有穿棉衣”</strong> 来判断<strong>”小明很高兴“</strong> ，可以很容易的发现逻辑不通，就 有理由判断这句话是有问题的。</p>
+<p>​    </p>
+<p>双向LSTM 的示意图如下：</p>
+<p><img src="http://ou3qtf5jl.bkt.clouddn.com/18-1-28/56364261.jpg" alt="img"></p>
+<p>​    双向LSTM的基本思想是：提出每一个训练序列向前和向后分别是两个LSTM，而且这两个都连接着一个输出层。这个结构提供给输出层输入序列中每一个点的完整的过去和未来的上下文信息。上图展示的是一个沿着时间展开的双向循环神经网络。六个独特的权值在每一个时步被重复的利用，六个权值分别对应：输入到向前和向后隐含层（w1, w3），隐含层到隐含层自己（w2, w5），向前和向后隐含层到输出层（w4, w6）。值得注意的是：向前和向后隐含层之间没有信息流，这保证了展开图是非循环的。</p>
+<p>​    双向LSTM很好地结合了数据上下文的整体结构，从前往后、从后往前的双重判断，共同决定了当前区段内数据的异常与否，对时间序列的异常检测来说，这无疑是一个非常合适的策略。</p>
+<p>​    另一方面，据我们所知，目前还没有将双向LSTM应用到时间序列的异常检测中的先例，而经过我们的实验验证，对于异常检测来说，双向LSTM确实发挥了很好的效应。</p>
+<p>因此，双向LSTM很适合我们的异常检测过程。</p>
+<h4 id="4-3-训练集的选择"><a href="#4-3-训练集的选择" class="headerlink" title="4.3 训练集的选择"></a>4.3 训练集的选择</h4><p>​    广泛意义上的RNN 属于监督学习，双向LSTM也不能免俗，如果正常实现，需要大量的已经被标注好的数据集合（这里的“标注”指是否该数据区段为“异常数据”），但为了我们的整体模型有更强的适应性，我们特意进行修改，修改后的模型不需要异常检测人员提供专门的正确数据，而是每次使用测试数据中的不同部分作为训练数据，得到模型进行判断，记录下当下预测的误差，直到所有测试数据都曾经被拿来训练之后，我们把每次预测的误差相加，合计误差较大的区段即为异常区段。</p>
+<p>具体做法如下：</p>
+<p><img src="http://ou3qtf5jl.bkt.clouddn.com/18-1-28/75147036.jpg" alt="img"></p>
+<p>如上图，将全体数据分成m段，依次选取不同的段作为训练集，进行预测，记录每次的误差，循环m次，将所有误差相加，得到每个数据点总的误差，作出误差曲线，根据总误差得出异常区段。</p>
+<h4 id="4-4-结构一览"><a href="#4-4-结构一览" class="headerlink" title="4.4 结构一览"></a>4.4 结构一览</h4><p>通过以上分析，我们得到下面的模型：</p>
+<p><img src="http://ou3qtf5jl.bkt.clouddn.com/18-1-28/41213890.jpg" alt="img"></p>
+<p>下面对每一部分进行详述：</p>
+<h5 id="6-1-输入与输出"><a href="#6-1-输入与输出" class="headerlink" title="6.1.输入与输出"></a>6.1.输入与输出</h5><p>设定每次拿来预测的子序列的长度sequence_length, 为了简便，我们记为SL。</p>
+<p>将所有数据进行0 均值标准化，有重叠的分为若干个子序列，每个子序列长度为SL。取子序列的前SL-1个数据为X， 取最后一个数据为Y。</p>
+<p>如下图（这里SL取4）</p>
+<p><img src="http://ou3qtf5jl.bkt.clouddn.com/18-1-28/28931195.jpg" alt="img"></p>
+<ul>
+<li>训练时，取训练集输入即可。</li>
+<li>预测时，取预测集的前SL-1 个数据为 X，输出结果为预测值。</li>
+</ul>
+<h5 id="6-2-层的组合"><a href="#6-2-层的组合" class="headerlink" title="6.2 层的组合"></a>6.2 层的组合</h5><p>数据输入之后经过三层双向的LSTM，起到主要的学习作用。为防止过拟合，每层LSTM后加上dropout 机制，在每次计算后随机断掉部分连接。之后加上一个全连接的DENSE，最后将计算结果线性相加，得到最后的输出。</p>
+<h4 id="4-5-算法流程"><a href="#4-5-算法流程" class="headerlink" title="4.5 算法流程"></a>4.5 算法流程</h4><p>整体算法的伪代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">sequence_lenth &lt;- 50</span><br><span class="line">epochs &lt;- 1</span><br><span class="line">batch_size &lt;- 50</span><br><span class="line">trainset_num &lt;- 5</span><br><span class="line"></span><br><span class="line">function getTrainOrTest(data, start, end)</span><br><span class="line">begin</span><br><span class="line">    result &lt;- ∅</span><br><span class="line">    for index in start to end - sequence_lenth do</span><br><span class="line">        result.append(data[index : index + sequence_lenth])</span><br><span class="line"></span><br><span class="line">    result &lt;- standardlize of result</span><br><span class="line"></span><br><span class="line">    x_result &lt;- result[:, :-1]</span><br><span class="line">    y_result &lt;- result[:, -1]</span><br><span class="line"></span><br><span class="line">    return x_result, y_result</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">function run()</span><br><span class="line">begin</span><br><span class="line">    data &lt;- getData()</span><br><span class="line">    total_error &lt;- all zeros of length data.length</span><br><span class="line">    for train_index in 0 to trainset_num do</span><br><span class="line"></span><br><span class="line">        start &lt;- data.length / sequence_lenth * train_index</span><br><span class="line">        end &lt;- data.length / sequence_lenth * (train_index + 1)</span><br><span class="line"></span><br><span class="line">        x_train, y_train &lt;- getTrainOrTest(data, start, end)</span><br><span class="line">        x_train, y_train &lt;- drop in of x_train and y_train</span><br><span class="line">        x_test， y_test &lt;- getTrainOrTest(data, 0, data.length)</span><br><span class="line"></span><br><span class="line">        model &lt;- Sequential()</span><br><span class="line">        layers = &#123;&apos;input&apos;: 1, &apos;hidden1&apos;: 64, &apos;hidden2&apos;: 256, &apos;hidden3&apos;: 100, &apos;output&apos;: 1&#125;</span><br><span class="line">        for index in 0 to 3 do</span><br><span class="line">            model.add(Bidirectional(LSTM(layers[index])).add(Dropout())</span><br><span class="line">        model.add(Dense()).add(Activation(&quot;linear&quot;))</span><br><span class="line">        model.compile(loss=&quot;mse&quot;, optimizer=&quot;rmsprop&quot;)</span><br><span class="line"></span><br><span class="line">        model.fit(x_train, y_train,batch_size=batch_size, nb_epoch=epochs, validation_split=0.05)</span><br><span class="line">        y_predicte &lt;- model.predict(x_test)</span><br><span class="line"></span><br><span class="line">        total_error &lt;- total_error + (y_predicte - y_test) ** 2</span><br><span class="line">        </span><br><span class="line">    return total_error</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p>双向LSTM的整体流程图如下：</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fo1db77ah9j310c0jh0ty.jpg" alt="img"></p>
+<h4 id="4-6-实验效果"><a href="#4-6-实验效果" class="headerlink" title="4.6 实验效果"></a>4.6 实验效果</h4><p>针对五种异常情况<strong>[5]</strong>，我们分别生成了对应的异常数据，用来进行效果验证。</p>
+<p>针对每种异常，得出大致轮廓，在实际数据中，可以将误差图像与我们得到的标准轮廓对比，判断异常种类，进而找出异常原因。</p>
+<p>每种异常得到的误差轮廓如下：</p>
+<ul>
+<li>加性异常点</li>
+</ul>
+<p><img src="http://ou3qtf5jl.bkt.clouddn.com/18-1-28/37453965.jpg" alt="img"></p>
+<p>特征：突然耸起 的尖端，之后迅速回落至0。</p>
+<ul>
+<li>革新异常点之一</li>
+</ul>
+<p><img src="http://ou3qtf5jl.bkt.clouddn.com/18-1-28/66813206.jpg" alt="img"></p>
+<p>特征：突然耸起的尖端，之后迅速回落，但仍保持误差值较大的状态，持续至异常结束。</p>
+<ul>
+<li>革新异常点之二</li>
+</ul>
+<p><img src="http://ou3qtf5jl.bkt.clouddn.com/18-1-28/77169446.jpg" alt="img"></p>
+<p>特征：先缓慢下降，后迅速上升，结束时过程相反。</p>
+<ul>
+<li>模式高度异常</li>
+</ul>
+<p><img src="http://ou3qtf5jl.bkt.clouddn.com/18-1-28/76923427.jpg" alt="img"></p>
+<p>特征：突然耸起 的尖端，之后缓慢下降，伴有震荡。</p>
+<ul>
+<li>模式长度异常</li>
+</ul>
+<p><img src="http://ou3qtf5jl.bkt.clouddn.com/18-1-28/46315928.jpg" alt="img"></p>
+<p>特征：开始于结束的时候都会有突然耸起的尖端，且都迅速下降至0。</p>
+<ul>
+<li>模式均值和标准差异常</li>
+</ul>
+<p><img src="http://ou3qtf5jl.bkt.clouddn.com/18-1-28/24309480.jpg" alt="img"></p>
+<p>特征：开始于结束的时候都会有突然耸起的尖端，开始的尖端下降后持续震荡至异常结束，后来的尖端下降后持续很短时间就回复至0。</p>
+<h2 id="三、对比实验"><a href="#三、对比实验" class="headerlink" title="三、对比实验"></a>三、对比实验</h2><h4 id="1-点异常检测"><a href="#1-点异常检测" class="headerlink" title="1. 点异常检测"></a>1. 点异常检测</h4><h5 id="1-1-传统温度数据"><a href="#1-1-传统温度数据" class="headerlink" title="1.1 传统温度数据"></a>1.1 传统温度数据</h5><p>我们选择的数据集为全球 <code>CO2</code> 检测量每周的统计数据，数据来源为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dta = sm.datasets.co2.load_pandas ( ).data</span><br><span class="line"># deal with missing values. see issue</span><br><span class="line">dta.co2.interpolate ( inplace = True )</span><br></pre></td></tr></table></figure>
+<p>处理这类有季节以及周期性的数据，首先我们要对数据进行解耦，去除季节和趋势对数据的影响，下图展示了解耦后各分量的图示，我们选取残差 <code>residual</code> 来进行异常检测。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fo5hgp8jd2j30hs0dcdgu.jpg" alt="img"></p>
+<p>在残差数据中，我们人工分别按照如下方式加入了三段异常信息。</p>
+<ol>
+<li><p>一类革新异常：连续20个较低的等值点数据。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for i in range ( 40 , 45 ) :</span><br><span class="line">    data [ i ] = -2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>二类革新异常：一次函数上升，下降的数据：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for i in range ( 100 , 120 ) :</span><br><span class="line">    data [ i ] = (i - 100) / 10</span><br><span class="line"></span><br><span class="line">for i in range ( 400 , 440 ) :</span><br><span class="line">    data [ i ] = (440 - i) / 20</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>我们分别使用了几种现在适用于此类数据的异常检测方法，最终检测的效果如下：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fo629d9qnpj31hc140dm1.jpg" alt="img"></p>
+<p>可以看到的是，我们的算法和其余机器学习方法相比，在极值点的检测中效果要明显好于 <code>SVM</code> 和 <code>LOF</code> 方法，和 <code>Isolated Forest</code> 方法相差无几，与 <code>Isolated Forest</code> 方法的差别在于 IF 方法可以检测出成段的异常点，而在我们的方法中，EA 预测判别是不具备这个能力的，我们把段异常的识别进行了一次过滤之后，交给RNN去做这个事情，接下来是RNN的检测效果。</p>
+<h5 id="1-2-当前工业数据"><a href="#1-2-当前工业数据" class="headerlink" title="1.2 当前工业数据"></a>1.2 当前工业数据</h5><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fo62muj1jej31hc14043n.jpg" alt="img"></p>
+<h4 id="2-模式异常检测"><a href="#2-模式异常检测" class="headerlink" title="2. 模式异常检测"></a>2. 模式异常检测</h4><h4 id="3-实验结果分析"><a href="#3-实验结果分析" class="headerlink" title="3. 实验结果分析"></a>3. 实验结果分析</h4><p>正如我们所提出这个方法的初衷，我们所面对的工业数据，并不具备如上述我们测试的温度，二氧化碳数据等，具有很强的周期性以及季节性，因此我们可以对其进行解耦后对残差进行异常检测，也正如前人论文里研究的大部分时序数据的异常检测效果，此时各类方法通常都能够取得较好的效果。</p>
+<p>而我们方法的创新性在于，检测并不依赖于数据的特性，我们的PCM（Predict &amp; Compare Model）方法是一种通用数据的方法，它通过预测下一个点的值和实际值对比，大于阈值便判定为异常的方式来决策异常。同时这是一个可以在线完成的算法，在第一层过滤时效率为 $O(N)$ ，第二层使用 RNN 对潜在的模式异常进行更进一步的准确判断，目前针对两类数据（温度，工业）的检测效果并不输于传统机器学习方法，且效率更要远胜于它们。</p>
+<h2 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h2><h3 id="如何调参？"><a href="#如何调参？" class="headerlink" title="如何调参？"></a>如何调参？</h3><p>对于在线比较器的部分，调整阈值的函数为 $p = f(x)，p为比较阈值，|x -p| \geq 0则判定异常， x为布林通道带宽$.  这部分需要人工根据具体的情况调整参数，首先 $p$ 应该有初始的值，这个值需要根据数据的范围进行设定，比如数据变动在1-2，你如果设定比较阈值为 0.0001，那么可能每一个点都会因为高于这个阈值而被判定为异常，而同样，布林通道带宽 $x$ 的变化会如何的影响 $p$ ，$x$ 变化到多大判定进入震荡区间？这些都需要根据具体的这个初始的值同样，同样对于$x$ 和 $p$ 的关系的调整，也是在框架的时间效率和检测效果之间做 Trade off.</p>
+<h3 id="1-创新性"><a href="#1-创新性" class="headerlink" title="1. 创新性"></a>1. 创新性</h3><p>目前少见有人使用预测器 + 判别器的方式结合统计方法进行异常检测，这种方式本身比较新颖。主要优势有如下几点：</p>
+<ol>
+<li>相对于我们之前采用的机器学习的方法，这种方法即使在大数据的情况下也能够顺利完成，因为根据选取方法的不同，基本都是在 $O(N)$ 级别的方法。</li>
+<li>这种方法可以实现在线实时预测，在不考虑 RNN 的情况下，牺牲一部分的检验效果，可以将成套的算法写入传感器芯片内作为硬件级别的预测，芯片内只需要存储规定 $N$ 日内的数据即可。</li>
+<li>使用 RNN 之后，可以达到最好的检验效果，而且我们使用在线的预测器粗略的过滤一遍可能存在的异常点，将过滤之后的数据段交给RNN处理，这样可以大幅度的降低 RNN 的处理时间。</li>
+<li>对于如何粗略的判断周期性，我们通过判断震荡区间的方式来判定周期性，通过布林通道带宽大小的变化，我们可以判断数据出现震荡的时机，震荡即代表可能出现周期性，这时候我们需要把这段数据交给 RNN 做下一步的检验。</li>
+<li>将改进后的双向LSTM网络应用到异常检测领域，双向LSTM发挥了长期记忆效应和上下文综合考量的特性，参数设置不依赖具体数据，检测比较简便，结果准确。</li>
+<li>在数据处理，以及训练集的选取方面，我们将数据分为多个部分，依次选取每个部分作为训练集，预测整个序列，每次误差相加，根据总误差的大小判断异常与否。</li>
+<li>序列的分割与输入输出的安排，为了把双向LSTM应用在时序数据，将整个序列分成若干滑动重叠的长度为SL的子序列，前SL-1项输入，输出与最后一项对比。</li>
+</ol>
+<h3 id="2-不足"><a href="#2-不足" class="headerlink" title="2. 不足"></a>2. 不足</h3><p>在预测器中其实我们也应该考虑ARIMA或者是三阶指数平滑（即Holt-winters）模型，但是对于传感器数据的先验信息我们并不了解，导致我们不能够手动的设置其周期值，对于周期性不明确的情况，我们暂时使用 fix 方法作为补偿。</p>
+<blockquote>
+<p>参考资料：</p>
+<p>[1]Fox.AJ. Outliers in time series. Journal of the Royal Statistics Society Series. 1972, B48:3947.</p>
+<p>[2]FransesPH, Dijk D. Outlier detection in GARCH models.Econometric Institute Report，ErasmusUniversity Roterdam, 2000.</p>
+<p>[3]詹艳艳, 徐荣聪. 时间序列异常模式的k-均距异常因子检测[J]. 计算机工程与应用, 2009, 45(9):141-145.</p>
+<p>[4]M. Basseville and I. V. Nikiforov. Detection of abrupt changes: theory and application.Prentice Hall, 1993.</p>
+<p>[5]Sepp Hochreiter, Jürgen Schmidhuber. Long Short-Term Memory[J]. Neural Computation, 1997, 9(8):1735-1780.</p>
+<p>[6] Jozefowicz R, Zaremba W, Sutskever I. An empirical exploration of recurrent network architectures[C]// International Conference on International Conference on Machine Learning. JMLR.org, 2015:2342-2350.</p>
+<p>[7] Chung J, Gulcehre C, Cho K H, et al. Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling[J]. Eprint Arxiv, 2014.</p>
+<p>[8]Franses P H, Dijk D V. Outlier detection in GARCH models[C]// University of Oxford, Department of Economics, 2000:460-463.</p>
+</blockquote>
 
-    
-    <div class="locate-thumbnail-symbol"></div>
-
-    <!-- Pin on top -->
-    
-
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018-02-26/异常检测-2018春季第一周周报/">异常检测-2018春季第一周周报</a></p>
+      
     </div>
+    <footer class="article-footer">
+      <a data-url="https://www.luodian.ink/2018-02-26/异常检测-2018春季第一周周报/" data-id="cjeaokicj000zf51yk91sfi6x" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+
+  
+    <article id="post-Contest-911-D-Inversion-Counting" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018-01-24/Contest-911-D-Inversion-Counting/" class="article-date">
+  <time datetime="2018-01-24T14:48:49.000Z" itemprop="datePublished">2018-01-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Codeforces/">Codeforces</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
-            
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018-01-24/Contest-911-D-Inversion-Counting/">Contest-911-D-Inversion Counting</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="D-Inversion-Counting"><a href="#D-Inversion-Counting" class="headerlink" title="D - Inversion Counting"></a>D - Inversion Counting</h1><p><a href="http://codeforces.com/contest/911/problem/D" target="_blank" rel="noopener">http://codeforces.com/contest/911/problem/D</a></p>
+<p>题目大意为：逆序对问题，事先求出有多少个逆序对，只用知道是奇数个还是偶数个即可，然后现在我们对l,r区间的序列进行 reverse 之后再问序列的逆序对是奇数个还是偶数个。</p>
+<p>因为 $l,r$ 区间反转之后，如果原来的全是顺序对，那么现在会造成总共 $\frac{(len(l,r) <em> len(l,r) - 1)}{2}$ 个逆序对，所以总的逆序对个数为 原有逆序对（区间外逆序对个数）+ 新逆序对，<em>*如果新逆序对个数为奇数，则总逆序对的奇偶性发生改变。</em></em></p>
+<p>如果原来的区间里含有m个逆序对，区间外逆序对个数为 $p$ 个，那么反转之后，逆序对会变成顺序对，原有顺序对会变成逆序对，同样总共会有新的 $\frac{(len(l,r) <em> len(l,r) - 1)}{2} - m$ 个逆序对产生，总的逆序对数变为 $\frac{(len(l,r) </em> len(l,r) - 1)}{2} - m + p$ 个，原逆序对数为 $m + p$ 个，怎么在只知道 $m + p$ ，不知道 $m$ 的情况下，推出的奇偶 $\frac{(len(l,r) * len(l,r) - 1)}{2} - m + p$ 性呢？</p>
+<p>可以利用  $\frac{(len(l,r) <em> len(l,r) - 1)}{2} - m + p =  \frac{(len(l,r) </em> len(l,r) - 1)}{2} + m + p - 2m$ ，然后就可以利用 $m + p$ 的奇偶性，以及 $\frac{(len(l,r) <em> len(l,r) - 1)}{2}$ 的奇偶性，推出 $\frac{(len(l,r) </em> len(l,r) - 1)}{2} - m + p$ 的奇偶性了。</p>
+<p>代码很简单：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bitset&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unordered_set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;numeric&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;list&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lower_bound LB</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> upper_bound UB</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mem(a,x) memset(a,x,sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,a,n) for (int i=a;i&lt;n;i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> per(i,a,n) for (int i=n-1;i&gt;=a;i--)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mp make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> all(x) (x).begin(),(x).end()</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SZ(x) ((int)(x).size())</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IT iterator</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> test puts(<span class="meta-string">"OK"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lowbit(x) x &amp; -x</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PRQ priority_queue</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PB push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> gcd(a,b) _gcd(a,b)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> uLL;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; pii;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; VI;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; PII;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;PII&gt; VPII;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> LL mod=<span class="number">1000000007</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> PI = <span class="built_in">acos</span>(<span class="number">-1.0</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> eps = <span class="number">1e-8</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="meta">#<span class="meta-keyword">ifndef</span> ONLINE_JUDGE</span></span><br><span class="line">        freopen(<span class="string">"D.txt"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">    <span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);</span><br><span class="line">    <span class="built_in">cout</span>.tie(<span class="literal">nullptr</span>);</span><br><span class="line">	<span class="keyword">int</span> n,m;</span><br><span class="line">	<span class="keyword">int</span> l,r;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; ar;</span><br><span class="line">	ar.clear();</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)</span><br><span class="line">	&#123;</span><br><span class="line">		ar.clear();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">int</span> temp;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;temp;</span><br><span class="line">			ar.PB(temp);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">bool</span> ret = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt; n; ++j)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (ar[j] &lt; ar[i])</span><br><span class="line">				&#123;</span><br><span class="line">					ret ^= <span class="number">1</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"><span class="comment">//		cout&lt;&lt;ret&lt;&lt;endl;</span></span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;m;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;l&gt;&gt;r;</span><br><span class="line">			<span class="keyword">int</span> permutations = (r - l) * (r - l + <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">if</span> (permutations &amp; <span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				ret ^= <span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (ret &amp; <span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">"odd\n"</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">"even\n"</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.luodian.ink/2018-01-24/Contest-911-D-Inversion-Counting/" data-id="cjeaokibv0004f51ylewky1dq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-基于统计方法进行时序数据预测的异常检测模型" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/" class="article-date">
+  <time datetime="2017-12-29T05:57:30.000Z" itemprop="datePublished">2017-12-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/时间序列/">时间序列</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018-02-26/异常检测-2018春季第一周周报/" target="_self">阅读全文</a>
-        </span>
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/">基于统计方法进行时序数据预测的异常检测模型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="时间序列数据异常检测报告"><a href="#时间序列数据异常检测报告" class="headerlink" title="时间序列数据异常检测报告"></a>时间序列数据异常检测报告</h1><blockquote>
+<p>15级-李博</p>
+<p>2017-12-29</p>
+</blockquote>
+<h2 id="基于统计方法进行时序数据预测的异常检测模型"><a href="#基于统计方法进行时序数据预测的异常检测模型" class="headerlink" title="基于统计方法进行时序数据预测的异常检测模型"></a>基于统计方法进行时序数据预测的异常检测模型</h2><h3 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h3><p>基于统计的预测，无非是根据收集过去时间的数据，建立一个模型，来计算未来时间的数据，建立的是一种数学或者统计模型，它能表现出已有数据的变化规律，因为大数定理的存在，定义了世间所有的行为都可以通过数字表示，并且存在一定的客观规律。</p>
+<p>对于股票市场中存在的量化交易这一概念，即是指以先进的数学模型替代人为的主观判断，利用计算机技术从庞大的历史数据中海选能带来超额收益的多种『大概率』事件以制定策略，极大地减少了投资者情绪波动的影响，避免在市场极度狂热或悲观的情况下作出非理性的投资决策。</p>
+<p>在这里我们从这个方向入手，通过传统股票市场的预测分析工具来进行我们的工业传感器数据分析，首先我简要分析其关联性：</p>
+<ol>
+<li>股票数据和传感器数据都具有趋势性，以及一定程度的随机性，趋势性保证了两者的数值会按照一定的规律变化，并且从长时间数据的角度看，其是较为连续的，因此我们可以使用ARIMA，EA等模型进行平滑处理，分析异常点。</li>
+<li>股票数据根据金融因素，考虑通货膨胀等原因，可能会存在不断起伏，但是大趋势增长的情况。但是对于传感器数据，大多会在一定范围内震荡（如温度，湿度等数据因为物理因素的原因，不会高出一定范围），所以我们可以在EA（适用于渐进上升型数据）或者是ARIMA模型（适用于周期波动性数据）中进行决策。</li>
+<li>传感器数据可能存在一定的周期，但是股票数据不一定存在明显周期性，这一点也是需要对模型进行修正调整的考虑因素之一。</li>
+</ol>
+<h2 id="模型方法介绍"><a href="#模型方法介绍" class="headerlink" title="模型方法介绍"></a>模型方法介绍</h2><p>在上一次周报中，我详细介绍了这种方法，现在在这里简单略过。</p>
+<p>基于预测的异常检测模型如下图所示，$O_{data}$ 是真实数据，通过预测器得到预测数据，然后 $O_{data}$ 和 $P_{data}$分别作为比较器的输入，比较器输出的是真实数据中被判别为异常值的下标 $Index$。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fmxgr3umhej30vy0iwq2z.jpg" alt=""></p>
+<h3 id="预测器"><a href="#预测器" class="headerlink" title="预测器"></a>预测器</h3><p>时间序列分析一般假设我们获得的数据在时域上具有一定的相互依赖关系，通常，如果传感器数值在 $t$ 时刻很高，那么在 $t+1$ 时刻价格也有一定的概率会比较高，而时间序列分析的目的包含以下两个方面：</p>
+<ul>
+<li>发现这种隐含的依赖关系，并增加我们对此类时间序列的理解；</li>
+<li>对未观测到的或者尚未发生的时间序列进行预测。</li>
+</ul>
+<p>在接下来的分析中，我们认为时间序列 $X$ 由两部分组成，即 $X_t=\hat{X}_t+\epsilon_t$. 其中$\hat{X}_t$ 是有规律的序列而$ \epsilon_t$ 则无规律的噪声。有规律的 $X_t$ 包含我们想要发现的依赖关系（pattern），而 $\epsilon_t$ 我们认为在时间域内不存在相互依赖的关系，即 $\epsilon_t$ 和 $\epsilon_{t+1}$ 之间是相互独立的。</p>
+<p>一个最简单的模型就是我们假设 $\epsilon_t$ 是一个随机数，服从一定的概率分布 $f_t(\epsilon)$。</p>
+<p>可以发现，我们想要找到 $\hat{X}_t$ 而对 $ϵ_t$不怎么感兴趣。为了使有规律的 $\hat{X}_t$ 更加明显，我们通常希望能过滤到噪声，而最简单的过滤噪声的方法就是『取平均』。</p>
+<p>而问题来了，对于时间序列信号来说，我们该如何取平均呢？这里便引出了我们的基于历史数据平滑曲线的几种方法，也即我们的预测期。</p>
+<p>我们使用的预测器主要有以下几种（还在等待其余方法的补充）。</p>
+<h4 id="对于时序数据的-F-t-m-的预测方法"><a href="#对于时序数据的-F-t-m-的预测方法" class="headerlink" title="对于时序数据的 $F_{t+m}$ 的预测方法"></a>对于时序数据的 $F_{t+m}$ 的预测方法</h4><h5 id="MA-滑动平均模型"><a href="#MA-滑动平均模型" class="headerlink" title="MA(滑动平均模型)"></a>MA(滑动平均模型)</h5><p>这种方法并不考虑数据的趋势性，单纯根据历史信息来求得当前点的滑动平均数值，参数 T（也即WindowSize） 决定了依赖历史的程度。</p>
+<p>我们用 $S$ 表示处理后的序列，那么 $S_t$ 等于 $X_{t−T+1}$ 到 $X_t$ 的平均值，即</p>
+<p> $S_t=\frac{1}{T}\Sigma^t_{i=t−T+1}X_i$</p>
+<p>我们使用 $S_t \simeq \hat{X_t}$，下面我们使用滑动平均来预测 windmachine 的第一列的数据，并根据预测值进行异常检测。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fmvmepv069j31hc140772.jpg" alt=""></p>
+<h5 id="EA-指数平均模型"><a href="#EA-指数平均模型" class="headerlink" title="EA(指数平均模型)"></a>EA(指数平均模型)</h5><p>在这里我们使用二阶指数平均，二阶在一阶的基础上增加了对于趋势的考量，更符合我们的数据要求，而三阶需要依赖于周期性，这点和上述的 ARIMA 模型所依赖的周期性也是相同的，下一步我们也需要加入周期性的考量。</p>
+<p>我们可以看到，虽然指数平均在产生新的数列的时候考虑了所有的历史数据，但是仅仅考虑其静态值，即没有考虑时间序列当前的变化趋势。如果当前的股票处于<strong>上升趋势</strong>，那么当我们对明天的股票进行预测的时候，好的预测值不仅仅是对历史数据进行『平均』，而且要考虑到当前数据变化的<em>上升趋势</em>。同时考虑历史平均和变化趋势，这边是<strong>二阶指数平均</strong>。<br>我们先给出二阶指数平均的两种方法，如下</p>
+<ol>
+<li><p>$initialize$<br>$S_1 = X_1$<br>$b_1 = X_1−X_0$<br>$for  t &gt; 1$<br>$S_t = αX_t + (1−α) ( S_t−1+b_t−1)$<br>$b_t = β(S_t−S_t−1)+(1−β)b_t−1$<br>$end  for$</p>
+<p>如果我们对 $X_{t+m}$ 之后的数值进行预测，那么我们的预测值为<br>$\hat{X}_{t+m} = S_t + mb_t$</p>
+</li>
+<li><p>$S′_0=X_0$<br>$S^{′′}_0=X_0$<br>$for  t \geq 1$<br>$\quad S^{‘}_t = \alpha X_t+(1-\alpha)S_{t-1}^{‘} \quad S^{‘’}_t = \alpha S^{‘}_t +(1-\alpha)S_{t-1}^{‘’}\quad S_t = 2S^{‘}_t-S^{‘’}_t$</p>
+<p>end for</p>
+<p>在方法二中，只有一个参数 $α$ 。其中$S^{‘}_t$为最基本的指数平均得到的结果，而 $S^{‘}_t - S^{“}_t$ 为变化的趋势.</p>
+<p>如果我们对 $X_{t+m}$ 之后的数值进行预测，那么我们的预测值为<br>$\hat{X}_{t+m} = S_t +(m\frac{\alpha}{1-\alpha})(S^{‘}_t-S^{‘’}_{t})$</p>
+</li>
+</ol>
+<p>我们利用二阶指数平均对于数据进行处理及异常检测的结果如下：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fmxhde15csj31hc140wgw.jpg" alt=""></p>
+<h4 id="用于修正的方法"><a href="#用于修正的方法" class="headerlink" title="用于修正的方法"></a>用于修正的方法</h4><h5 id="布林通道"><a href="#布林通道" class="headerlink" title="布林通道"></a>布林通道</h5><p>布林通道是一个在股票市场中经常使用的概念，它在应用上结合了移动平均和标准差的概念，其基本的型态是由三条轨道线组成的带状通道（中轨和上、下轨各一条）。上下轨分别由平均值加减二倍标准差（<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d113484745294ddf53ff5589762d9565d63b7c36" alt="\pm 2\sigma ">）得到，<strong>中轨</strong>为股价的平均成本，<strong>上轨</strong>和<strong>下轨</strong>可分别视为股价的压力线和支撑线。</p>
+<blockquote>
+<p>下图中红线为上轨，绿线为下轨，蓝线为滑动平均值。</p>
+</blockquote>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fmxkgfdm6wj30je0fgmxo.jpg" alt=""></p>
+<p>由大数定律以及高斯分布模型，我们可以获知在上下二倍标准差基本涵盖了数据变化的95%左右的情况，如果超出这个分布，那么极有可能是异常点，因此在我们的模型中我们结合布林通道进行了异常点的修正。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fmxkmds0frj30me0asmx7.jpg" alt=""></p>
+<h5 id="RSI指数"><a href="#RSI指数" class="headerlink" title="RSI指数"></a>RSI指数</h5><p>RSI指数在证券市场中适用于衡量一段周期内增长和下降强弱对比的一个指标，其计算公式如下：</p>
+<ol>
+<li>RSI = 100×RS / (1+RS)</li>
+<li>RS = X天的平均上涨点数 / X天的平均下跌点数</li>
+</ol>
+<p>通俗的讲，RSI 指数过高代表上涨明显（超买现象），意味着有可能会存在潜在的下跌，RSI指数过低则反之。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fmxkr5mywfg30f009qwel.gif" alt=""></p>
+<p>下面是我们使用布林通道进行异常检测的测试：</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fmxkzutsmwj31hc140n0g.jpg" alt=""></p>
+<p>下面是我们使用修正之后的模型结合EA方法进行异常检测的情况：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fmxl1rstxaj31hc140whb.jpg" alt=""></p>
+<h3 id="比较器"><a href="#比较器" class="headerlink" title="比较器"></a>比较器</h3><p>预测器预测出当前时刻传感器的预测值后，还需要与真实值比较来判断当前时刻数据是否异常。一般的比较器都是通过阈值法，比如实际值超过预测值的一定比例就认为该点出现异常，进行报警。这种方式错误率比较大。在传感器数值模型的报警检测中没有使用这种方式，而是使用了两个串联的 Filter，只有当两个 Fliter 都认为该点异常时，才进行报警，下面简单介绍一下两个 Filter 的实现。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fmxgr0c6roj30y20m674f.jpg" alt="@图4.1 比较器模型 | center | 500x0"></p>
+<h4 id="离散度Filter"><a href="#离散度Filter" class="headerlink" title="离散度Filter"></a>离散度Filter</h4><p>根据预测误差曲线离散程度过滤出可能的异常点。一个序列的方差表示该序列离散的程度，方差越大，表明该序列波动越大。如果一个预测误差序列方差比较大，那么我们认为预测误差的报警阈值相对大一些才比较合理。离散度 filter 利用了这一特性，我们对于这个真实数据点的前 $N$ 个点求方差，下一步阈值 filter 的输入为方差 $\sigma$.</p>
+<h4 id="阈值Filter"><a href="#阈值Filter" class="headerlink" title="阈值Filter"></a>阈值Filter</h4><p>根据误差绝对值是否超过某个阈值过滤出可能的异常点。利用离散度 Filter 进行过滤时，报警阈值随着误差序列波动程度变大而变大，但是在输入数据比较小时，误差序列方差比较小，报警阈值也很小，容易出现误报。所以设计了根据方差 $\sigma$ 进行过滤的阈值 filter。阈值 filter 设计了一个分段阈值函数 $y=f(x)$，对于实际值 $x$ 和预测值 $p$ ，只有当 $|x-p|&gt;f(x)$ 时报警。实际使用中，可以根据数据寻找一个对数函数替换分段阈值函数，更易于参数调优。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="创新性"><a href="#创新性" class="headerlink" title="创新性"></a>创新性</h3><p>目前少见有人使用预测器 + 判别器的方式结合金融统计方法进行异常检测，这种方式本身比较新颖。主要优势有如下几点：</p>
+<ol>
+<li>相对于我们之前采用的机器学习的方法，这种方法即使在大数据的情况下也能够顺利完成，因为根据选取方法的不同，基本都是在 $O(N)$ 级别的方法。</li>
+<li>可以实现在线实时预测，可以将成套的算法写入传感器芯片内作为硬件级别的预测，芯片内只需要存储规定 $N$ 日内的数据即可。</li>
+</ol>
+<h3 id="不足"><a href="#不足" class="headerlink" title="不足"></a>不足</h3><ol>
+<li>在预测器中其实我们也应该考虑ARIMA或者是三阶指数平滑（即Holt-winters）模型，但是对于传感器数据的先验信息我们并不了解，导致我们不能够手动的设置其周期值，对于周期性不明确的情况，我们暂时使用 fix 方法作为补偿。</li>
+<li>下一步我计划使用RNN作为预测器，使用LSTM方法，直接对数据进行预测，但是这种方法可能会比现有的方法更耗时，但是有可能会有更高的准确性，而且目前我已经在尝试使用 LSTM 提取数据的周期性，效果还不错。</li>
+</ol>
+<h4 id="困难点分析"><a href="#困难点分析" class="headerlink" title="困难点分析"></a>困难点分析</h4><ol>
+<li>对数据的先验知识不够，这近似于一个非监督学习，如果要对效率有更高的要求可能需要更多的标记。</li>
+<li>对未来这个系统的使用方法，使用对象和项目雏形不是很了解。</li>
+<li>目前尚未完成对于数据的周期性提取的高效算法（LSTM相对来说比较耗时，对于大数据可能不太适用）。</li>
+<li>目前尚未完成对于模式异常的识别。</li>
+</ol>
+<h4 id="研究方向"><a href="#研究方向" class="headerlink" title="研究方向"></a>研究方向</h4><ol>
+<li>正在学习使用 RNN 进行序列的预测，到时候会根据正确性以及效率来和现有的方法进行选择以及比较。</li>
+<li>正在考虑是否需要将大段的点异常归类为段异常，从而进行模式异常的识别。</li>
+<li>在目前我们的实验中，主要使用了两种预测方法+两种修正方法，但实际上时序数据还有许多可以增加的模型和修正方法（我们倾向于使用多修正方法进行参数投票，最终用拟合的方式找出一个最适合我们训练数据的函数），这些方法的最终目的就是能够更加根据历史信息平滑的预测变化量，从而为我们的异常检测提出建议的值。</li>
+</ol>
+
+      
     </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/my_face.png" width="44px" height="44px" alt="Luodian's avatar">
-            </div>
-            <div>
-                <strong>Luodian</strong>
-                <span>2月 26, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/异常检测/">异常检测</a>
-            </span>
+    <footer class="article-footer">
+      <a data-url="https://www.luodian.ink/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/" data-id="cjeaokic7000if51ytjqar6em" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
 
-            
 
-            
+  
+    <article id="post-数据之美-时间序列分析" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017-12-27/数据之美-时间序列分析/" class="article-date">
+  <time datetime="2017-12-27T07:10:53.000Z" itemprop="datePublished">2017-12-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/异常检测/">异常检测</a>
+  </div>
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017-12-27/数据之美-时间序列分析/">数据之美-时间序列分析</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="时间序列分析"><a href="#时间序列分析" class="headerlink" title="时间序列分析"></a>时间序列分析</h3><blockquote>
+<p>部分内容整理自：<a href="https://www.ricequant.com/community/topic/567/" target="_blank" rel="noopener">https://www.ricequant.com/community/topic/567/</a></p>
+<p>但是在这上面做了扩充，而且也纠正了它的排版和公式等。</p>
+</blockquote>
+<p>时间序列是指一个数据序列，特别是之由一段时间内采集的信号组成的序列，序列前面的信号表示采集的时间较早。比如一只股票（000056）在2015年一月一号到2015年12月一号的收盘价就是一个时间序列，我们用X表示这个序列并把它画在下图中。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fmvd266cd3j30a607k74a.jpg" alt=""></p>
+<p>与其他的数据分析技术不同，时间序列分析一般假设我们获得的数据在时域上具有一定的相互依赖关系，如果股票价格在t时刻很高，那么在t+1时刻价格也会比较高（跌停才10%）；在比如如果股票价格在一段时间内获得稳定的上升，那么在接下来的一段时间内延续上升趋势的概率也会比较大。而时间序列分析的目的包含以下两个方面：</p>
+<ul>
+<li>发现这种隐含的依赖关系，并增加我们对此类时间序列的理解；</li>
+<li>对未观测到的或者尚未发生的时间序列进行预测。</li>
+</ul>
+<p>在接下来的分析中，我们认为时间序列 $X$ 由两部分组成，即 $X_t=\hat{X}_t+\epsilon_t$. 其中$\hat{X}_t$ 是有规律的序列而$ \epsilon_t$ 则无规律的噪声。有规律的 $X_t$ 包含我们想要发现的依赖关系（pattern），而 $\epsilon_t$ 我们认为在时间域内不存在相互依赖的关系，即 $\epsilon_t$ 和$\epsilon_{t+1}$ 之间是相互独立的。</p>
+<p>一个最简单的模型就是我们假设 $\epsilon_t$ 是一个随机数，服从一定的概率分布 $f_t(\epsilon)$。</p>
+<p>可以发现，我们想要找到 $\hat{X}_t$ 而对 $ϵ_t$不怎么感兴趣。为了使有规律的 $\hat{X}_t$ 更加明显，我们通常希望能过滤到噪声，而最简单的过滤噪声的方法就是『取平均』。</p>
+<p>而问题来了，对于时间序列信号来说，我们该如何取平均呢？</p>
+<p>目前主要有以下两种方式：</p>
+<ol>
+<li><p>滑动平均（Moving Average）</p>
+<p>并不考虑数据的趋势性，单纯根据历史信息来求得当前点的滑动平均数值，参数 windowSize 决定了依赖历史的程度。</p>
+<p>我们用 $S$ 表示处理后的序列，那么 $S_t$ 等于 $X_{t−T+1}$ 到 $X_t$ 的平均值，即</p>
+<p> $S_t=\frac{1}{T}\Sigma^t_{i=t−T+1}X_i$</p>
+<p>我们使用 $S_t \simeq \hat{X_t}​$，下面我们使用滑动平均来预测 windmachine 的第一列的数据，并根据预测值进行异常检测。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fmvmepv069j31hc140772.jpg" alt=""></p>
+</li>
+<li><p>指数平均（Exponent Average）</p>
+<ol>
+<li><p>一阶指数平均</p>
+<p>$S_0 = X_0$</p>
+<p>$S_t = \alpha X_t + (1−α)S_{t−1}  ,  for   t≥1$</p>
+<p>其中参数$\alpha \in (0,1)$</p>
+<p>可以看到 $S_t​$ 是某种 weighted averaging，而使用的权重服从几何分布，这也是这种平均方法被称为指数平均的原因（指数分布是几何分布的连续形式）。这种平均方法的一个重要特征就是，St用之前产生的所有信号有关，并且距离越近的信号所占权重越大。我们使用两个不同参数 $α=0.8​$ 和 $α=0.3​$对以上的股票价格序列进行处理，得到的结果如下图所示</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fmvduyt3ovj30a607kmx7.jpg" alt=""></p>
+<p>同时，我们也可以使用指数平均对未来进行预测。在这里我们用当前得到的指数平均作为下一个时间的预测，假如对t+1时刻的预测用 $\hat{X}_{t+1}$ 表示，那么 $\hat{X}_{t+1} = S_t.$<br>为了更清楚地说明问题，我们画出一段时间的图像，如下图所示</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fmvf171aq1j30ap08it8n.jpg" alt=""></p>
+</li>
+<li><p>二阶指数平均</p>
+<p>我们可以看到，虽然指数平均在产生新的数列的时候考虑了所有的历史数据，但是仅仅考虑其静态值，即没有考虑时间序列当前的变化趋势。如果当前的股票处于<strong>上升趋势</strong>，那么当我们对明天的股票进行预测的时候，好的预测值不仅仅是对历史数据进行『平均』，而且要考虑到当前数据变化的<em>上升趋势</em>。同时考虑历史平均和变化趋势，这边是<strong>二阶指数平均</strong>。<br>我们先给出二阶指数平均的两种方法，如下</p>
+<ol>
+<li><p>$initialize$<br>$S_1 = X_1$<br>$b_1 = X_1−X_0$<br>$for  t &gt; 1​$<br>$S_t = αX_t + (1−α) ( S_t−1+b_t−1)$<br>$b_t = β(S_t−S_t−1)+(1−β)b_t−1$<br>$end  for$</p>
+<p>如果我们对 $X_{t+m}$ 之后的数值进行预测，那么我们的预测值为<br>$\hat{X}_{t+m} = S_t + mb_t$</p>
+</li>
+<li><p>$S′_0=X_0$<br>$S^{′′}_0=X_0$<br>$for  t \geq 1$<br>$\quad S^{‘}_t = \alpha X_t+(1-\alpha)S_{t-1}^{‘} \quad S^{‘’}_t = \alpha S^{‘}_t +(1-\alpha)S_{t-1}^{‘’}\quad S_t = 2S^{‘}_t-S^{‘’}_t$</p>
+<p>end for</p>
+<p>在方法二中，只有一个参数α。其中S′t为最基本的指数平均得到的结果，而S′t−S′′t为变化的趋势.</p>
+<p>如果我们对 $X_{t+m}$ 之后的数值进行预测，那么我们的预测值为<br>$\hat{X}_{t+m} = S^{‘}_t +(1+m\frac{\alpha}{1-\alpha})(S^{‘}_t-S^{‘’}_{t})$</p>
+</li>
+</ol>
+</li>
+<li><p>三阶指数平均</p>
+<p>就是我们在17周周报里提到过的啦~</p>
+</li>
+</ol>
+<h3 id="Wind-Machine-Data异常检测"><a href="#Wind-Machine-Data异常检测" class="headerlink" title="Wind Machine Data异常检测"></a>Wind Machine Data异常检测</h3><p>​</p>
+</li>
+</ol>
+
+      
     </div>
+    <footer class="article-footer">
+      <a data-url="https://www.luodian.ink/2017-12-27/数据之美-时间序列分析/" data-id="cjeaokid6001nf51yf71ldln1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-股票技术资料" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017-12-27/股票技术资料/" class="article-date">
+  <time datetime="2017-12-27T05:47:59.000Z" itemprop="datePublished">2017-12-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/投资/">投资</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017-12-27/股票技术资料/">股票技术资料</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="时机度量"><a href="#时机度量" class="headerlink" title="时机度量"></a>时机度量</h2><ol>
+<li><p>乖离率（物极必反的原理体现）</p>
+<ul>
+<li><p>公式：当前收盘价减去移动平均（MA）的差值</p>
+<p>$乖离率 = \frac{收盘价 - 均线值}{均线值}$。</p>
+</li>
+<li><p>应用：</p>
+<p>5日，6日均线对应5日，6日乖离率，常用5，6，12，30日乖离。</p>
+</li>
+<li><p>正乖离越大，市场就越可能继续修正向下，负的亦然，总的来说股票市场更多的会向移动平均线靠拢。</p>
+<p>值得参考的乖离率参数如下：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fmvaie5fmej31kw0qa774.jpg" alt=""></p>
+<blockquote>
+<p>注意：对于长期处于缓涨缓跌，整理区间，其乖离率参考价值不大（因为数值始终会很小）。</p>
+</blockquote>
+</li>
+</ul>
+<p>​</p>
+<p>​</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.luodian.ink/2017-12-27/股票技术资料/" data-id="cjeaokidj001xf51yxfwigkg1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-17周周报-使用Holt-Winters模型通过比对预测值进行异常检测" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017-12-24/17周周报-使用Holt-Winters模型通过比对预测值进行异常检测/" class="article-date">
+  <time datetime="2017-12-24T12:43:29.000Z" itemprop="datePublished">2017-12-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/异常检测/">异常检测</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017-12-24/17周周报-使用Holt-Winters模型通过比对预测值进行异常检测/">17周周报-使用Holt-Winters模型通过比对预测值进行异常检测</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="基于预测比较模型的异常检测"><a href="#基于预测比较模型的异常检测" class="headerlink" title="基于预测比较模型的异常检测"></a>基于预测比较模型的异常检测</h1><blockquote>
+<p>16周时，开始尝试一些新的思路与原有方法的对比，在比较了传统的滑动平均和现有的指数平均方法之后，我们采用Holt Winters方法从预测的角度来做误差分析。</p>
+</blockquote>
+<h3 id="新的方法"><a href="#新的方法" class="headerlink" title="新的方法"></a>新的方法</h3><p>在序列数据的异常检测过程中，我们既可以直接使用对序列进行异常检测的算法，也可以先对序列数据进行特征提取然后转化为传统的离群点检测。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>离群点检测方法</th>
+<th>方法描述</th>
+<th>方法特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基于统计</td>
+<td>大部分的基于统计的离群点检测方法是构建一个概率分布模型，并计算对象符合该模型的概率，把具有低概率的对象视为离群点</td>
+<td>基于统计模型的离群点检测方法的前提是必须知道数据集服从什么分布；而对于高维的数据，可能每一维度服从的分布都不太一致，所以通常对高维数据来讲通常效果较差。</td>
+</tr>
+<tr>
+<td>基于邻近度</td>
+<td>通常可以在数据对象之间定义邻近性度量，把远离大部分点的对象视为离群点。</td>
+<td>算法假定离群点是离散的，低维数据我们可以作图观察，而高维数据我们无法观察，所以难以确定有效的参数和全局阈值，效果较差。</td>
+</tr>
+<tr>
+<td>基于聚类</td>
+<td>一种利用聚类检测离群点的方法是直接丢弃远离其他簇的小簇；另一种是对数据点属于簇的程度进行评价，去除得分较低的点。</td>
+<td>聚类算法产生的簇的质量对该算法产生的离群点的质量影响非常大，对数据的可分类性要求较高</td>
+</tr>
+</tbody>
+</table>
 </div>
+<p>之前考虑的算法方向主要是在『基于统计』+『基于聚类』的这个方向来考量。</p>
+<p>而如今我发现了一种新的方法可以作为采用与尝试，即上图中『基于临近度』，也是一种使用历史数据判断当前数据的方法。</p>
+<p>基于预测的异常检测模型如下图所示，$x_t$ 是真实数据，通过预测器得到预测数据，然后 $x_t$ 和 $p_t$ 分别作为比较器的输入，最终得到输出 $y_t$，$y_t$ 是一个二元值，可以用+1（+1表示输入数据正常），-1（-1表示输入数据异常）表示。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1fmroslheqbj31d00m2jrh.jpg" alt=""></p>
+<p>如果说我们设置异常检测的模型如此，那么我们可以从两个以下方面入手，一是预测器的优化，二是比较器的优化。</p>
+<h4 id="预测器优化"><a href="#预测器优化" class="headerlink" title="预测器优化"></a>预测器优化</h4><h5 id="同比环比预测器"><a href="#同比环比预测器" class="headerlink" title="同比环比预测器"></a>同比环比预测器</h5><p>同比环比是比较常用的异常检测方式，它是将当前时刻数据和前一时刻数据（环比）或者前一天同一时刻数据（同比）比较，超过一定阈值即认为该点异常。如果用图模型来表示，那么预测器就可以表示为用当前时刻前一时刻或者前一天同一时刻数据作为当前时刻的预测数据。</p>
+<p>如果将不同日期、时刻的监控数据以矩阵方式存储，每一行表示一天内不同时刻的监控数据，每一列表示同一时刻不同日期的监控数据，那么存储矩阵如下图所示：</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fmroz08dq2j30a207ua9x.jpg" alt=""></p>
+<p>假如需要预测图中黄色数据，那么环比使用图中的蓝色数据作为预测黄点的源数据，同比使用图中红色数据作为预测黄点的源数据。</p>
+<h5 id="基线预测器（MA方法）"><a href="#基线预测器（MA方法）" class="headerlink" title="基线预测器（MA方法）"></a>基线预测器（MA方法）</h5><p>同比环比使用历史上的单点数据来预测当前数据，误差比较大。$t$ 时刻的监控数据，与<br>$t-1,t-2,…$ 时刻的监控数据存在相关性。同时，与$t-k,t-2k,…$ 时刻的数据也存在相关性（<em>k</em>为周期），如果能利用上这些相关数据对<em>t</em>时刻进行预测，预测结果的误差将会更小。</p>
+<p>比较常用的方式是对历史数据求平均，然后过滤噪声，可以得到一个平滑的曲线（基线），使用基线数据来预测当前时刻的数据。该方法预测 $t$ 时刻数据（图中黄色数据）使用到的历史数据如下图所示（图中红色数据）：</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1fmrozw8uuij309s07e745.jpg" alt=""></p>
+<h5 id="Holt-Winters预测器"><a href="#Holt-Winters预测器" class="headerlink" title="Holt-Winters预测器"></a>Holt-Winters预测器</h5><p>同比环比预测到基线数据预测，使用的相关数据变多，预测的效果也较好。但是基线数据预测器只使用了周期相关的历史数据，没有使用上同周期相邻时刻的历史数据，相邻时刻的历史数据对于当前时刻的预测影响是比较大的。对于 <strong>Holt-winters </strong>预测期模型，它建议使用黄色点左上方的所有数据。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fmrp7xumw7j309u07k745.jpg" alt=""></p>
+<p>Holt-Winters是三次指数滑动平均算法，它将时间序列数据分为三部分：残差数据 $a(t)$，趋势性数据 $b(t)$，周期性数据 $s(t)$。使用Holt-Winters预测 $t$ 时刻数据，需要 $t$ 时刻前包含多个周期的历史数据。</p>
+<p>详细信息看这里：<a href="https://www.otexts.org/fpp/7/5" target="_blank" rel="noopener">https://www.otexts.org/fpp/7/5</a></p>
+<p>在实际的异常检测模型中，我们对Holt-Winters预测器进行了简化。预测器的趋势数据表示的是时间序列的总体变化趋势，经过分析，如果以天/小时为周期看待传感器数据的订单量时间序列，是没有明显的趋势性的，如下的分解图也证明了这一点。因此，我们可以去掉其中的趋势数据部分。</p>
+<p>各部分迭代的简化计算公式如（其中 $k$ 为周期）：</p>
+<ol>
+<li>$a[t] = \alpha(Y[t] - s[t-k]) + (1-\alpha) a[t-1]$</li>
+<li>$s[t] = \gamma(Y[t] - a[t]) + (1 - \gamma)(s[t-k])$</li>
+</ol>
+<p>预测值：$Y[t+h] = a[t] + s[t-k+1 + (h-1)  mod  k]$</p>
+<p>为了将算法应用到线上的实时预测，我们可以将 Holt-Winters 算法拆分为两个独立的计算过程：</p>
+<ol>
+<li><p>定时任务计算序列的周期数 $s(t)$。</p>
+<p>$S(t)$ 不需要实时计算，只用按照周期性更新即可，使用 Holt-Winters 公式计算出时间序列的周期性数据。</p>
+</li>
+<li><p>对残差序列做实时预测。</p>
+<p>计算出周期数据后，下一个目标就是对残差数据的预测。使用下面的公式，实际监控数据与周期数据相减得到残差数据，对残差数据做一次滑动平均，预测出下一刻的残差，将该时刻的残差、周期数据相加即可得到该时刻的预测数据。对于分钟数据，则将残差序列的长度设为60，即可以得到比较准确的预测效果。</p>
+<blockquote>
+<p>红线为预测数据，蓝线为真实数据</p>
+</blockquote>
+<p><img src="https://tech.meituan.com/img/holtwinter/p1.png" alt="@ 图3.8a) | center | 500x0"></p>
+<p>​</p>
+</li>
+</ol>
+<h3 id="比较器优化"><a href="#比较器优化" class="headerlink" title="比较器优化"></a>比较器优化</h3><p>预测器预测出当前时刻传感器的预测值后，还需要与真实值比较来判断当前时刻数据是否异常。一般的比较器都是通过阈值法，比如实际值超过预测值的一定比例就认为该点出现异常，进行报警。这种方式错误率比较大。在传感器数值模型的报警检测中没有使用这种方式，而是使用了两个串联的Filter，只有当两个Fliter都认为该点异常时，才进行报警，下面简单介绍一下两个Filter的实现。</p>
+<p><img src="https://tech.meituan.com/img/holtwinter/compaire.png" alt="@图4.1 比较器模型 | center | 500x0"></p>
+<h4 id="离散度Filter"><a href="#离散度Filter" class="headerlink" title="离散度Filter"></a>离散度Filter</h4><p>根据预测误差曲线离散程度过滤出可能的异常点。一个序列的方差表示该序列离散的程度，方差越大，表明该序列波动越大。如果一个预测误差序列方差比较大，那么我们认为预测误差的报警阈值相对大一些才比较合理。离散度 Filter 利用了这一特性，取连续 15 分钟的预测误差序列，分为首尾两个序列（e1,e2），如果两个序列的均值差大于 e1 序列方差的某个倍数，我们就认为该点可能是异常点。</p>
+<h4 id="阈值Filter"><a href="#阈值Filter" class="headerlink" title="阈值Filter"></a>阈值Filter</h4><p>根据误差绝对值是否超过某个阈值过滤出可能的异常点。利用离散度 Filter 进行过滤时，报警阈值随着误差序列波动程度变大而变大，但是在输入数据比较小时，误差序列方差比较小，报警阈值也很小，容易出现误报。所以设计了根据误差绝对值进行过滤的阈值 Filter。阈值 Filter 设计了一个分段阈值函数 $y=f(x)$，对于实际值 $x$ 和预测值 $p$ ，只有当 $|x-p|&gt;f(x)$ 时报警。实际使用中，可以寻找一个对数函数替换分段阈值函数，更易于参数调优。</p>
+<h3 id="模型最终架构"><a href="#模型最终架构" class="headerlink" title="模型最终架构"></a>模型最终架构</h3><p>每天定时抽取历史10天数据，经过预处理模块，去除异常数据，经过周期数据计算模块得到周期性数据。对当前时刻预测时，取60分钟的真实数据和周期性数据，经过实时预测模块，预测出当前传感器数值。将连续15分钟的预测值和真实值通过比较器，判断当前时刻是否异常。</p>
+<p><img src="https://tech.meituan.com/img/holtwinter/jiegoutu.png" alt="@图4.2 分段阈值filter | center | 500x0"></p>
+<blockquote>
+<p>参考来源：</p>
+<ol>
+<li><a href="https://www.jianshu.com/p/6fb0408b3f54" target="_blank" rel="noopener">https://www.jianshu.com/p/6fb0408b3f54</a></li>
+<li><a href="https://www.otexts.org/fpp/7/5" target="_blank" rel="noopener">https://www.otexts.org/fpp/7/5</a></li>
+</ol>
+</blockquote>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018-01-24/Contest-911-D-Inversion-Counting/">Contest-911-D-Inversion Counting</a></p>
+      
     </div>
+    <footer class="article-footer">
+      <a data-url="https://www.luodian.ink/2017-12-24/17周周报-使用Holt-Winters模型通过比对预测值进行异常检测/" data-id="cjeaokiby0006f51ydpdwf1gz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+
+  
+    <article id="post-Mecari-Analysis-LB-0-4229-rank-17-1090" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017-12-23/Mecari-Analysis-LB-0-4229-rank-17-1090/" class="article-date">
+  <time datetime="2017-12-23T13:17:16.000Z" itemprop="datePublished">2017-12-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018-01-24/Contest-911-D-Inversion-Counting/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/my_face.png" width="44px" height="44px" alt="Luodian's avatar">
-            </div>
-            <div>
-                <strong>Luodian</strong>
-                <span>1月 24, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/Codeforces/">Codeforces</a>
-            </span>
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017-12-23/Mecari-Analysis-LB-0-4229-rank-17-1090/">Mecari-Analysis(LB=0.4229~rank 17 / 1090)</a>
+    </h1>
+  
 
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Mecari"><a href="#Mecari" class="headerlink" title="Mecari"></a>Mecari</h1><p>其实从情理上来说这个比赛有一点奇怪，因为全凭给出的 feature 似乎并不能很好的去 fit 结果的 price。</p>
+<p>所以如果不能从特征工程的角度去挖掘数据的信息的话，只拿已给出的信息扔进 xgboost 或者是 lgbm，似乎就会和大部分人在同一个水平线。</p>
+<h2 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h2><h3 id="NLP-Related"><a href="#NLP-Related" class="headerlink" title="NLP-Related"></a>NLP-Related</h3><h5 id="Document-term-matrix"><a href="#Document-term-matrix" class="headerlink" title="Document-term matrix"></a>Document-term matrix</h5><p>A <strong>document-term matrix</strong> or <strong>term-document matrix</strong> is a mathematical <a href="https://en.wikipedia.org/wiki/Matrix_(mathematics" target="_blank" rel="noopener">matrix</a>) that describes the frequency of terms that occur in a collection of documents. In a document-term matrix, rows correspond to documents in the collection and columns correspond to terms. There are various schemes for determining the value that each entry in the matrix should take.</p>
+<ul>
+<li>D1 = “I like databases”</li>
+<li>D2 = “I hate databases”</li>
+</ul>
+<p>then the document-term matrix would be:</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>I</th>
+<th>like</th>
+<th>hate</th>
+<th>databases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>D1</strong></td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>D2</strong></td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
 </div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/">基于统计方法进行时序数据预测的异常检测模型</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/my_face.png" width="44px" height="44px" alt="Luodian's avatar">
-            </div>
-            <div>
-                <strong>Luodian</strong>
-                <span>12月 29, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/时间序列/">时间序列</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017-12-27/数据之美-时间序列分析/">数据之美-时间序列分析</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            时间序列分...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017-12-27/数据之美-时间序列分析/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/my_face.png" width="44px" height="44px" alt="Luodian's avatar">
-            </div>
-            <div>
-                <strong>Luodian</strong>
-                <span>12月 27, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/异常检测/">异常检测</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017-12-27/股票技术资料/">股票技术资料</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            时机度量
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017-12-27/股票技术资料/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/my_face.png" width="44px" height="44px" alt="Luodian's avatar">
-            </div>
-            <div>
-                <strong>Luodian</strong>
-                <span>12月 27, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/投资/">投资</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017-12-24/17周周报-使用Holt-Winters模型通过比对预测值进行异常检测/">17周周报-使用Holt-Winters模型通过比对预测值进行异常检测</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017-12-24/17周周报-使用Holt-Winters模型通过比对预测值进行异常检测/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/my_face.png" width="44px" height="44px" alt="Luodian's avatar">
-            </div>
-            <div>
-                <strong>Luodian</strong>
-                <span>12月 24, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/异常检测/">异常检测</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017-12-23/Mecari-Analysis-LB-0-4229-rank-17-1090/">Mecari-Analysis(LB=0.4229~rank 17 / 1090)</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Mecar...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017-12-23/Mecari-Analysis-LB-0-4229-rank-17-1090/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/my_face.png" width="44px" height="44px" alt="Luodian's avatar">
-            </div>
-            <div>
-                <strong>Luodian</strong>
-                <span>12月 23, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/机器学习/">机器学习</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017-12-21/操作系统-文件系统/">操作系统-文件系统</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            思考：
-
-拷贝一个1G的文件 对比 1M 个 1K 的文件。
-拷贝无数个空的文件夹？
-无...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017-12-21/操作系统-文件系统/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/my_face.png" width="44px" height="44px" alt="Luodian's avatar">
-            </div>
-            <div>
-                <strong>Luodian</strong>
-                <span>12月 21, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/操作系统/">操作系统</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017-12-17/Ng-Cousera-Week-6-Bias-VS-Variance/">Ng&#39;Cousera-Week 6-Bias vs Variance</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017-12-17/Ng-Cousera-Week-6-Bias-VS-Variance/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/my_face.png" width="44px" height="44px" alt="Luodian's avatar">
-            </div>
-            <div>
-                <strong>Luodian</strong>
-                <span>12月 17, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/机器学习/">机器学习</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017-12-12/软件工程-复习总结/">软件工程-复习总结</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            概论软件工程：没有...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017-12-12/软件工程-复习总结/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/my_face.png" width="44px" height="44px" alt="Luodian's avatar">
-            </div>
-            <div>
-                <strong>Luodian</strong>
-                <span>12月 12, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/软件工程/">软件工程</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-    <!-- Index nav -->
-        <nav class="material-nav mdl-cell mdl-cell--12-col">
-            <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button></a>
-        </nav>
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 32 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
-</script>
-
-    
-</div>
-
-
-                    
-                        <!-- Overlay For Active Sidebar -->
-<div class="sidebar-overlay"></div>
-
-<!-- Material sidebar -->
-<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
-    <div id="sidebar-main">
-        <!-- Sidebar Header -->
-        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
-    <!-- Top bar -->
-    <div class="top-bar"></div>
-
-    <!-- Sidebar toggle button -->
-    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
-        <i class="material-icons">clear_all</i>
-        <span class="mdl-button__ripple-container">
-            <span class="mdl-ripple">
-            </span>
-        </span>
-    </button>
-
-    <!-- Sidebar Avatar -->
-    <div class="sidebar-image">
-        <img src="/img/my_face.png" alt="Luodian's avatar">
-    </div>
-
-    <!-- Sidebar Email -->
-    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        drluodian@gmail.com
-        <b class="caret"></b>
-    </a>
-</div>
-
-
-        <!-- Sidebar Navigation  -->
-        <ul class="nav sidebar-nav">
-    <!-- User dropdown  -->
-    <li class="dropdown">
-        <ul id="settings-dropdown" class="dropdown-menu">
-            
-                <li>
-                    <a href="mailto: drluodian@gmail.com" target="_blank" title="Email Me">
-                        
-                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
-                        
-                        Email Me
-                    </a>
-                </li>
-            
-        </ul>
-    </li>
-
-    <!-- Homepage -->
-    
-        <li id="sidebar-first-li">
-            <a href="/">
-                
-                    <i class="material-icons sidebar-material-icons">home</i>
-                
-                主页
-            </a>
-        </li>
-        
-    
-
-    <!-- Archives  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">inbox</i>
-                
-                    归档
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-            <li>
-                <a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">18</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">8</span></a>
-            </ul>
-        </li>
-        
-    
-
-    <!-- Categories  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
-                
-                分类
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-                <li>
-                <a class="sidebar_archives-link" href="/categories/Codeforces/">Codeforces<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Kaggle/">Kaggle<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Linux/">Linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/其余/">其余<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/分布式计算/">分布式计算<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/异常检测/">异常检测<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/投资/">投资<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/操作系统/">操作系统<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/时间序列/">时间序列<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/软件工程/">软件工程<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/随想/">随想<span class="sidebar_archives-count">1</span></a>
-            </ul>
-        </li>
-        
-    
-
-    <!-- Pages  -->
-    
-
-    <!-- Article Number  -->
-    
-        <li>
-            <a href="/archives">
-                文章总数
-                <span class="sidebar-badge">28</span>
-            </a>
-        </li>
-        
-            <li class="divider"></li>
-        
-    
+<p>也可以使用tf-idf schema对其进行计数。</p>
+<h5 id="Bags-of-words-model"><a href="#Bags-of-words-model" class="headerlink" title="Bags of words model"></a>Bags of words model</h5><p>下列文件可用词袋表示:</p>
+<p>以下是两个简单的文件:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(1) John likes to watch movies. Mary likes movies too.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(2) John also likes to watch football games.</span><br></pre></td></tr></table></figure>
+<p>基于以上两个文件，可以建构出下列清单:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    <span class="string">"John"</span>,</span><br><span class="line">    <span class="string">"likes"</span>,</span><br><span class="line">    <span class="string">"to"</span>,</span><br><span class="line">    <span class="string">"watch"</span>,</span><br><span class="line">    <span class="string">"movies"</span>,</span><br><span class="line">    <span class="string">"also"</span>,</span><br><span class="line">    <span class="string">"football"</span>,</span><br><span class="line">    <span class="string">"games"</span>,</span><br><span class="line">    <span class="string">"Mary"</span>,</span><br><span class="line">    <span class="string">"too"</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>此处有10个不同的词，使用清单的索引表示长度为10的向量:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[1, 2, 1, 1, 2, 0, 0, 0, 1, 1] (2) [1, 1, 1, 1, 0, 1, 1, 1, 0, 0]</span><br></pre></td></tr></table></figure>
+<p>每个向量的索引内容对应到清单中词出现的次数。</p>
+<h3 id="标签二值化"><a href="#标签二值化" class="headerlink" title="标签二值化"></a>标签二值化</h3><p><a href="http://sklearn.lzjqsdd.com/modules/generated/sklearn.preprocessing.LabelBinarizer.html#sklearn.preprocessing.LabelBinarizer" target="_blank" rel="noopener"><code>LabelBinarizer</code></a> 是一个用来从多类别列表创建标签矩阵的工具类:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>lb = preprocessing.LabelBinarizer()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>lb.fit([<span class="number">1</span>, <span class="number">2</span>, <span class="number">6</span>, <span class="number">4</span>, <span class="number">2</span>])</span><br><span class="line">LabelBinarizer(neg_label=<span class="number">0</span>, pos_label=<span class="number">1</span>, sparse_output=<span class="keyword">False</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>lb.classes_</span><br><span class="line">array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>lb.transform([<span class="number">1</span>, <span class="number">6</span>])</span><br><span class="line">array([[<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>],</span><br><span class="line">       [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>]])</span><br></pre></td></tr></table></figure>
+<p>在 <code>mecari</code> 中我们对 <code>brand_name</code> 进行二值化处理，生成了一个<code>item * brand_count</code> 大小的矩阵。</p>
+<h3 id="One-hot-编码和-get-dummies"><a href="#One-hot-编码和-get-dummies" class="headerlink" title="One-hot 编码和 get_dummies"></a>One-hot 编码和 get_dummies</h3><p>离散特征的编码分为两种情况：</p>
+<ol>
+<li>离散特征的取值之间没有大小的意义，比如color：[red,blue],那么就使用one-hot编码</li>
+<li>离散特征的取值有大小的意义，比如size:[X,XL,XXL],那么就使用数值的映射{X：1,XL：2,XXL：3}</li>
+</ol>
+<p>使用pandas可以很方便的对离散型特征进行one-hot编码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd  </span><br><span class="line">df = pd.DataFrame([  </span><br><span class="line">            [<span class="string">'green'</span>, <span class="string">'M'</span>, <span class="number">10.1</span>, <span class="string">'class1'</span>],   </span><br><span class="line">            [<span class="string">'red'</span>, <span class="string">'L'</span>, <span class="number">13.5</span>, <span class="string">'class2'</span>],   </span><br><span class="line">            [<span class="string">'blue'</span>, <span class="string">'XL'</span>, <span class="number">15.3</span>, <span class="string">'class1'</span>]])  </span><br><span class="line">  </span><br><span class="line">df.columns = [<span class="string">'color'</span>, <span class="string">'size'</span>, <span class="string">'prize'</span>, <span class="string">'class label'</span>]  </span><br><span class="line">  </span><br><span class="line">size_mapping = &#123;  </span><br><span class="line">           <span class="string">'XL'</span>: <span class="number">3</span>,  </span><br><span class="line">           <span class="string">'L'</span>: <span class="number">2</span>,  </span><br><span class="line">           <span class="string">'M'</span>: <span class="number">1</span>&#125;  </span><br><span class="line">df[<span class="string">'size'</span>] = df[<span class="string">'size'</span>].map(size_mapping)  </span><br><span class="line">  </span><br><span class="line">class_mapping = &#123;label:idx <span class="keyword">for</span> idx,label <span class="keyword">in</span> enumerate(set(df[<span class="string">'class label'</span>]))&#125;  </span><br><span class="line">df[<span class="string">'class label'</span>] = df[<span class="string">'class label'</span>].map(class_mapping)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>对于有大小意义的离散特征，直接使用映射就可以了，{‘XL’:3,’L’:2,’M’:1}</p>
+</blockquote>
+<p><img src="http://img.blog.csdn.net/20161017092849112?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="img"></p>
+<p>Using the <code>get_dummies</code> will create a new column for every unique string in a certain column.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.get_dummies(df)</span><br></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20161017092944347?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="img"></p>
+<h2 id="Tf-idf"><a href="#Tf-idf" class="headerlink" title="Tf-idf"></a>Tf-idf</h2><p><strong>TF</strong>：Term Frequency.</p>
+<p>单词在文章中出现的频率。</p>
+<p><strong>Idf</strong>：Inverse Document Frequency.</p>
+<p>逆文档频率：为了衡量单词在该文章中的重要程度（在Mecari中我们是衡量单词在这条评论中的重要程度）。</p>
+<p><img src="http://image.beekka.com/blog/201303/bg2013031506.png" alt="img"></p>
+<p>如果一个词越常见，那么分母就越大，逆文档频率就越小越接近0。分母之所以要加1，是为了避免分母为0（即所有文档都不包含该词）。log表示对得到的值取对数。</p>
+<p><img src="http://image.beekka.com/blog/201303/bg2013031507.png" alt="img"></p>
+<p><strong>TF-IDF与一个词在文档中的出现次数成正比，与该词在整个语言中的出现次数成反比。</strong>所以，自动提取关键词的算法就很清楚了，就是计算出文档的每个词的TF-IDF值，然后按降序排列，取排在最前面的几个词。</p>
+<h2 id="Boosting-思想"><a href="#Boosting-思想" class="headerlink" title="Boosting 思想"></a>Boosting 思想</h2><blockquote>
+<p>不断的强化模型</p>
+</blockquote>
+<p>The term <code>Boosting</code> refers to a family of algorithms which converts weak learner to strong learners.</p>
+<h4 id="Ada-Boost"><a href="#Ada-Boost" class="headerlink" title="Ada Boost"></a>Ada Boost</h4><p>Why often use decision tree?</p>
+<p>Decision trees are non-linear. Boosting with linear models simply doesn’t work well.</p>
+<p>The weak learner needs to be consistently better than random guessing. You don’t normal need to do any parameter tuning to a decision tree to get that behavior. Training an SVM really does need a parameter search. Since the data is re-weighted on each iteration, you likely need to do another parameter search on each iteration. So you are increasing the amount of work you have to do by a large margin. </p>
+<p>Decision trees are reasonably fast to train. Since we are going to be building 100s or 1000s of them, thats a good property. They are also fast to classify, which is again important when you need 100s or 1000s to run before you can output your decision. </p>
+<p>By changing the depth you have a simple and easy control over the bias/variance trade off, knowing that boosting can reduce bias but also significantly reduces variance. Boosting is known to overfit, so the easy nob to tune is helpful in that regard.</p>
+<h4 id="GBM"><a href="#GBM" class="headerlink" title="GBM"></a>GBM</h4><p>回归树总体流程类似于分类树，区别在于，回归树的每一个节点都会得一个预测值，以年龄为例，该预测值等于属于这个节点的所有人年龄的平均值。分枝时穷举每一个feature的每个阈值找最好的分割点，但衡量最好的标准不再是最大熵，而是最小化平方误差。也就是被预测出错的人数越多，错的越离谱，平方误差就越大，通过最小化平方误差能够找到最可靠的分枝依据。分枝直到每个叶子节点上人的年龄都唯一或者达到预设的终止条件(如叶子个数上限)，若最终叶子节点上人的年龄不唯一，则以该节点上所有人的平均年龄做为该叶子节点的预测年龄。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/967544-81b3ff4fbf2c6afb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/541" alt="img"></p>
+<h2 id="Lgbm-Light-Gradient-Boosting-Model"><a href="#Lgbm-Light-Gradient-Boosting-Model" class="headerlink" title="Lgbm(Light Gradient Boosting Model)"></a>Lgbm(Light Gradient Boosting Model)</h2><p><strong>Light GBM grows tree vertically </strong>while other algorithm grows trees horizontally meaning that Light GBM grows tree <strong>leaf-wise </strong>while other algorithm grows level-wise. It will choose the leaf with max delta loss to grow. When growing the same leaf, Leaf-wise algorithm can reduce more loss than a level-wise algorithm.</p>
+<p>Below diagrams explain the implementation of LightGBM and other boosting algorithms.</p>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*AZsSoXb8lc5N6mnhqX5JCg.png" alt="img"></p>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*whSa8rY4sgFQj1rEcWr8Ag.png" alt="img"></p>
+<h5 id="Parameters-Tunning"><a href="#Parameters-Tunning" class="headerlink" title="Parameters Tunning"></a>Parameters Tunning</h5><p> it is not advisable to use LGBM on small datasets. Light GBM is <strong>sensitive to overfitting</strong> and can easily overfit small data. Their is no threshold on the number of rows but my experience suggests me to use it only for data with 10,000+ rows.</p>
+<p><strong>Control Parameters</strong></p>
+<p><strong>max_depth:</strong> It describes the maximum depth of tree. This parameter is used to handle model overfitting. Any time you feel that your model is overfitted, my first advice will be to lower max_depth.</p>
+<p><strong>min_data_in_leaf:</strong> It is the minimum number of the records a leaf may have. The default value is 20, optimum value. It is also used to deal over fitting</p>
+<p><strong>feature_fraction:</strong> Used when your boosting(discussed later) is random forest. 0.8 feature fraction means LightGBM will select 80% of parameters randomly in each iteration for building trees.</p>
+<p><strong>bagging_fraction:</strong> specifies the fraction of data to be used for each iteration and is generally used to speed up the training and avoid overfitting.</p>
+<p><strong>early_stopping_round:</strong> This parameter can help you speed up your analysis. Model will stop training if one metric of one validation data doesn’t improve in last early_stopping_round rounds. This will reduce excessive iterations.</p>
+<p><strong>lambda: </strong>lambda specifies regularization. Typical value ranges from 0 to 1.</p>
+<p><strong>min_gain_to_split:</strong> This parameter will describe the minimum gain to make a split. It can used to control number of useful splits in tree.</p>
+<p><strong>max_cat_group: </strong>When the number of category is large, finding the split point on it is easily over-fitting. So LightGBM merges them into ‘max_cat_group’ groups, and finds the split points on the group boundaries, default:64</p>
+<p><strong>Core Parameters</strong></p>
+<p><strong>Task: </strong>It specifies the task you want to perform on data. It may be either train or predict.</p>
+<p><strong>application: </strong>This is the most important parameter and specifies the application of your model, whether it is a regression problem or classification problem. LightGBM will by default consider model as a regression model.</p>
+<ul>
+<li>regression: for regression</li>
+<li>binary: for binary classification</li>
+<li>multiclass: for multiclass classification problem</li>
+</ul>
+<p><strong>boosting:</strong> defines the type of algorithm you want to run, default=gdbt</p>
+<ul>
+<li>gbdt: traditional Gradient Boosting Decision Tree</li>
+<li>rf: random forest</li>
+<li>dart: Dropouts meet Multiple Additive Regression Trees</li>
+<li>goss: Gradient-based One-Side Sampling</li>
+</ul>
+<p><strong>num_boost_round:</strong> Number of boosting iterations, typically 100+</p>
+<p><strong>learning_rate: </strong>This determines the impact of each tree on the final outcome. GBM works by starting with an initial estimate which is updated using the output of each tree. The learning parameter controls the magnitude of this change in the estimates. Typical values: 0.1, 0.001, 0.003…</p>
+<p><strong>num_leaves:</strong> number of leaves in full tree, default: 31</p>
+<p><strong>device: </strong>default: cpu, can also pass gpu</p>
+<p><strong>Metric parameter</strong></p>
+<p><strong>metric：</strong> again one of the important parameter as it specifies loss for model building. Below are few general losses for regression and classification.</p>
+<ul>
+<li>mae: mean absolute error</li>
+<li>mse: mean squared error</li>
+<li>binary_logloss: loss for binary classification</li>
+<li>multi_logloss: loss for multi classification</li>
+</ul>
+<p><strong>IO parameter</strong></p>
+<p><strong>max_bin： </strong>it denotes the maximum number of bin that feature value will bucket in.</p>
+<p><strong>categorical_feature:</strong> It denotes the index of categorical features. If categorical_features=0，1，2 then column 0， column 1 and column 2 are categorical variables.</p>
+<p><strong>ignore_column：</strong> same as categorical_features just instead of considering specific columns as categorical, it will completely ignore them.</p>
+<p><strong>save_binary：</strong> If you are really dealing with the memory size of your data file then specify this parameter as ‘True’. Specifying parameter true will save the dataset to binary file, this binary file will speed your data reading time for the next time.</p>
+<p>Knowing and using above parameters will definitely help you implement the model. Remember I said that implementation of LightGBM is easy but parameter tuning is difficult. So let’s first start with implementation and then I will give idea about the parameter tuning.</p>
+<h2 id="Ridge"><a href="#Ridge" class="headerlink" title="Ridge"></a>Ridge</h2><h4 id="线性最小二乘拟合解析解"><a href="#线性最小二乘拟合解析解" class="headerlink" title="线性最小二乘拟合解析解"></a>线性最小二乘拟合解析解</h4><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fmoltdbrsgj311q0qajsr.jpg" alt=""></p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fmom4y06e8j31aa11cte1.jpg" alt=""></p>
+<p>当XTX的行列式接近于0时，我们将其主对角元素都加上一个数k，可以使矩阵为奇异的风险大降低。于是：</p>
+<p>B(k)=(XTX+kI)−1XTYB(k)=(XTX+kI)−1XTY (I是单位矩阵)</p>
+<p>随着k的增大，B(k)中各元素bi(k)的绝对值均趋于不断变小，它们相对于正确值bi的偏差也越来越大。k趋于无穷大时，B(k)趋于0。b(k)随k的改变而变化的轨迹，就称为岭迹。实际计算中可选非常多的k值，做出一个岭迹图，看看这个图在取哪个值的时候变稳定了，那就确定k值了。</p>
+<p>X不满足列满秩，换句话就是说样本向量之间具有高度的相关性（如果每一列是一个向量的话）。遇到列向量相关的情形，岭回归是一种处理方法，也可以用主成分分析PCA来进行降维。</p>
+<p>岭回归的原理较为复杂。根据高斯马尔科夫定力，多重相关性并不影响最小二乘法估计量的无偏性和最小方差性，但是，虽然最小二乘估计量在所有线性估计量中是方差最小的，但是这个方差都不一定小，而实际上可以找到一个有偏估计量，这个估计量虽然有较小的偏差，但它的精度却能够大大高于无偏的估计量。岭回归分析就是根据这个原理，通过在正规方程中引入有偏常熟二求的回归估计量的。</p>
+<h2 id="辅助函数"><a href="#辅助函数" class="headerlink" title="辅助函数"></a>辅助函数</h2><p><strong>preprocessing.MinMaxScaler</strong>：</p>
+<p>The <code>MinMaxScaler</code> is the probably the most famous scaling algorithm, and follows the following formula for each feature:</p>
+<p>xi–min(x)max(x)–min(x)</p>
+<p>It essentially shrinks the range such that the range is now between 0 and 1 (or -1 to 1 if there are negative values).</p>
+<p>This scaler works better for cases in which the standard scaler might not work so well. If the distribution is not Gaussian or the standard deviation is very small, the min-max scaler works better.</p>
+<p>使用这种方法的目的包括：</p>
+<ol>
+<li>对于方差非常小的属性可以增强其稳定性。</li>
+<li>维持稀疏矩阵中为0的条目。</li>
+</ol>
+<h2 id="Cross-Validation"><a href="#Cross-Validation" class="headerlink" title="Cross Validation"></a>Cross Validation</h2><p>在解决实际问题中，我们可以将所有的数据集 dataset ，划分为 train_set（例如70%）和test_set（30%），然后在 train_set 上做 cross_validation ，最后取平均之后，再使用test_set测试模型的准确度。</p>
+<h4 id="K-Fold"><a href="#K-Fold" class="headerlink" title="K-Fold"></a>K-Fold</h4><ol>
+<li>A model is trained using k-1 of the folds as training data; </li>
+<li>the resulting model is validated on the remaining part of the data (i.e., it is used as a test set to compute a performance measure such as accuracy). </li>
+</ol>
+<p>The performance measure reported by k-fold cross-validation is then the average of the values computed in the loop.</p>
+<h4 id="Grid-Search"><a href="#Grid-Search" class="headerlink" title="Grid Search"></a>Grid Search</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> svm, datasets</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> GridSearchCV</span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> classification_report</span><br><span class="line"></span><br><span class="line">iris = datasets.load_iris()</span><br><span class="line">parameters = &#123;<span class="string">'kernel'</span>:(<span class="string">'linear'</span>, <span class="string">'rbf'</span>), <span class="string">'C'</span>:[<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>], <span class="string">'gamma'</span>:[<span class="number">0.125</span>, <span class="number">0.25</span>, <span class="number">0.5</span> ,<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>]&#125;</span><br><span class="line">svr = svm.SVC()</span><br><span class="line">clf = GridSearchCV(svr, parameters, n_jobs=<span class="number">-1</span>)</span><br><span class="line">clf.fit(iris.data, iris.target)</span><br><span class="line">cv_result = pd.DataFrame.from_dict(clf.cv_results_)</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'cv_result.csv'</span>,<span class="string">'w'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    cv_result.to_csv(f)</span><br><span class="line">    </span><br><span class="line">print(<span class="string">'The parameters of the best model are: '</span>)</span><br><span class="line">print(clf.best_params_)</span><br><span class="line"></span><br><span class="line">y_pred = clf.predict(iris.data)</span><br><span class="line">print(classification_report(y_true=iris.target, y_pred=y_pred))</span><br></pre></td></tr></table></figure>
+<h2 id="Konstantin的建议"><a href="#Konstantin的建议" class="headerlink" title="Konstantin的建议"></a>Konstantin的建议</h2><p>Sure, let me give some examples:</p>
+<ul>
+<li>after looking at explained predictions, I see that “t-“ in word “t-shirt” is not highlighted, then I can check how scikit-learn vectorizer processes such words and see that it discards “t-“, so the model sees “shirt” - which may or may not be the problem, but it’s worth checking</li>
+<li>after looking at the model features, I see that words like “16gb” and “32gb” are really important - I would check, maybe people also write “16 gb” too, and it’s better to normalize such cases to give the model a better job</li>
+<li>I see “item_description__regimen” as a positive feature, this looks strange - is it a german word and so any german descriptions make the product more expensive? Or something else?</li>
 </ul>
 
-
-        <!-- Sidebar Footer -->
-        <!--
-I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
-If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
-It will not impact the appearance and can give developers a lot of support :)
-
-很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
-如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
-它不会影响美观并可以给开发者很大的支持和动力。 :)
--->
-
-<!-- Sidebar Divider -->
-
-
-<!-- Theme Material -->
-
-
-<!-- Help & Support -->
-<!--
-
--->
-
-<!-- Feedback -->
-<!--
-
--->
-
-<!-- About Theme -->
-<!--
-
--->
-
+      
     </div>
+    <footer class="article-footer">
+      <a data-url="https://www.luodian.ink/2017-12-23/Mecari-Analysis-LB-0-4229-rank-17-1090/" data-id="cjeaokic9000jf51yncww718g" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
 
-    <!-- Sidebar Image -->
+
+  
+    <article id="post-操作系统-文件系统" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017-12-21/操作系统-文件系统/" class="article-date">
+  <time datetime="2017-12-21T02:35:53.000Z" itemprop="datePublished">2017-12-21</time>
+</a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/操作系统/">操作系统</a>
+  </div>
 
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017-12-21/操作系统-文件系统/">操作系统-文件系统</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>思考：</p>
+<ol>
+<li>拷贝一个1G的文件 对比 1M 个 1K 的文件。</li>
+<li>拷贝无数个空的文件夹？</li>
+<li>无数个小文件总大小和占用磁盘空间大小不一致。</li>
+<li>压缩后文件大小和占用磁盘空间大小更接近？</li>
+<li>同磁盘剪切和跨磁盘剪切耗时对比。</li>
+<li>对U盘格式化是在干什么？</li>
+<li>磁盘碎片清理是在干什么？（不停的挪位置，挪到尽量连续的位置）</li>
+</ol>
+<h2 id="内部文件结构"><a href="#内部文件结构" class="headerlink" title="内部文件结构"></a>内部文件结构</h2><ul>
+<li>树状结构：层级顺序路径解析</li>
+<li>DAG结构</li>
+</ul>
+<p>磁盘按照：引导区，文件头数组，数据盘块集合这三个顺序组织。</p>
+<h2 id="效率"><a href="#效率" class="headerlink" title="效率"></a>效率</h2><ul>
+<li>磁盘缓存</li>
+<li>某些目录的FCB可以常驻内存<ul>
+<li>根目录</li>
+<li>当前目录</li>
+</ul>
+</li>
+<li>同一个目录下文件的FCB存储于同一个柱面。</li>
+</ul>
+<p>FCB是什么？：<a href="https://en.wikipedia.org/wiki/File_Control_Block" target="_blank" rel="noopener">File Control Block</a></p>
+<h2 id="容错"><a href="#容错" class="headerlink" title="容错"></a>容错</h2><ul>
+<li>RAID：利用便宜的磁盘组成存储阵列进行冗余存储。<ul>
+<li>利用冗余磁盘进行备份。</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.luodian.ink/2017-12-21/操作系统-文件系统/" data-id="cjeaokici000wf51ynvuheckl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Ng-Cousera-Week-6-Bias-VS-Variance" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017-12-17/Ng-Cousera-Week-6-Bias-VS-Variance/" class="article-date">
+  <time datetime="2017-12-17T10:26:55.000Z" itemprop="datePublished">2017-12-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017-12-17/Ng-Cousera-Week-6-Bias-VS-Variance/">Ng&#39;Cousera-Week 6-Bias vs Variance</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Diagnosing-Bias-vs-Variance"><a href="#Diagnosing-Bias-vs-Variance" class="headerlink" title="Diagnosing Bias vs. Variance"></a>Diagnosing Bias vs. Variance</h1><p>In this section we examine the relationship between the degree of the polynomial d and the underfitting or overfitting of our hypothesis.</p>
+<ul>
+<li>We need to distinguish whether <strong>bias</strong> or <strong>variance</strong> is the problem contributing to bad predictions.</li>
+<li>High bias is underfitting and high variance is overfitting. Ideally, we need to find a golden mean between these two.</li>
+</ul>
+<p>The training error will tend to <strong>decrease</strong> as we increase the degree d of the polynomial.</p>
+<p>At the same time, the cross validation error will tend to <strong>decrease</strong> as we increase d up to a point, and then it will <strong>increase</strong> as d is increased, forming a convex curve.</p>
+<p><strong>High bias (underfitting)</strong>: both Jtrain(Θ) and JCV(Θ) will be high. Also, JCV(Θ)≈Jtrain(Θ).</p>
+<p><strong>High variance (overfitting)</strong>: Jtrain(Θ) will be low and JCV(Θ) will be much greater than Jtrain(Θ).</p>
+<p>The is summarized in the figure below:</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fmk9nubr83j308c073t8s.jpg" alt=""></p>
+<h3 id="Regularization"><a href="#Regularization" class="headerlink" title="Regularization"></a>Regularization</h3><p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fmk9pevgxgj30jj0ak74u.jpg" alt=""></p>
+<p>In the figure above, we see that as $\lambda$ increases, our fit becomes more rigid. On the other hand, as $\lambda$ approaches 0, we tend to over overfit the data. So how do we choose our parameter $\lambda$ to get it ‘just right’ ? In order to choose the model and the regularization term $\lambda$, we need to:</p>
+<ol>
+<li>Create a list of lambdas (i.e. $\lambda \in {0,0.01,0.02,0.04,0.08,0.16,0.32,0.64,1.28,2.56,5.12,10.24})$;</li>
+<li>Create a set of models with different degrees or any other variants.</li>
+<li>Iterate through the λs and for each λ go through all the models to learn some  $\theta$  .</li>
+<li>Compute the cross validation error using the learned  $\theta$   (computed with λ) on the $J_{CV}(\theta) $  <strong>without</strong> regularization or λ = 0.</li>
+<li>Select the best combo that produces the lowest error on the cross validation set.</li>
+<li>Using the best combo $\theta$  and λ, apply it on $J_{CV}(\theta) $ to see if it has a good generalization of the problem.</li>
+</ol>
+<h3 id="Decision"><a href="#Decision" class="headerlink" title="Decision"></a>Decision</h3><p>Our decision process can be broken down as follows:</p>
+<ul>
+<li><strong>Getting more training examples:</strong> Fixes high variance</li>
+</ul>
+<ul>
+<li><strong>Trying smaller sets of features:</strong> Fixes high variance</li>
+</ul>
+<ul>
+<li><strong>Adding features:</strong> Fixes high bias</li>
+</ul>
+<ul>
+<li><strong>Adding polynomial features:</strong> Fixes high bias</li>
+</ul>
+<ul>
+<li><strong>Decreasing λ:</strong> Fixes high bias</li>
+</ul>
+<ul>
+<li><strong>Increasing λ:</strong> Fixes high variance.</li>
+</ul>
+<h1 id="Diagnosing-Neural-Networks"><a href="#Diagnosing-Neural-Networks" class="headerlink" title="Diagnosing Neural Networks"></a>Diagnosing Neural Networks</h1><ul>
+<li>A neural network with fewer parameters is <strong>prone to underfitting</strong>. It is also <strong>computationally cheaper</strong>.</li>
+<li>A large neural network with more parameters is <strong>prone to overfitting</strong>. It is also <strong>computationally expensive</strong>. In this case you can use regularization (increase λ) to address the overfitting.</li>
+</ul>
+<p>Using a single hidden layer is a good starting default. You can train your neural network on a number of hidden layers using your cross validation set. You can then select the one that performs best. </p>
+<blockquote>
+<p>网络越大越好，不要因噎废食怕过拟合就用小网络。上大网络加正则化肯定比小网络好，因为大网络加正则化后的损失函数更容易优化到一个更小的局部极值点，对随机初始化的依赖更小。</p>
+</blockquote>
+<p><strong>Model Complexity Effects:</strong></p>
+<ul>
+<li>Lower-order polynomials (low model complexity) have high bias and low variance. In this case, the model fits poorly consistently.</li>
+<li>Higher-order polynomials (high model complexity) fit the training data extremely well and the test data extremely poorly. These have low bias on the training data, but very high variance.</li>
+<li>In reality, we would want to choose a model somewhere in between, that can generalize well but also fits the data reasonably well.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.luodian.ink/2017-12-17/Ng-Cousera-Week-6-Bias-VS-Variance/" data-id="cjeaokic5000ff51ypm1cg3ic" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
+  </nav>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Codeforces/">Codeforces</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Kaggle/">Kaggle</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/其余/">其余</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/分布式计算/">分布式计算</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/异常检测/">异常检测</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资/">投资</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/操作系统/">操作系统</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/时间序列/">时间序列</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/机器学习/">机器学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/软件工程/">软件工程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/量化交易/">量化交易</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随想/">随想</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/大数据异常检测/">大数据异常检测</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/机器学习/">机器学习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/大数据异常检测/" style="font-size: 10px;">大数据异常检测</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018-03-01/2018-MetaTrade-网格交易简述/">MetaTrader-网格交易简述</a>
+          </li>
+        
+          <li>
+            <a href="/2018-02-26/异常检测-2018春季第一周周报/">异常检测-2018春季第一周周报</a>
+          </li>
+        
+          <li>
+            <a href="/2018-01-24/Contest-911-D-Inversion-Counting/">Contest-911-D-Inversion Counting</a>
+          </li>
+        
+          <li>
+            <a href="/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/">基于统计方法进行时序数据预测的异常检测模型</a>
+          </li>
+        
+          <li>
+            <a href="/2017-12-27/数据之美-时间序列分析/">数据之美-时间序列分析</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
 </aside>
-
-                    
-
-                    
-                        <!-- Footer Top Button -->
-                        <div id="back-to-top" class="toTop-wrap">
-    <a href="#top" class="toTop">
-        <i class="material-icons footer_top-i">expand_less</i>
-    </a>
-</div>
-
-                    
-
-                    <!--Footer-->
-<footer class="mdl-mini-footer" id="bottom">
-    
-        <!-- Paradox Footer Left Section -->
-        <div class="mdl-mini-footer--left-section sns-list">
-    <!-- Twitter -->
-    
-        <a href="https://twitter.com/naidoul" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
-                <span class="visuallyhidden">Twitter</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Facebook -->
-    
-        <a href="https://www.facebook.com/profile.php?id=100010575373244" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
-                <span class="visuallyhidden">Facebook</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Google + -->
-    
-        <a href="https://plus.google.com/u/0/100896813044234592058" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
-                <span class="visuallyhidden">Google Plus</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Weibo -->
-    
-
-    <!-- Instagram -->
-    
-
-    <!-- Tumblr -->
-    
-
-    <!-- Github -->
-    
-        <a href="https://github.com/Luodian" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
-                <span class="visuallyhidden">Github</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- LinkedIn -->
-    
-
-    <!-- Zhihu -->
-    
-        <a href="https://www.zhihu.com/people/luo-dian-zhu-84/activities" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
-                <span class="visuallyhidden">Zhihu</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Bilibili -->
-    
-
-    <!-- Telegram -->
-    
-</div>
-
-
-        <!--Copyright-->
-        <div id="copyright">
-            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Luodian.ink
-        </div>
-
-        <!-- Paradox Footer Right Section -->
-
-        <!--
-        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
-        It will not impact the appearance and can give developers a lot of support :)
-
-        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
-        它不会影响美观并可以给开发者很大的支持。 :)
-        -->
-
-        <div class="mdl-mini-footer--right-section">
-            <div>
-                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
-                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
-            </div>
-        </div>
-    
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Luodian<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
 </footer>
-
-
-                    <!-- Import File -->
-
-
-    <script>lsloader.load("js/lazyload.min.js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
-    <script>lsloader.load("js/js.min.js","/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
-
-
-
-    <script>lsloader.load("js/nprogress.js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
-
-
-<script type="text/ls-javascript" id="NProgress-script">
-    NProgress.configure({
-        showSpinner: true
-    });
-    NProgress.start();
-    $('#nprogress .bar').css({
-        'background': '#29d'
-    });
-    $('#nprogress .peg').css({
-        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
-    });
-    $('#nprogress .spinner-icon').css({
-        'border-top-color': '#29d',
-        'border-left-color': '#29d'
-    });
-    setTimeout(function() {
-        NProgress.done();
-        $('.fade').removeClass('out');
-    }, 800);
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Swiftye -->
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
     
 
-    <!-- Local Search-->
-    
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-<!-- UC Browser Compatible -->
-<script>
-	var agent = navigator.userAgent.toLowerCase();
-	if(agent.indexOf('ucbrowser')>0) {
-		document.write('<link rel="stylesheet" href="/css/uc.css">');
-	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-	}
-</script>
-
-<!-- Window Load-->
-<script type="text/ls-javascript" id="window-load">
-    $(window).on('load', function() {
-        // Post_Toc parent position fixed
-        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
-    });
-</script>
-
-<!-- MathJax Load-->
-
-<script type="text/ls-javascript" id="lazy-load">
-    // Offer LazyLoad
-    queue.offer(function(){
-        $('.lazy').lazyload({
-            effect : 'show'
-        });
-    });
-
-    // Start Queue
-    $(document).ready(function(){
-        setInterval(function(){
-            queue.execNext();
-        },200);
-    });
-</script>
-
-<!-- Bing Background -->
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script>
-    (function(){
-        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+<script src="/js/script.js"></script>
 
-        for (var i = 0; i < scriptList.length; ++i) {
-            var item = scriptList[i];
-            lsloader.runInlineScript(item.id,item.id);
-        }
-    })()
-console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
-</script>
-
-                </main>
-            </div>
-        <script type="text/x-mathjax-config">
+  </div>
+<script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [ ["$","$"], ["\\(","\\)"] ],
@@ -1466,5 +1464,4 @@ console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viose
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
-    
 </html>
