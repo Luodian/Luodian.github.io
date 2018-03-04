@@ -62,6 +62,95 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-机器学习-第二章-概率" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017-11-25/机器学习-第二章-概率/" class="article-date">
+  <time datetime="2017-11-25T02:22:10.000Z" itemprop="datePublished">2017-11-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017-11-25/机器学习-第二章-概率/">机器学习复习-第二章-概率</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="几个公式"><a href="#几个公式" class="headerlink" title="几个公式"></a>几个公式</h3><ul>
+<li>贝叶斯公式：$P(B \mid A) = \frac{P(B)  \cdot  P(A \mid B)}{P(A)}$</li>
+<li>全概率公式：$P(A) = \Sigma_{n} P(A \mid B_n) \cdot P(B_n)$.</li>
+</ul>
+<h3 id="生成模型与判别模型"><a href="#生成模型与判别模型" class="headerlink" title="生成模型与判别模型"></a>生成模型与判别模型</h3><p>监督学习的任务就是学习一个模型，应用这一模型，对给定的输入预测相应的输出，这个模型的一般形式为决策函数：$Y = f(x)$，或者条件概率分布：$P(Y \mid X)$</p>
+<p>监督学习方法又可以分为生成方法（Generative Approach）和判别方法（Discriminative Approach），所学习到的模型分别称为生成模型和判别模型。</p>
+<h4 id="生成方法"><a href="#生成方法" class="headerlink" title="生成方法"></a><strong>生成方法</strong></h4><p>生成方法由数据学习联合概率分布 $P(X,Y)$，然后求出条件概率分布 $P(Y \mid X)$ 作为预测的模型.</p>
+<p>即生成模型：$P(Y \mid X) = \frac{P(X,Y)}{P(X)}$</p>
+<p>这样的方法之所以称为生成方法，是因为模型表示了给定输入 $X$ 产生输出 $Y$ 的生成关系，典型的生成模型有：朴素贝叶斯方法和隐马尔科夫模型。</p>
+<h4 id="判别方法"><a href="#判别方法" class="headerlink" title="判别方法"></a><strong>判别方法</strong></h4><p>判别方法由数据直接学习决策函数 $f(X)$ 或者条件概率分布 $P(Y \mid X)$ 作为预测的模型，即判别模型。判别方法关心的是对给定的输入 $X$，应该预测什么样的输出 $Y$。典型的判别模型包括：$k$ 近邻法，感知机，决策树，逻辑斯蒂回归模型，最大熵模型，支持向量机，提升方法和条件随机场等。</p>
+<h4 id="评价分类指标"><a href="#评价分类指标" class="headerlink" title="评价分类指标"></a>评价分类指标</h4><p><strong>准确率（accuracy）</strong></p>
+<p><strong>精确率（precision）</strong></p>
+<p><strong>召回率（recall）</strong></p>
+<h3 id="朴素贝叶斯"><a href="#朴素贝叶斯" class="headerlink" title="朴素贝叶斯"></a>朴素贝叶斯</h3><p>医生对病人进行诊断就是一个典型的分类过程，任何一个医生都无法直接看到病人的病情，只能观察病人表现出的症状和各种化验检测数据来推断病情，这时医生就好比一个分类器，而这个医生诊断的准确率，与他当初受到的教育方式（构造方法）、病人的症状是否突出（待分类数据的特性）以及医生的经验多少（训练样本数量）都有密切关系。</p>
+<p>回忆朴素贝叶斯中的公式 $P(Y = y_k \mid X_1,X_2,\ldots X_n) = \frac{P(Y = y_k)\prod_i P(X_i \mid Y = y_k)}{\Sigma_j ( P(Y = y_j)\prod_i P(X_i \mid Y = y_j))}$</p>
+<p>对比与医生看病，就是医生利用他已知的发病的征兆，结合病人的征兆去获取这个 $\prod_i P(X_i \mid Y = y_k)$，然后再结合发病的概率，去推断病人现在身上的征兆，有多大的可能发病。</p>
+<p>朴素贝叶斯学习和分类器与其他相比可以非常快。在条件独立的假设下，类条件特征分布的解耦意味着 每个分布可以独立估计为一个一维分布，这反过来又有助于缓解维灾难问题。</p>
+<p><strong>高斯朴素贝叶斯的训练过程</strong></p>
+<ul>
+<li><p>训练：对于每个 $y_k$：</p>
+<ol>
+<li>估计 $\pi_k (即P(Y = y_k))$</li>
+<li>对于 $X$ 的每一个属性 $X_i$，估计类条件均值和方差 $\mu_{i,k},\sigma_{i,k}$.</li>
+</ol>
+</li>
+<li><p>分类：</p>
+<ol>
+<li><p>$Y_{new} \leftarrow argmax_{y_k} \prod_i {P(X^{new}_i \mid Y = y_k)}$</p>
+</li>
+<li><p>$Y_{new} \leftarrow argmax_{y_k} \pi_k \prod_i N(X^{new}_i,\mu_{i,k},\sigma_{i,k}) $</p>
+</li>
+<li><p>对于均值和方差的计算如下：</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flvkhkdjluj315o0m20wb.jpg" alt=""><strong>一些问题</strong></p>
+<ol>
+<li>怎么对两组数据进行独立性检验？<ul>
+<li>皮尔森卡方检验</li>
+</ul>
+</li>
+<li>标准的朴素贝叶斯分类器的决策面看起来是什么样的？<ul>
+<li>对于高斯分布的话，如果两个类的协方差相同，决策面是线性的超平面</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.luodian.ink/2017-11-25/机器学习-第二章-概率/" data-id="cjec792bd0014xe1yvxe33fnr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/机器学习/">机器学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-机器学习-第一章-决策树" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017-11-24/机器学习-第一章-决策树/" class="article-date">
@@ -119,7 +208,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://www.luodian.ink/2017-11-24/机器学习-第一章-决策树/" data-id="cjeap1ahj000vv31yii2whsm4" class="article-share-link">Share</a>
+      <a data-url="https://www.luodian.ink/2017-11-24/机器学习-第一章-决策树/" data-id="cjec792b9000yxe1y9p0ksjc1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/机器学习/">机器学习</a></li></ul>
@@ -221,7 +310,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://www.luodian.ink/2017-11-24/11-24-异常检测周报/" data-id="cjeap1agk0000v31y4s0emxu7" class="article-share-link">Share</a>
+      <a data-url="https://www.luodian.ink/2017-11-24/11-24-异常检测周报/" data-id="cjec792a60000xe1ybg8z76ct" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/大数据异常检测/">大数据异常检测</a></li></ul>
@@ -275,7 +364,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li></ul>
     </div>
   </div>
 
@@ -286,6 +375,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018-03-04/异常检测-面向大数据的异常检测算法设计分析/">异常检测-面向大数据的异常检测算法设计分析</a>
+          </li>
         
           <li>
             <a href="/2018-01-24/Contest-911-D-Inversion-Counting/">Contest-911-D-Inversion Counting</a>
@@ -301,10 +394,6 @@
         
           <li>
             <a href="/2017-12-24/17周周报-使用Holt-Winters模型通过比对预测值进行异常检测/">17周周报-使用Holt-Winters模型通过比对预测值进行异常检测</a>
-          </li>
-        
-          <li>
-            <a href="/2017-12-23/Mecari-Analysis-LB-0-4229-rank-17-1090/">Mecari-Analysis(LB=0.4229~rank 17 / 1090)</a>
           </li>
         
       </ul>
