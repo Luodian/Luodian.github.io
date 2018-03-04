@@ -1,853 +1,1085 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-  
-  <title>Luodian.ink</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Luodian.ink">
-<meta property="og:url" content="https://www.luodian.ink/page/2/index.html">
-<meta property="og:site_name" content="Luodian.ink">
-<meta property="og:locale" content="zh-CN">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Luodian.ink">
-  
-    <link rel="alternate" href="/atom.xml" title="Luodian.ink" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-  
+<html style="display: none;" lang="zh">
+    <head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.4.0 -->
+    <script>window.materialVersion = "1.4.0"</script>
 
+    <!-- Title -->
+    
+    <title>
+        
+        Luodian.ink
+    </title>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+    
+    
+    
+        <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
+    
+    
+    
+    
+    
+    
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="Luodian">
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="luodian">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Luodian.ink">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://www.luodian.ink">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Luodian.ink">
+    <meta property="og:image" content="/img/favicon.png" />
+    <meta property="og:description" content="">
+    
+
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="Luodian.ink">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.luodian.ink" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://www.luodian.ink/page/2/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import CSS & jQuery -->
+    
+        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/css/style.min.css?oCSEO3ST+aEypEwttTDI9g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        
+            <style id="/css/fontawesome.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("/css/fontawesome.min.css","/css/fontawesome.min.css?JpVQUwzBJ7aqWjWSWn3mzg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        
+        
+        <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+
+        <script>lsloader.load("js/jquery.min.js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
+    
+    
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-110144268-1', 'auto');ga('send', 'pageview');
+</script>
+
+    <!-- Custom Head --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
 </head>
 
-<body>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Luodian.ink</a>
-      </h1>
-      
+
+    
+        <body id="scheme-Isolation" class="lazy">
+            <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+                    <!-- Isolation Header -->
+                    <header class="header">
+    <div class="header-wrapper">
+        <!-- Header Copyright -->
+        <div class="header-copyright">
+            <div class="header-site">
+                ©&nbsp;
+                <script type="text/javascript">
+                    var fd = new Date();
+                    document.write(fd.getFullYear());
+                </script>
+                &nbsp;Luodian.ink
+            </div>
+            <!--
+            I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+            It will not impact the appearance and can give developers a lot of support :)
+
+            很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+            它不会影响美观并可以给开发者很大的支持。 :)
+            -->
+            <div>
+                Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a>
+                <br>
+                Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a>
+            </div>
+        </div>
+
+        <!-- Header Title -->
+        <span class="header-title header-item">
+            <a href="/" title="Luodian.ink">
+                Luodian.ink
+            </a>
+        </span>
+
+        <p class="header-slogan header-item">
+        
+            
+                Hello,my world
+            
+        
+        </p>
+
+        <!-- Header Nav -->
+        <nav class="header-nav header-item">
+            <span class="header-nav-item">
+                <a href="/" title="Home">
+                    <span>主页</span>
+                </a>
+            </span>
+
+            <!-- Pages  -->
+            
+            
+        </nav>
+
+        <!-- Header SNS -->
+        <div class="header-item header-sns_list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/naidoul" target="_blank">
+            <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/profile.php?id=100010575373244" target="_blank">
+            <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://plus.google.com/u/0/100896813044234592058" target="_blank">
+            <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/Luodian" target="_blank">
+            <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://www.luodian.ink"></form>
-      </div>
-    </div>
-  </div>
 </header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-Linux：一些常用命令 " class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017-12-04/Linux：一些常用命令 /" class="article-date">
-  <time datetime="2017-12-04T14:22:50.000Z" itemprop="datePublished">2017-12-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Linux/">Linux</a>
-  </div>
 
-  </div>
-  <div class="article-inner">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+
+                    <!-- Index Module -->
+<div class="material-index mdl-grid">
     
+    <div class="locate-thumbnail-symbol"></div>
+
+    <!-- Pin on top -->
     
-      <header class="article-header">
+
+    <!-- Normal Post -->
+    
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017-12-04/Linux：一些常用命令 /">Linux：一些常用的Linux命令</a>
-    </h1>
-  
-
-      </header>
+            
+            
+                <!-- Isolation Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post_entry Header -->
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="CP"><a href="#CP" class="headerlink" title="CP"></a>CP</h3><p>操作格式：<code>cp [选项]... 源… 目录</code></p>
-<p>命令作用：将源文件复制至目标文件，或将多个源文件复制至目标目录。</p>
-<p>命令参数：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">-a, --archive    等于-dR --preserve=all</span><br><span class="line">    --backup[=CONTROL    为每个已存在的目标文件创建备份</span><br><span class="line">-b                类似--backup 但不接受参数</span><br><span class="line">   --copy-contents        在递归处理是复制特殊文件内容</span><br><span class="line">-d                等于--no-dereference --preserve=links</span><br><span class="line">-f, --force        如果目标文件无法打开则将其移除并重试(当 -n 选项</span><br><span class="line">                    存在时则不需再选此项)</span><br><span class="line">-i, --interactive        覆盖前询问(使前面的 -n 选项失效)</span><br><span class="line">-H                跟随源文件中的命令行符号链接</span><br><span class="line">-l, --link            链接文件而不复制</span><br><span class="line">-L, --dereference   总是跟随符号链接</span><br><span class="line">-n, --no-clobber   不要覆盖已存在的文件(使前面的 -i 选项失效)</span><br><span class="line">-P, --no-dereference   不跟随源文件中的符号链接</span><br><span class="line">-p                等于--preserve=模式,所有权,时间戳</span><br><span class="line">    --preserve[=属性列表   保持指定的属性(默认：模式,所有权,时间戳)，如果</span><br><span class="line">               可能保持附加属性：环境、链接、xattr 等</span><br><span class="line">-R, -r, --recursive  复制目录及目录内的所有项目</span><br></pre></td></tr></table></figure>
+        <!-- Post Header Info -->
+        <div class="post_entry-header_info without-thumbnail">
+            <!-- Author Avatar & Name -->
+            <img src="/img/my_face.png" class="avatar-img" width="44px" height="44px" alt="Luodian's avatar">
+            <span class="name-span">Luodian</span>
+        </div>
 
-      
+        <!-- Null Thumbnail -->
+        <div class="post_thumbnail-null">
+    
+        </div>
+
+    <!-- Post_entry Content -->
+    <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
+        <!-- Post Title -->
+        <p class="post_entry-title">
+            <a href="/2017-12-04/Linux：一些常用命令 /">Linux：一些常用的Linux命令</a>
+        </p>
+
+        <!-- Post Excerpt -->
+        <p class="post_entry-excerpt">
+            
+                CP操作格式：
+            
+            &nbsp;&nbsp;&nbsp;
+            <span>
+                <a href="/2017-12-04/Linux：一些常用命令 /" target="_self">阅读全文</a>
+            </span>
+        </p>
+
+        <!-- Post Tags -->
+        
     </div>
-    <footer class="article-footer">
-      <a data-url="https://www.luodian.ink/2017-12-04/Linux：一些常用命令 /" data-id="cjec792ap000axe1ye9m031a2" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
-
-  
-    <article id="post-天算计划-为什么Based-on-Spark" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017-12-04/天算计划-为什么Based-on-Spark/" class="article-date">
-  <time datetime="2017-12-04T12:08:31.000Z" itemprop="datePublished">2017-12-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/分布式计算/">分布式计算</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017-12-04/天算计划-为什么Based-on-Spark/">天算计划-为什么Based on Spark?</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Spark简介"><a href="#Spark简介" class="headerlink" title="Spark简介"></a>Spark简介</h3><p><strong>Spark</strong>最初诞生于美国加州大学伯克利分校（UC Berkeley）的AMP实验室，是一个可应用于大规模数据处理的快速、通用引擎。2013年，Spark加入Apache孵化器项目后，开始获得迅猛的发展，如今已成为Apache软件基金会最重要的三大分布式计算系统开源项目之一（即Hadoop、Spark、Storm）。Spark最初的设计目标是使数据分析更快——不仅运行速度快，也要能快速、容易地编写程序。为了使程序运行更快，Spark提供了内存计算，减少了迭代计算时的IO开销；而为了使编写程序更为容易，Spark使用简练、优雅的Scala语言编写，基于Scala提供了交互式的编程体验。虽然，Hadoop已成为大数据的事实标准，但其MapReduce分布式计算模型仍存在诸多缺陷，而Spark不仅具备Hadoop MapReduce所具有的优点，且解决了Hadoop MapReduce的缺陷。Spark正以其结构一体化、功能多元化的优势逐渐成为当今大数据领域最热门的大数据计算平台。</p>
-<p>Spark支持使用Scala、Java、Python和R语言进行编程。由于Spark采用Scala语言进行开发，因此，建议采用Scala语言进行Spark应用程序的编写。Scala是一门现代的多范式编程语言，平滑地集成了面向对象和函数式语言的特性，旨在以简练、优雅的方式来表达常用编程模式。Scala语言的名称来自于“可伸展的语言”，从写个小脚本到建立个大系统的编程任务均可胜任。Scala运行于Java平台（JVM，Java 虚拟机）上，并兼容现有的Java程序。</p>
-<h3 id="Spark模式区分"><a href="#Spark模式区分" class="headerlink" title="Spark模式区分"></a>Spark模式区分</h3><p>在Spark中存在着多种运行模式，可使用本地模式运行、可使用伪分布式模式运行、使用分布式模式也存在多种模式如：Spark Mesos模式、Spark YARN模式。</p>
-<p><strong>Spark Mesos模式</strong>：官方推荐模式，通用集群管理，有两种调度模式：粗粒度模式（Coarse-grained Mode）与细粒度模式（Fine-grained Mode）。</p>
-<p><strong>Spark YARN模式</strong>：Hadoop YARN资源管理模式。</p>
-<p><strong>Standalone模式</strong>： 简单模式或称独立模式，可以单独部署到一个集群中，无依赖任何其他资源管理系统。不使用其他调度工具时会存在单点故障，使用Zookeeper等可以解决</p>
-<p>（我们之前配置的是standalone模式）</p>
-<p><strong>Local模式</strong>：本地模式，可以启动本地一个线程来运行job，可以启动N个线程或者使用系统所有核运行job。</p>
-<h3 id="RDD介绍"><a href="#RDD介绍" class="headerlink" title="RDD介绍"></a>RDD介绍</h3><p>Spark的核心是建立在统一的抽象RDD之上，使得Spark的各个组件可以无缝进行集成，在同一个应用程序中完成大数据计算任务。RDD的设计理念源自AMP实验室发表的论文《Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing》。</p>
-<h5 id="RDD设计背景"><a href="#RDD设计背景" class="headerlink" title="RDD设计背景"></a>RDD设计背景</h5><p>在实际应用中，存在许多迭代式算法（比如机器学习、图算法等）和交互式数据挖掘工具，目前的MapReduce框架都是把中间结果写入到HDFS中，带来了大量的数据复制、磁盘IO和序列化开销。虽然，类似Pregel等图计算框架也是将结果保存在内存当中，但是，这些框架只能支持一些特定的计算模式，并没有提供一种通用的数据抽象。RDD就是为了满足这种需求而出现的，它提供了一个抽象的数据架构，我们不必担心底层数据的分布式特性，只需将具体的应用逻辑表达为一系列转换处理，不同RDD之间的转换操作形成依赖关系，可以实现管道化，从而避免了中间结果的存储，大大降低了数据复制、磁盘IO和序列化开销。</p>
-<blockquote>
-<p>迭代式算法：下次计算依赖于上次结果，PageRank，单源最短路径是常常见的迭代式算法之一。</p>
-<p>交互式数据挖掘：数据库+可视化+数据挖掘算法</p>
-</blockquote>
-<h5 id="RDD-概念"><a href="#RDD-概念" class="headerlink" title="RDD 概念"></a>RDD 概念</h5><p>一个RDD就是一个分布式对象集合，本质上是一个只读的分区记录集合，每个RDD可以分成多个分区，每个分区就是一个数据集片段，并且一个RDD的不同分区可以被保存到集群中不同的节点上，从而可以在集群中的不同节点上进行并行计算。RDD提供了一种高度受限的共享内存模型，即RDD是只读的记录分区的集合，不能直接修改，只能基于稳定的物理存储中的数据集来创建RDD，或者通过在其他RDD上执行确定的转换操作（如map、join和groupBy）而创建得到新的RDD。RDD提供了一组丰富的操作以支持常见的数据运算，分为“行动”（Action）和“转换”（Transformation）两种类型，前者用于执行计算并指定输出的形式，后者指定RDD之间的相互依赖关系。两类操作的主要区别是，转换操作（比如map、filter、groupBy、join等）接受RDD并返回RDD，而行动操作（比如count、collect等）接受RDD但是返回非RDD（即输出一个值或结果）。RDD提供的转换接口都非常简单，都是类似map、filter、groupBy、join等粗粒度的数据转换操作，而不是针对某个数据项的细粒度修改。因此，RDD比较适合对于数据集中元素执行相同操作的批处理式应用，而不适合用于需要异步、细粒度状态的应用，比如Web应用系统、增量式的网页爬虫等。正因为这样，这种粗粒度转换接口设计，会使人直觉上认为RDD的功能很受限、不够强大。但是，实际上RDD已经被实践证明可以很好地应用于许多并行计算应用中，可以具备很多现有计算框架（比如MapReduce、SQL、Pregel等）的表达能力，并且可以应用于这些框架处理不了的交互式数据挖掘应用。<br>Spark用Scala语言实现了RDD的API，程序员可以通过调用API实现对RDD的各种操作。RDD典型的执行过程如下：</p>
-<ol>
-<li>RDD读入外部数据源（或者内存中的集合）进行创建；</li>
-<li>RDD经过一系列的“转换”操作，每一次都会产生不同的RDD，供给下一个“转换”使用；</li>
-<li>最后一个RDD经“行动”操作进行处理，并输出到外部数据源（或者变成Scala集合或标量）。<br>需要说明的是，RDD采用了惰性调用，即在RDD的执行过程中（如图9-8所示），真正的计算发生在RDD的“行动”操作，对于“行动”之前的所有“转换”操作，Spark只是记录下“转换”操作应用的一些基础数据集以及RDD生成的轨迹，即相互之间的依赖关系，而不会触发真正的计算。</li>
-</ol>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fm51zymadwj311x0ah74j.jpg" alt=""></p>
-<p>从输入中逻辑上生成A和C两个RDD，经过一系列“转换”操作，逻辑上生成了F（也是一个RDD），之所以说是逻辑上，是因为这时候计算并没有发生，Spark只是记录了RDD之间的生成和依赖关系。当F要进行输出时，也就是当F进行“行动”操作的时候，Spark才会根据RDD的依赖关系生成DAG，并从起点开始真正的计算。</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fm520ym19kj30rv074t8q.jpg" alt=""></p>
-
-      
+    <!-- Post_entry Footer -->
+    <div class="post_entry-footer">
+        <div class="post_entry-footer-border"></div>
+        <div class="post_entry-footer-info">
+            <div class="post_entry-footer-date">
+                12月 04, 2017
+            </div>
+            <div class="post_entry-footer-comment">
+                
+                
+            </div>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="https://www.luodian.ink/2017-12-04/天算计划-为什么Based-on-Spark/" data-id="cjec792b0000lxe1ymxw20yih" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+</div>
 
-
-  
-    <article id="post-天算计划-Spark-计算任务分发流程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017-12-04/天算计划-Spark-计算任务分发流程/" class="article-date">
-  <time datetime="2017-12-04T09:47:26.000Z" itemprop="datePublished">2017-12-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/分布式计算/">分布式计算</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017-12-04/天算计划-Spark-计算任务分发流程/">天算计划-Spark-计算任务分发流程</a>
-    </h1>
-  
-
-      </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Spark-Shell操作"><a href="#Spark-Shell操作" class="headerlink" title="Spark-Shell操作"></a>Spark-Shell操作</h3><p><strong>加载本地文件</strong></p>
-<p>在开始具体词频统计代码之前，需要解决一个问题，就是如何加载文件？</p>
-<p>要注意，文件可能位于本地文件系统中，也有可能存放在分布式文件系统HDFS中，所以，下面我们分别介绍如何加载本地文件，以及如何加载HDFS中的文件。</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> textFile = sc.textFile(<span class="string">"file:///usr/local/spark/mycode/wordcount/word123.txt"</span>)</span><br><span class="line"><span class="comment">//如果文件不存在会在执行诸如 textFile.first()指令时拒绝连接</span></span><br></pre></td></tr></table></figure>
-<p><strong>加载HDFS中的文件</strong></p>
-<p>为了能够读取 HDFS 中的文件，我们需要先启动 Hadoop 中的 HDFS 组件。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start-all</span><br></pre></td></tr></table></figure>
-<p>请使用下面命令创建用户名 hadoop 登录 Linux 系统。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/hdfs dfs -mkdir -p /user/hadoop</span><br></pre></td></tr></table></figure>
-<p>下面我们使用命令查看一下HDFS文件系统中的目录和文件：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./bin/hdfs dfs -ls .</span><br><span class="line">./bin/hdfs dfs -ls /user/hadoop</span><br><span class="line">//这两个命令等价</span><br></pre></td></tr></table></figure>
-<p>上面命令中，最后一个点号“.”，表示要查看Linux当前登录用户hadoop在HDFS文件系统中与hadoop对应的目录下的文件，也就是查看HDFS文件系统中“/user/hadoop/”目录下的文件</p>
-<p>如果要查看HDFS文件系统根目录下的内容，需要使用下面命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/hdfs dfs -ls /</span><br></pre></td></tr></table></figure>
-<p>下面我们使用<code>dfs -put</code>指令将文件上传到<code>hdfs</code>文件系统中</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/hdfs dfs -put &lt;path&gt; .</span><br></pre></td></tr></table></figure>
-<p>使用<code>-cat</code>指令查看文件内容</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/hdfs dfs -cat ./&lt;filename&gt;</span><br></pre></td></tr></table></figure>
-<p>现在，让我们切换回到spark-shell窗口，编写语句从HDFS中加载word.txt文件，并显示第一行文本内容：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">scala&gt;</span> val textFile = sc.textFile("hdfs://localhost:9000/user/hadoop/&lt;filename&gt;")</span><br><span class="line"><span class="meta">scala&gt;</span> textFile.first()</span><br></pre></td></tr></table></figure>
-<p>如下三条语句也等价</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> textFile = sc.textFile(<span class="string">"hdfs://localhost:9000/user/hadoop/word.txt"</span>)</span><br><span class="line"><span class="keyword">val</span> textFile = sc.textFile(<span class="string">"/user/hadoop/word.txt"</span>)</span><br><span class="line"><span class="keyword">val</span> textFile = sc.textFile(<span class="string">"word.txt"</span>)</span><br></pre></td></tr></table></figure>
+        
+            
+            
+                <!-- Isolation Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post_entry Header -->
+    
+        <!-- Post Header Info -->
+        <div class="post_entry-header_info without-thumbnail">
+            <!-- Author Avatar & Name -->
+            <img src="/img/my_face.png" class="avatar-img" width="44px" height="44px" alt="Luodian's avatar">
+            <span class="name-span">Luodian</span>
+        </div>
 
-      
+        <!-- Null Thumbnail -->
+        <div class="post_thumbnail-null">
+    
+        </div>
+
+    <!-- Post_entry Content -->
+    <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
+        <!-- Post Title -->
+        <p class="post_entry-title">
+            <a href="/2017-12-04/天算计划-为什么Based-on-Spark/">天算计划-为什么Based on Spark?</a>
+        </p>
+
+        <!-- Post Excerpt -->
+        <p class="post_entry-excerpt">
+            
+                Sp...
+            
+            &nbsp;&nbsp;&nbsp;
+            <span>
+                <a href="/2017-12-04/天算计划-为什么Based-on-Spark/" target="_self">阅读全文</a>
+            </span>
+        </p>
+
+        <!-- Post Tags -->
+        
     </div>
-    <footer class="article-footer">
-      <a data-url="https://www.luodian.ink/2017-12-04/天算计划-Spark-计算任务分发流程/" data-id="cjec792ay000ixe1ywqvl2438" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
-
-  
-    <article id="post-Kaggle实战-Mecari价格预测" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017-12-03/Kaggle实战-Mecari价格预测/" class="article-date">
-  <time datetime="2017-12-03T08:43:37.000Z" itemprop="datePublished">2017-12-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Kaggle/">Kaggle</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017-12-03/Kaggle实战-Mecari价格预测/">Kaggle实战-Mecari价格预测</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>先从分析别人的visualization kernel入手。</p>
-<h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><p>The training data has 1482535 observations with 7 features. The test data has 693359 rows that we need to predict. According to the competition description, the public leaderboard will be evaluated by ALL of the test data we have at the first stage.</p>
-<p>We can have a a rough look at the features (test data summary is hidden for simplicity)</p>
-<ol>
-<li><strong>train_id / test_id</strong>: A unique key for each item.</li>
-<li><strong>name</strong>: The item’s name as a string.</li>
-<li><strong>item_condition_id</strong>: A factor with 5 levels. As the plot below shows, <strong>the mean prices for different conditions are really close and it’s hard to guess which whether higher / lower condition id is better so far.</strong></li>
-<li><strong>category_name</strong>: The category of the item.</li>
-<li><strong>brand_name</strong>: The brand name of the item. Nearly half of the items do not have a brand.</li>
-<li><strong>shipping</strong>: A binary indicator of the shipping information. (<strong>1 if shipping fee is paid by seller and 0 by buyer</strong>)</li>
-<li><strong>item_description</strong>: A long string containing the raw text of the item description. ~5% of the items do not have a description.</li>
-</ol>
-<h2 id="Shipping"><a href="#Shipping" class="headerlink" title="Shipping"></a><strong>Shipping</strong></h2><p>The shipping cost burden is decently splitted between sellers and buyers with more than half of the items’ shipping fees are paid by the sellers (55%). In addition, the average price paid by users who have to pay for shipping fees is lower than those that don’t require additional shipping cost. This matches with our perception that the sellers need a lower price to compensate for the additional shipping.</p>
-<p>普遍来说：价格低的不怎么需要付邮费，而价格高的需要支付更多的邮费。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span>    <span class="number">0.552726</span></span><br><span class="line"><span class="number">1</span>    <span class="number">0.447274</span></span><br><span class="line">Name: shipping, dtype: float64</span><br></pre></td></tr></table></figure>
-<p><img src="https://www.kaggle.io/svf/1854426/8f395cd10b83bd4e2d2ae59d6a6c80ba/__results___files/__results___15_0.png" alt=""></p>
-<p>对于物品的状况<code>item_condition</code>来说，数值和价格关联不大，目前还不知道具体的作用是什么，处理的时候先扔掉（估计对于非常相似的物品，比较下它的状态或许能够给我们一些启发）。</p>
-<blockquote>
-<p>ID = 5时看起来四分位数和中位数都比较高。</p>
-</blockquote>
-<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fm3o51uu04j30x00oqdfw.jpg" alt=""></p>
-<h3 id="Tokenlize"><a href="#Tokenlize" class="headerlink" title="Tokenlize"></a>Tokenlize</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">stop = set(stopwords.words(<span class="string">'english'</span>))</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tokenize</span><span class="params">(text)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    sent_tokenize(): segment text into sentences</span></span><br><span class="line"><span class="string">    word_tokenize(): break sentences into words</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">try</span>: </span><br><span class="line">        regex = re.compile(<span class="string">'['</span> +re.escape(string.punctuation) + <span class="string">'0-9\\r\\t\\n]'</span>)</span><br><span class="line">        text = regex.sub(<span class="string">" "</span>, text) <span class="comment"># remove punctuation</span></span><br><span class="line">        </span><br><span class="line">        tokens_ = [word_tokenize(s) <span class="keyword">for</span> s <span class="keyword">in</span> sent_tokenize(text)]</span><br><span class="line">        tokens = []</span><br><span class="line">        <span class="keyword">for</span> token_by_sent <span class="keyword">in</span> tokens_:</span><br><span class="line">            tokens += token_by_sent</span><br><span class="line">        tokens = list(filter(<span class="keyword">lambda</span> t: t.lower() <span class="keyword">not</span> <span class="keyword">in</span> stop, tokens))</span><br><span class="line">        filtered_tokens = [w <span class="keyword">for</span> w <span class="keyword">in</span> tokens <span class="keyword">if</span> re.search(<span class="string">'[a-zA-Z]'</span>, w)]</span><br><span class="line">        filtered_tokens = [w.lower() <span class="keyword">for</span> w <span class="keyword">in</span> filtered_tokens <span class="keyword">if</span> len(w)&gt;=<span class="number">3</span>]</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> filtered_tokens</span><br><span class="line">            </span><br><span class="line">    <span class="keyword">except</span> TypeError <span class="keyword">as</span> e: print(text,e)</span><br></pre></td></tr></table></figure>
-<h5 id="TF-IDF"><a href="#TF-IDF" class="headerlink" title="TF-IDF"></a>TF-IDF</h5><p>tf-idf（英语：term frequency–inverse document frequency）是一种用于信息检索与文本挖掘的常用加权技术。tf-idf是一种统计方法，用以评估一字词对于一个文件集或一个语料库中的其中一份文件的重要程度。字词的重要性随着它在文件中出现的次数成正比增加，但同时会随着它在语料库中出现的频率成反比下降。tf-idf加权的各种形式常被搜索引擎应用，作为文件与用户查询之间相关程度的度量或评级。除了tf-idf以外，互联网上的搜索引擎还会使用基于链接分析的评级方法，以确定文件在搜索结果中出现的顺序。</p>
-<p>有很多不同的数学公式可以用来计算tf-idf。这边的例子以上述的数学公式来计算。词频（tf）是一词语出现的次数除以该文件的总词语数。假如一篇文件的总词语数是100个，而词语“母牛”出现了3次，那么“母牛”一词在该文件中的词频就是3/100=0.03。而计算文件频率（DF）的方法是以文件集的文件总数，除以出现“母牛”一词的文件数。所以，如果“母牛”一词在1,000份文件出现过，而文件总数是10,000,000份的话，其逆向文件频率就是log（10,000,000 / 1,000）=4。最后的tf-idf的分数为0.03 * 4=0.12。</p>
-<p>tf-idf算法是创建在这样一个假设之上的：对区别文档最有意义的词语应该是那些在文档中出现频率高，而在整个文档集合的其他文档中出现频率少的词语，所以如果特征空间坐标系取tf词频作为测度，就可以体现同类文本的特点。另外考虑到单词区别不同类别的能力，tf-idf法认为一个单词出现的文本频数越小，它区别不同类别文本的能力就越大。因此引入了逆文本频度idf的概念，以tf和idf的乘积作为特征空间坐标系的取值测度，并用它完成对权值tf的调整，调整权值的目的在于突出重要单词，抑制次要单词。但是在本质上idf是一种试图抑制噪声的加权，并且单纯地认为文本频率小的单词就越重要，文本频率大的单词就越无用，显然这并不是完全正确的。idf的简单结构并不能有效地反映单词的重要程度和特征词的分布情况，使其无法很好地完成对权值调整的功能，所以tf-idf法的精度并不是很高。</p>
-<p>此外，在tf-idf算法中并没有体现出单词的位置信息，对于Web文档而言，权重的计算方法应该体现出HTML的结构特征。特征词在不同的标记符中对文章内容的反映程度不同，其权重的计算方法也应不同。因此应该对于处于网页不同位置的特征词分别赋予不同的系数，然后乘以特征词的词频，以提高文本表示的效果。</p>
-<h4 id="t-SNE"><a href="#t-SNE" class="headerlink" title="t-SNE"></a>t-SNE</h4><p>因为原理不同，导致，tsne 保留下的属性信息，更具代表性，也即最能体现样本间的差异，且TSNE 运行极慢，PCA 则相对较快。</p>
-<p>因此更为一般的处理，尤其在展示（可视化）高维数据时，常常先用 PCA 进行降维，再使用 tsne。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">data_pca = PCA(n_components=<span class="number">50</span>).fit_transform(data)</span><br><span class="line">data_pca_tsne = TSNE(n_components=<span class="number">2</span>).fit_transform(data_pca)</span><br></pre></td></tr></table></figure>
-
-      
+    <!-- Post_entry Footer -->
+    <div class="post_entry-footer">
+        <div class="post_entry-footer-border"></div>
+        <div class="post_entry-footer-info">
+            <div class="post_entry-footer-date">
+                12月 04, 2017
+            </div>
+            <div class="post_entry-footer-comment">
+                
+                
+            </div>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="https://www.luodian.ink/2017-12-03/Kaggle实战-Mecari价格预测/" data-id="cjec792am0009xe1ynm881cpr" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+</div>
 
-
-  
-    <article id="post-Hexo-Material主题中Mathjax的配置" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017-12-01/Hexo-Material主题中Mathjax的配置/" class="article-date">
-  <time datetime="2017-12-01T07:17:26.000Z" itemprop="datePublished">2017-12-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/其余/">其余</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017-12-01/Hexo-Material主题中Mathjax的配置/">Hexo-Material主题中Mathjax的配置</a>
-    </h1>
-  
-
-      </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近Hexo无故始终出渲染的问题，删掉重建的过程中发现是因为操作系统-内存那节因为有些是从PPT里拷出来的，导致了无法识别符号，渲染失败。</p>
-<p>在重建的过程中，最头疼的就是 Mathjax 的配置了，实现这个效果的插件似乎有很多个版本，有些也有时效性，而且挺多插件，针对于我当前使用的Material主题并无效果，如果使用最出名的Next主题似乎就要好很多。</p>
-<p>下面简单记录下配置Mathjax的过程。</p>
-<h3 id="修改默认的render"><a href="#修改默认的render" class="headerlink" title="修改默认的render"></a>修改默认的render</h3><p><code>hexo</code> 默认的渲染引擎是 <code>marked</code>，但是 <code>marked</code> 不支持 <code>mathjax</code>。 <code>kramed</code> 是在 <code>marked</code>的基础上进行修改。我们在工程目录下执行以下命令来安装 <code>kramed</code>。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br><span class="line">npm uninstall hexo-math --save</span><br><span class="line">npm install hexo-renderer-mathjax --save //这个使用来代替hexo-math的</span><br></pre></td></tr></table></figure>
-<p>执行了这两个操作这个，不用去<code>_config.yml</code>文件中改什么plugin之类的东西（这些是之前使用hexo-math才需要的操作）。</p>
-<h3 id="修改kramed的渲染细节"><a href="#修改kramed的渲染细节" class="headerlink" title="修改kramed的渲染细节"></a>修改kramed的渲染细节</h3><p>这一步不做其实也可以，但是会出现一些转义的bug.</p>
-<ol>
-<li><p>接下来在 <code>/node_modules/hexo-renderer-kramed/lib/renderer.js</code>，修改</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatText</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Fit kramed's rule: $$ + \1 + $$</span></span><br><span class="line">    <span class="keyword">return</span> text.replace(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">'$$$$$1$$$$'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 将上面的修改为如下的</span></span><br><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatText</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>到<code>&lt;path-to-your-project/node_modules/kramed/lib/rules/inline.js</code>，将11行的</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">escape</span>: <span class="regexp">/^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/</span></span><br><span class="line">修改为</span><br><span class="line"><span class="built_in">escape</span>: <span class="regexp">/^\\([`*\[\]()# +\-.!_&gt;])/</span>,</span><br></pre></td></tr></table></figure>
-<p>将20行的：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">em: <span class="regexp">/^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span>,</span><br><span class="line">修改为</span><br><span class="line">em: <span class="regexp">/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span>,</span><br></pre></td></tr></table></figure>
-<p>​</p>
-</li>
-<li><p>配置Material主题的Mathjax加载的CDN链接：</p>
-<p>在<code>material/_config.yml</code>下添加如下的链接</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">vendors:</span><br><span class="line"># MaterialCDN</span><br><span class="line">#   You can load theme unique files from your private cdn or oss.</span><br><span class="line">#   The new src will have the base domain you configured below.</span><br><span class="line">#   For example</span><br><span class="line">#       materialcdn: https://cdn.jsdelivr.net/npm/hexo-material@1.4.0/source</span><br><span class="line">    materialcdn: https:<span class="comment">//cdn.jsdelivr.net/npm/hexo-material@1.4.0/source</span></span><br><span class="line">    # MathJax 2.7.0-2.7.1</span><br><span class="line">    mathjax: https:<span class="comment">//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js</span></span><br></pre></td></tr></table></figure>
-<p>​</p>
-</li>
-</ol>
+        
+            
+            
+                <!-- Isolation Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post_entry Header -->
+    
+        <!-- Post Header Info -->
+        <div class="post_entry-header_info without-thumbnail">
+            <!-- Author Avatar & Name -->
+            <img src="/img/my_face.png" class="avatar-img" width="44px" height="44px" alt="Luodian's avatar">
+            <span class="name-span">Luodian</span>
+        </div>
 
-      
+        <!-- Null Thumbnail -->
+        <div class="post_thumbnail-null">
+    
+        </div>
+
+    <!-- Post_entry Content -->
+    <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
+        <!-- Post Title -->
+        <p class="post_entry-title">
+            <a href="/2017-12-04/天算计划-Spark-计算任务分发流程/">天算计划-Spark-计算任务分发流程</a>
+        </p>
+
+        <!-- Post Excerpt -->
+        <p class="post_entry-excerpt">
+            
+                
+            
+            &nbsp;&nbsp;&nbsp;
+            <span>
+                <a href="/2017-12-04/天算计划-Spark-计算任务分发流程/" target="_self">阅读全文</a>
+            </span>
+        </p>
+
+        <!-- Post Tags -->
+        
     </div>
-    <footer class="article-footer">
-      <a data-url="https://www.luodian.ink/2017-12-01/Hexo-Material主题中Mathjax的配置/" data-id="cjec792ai0006xe1ysyaal33u" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
-
-  
-    <article id="post-随想-同谋（Complicit）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017-12-01/随想-同谋（Complicit）/" class="article-date">
-  <time datetime="2017-12-01T04:56:53.000Z" itemprop="datePublished">2017-12-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/随想/">随想</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017-12-01/随想-同谋（Complicit）/">随想-同谋（Complicit）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="2017年度词汇-——-同谋"><a href="#2017年度词汇-——-同谋" class="headerlink" title="2017年度词汇 —— 同谋"></a>2017年度词汇 —— 同谋</h2><blockquote>
-<p>“ 2017 年度词汇：同谋（Complicit）” —— dictionary.com</p>
-</blockquote>
-<p>这个词的来源是：</p>
-<ul>
-<li>4月5日，美国总统特朗普的女儿伊万卡· 特朗普接受《CBS 今晨秀》采访时，被问到她与丈夫是否是特朗普总统的同谋，她回答说 『我不知道同谋是什么意思』。</li>
-<li>10月24日，参议员杰夫·弗莱克宣布辞职，并表示『我不会成为共谋』。</li>
-</ul>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fm16ktlqv3j310g0pdq4h.jpg" alt=""></p>
-<p>Dictionary.com 在公布年度词汇时表示</p>
-<blockquote>
-<p>我们所选择的年度词汇既指那些看得见的行为，也指看些看不见的行为。这个词汇提醒我们，即使不作为也是一种行动。沉默地接受了错误的行为，是我们落到这般境地的原因。我们不能让这种情况继续变成一种常态。如果我们这样做，我们都是共谋。</p>
-</blockquote>
-<p>用一种更通俗的话来讲，或许它在表达：人们越来越沉浸在社交网络的娱乐氛围当中，缺少对时事的严肃讨论和关切，人们倾向于看到事情更让滑稽，更戏剧性，或者说更愿意让自己相信的那一面，而沉默或者是不理智的发声，有时候也是错误的帮凶。</p>
-
-      
+    <!-- Post_entry Footer -->
+    <div class="post_entry-footer">
+        <div class="post_entry-footer-border"></div>
+        <div class="post_entry-footer-info">
+            <div class="post_entry-footer-date">
+                12月 04, 2017
+            </div>
+            <div class="post_entry-footer-comment">
+                
+                
+            </div>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="https://www.luodian.ink/2017-12-01/随想-同谋（Complicit）/" data-id="cjec792bg0019xe1yausmkbrz" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+</div>
 
-
-  
-    <article id="post-天算计划-Ubuntu-Spark组网计划配置操作" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017-11-30/天算计划-Ubuntu-Spark组网计划配置操作/" class="article-date">
-  <time datetime="2017-11-29T16:26:51.000Z" itemprop="datePublished">2017-11-30</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/分布式计算/">分布式计算</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017-11-30/天算计划-Ubuntu-Spark组网计划配置操作/">天算计划-Ubuntu-Spark组网计划配置操作</a>
-    </h1>
-  
-
-      </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>记录下组内环境的配置流程，目前我们需要实现五个人在Ubuntu环境下的Hadoop+Spark配置，配置流程如下。</p>
-<h3 id="SSH无密码互联"><a href="#SSH无密码互联" class="headerlink" title="SSH无密码互联"></a>SSH无密码互联</h3><ol>
-<li>使用<code>ssh-keygen -t rsa -P &quot;&quot;</code> 命令生成公钥，表示生成的公钥不含登录密码，只要A机器拿到B的公钥就可以实现 A 机器无密码登录 B 机器。</li>
-<li><code>cd $HOME/.ssh</code>目录下，使用<code>cat $HOME/.ssh/id_rsa.pub &gt;&gt; $HOME/.ssh/authorized_keys</code> 命令或者直接将<code>id_rsa.pub</code>中的最后一行复制到<code>authorized_keys</code>当中。</li>
-<li>最终保证五个人的电脑的中都有一份相同<code>authorized_keys</code>文件是最好的，这样就可以实现无密码登陆了（第一次可能需要输密码，这里建议咱们先都设置成12345678，方便实验）。</li>
-<li>两个人之间测试能否通过当前的内网IP互相登录，如<code>elrond@master</code>这种格式，使用<code>ssh &#39;inet IP&#39;@master</code>登录 elrond 的机器。</li>
-</ol>
-<p><strong>错误收集</strong></p>
-<ol>
-<li><p>如果遇到<code>sign_and_send_pubkey: signing failed: agent refused operation</code>的错误，原因是因为ssh-agent并没有真正的工作，输入下列命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">eval `ssh-agent -s` </span><br><span class="line">ssh-add</span><br></pre></td></tr></table></figure>
-<p>​</p>
-</li>
-</ol>
-<h3 id="统一化HOSTNAME"><a href="#统一化HOSTNAME" class="headerlink" title="统一化HOSTNAME"></a>统一化HOSTNAME</h3><ol>
-<li><p>对于不同的电脑有可能有不同的用户名，我们这里针对于hadoop统一设置一下我们每个人的用户名。</p>
-<p>为了更好的在Shell中区分三台主机，修改其显示的主机名，执行如下命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/hostname</span><br></pre></td></tr></table></figure>
-<p>master的/etc/hostname添加如下配置：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">master</span><br></pre></td></tr></table></figure>
-<p>同样slave01的/etc/hostname添加如下配置：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slave01</span><br></pre></td></tr></table></figure>
-<p>同样slave02的/etc/hostname添加如下配置：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slave02</span><br></pre></td></tr></table></figure>
-<p>重启三台电脑，重启后在终端Shell中才会看到机器名的变化,如下图：</p>
-<p><img src="http://7xjnip.com1.z0.glb.clouddn.com/20161205_005.png" alt="img"></p>
-</li>
-<li><p>到<code>/etc/hosts</code>路径下修改<code>ip - 缩写</code>，如当前阿臻是<code>master</code>用户，那么我在<code>hosts</code>下面加入了<code>172.20.0.39   master</code>这行语句之后，我再使用<code>ping master</code>实际上是<code>ping 172.20.0.39</code> 。</p>
-<p>因此我们最好把<code>hosts</code>文件修改为如下的形式：</p>
-<p>使用</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/hosts</span><br></pre></td></tr></table></figure>
-<p>配置如下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 localhost</span><br><span class="line">172.20.0.39 master</span><br><span class="line">172.20.0.38 slave01</span><br><span class="line">172.20.0.37 slave02</span><br></pre></td></tr></table></figure>
-<p>然后master需要修改~/.ssh/config文件，如果没有此文件，自己创建文件。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Host master</span><br><span class="line">  user elrond // 阿臻的电脑</span><br><span class="line">Host slave01</span><br><span class="line">  user hadoop // 丹丹的电脑</span><br><span class="line">Host slave02</span><br><span class="line">  user yuhongzhong  // 宇宏的电脑</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注：这里的user和host对应的是命令行下的elrond@master，等于在master主机下的elrond用户。</p>
-</blockquote>
-<p>这时我们尝试下面操作，应该就能登录到丹丹的电脑上了。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh slave01</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="Hadoop配置"><a href="#Hadoop配置" class="headerlink" title="Hadoop配置"></a>Hadoop配置</h3><ol>
-<li><p>修改master主机修改Hadoop如下配置文件，这些配置文件都位于/usr/local/hadoop/etc/hadoop目录下。</p>
-<ol>
-<li><p>slaves<br>这里把DataNode的主机名写入该文件，每行一个。这里让master节点主机仅作为NameNode使用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">slave01</span><br><span class="line">slave02</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>core-site.xml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;file:/usr/local/hadoop/tmp&lt;/value&gt;</span><br><span class="line">        &lt;description&gt;Abase for other temporary directories.&lt;/description&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;fs.defaultFS&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;hdfs://master:9000&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>hdfs-site.xml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">  &lt;property&gt;</span><br><span class="line">      &lt;name&gt;dfs.replication&lt;/name&gt;</span><br><span class="line">      &lt;value&gt;3&lt;/value&gt; //注：这里只能是奇数，代表当前允许的datanode个数，即slaver个数。</span><br><span class="line">  &lt;/property&gt;</span><br><span class="line">  &lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>mapred-site.xml(复制mapred-site.xml.template,再修改文件名)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">  &lt;property&gt;</span><br><span class="line">      &lt;name&gt;mapreduce.framework.name&lt;/name&gt;</span><br><span class="line">      &lt;value&gt;yarn&lt;/value&gt;</span><br><span class="line">  &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>yarn-site.xml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">&lt;!-- Site specific YARN configuration properties --&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;mapreduce_shuffle&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;master&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-<li><p>此时阿臻的电脑上 /usr/local 文件夹下面有一个hadoop.tar文件，我们使用<code>scp</code>指令将其传送到其他的slave结点上。</p>
-<p>如传送到宇宏的电脑，我们使用：<code>scp hadoop.tar slave02:/usr/local</code>，传送之前要保证宇宏执行了了<code>sudo chmod 777 /usr/local/</code>。</p>
-</li>
-<li><p>传送完毕文件之后（丹丹和宇宏的电脑都已经有了），解压，在 slave01，slave02 节点上执行 <code>sudo chown -R hadoop /usr/local/hadoop</code>，以保证 master 有权限去修改 slaver 的这个目录。</p>
-</li>
-<li><p>在 master 主机上执行如下命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/hadoop</span><br><span class="line">bin/hdfs namenode -format</span><br><span class="line">sbin/start-dfs.sh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行过程中理论上不应该输入密码，如果要输入密码，重回 SSH 的步骤，检查 SSH 是否能够相互无密码登录。</p>
-<ul>
-<li><p>理论情形如下：</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1flzx9vlmytj30zq071go1.jpg" alt="img"></p>
-</li>
-<li><p>我们通过浏览器来查看整个集群的HDFS状态，地址为：<a href="http://172.20.0.39（master的内网IP）:50070/dfshealth.html#tab-overview" target="_blank" rel="noopener">http://172.20.0.39（master的内网IP）:50070/dfshealth.html#tab-overview</a></p>
-<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1flzhf07xmuj30wp0aumxu.jpg" alt="img"></p>
-</li>
-</ul>
-</li>
-</ol>
+        
+            
+            
+                <!-- Isolation Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post_entry Header -->
+    
+        <!-- Post Header Info -->
+        <div class="post_entry-header_info without-thumbnail">
+            <!-- Author Avatar & Name -->
+            <img src="/img/my_face.png" class="avatar-img" width="44px" height="44px" alt="Luodian's avatar">
+            <span class="name-span">Luodian</span>
+        </div>
 
-      
+        <!-- Null Thumbnail -->
+        <div class="post_thumbnail-null">
+    
+        </div>
+
+    <!-- Post_entry Content -->
+    <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
+        <!-- Post Title -->
+        <p class="post_entry-title">
+            <a href="/2017-12-03/Kaggle实战-Mecari价格预测/">Kaggle实战-Mecari价格预测</a>
+        </p>
+
+        <!-- Post Excerpt -->
+        <p class="post_entry-excerpt">
+            
+                先从分析别人的visualization kernel入手。
+
+            
+            &nbsp;&nbsp;&nbsp;
+            <span>
+                <a href="/2017-12-03/Kaggle实战-Mecari价格预测/" target="_self">阅读全文</a>
+            </span>
+        </p>
+
+        <!-- Post Tags -->
+        
     </div>
-    <footer class="article-footer">
-      <a data-url="https://www.luodian.ink/2017-11-30/天算计划-Ubuntu-Spark组网计划配置操作/" data-id="cjec792b1000mxe1yk3t4knpi" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
-
-  
-    <article id="post-11-29-异常检测周报" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017-11-29/11-29-异常检测周报/" class="article-date">
-  <time datetime="2017-11-29T01:31:39.000Z" itemprop="datePublished">2017-11-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/异常检测/">异常检测</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017-11-29/11-29-异常检测周报/">11-29-异常检测周报</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这周因为机器学习的考试和软工课的一些其他事情。</p>
-<p>我还没有进行我的计划：对于DBSCAN针对于时间序列数据的代码级别改进，但是从思路上考虑到了一些方向，下面主要结合这段时间对于这个问题的思考以及一切实验来进行汇报。</p>
-<h2 id="数据平滑之后的结果"><a href="#数据平滑之后的结果" class="headerlink" title="数据平滑之后的结果"></a>数据平滑之后的结果</h2><p>首先我考虑对数据集进行平滑处理，目前能够使用的是如窗口移动平均这类做法，这类做法的时间复杂度为 $O(N)$ ，常数较大，但是复杂度在可以接受的返回值内。</p>
-<p>平滑的目的是将工业中因为传感器误差而引入的背景噪声消除，在平滑了曲线后我再使用差分的方法找出局部的最大最小值，效果更为理想（注意在演示中因为使用的数据太大，太密，导致了我们没有办法很好的细粒度的展示）</p>
-<p>平滑的含义如下：</p>
-<p align="center">
-<img src="http://www.redpoppet.com/wp-content/uploads/2016/05/figure_2_thumb.png">
-</p>
-
-<p>在平滑之后的数据，使用差分标记可能的异常值（红点里标记的为局部的最大最小值，我们通过让用户设置阈值，规定差距大于 $\epsilon$ 时，我们检测这个异常值，可以实现针对不同类型的传感器数据报出异常）。</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1flyw2mhb45j31hc140q62.jpg" alt=""></p>
-<p>对差分之后的结果进行 K-means和DBSCAN聚类的结果分别如下。</p>
-<p>K-MEANS的效果：</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1flyw6x0zc3j31hc140grp.jpg" alt=""></p>
-<p>但是很可惜的是，K-MEANS的效果是基于空间的聚类，经过更大规模数据的观察，显然它是更多的在根据Y轴坐标进行聚类的划分。</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1flywen9hd7j31hc140adh.jpg" alt=""></p>
-<p>以下是DBSCAN的效果，DBSCAN能够识别出数据大的模式的转化，下一步我打算在红点处加重权值 minEps，希望能够成功的使用DBSCAN进行模式的划分。</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1flywc8z89rj31hc14045m.jpg" alt=""></p>
-<h3 id="MRDBSCAN"><a href="#MRDBSCAN" class="headerlink" title="MRDBSCAN"></a>MRDBSCAN</h3><p>最近一段时间，我接触到了分布式计算，并且在尝试使用Spark完成一些分布式计算的任务。我也了解到了一个比较前沿的分布式使用DBSCAN的算法：MRDBSCAN。</p>
-<p>下面对这个算法做一些简单的记录以及报告：</p>
-<ol>
-<li><p>第一步将平面划分为等点数的几个子平面。</p>
-</li>
-<li><p>将每个子平面交给一个Worknode去进行DBSCAN的划分。</p>
-</li>
-<li><p>收集每个子结点计算的结果，考虑子平面边界的情况，对于边界的点，能够向哪边传播，就属于哪边的簇，如果两边都能够同时传播，那么它就属于两边的簇，这时说明两边的簇能够连接到一起去，这时将两边修改为同样的颜色。</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1flyx4irf5oj30ri0gm451.jpg" alt=""></p>
-</li>
-</ol>
-<h3 id="下一步方向规划"><a href="#下一步方向规划" class="headerlink" title="下一步方向规划"></a>下一步方向规划</h3><p>目前我的方法是基于差分-&gt;DBSCAN-&gt;LSTM进行的组合方法的异常点+异常模式段的识别。</p>
-<p>下一步我打算分为以下两个阶段进行：</p>
-<ol>
-<li>去广泛的使用其他的算法进行异常点（和差分比较）和异常模式（和DBSCAN+LSTM比较）识别检测的效果比较。</li>
-<li>将差分找异常点的算法打成包或者写成函数，向外提供调用的接口。</li>
-<li>尝试针对于时序数据特性改进DBSCAN算法，并且尝试实现此函数。</li>
-</ol>
-<h3 id="一些疑惑"><a href="#一些疑惑" class="headerlink" title="一些疑惑"></a>一些疑惑</h3><ol>
-<li>能够实现同样效果的有很多其余的算法，浩哥也在研究其他的一些算法，但是有一些算法时间空间效果不高，对于工业大数据要求的尽可能 $O(N)$ 级别的处理速度，这些算法还有其研究的意义吗？我们有没有必要去广泛的收集各类算法进行比较，测试？即使它看起来很慢而且效果不见得会很好。</li>
-<li>目前我们的数据感觉存在低质量的情况，很多时候做不出和理论相近的效果，这方面可能会牺牲一些，需要用户自己多设置一些参数，去调整最后的效果。</li>
-<li>最后用户希望从我们的系统检测出来的异常值获取什么信息，能够对工业上有什么帮助呢？</li>
-</ol>
-
-      
+    <!-- Post_entry Footer -->
+    <div class="post_entry-footer">
+        <div class="post_entry-footer-border"></div>
+        <div class="post_entry-footer-info">
+            <div class="post_entry-footer-date">
+                12月 03, 2017
+            </div>
+            <div class="post_entry-footer-comment">
+                
+                
+            </div>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="https://www.luodian.ink/2017-11-29/11-29-异常检测周报/" data-id="cjec792ab0001xe1yac32g7xm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+</div>
 
-
-  
-    <article id="post-机器学习-第四章-SVM" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017-11-26/机器学习-第四章-SVM/" class="article-date">
-  <time datetime="2017-11-26T11:41:31.000Z" itemprop="datePublished">2017-11-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017-11-26/机器学习-第四章-SVM/">机器学习-第四章-SVM（Updating）</a>
-    </h1>
-  
-
-      </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>主要梳理以下三个方向：支持向量机，核函数，序列最小最优化算法</p>
-<h2 id="支持向量机"><a href="#支持向量机" class="headerlink" title="支持向量机"></a>支持向量机</h2><p>支持向量学习方法包含构建线性可分支持向量机（Linear support vector machine in linearly separable case）、线性支持向量机（Linear support vector machine）及非线性支持向量机（non-linear support vector machine）。</p>
-<p>在提到SVM以及逻辑回归，有如下几种情况。</p>
-<ul>
-<li>当我们使用线性可分的数据集时，通过硬间隔最大化（hard margin maximization），学习一个线性的分类器，即线性可分支持向量机。</li>
-<li>当训练数据近似可分，通过软间隔最大化（soft margin maximization），也学习一个线性分类器。</li>
-<li>再则，当训练数据线性不可分时，通过引入核技巧（kernel trick）及软间隔最大化，学习非线性支持向量机。</li>
-</ul>
-<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>假设在给定的特征空间训练集如下：$T = \{(x_1,y_1),…(x_n,y_n)\}$，其中，$x_i \in \chi= \Re^n, y_i \in \{1,-1\}$</p>
-<p>假设训练数据集是线性可分的，我们需要找到一个分离的超平面 $w \cdot x + b$ 能够将不同的实例分成两部分，我们利用间隔最大化求最优的分离超平面，这时，解是唯一的。</p>
-<h3 id="函数间隔和几何间隔"><a href="#函数间隔和几何间隔" class="headerlink" title="函数间隔和几何间隔"></a>函数间隔和几何间隔</h3><p><strong>函数间隔</strong>：</p>
-<ol>
-<li>定义给定的数据集 $T$ 和超平面 $（w，b）$.</li>
-<li>定义超平面 $(w,b)$ 和样本点 $(x_i,y_i)$ 的函数间隔为：$\hat{\gamma} = y_i(w \dot x_i + b)$.</li>
-<li>定义超平面 $(w,b)$ 和数据集 $T$ 的函数间隔为：$\hat{\gamma} = min_{1…n}(\hat{\gamma}_i)$.</li>
-</ol>
-<p><strong>几何间隔</strong></p>
-<p>由于函数间隔在成倍数变化时，虽然超平面不变动，但是数值却在发生变化，因此我们继续定义几何间隔来对函数间隔进行规范化。</p>
-<p>几何间隔：$\gamma_i = \frac{w}{\mid \mid w \mid \mid} \cdot x_i + \frac{b}{\mid \mid w \mid \mid}$</p>
-<p><strong>为什么要间隔最大化</strong></p>
-<p>对于训练数据及找到几何间隔最大化的超平面意味着以充分大的确信度（我们可以定义离超平面越远的点对于分类面的确信度越大）对训练数据进行分类，这样的分类结果对于最难分类的点也有足够大的确信度将其分开，这样的超平面应该对未知的新实例有更好的泛化的效果。</p>
-<p><strong>支持向量和间隔边界</strong></p>
-<p>在线性可分的情况下，训练数据的样本点与分离超平面距离最近的样本点的实例称为支持向量（Support Vector）.支持向量是使约束条件式子等号成立的点，即 $y_i(w \cdot x_i + b) - 1=0$</p>
-<p>对于 $y_i = +1$ 的正例点，支持向量在超平面：$H_1:w \cdot x + b = 1$ 上。</p>
-<p>对于 $y_i = -1$ 的负例点，支持向量在超平面：$H_1:w \cdot x + b = -1$ 上。</p>
-<blockquote>
-<p>在决定分离平面时只有支持向量起作用，支持向量两侧的其余点并不起作用，所以我们将这种分类模型称为支持向量机，支持向量的个数一般很少，所以支持向量机由很少的『重要的』训练样本决定。</p>
-</blockquote>
-<p><strong>拉格朗日对偶</strong></p>
-<p>通过求解对偶问题的解来获取原问题的最优解，被称为Linear SVM的对偶算法，这样做的优点在于，一是，对偶问题往往更容易求解，二是，引入核函数，进而推广到非线性分类问题。</p>
-<p>定义拉格朗日函数：$L(w,b,\alpha) = \frac{1}{2} \mid \mid w \mid \mid^2 - \Sigma^N_{i} \alpha_i y_i(w \cdot x_i + b) + \Sigma^N_{i} \alpha_i$. </p>
-<p>对于支持向量需要尽量满足 $y_i(w  \cdot x_i + b) - 1 \geq0$，根据拉格朗日对偶性，原始问题的对偶问题是极大极小问题：$\max \limits_{\alpha} \cdot \min \limits_{w,b} \{L(w,b,a)\}$.</p>
-<h2 id="核技巧"><a href="#核技巧" class="headerlink" title="核技巧"></a>核技巧</h2><p>当输入空间为欧式空间或者离散集合，特征空间为希尔伯特空间时，核函数表示将输入从输入空间映射到特征空间得到的特征向量之间的内积，通过核函数可以学习到非线性支持向量机，等价于隐式地在高维的特征空间中学习线性支持向量机，这样的方法称为核技巧。</p>
-<p>概述的说，线性SVM+核技巧 = 非线性SVM。</p>
-<blockquote>
-<p>希尔伯特空间：抽象空间中的极限与实数上的极限有一个很大的不同就是，极限点可能不在原来给定的集合中，所以又引入了完备的概念，完备的内积空间就称为Hilbert空间。</p>
-</blockquote>
+        
+            
+            
+                <!-- Isolation Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post_entry Header -->
+    
+        <!-- Post Header Info -->
+        <div class="post_entry-header_info without-thumbnail">
+            <!-- Author Avatar & Name -->
+            <img src="/img/my_face.png" class="avatar-img" width="44px" height="44px" alt="Luodian's avatar">
+            <span class="name-span">Luodian</span>
+        </div>
 
-      
+        <!-- Null Thumbnail -->
+        <div class="post_thumbnail-null">
+    
+        </div>
+
+    <!-- Post_entry Content -->
+    <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
+        <!-- Post Title -->
+        <p class="post_entry-title">
+            <a href="/2017-12-01/Hexo-Material主题中Mathjax的配置/">Hexo-Material主题中Mathjax的配置</a>
+        </p>
+
+        <!-- Post Excerpt -->
+        <p class="post_entry-excerpt">
+            
+                最近Hexo无故始终出渲染的问题，删掉重建的过程中发现是因为操作系统-内存那节因为有些是从PPT里拷出来的，导致了无法识别符号，渲染失败。
+...
+            
+            &nbsp;&nbsp;&nbsp;
+            <span>
+                <a href="/2017-12-01/Hexo-Material主题中Mathjax的配置/" target="_self">阅读全文</a>
+            </span>
+        </p>
+
+        <!-- Post Tags -->
+        
     </div>
-    <footer class="article-footer">
-      <a data-url="https://www.luodian.ink/2017-11-26/机器学习-第四章-SVM/" data-id="cjec792be0016xe1y7gjn34id" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
-
-  
-    <article id="post-机器学习-第三章-逻辑回归" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017-11-26/机器学习-第三章-逻辑回归/" class="article-date">
-  <time datetime="2017-11-26T11:39:47.000Z" itemprop="datePublished">2017-11-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017-11-26/机器学习-第三章-逻辑回归/">机器学习复习-第三章-逻辑回归（Updating）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
+    <!-- Post_entry Footer -->
+    <div class="post_entry-footer">
+        <div class="post_entry-footer-border"></div>
+        <div class="post_entry-footer-info">
+            <div class="post_entry-footer-date">
+                12月 01, 2017
+            </div>
+            <div class="post_entry-footer-comment">
+                
+                
+            </div>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="https://www.luodian.ink/2017-11-26/机器学习-第三章-逻辑回归/" data-id="cjec792bb0010xe1y0zhjyh6a" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+</div>
 
-
-  
-
-
-  <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">__('next') &raquo;</a>
-  </nav>
-</section>
+            
         
-          <aside id="sidebar">
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">分类</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Codeforces/">Codeforces</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Kaggle/">Kaggle</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/其余/">其余</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/分布式计算/">分布式计算</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/异常检测/">异常检测</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/时间序列/">时间序列</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/机器学习/">机器学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随想/">随想</a></li></ul>
-    </div>
-  </div>
-
-
-  
+        
+            
+            
+                <!-- Isolation Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post_entry Header -->
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/大数据异常检测/">大数据异常检测</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/机器学习/">机器学习</a></li></ul>
-    </div>
-  </div>
+        <!-- Post Header Info -->
+        <div class="post_entry-header_info without-thumbnail">
+            <!-- Author Avatar & Name -->
+            <img src="/img/my_face.png" class="avatar-img" width="44px" height="44px" alt="Luodian's avatar">
+            <span class="name-span">Luodian</span>
+        </div>
 
-
-  
+        <!-- Null Thumbnail -->
+        <div class="post_thumbnail-null">
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/大数据异常检测/" style="font-size: 10px;">大数据异常检测</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a>
-    </div>
-  </div>
+        </div>
 
-  
+    <!-- Post_entry Content -->
+    <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
+        <!-- Post Title -->
+        <p class="post_entry-title">
+            <a href="/2017-12-01/随想-同谋（Complicit）/">随想-同谋（Complicit）</a>
+        </p>
+
+        <!-- Post Excerpt -->
+        <p class="post_entry-excerpt">
+            
+                
+            
+            &nbsp;&nbsp;&nbsp;
+            <span>
+                <a href="/2017-12-01/随想-同谋（Complicit）/" target="_self">阅读全文</a>
+            </span>
+        </p>
+
+        <!-- Post Tags -->
+        
+    </div>
+
+    <!-- Post_entry Footer -->
+    <div class="post_entry-footer">
+        <div class="post_entry-footer-border"></div>
+        <div class="post_entry-footer-info">
+            <div class="post_entry-footer-date">
+                12月 01, 2017
+            </div>
+            <div class="post_entry-footer-comment">
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+        
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li></ul>
-    </div>
-  </div>
-
-
-  
+        
+            
+            
+                <!-- Isolation Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post_entry Header -->
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2018-03-04/异常检测-面向大数据的异常检测算法设计分析/">异常检测-面向大数据的异常检测算法设计分析</a>
-          </li>
-        
-          <li>
-            <a href="/2018-01-24/Contest-911-D-Inversion-Counting/">Contest-911-D-Inversion Counting</a>
-          </li>
-        
-          <li>
-            <a href="/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/">基于统计方法进行时序数据预测的异常检测模型</a>
-          </li>
-        
-          <li>
-            <a href="/2017-12-27/数据之美-时间序列分析/">数据之美-时间序列分析</a>
-          </li>
-        
-          <li>
-            <a href="/2017-12-24/17周周报-使用Holt-Winters模型通过比对预测值进行异常检测/">17周周报-使用Holt-Winters模型通过比对预测值进行异常检测</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+        <!-- Post Header Info -->
+        <div class="post_entry-header_info without-thumbnail">
+            <!-- Author Avatar & Name -->
+            <img src="/img/my_face.png" class="avatar-img" width="44px" height="44px" alt="Luodian's avatar">
+            <span class="name-span">Luodian</span>
+        </div>
 
-  
-</aside>
+        <!-- Null Thumbnail -->
+        <div class="post_thumbnail-null">
+    
+        </div>
+
+    <!-- Post_entry Content -->
+    <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
+        <!-- Post Title -->
+        <p class="post_entry-title">
+            <a href="/2017-11-30/天算计划-Ubuntu-Spark组网计划配置操作/">天算计划-Ubuntu-Spark组网计划配置操作</a>
+        </p>
+
+        <!-- Post Excerpt -->
+        <p class="post_entry-excerpt">
+            
+                记录下组内环境的配置流程，目前我们需要实现五个人在Ubuntu环境下的Hadoop+Spark配置，配置流程如下。
+
+            
+            &nbsp;&nbsp;&nbsp;
+            <span>
+                <a href="/2017-11-30/天算计划-Ubuntu-Spark组网计划配置操作/" target="_self">阅读全文</a>
+            </span>
+        </p>
+
+        <!-- Post Tags -->
         
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 Luodian<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
-  </div>
+
+    <!-- Post_entry Footer -->
+    <div class="post_entry-footer">
+        <div class="post_entry-footer-border"></div>
+        <div class="post_entry-footer-info">
+            <div class="post_entry-footer-date">
+                11月 30, 2017
+            </div>
+            <div class="post_entry-footer-comment">
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+        
+    
+        
+            
+            
+                <!-- Isolation Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post_entry Header -->
+    
+        <!-- Post Header Info -->
+        <div class="post_entry-header_info without-thumbnail">
+            <!-- Author Avatar & Name -->
+            <img src="/img/my_face.png" class="avatar-img" width="44px" height="44px" alt="Luodian's avatar">
+            <span class="name-span">Luodian</span>
+        </div>
+
+        <!-- Null Thumbnail -->
+        <div class="post_thumbnail-null">
+    
+        </div>
+
+    <!-- Post_entry Content -->
+    <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
+        <!-- Post Title -->
+        <p class="post_entry-title">
+            <a href="/2017-11-29/11-29-异常检测周报/">11-29-异常检测周报</a>
+        </p>
+
+        <!-- Post Excerpt -->
+        <p class="post_entry-excerpt">
+            
+                这周因为机器学习的考试和软工课的一些其他事情。
+我还没有进行我的计划：对于DBSCAN针对于时间序列数据的代码级别改进，但是从思路上考...
+            
+            &nbsp;&nbsp;&nbsp;
+            <span>
+                <a href="/2017-11-29/11-29-异常检测周报/" target="_self">阅读全文</a>
+            </span>
+        </p>
+
+        <!-- Post Tags -->
+        
+    </div>
+
+    <!-- Post_entry Footer -->
+    <div class="post_entry-footer">
+        <div class="post_entry-footer-border"></div>
+        <div class="post_entry-footer-info">
+            <div class="post_entry-footer-date">
+                11月 29, 2017
+            </div>
+            <div class="post_entry-footer-comment">
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+        
+    
+        
+            
+            
+                <!-- Isolation Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post_entry Header -->
+    
+        <!-- Post Header Info -->
+        <div class="post_entry-header_info without-thumbnail">
+            <!-- Author Avatar & Name -->
+            <img src="/img/my_face.png" class="avatar-img" width="44px" height="44px" alt="Luodian's avatar">
+            <span class="name-span">Luodian</span>
+        </div>
+
+        <!-- Null Thumbnail -->
+        <div class="post_thumbnail-null">
+    
+        </div>
+
+    <!-- Post_entry Content -->
+    <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
+        <!-- Post Title -->
+        <p class="post_entry-title">
+            <a href="/2017-11-26/机器学习-第四章-SVM/">机器学习-第四章-SVM（Updating）</a>
+        </p>
+
+        <!-- Post Excerpt -->
+        <p class="post_entry-excerpt">
+            
+                主要梳理以下三个方向：支持向量机，核函数，序列最小最优化算法
+
+            
+            &nbsp;&nbsp;&nbsp;
+            <span>
+                <a href="/2017-11-26/机器学习-第四章-SVM/" target="_self">阅读全文</a>
+            </span>
+        </p>
+
+        <!-- Post Tags -->
+        
+    </div>
+
+    <!-- Post_entry Footer -->
+    <div class="post_entry-footer">
+        <div class="post_entry-footer-border"></div>
+        <div class="post_entry-footer-info">
+            <div class="post_entry-footer-date">
+                11月 26, 2017
+            </div>
+            <div class="post_entry-footer-comment">
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+        
+    
+        
+            
+            
+                <!-- Isolation Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post_entry Header -->
+    
+        <!-- Post Header Info -->
+        <div class="post_entry-header_info without-thumbnail">
+            <!-- Author Avatar & Name -->
+            <img src="/img/my_face.png" class="avatar-img" width="44px" height="44px" alt="Luodian's avatar">
+            <span class="name-span">Luodian</span>
+        </div>
+
+        <!-- Null Thumbnail -->
+        <div class="post_thumbnail-null">
+    
+        </div>
+
+    <!-- Post_entry Content -->
+    <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
+        <!-- Post Title -->
+        <p class="post_entry-title">
+            <a href="/2017-11-26/机器学习-第三章-逻辑回归/">机器学习复习-第三章-逻辑回归（Updating）</a>
+        </p>
+
+        <!-- Post Excerpt -->
+        <p class="post_entry-excerpt">
+            
+                
+            
+            &nbsp;&nbsp;&nbsp;
+            <span>
+                <a href="/2017-11-26/机器学习-第三章-逻辑回归/" target="_self">阅读全文</a>
+            </span>
+        </p>
+
+        <!-- Post Tags -->
+        
+    </div>
+
+    <!-- Post_entry Footer -->
+    <div class="post_entry-footer">
+        <div class="post_entry-footer-border"></div>
+        <div class="post_entry-footer-info">
+            <div class="post_entry-footer-date">
+                11月 26, 2017
+            </div>
+            <div class="post_entry-footer-comment">
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+        
+    
+
+    
+    <!-- Index nav -->
+        <nav class="material-nav mdl-cell mdl-cell--12-col">
+            <a class="extend prev" rel="prev" href="/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button></a>
+        </nav>
+    
+
+    
+</div>
+
+
+                    
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
 </footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+                    <!-- Import File -->
 
 
-<script src="/js/script.js"></script>
+    <script>lsloader.load("js/lazyload.min.js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
+    <script>lsloader.load("js/js.min.js","/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
 
-  </div>
-<script type="text/x-mathjax-config">
+
+
+    <script>lsloader.load("js/nprogress.js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Window Load-->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Bing Background -->
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [ ["$","$"], ["\\(","\\)"] ],
@@ -863,4 +1095,5 @@
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
+    
 </html>
