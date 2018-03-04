@@ -28,6 +28,8 @@
     
     
     
+        <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+    
     
     
     
@@ -268,9 +270,9 @@
     ga('create', 'UA-110144268-1', 'auto');ga('send', 'pageview');
 </script>
 
-    <!-- Custom Head --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <!-- Custom Head -->
     
-</head>
+<link rel="stylesheet" href="/css/prism-xonokai.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
     
@@ -440,25 +442,40 @@
             <h3 id="Spark-Shell操作"><a href="#Spark-Shell操作" class="headerlink" title="Spark-Shell操作"></a>Spark-Shell操作</h3><p><strong>加载本地文件</strong></p>
 <p>在开始具体词频统计代码之前，需要解决一个问题，就是如何加载文件？</p>
 <p>要注意，文件可能位于本地文件系统中，也有可能存放在分布式文件系统HDFS中，所以，下面我们分别介绍如何加载本地文件，以及如何加载HDFS中的文件。</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> textFile = sc.textFile(<span class="string">"file:///usr/local/spark/mycode/wordcount/word123.txt"</span>)</span><br><span class="line"><span class="comment">//如果文件不存在会在执行诸如 textFile.first()指令时拒绝连接</span></span><br></pre></td></tr></table></figure>
+<pre class=" language-lang-scala"><code class="language-lang-scala">val textFile = sc.textFile("file:///usr/local/spark/mycode/wordcount/word123.txt")
+//如果文件不存在会在执行诸如 textFile.first()指令时拒绝连接
+</code></pre>
 <p><strong>加载HDFS中的文件</strong></p>
 <p>为了能够读取 HDFS 中的文件，我们需要先启动 Hadoop 中的 HDFS 组件。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start-all</span><br></pre></td></tr></table></figure>
+<pre class=" language-lang-shell"><code class="language-lang-shell">start-all
+</code></pre>
 <p>请使用下面命令创建用户名 hadoop 登录 Linux 系统。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/hdfs dfs -mkdir -p /user/hadoop</span><br></pre></td></tr></table></figure>
+<pre class=" language-lang-shell"><code class="language-lang-shell">./bin/hdfs dfs -mkdir -p /user/hadoop
+</code></pre>
 <p>下面我们使用命令查看一下HDFS文件系统中的目录和文件：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./bin/hdfs dfs -ls .</span><br><span class="line">./bin/hdfs dfs -ls /user/hadoop</span><br><span class="line">//这两个命令等价</span><br></pre></td></tr></table></figure>
+<pre class=" language-lang-shell"><code class="language-lang-shell">./bin/hdfs dfs -ls .
+./bin/hdfs dfs -ls /user/hadoop
+//这两个命令等价
+</code></pre>
 <p>上面命令中，最后一个点号“.”，表示要查看Linux当前登录用户hadoop在HDFS文件系统中与hadoop对应的目录下的文件，也就是查看HDFS文件系统中“/user/hadoop/”目录下的文件</p>
 <p>如果要查看HDFS文件系统根目录下的内容，需要使用下面命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/hdfs dfs -ls /</span><br></pre></td></tr></table></figure>
+<pre class=" language-lang-shell"><code class="language-lang-shell">./bin/hdfs dfs -ls /
+</code></pre>
 <p>下面我们使用<code>dfs -put</code>指令将文件上传到<code>hdfs</code>文件系统中</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/hdfs dfs -put &lt;path&gt; .</span><br></pre></td></tr></table></figure>
+<pre class=" language-lang-shell"><code class="language-lang-shell">./bin/hdfs dfs -put <path> .
+</code></pre>
 <p>使用<code>-cat</code>指令查看文件内容</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/hdfs dfs -cat ./&lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<pre class=" language-lang-shell"><code class="language-lang-shell">./bin/hdfs dfs -cat ./<filename>
+</code></pre>
 <p>现在，让我们切换回到spark-shell窗口，编写语句从HDFS中加载word.txt文件，并显示第一行文本内容：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">scala&gt;</span> val textFile = sc.textFile("hdfs://localhost:9000/user/hadoop/&lt;filename&gt;")</span><br><span class="line"><span class="meta">scala&gt;</span> textFile.first()</span><br></pre></td></tr></table></figure>
+<pre class=" language-lang-shell"><code class="language-lang-shell">scala> val textFile = sc.textFile("hdfs://localhost:9000/user/hadoop/<filename>")
+scala> textFile.first()
+</code></pre>
 <p>如下三条语句也等价</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> textFile = sc.textFile(<span class="string">"hdfs://localhost:9000/user/hadoop/word.txt"</span>)</span><br><span class="line"><span class="keyword">val</span> textFile = sc.textFile(<span class="string">"/user/hadoop/word.txt"</span>)</span><br><span class="line"><span class="keyword">val</span> textFile = sc.textFile(<span class="string">"word.txt"</span>)</span><br></pre></td></tr></table></figure>
+<pre class=" language-lang-scala"><code class="language-lang-scala">val textFile = sc.textFile("hdfs://localhost:9000/user/hadoop/word.txt")
+val textFile = sc.textFile("/user/hadoop/word.txt")
+val textFile = sc.textFile("word.txt")
+</code></pre>
 
         </div>
     
@@ -473,6 +490,35 @@
                 <!-- Post Comments -->
                 
                     
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://www.luodian.ink/2017-12-04/天算计划-Spark-计算任务分发流程/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://www.luodian.ink/2017-12-04/天算计划-Spark-计算任务分发流程/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//luodian-ink.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
                 
             </div>
 
@@ -567,7 +613,13 @@
 
 
 
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//luodian-ink.disqus.com/count.js" async></script>
 
 
 

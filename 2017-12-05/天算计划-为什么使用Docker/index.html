@@ -28,6 +28,8 @@
     
     
     
+        <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+    
     
     
     
@@ -268,9 +270,9 @@
     ga('create', 'UA-110144268-1', 'auto');ga('send', 'pageview');
 </script>
 
-    <!-- Custom Head --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <!-- Custom Head -->
     
-</head>
+<link rel="stylesheet" href="/css/prism-xonokai.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
     
@@ -441,10 +443,13 @@
 <h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p>Docker运行Linux上可以原生无压力，Windows上需要装插件虚化一个Linux环境，感觉很麻烦。</p>
 <ol>
 <li><p>在 Docker 下安装镜像</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull uhopper/hadoop-spark</span><br></pre></td></tr></table></figure>
+<pre class=" language-lang-shell"><code class="language-lang-shell">docker pull uhopper/hadoop-spark
+</code></pre>
 </li>
 <li><p>在 Docker 中移除镜像</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker rm [container_id]</span><br><span class="line">docker rmi [image_id]</span><br></pre></td></tr></table></figure>
+<pre class=" language-lang-shell"><code class="language-lang-shell">docker rm [container_id]
+docker rmi [image_id]
+</code></pre>
 <p>​</p>
 </li>
 </ol>
@@ -462,6 +467,35 @@
                 <!-- Post Comments -->
                 
                     
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://www.luodian.ink/2017-12-05/天算计划-为什么使用Docker/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://www.luodian.ink/2017-12-05/天算计划-为什么使用Docker/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//luodian-ink.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
                 
             </div>
 
@@ -556,7 +590,13 @@
 
 
 
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//luodian-ink.disqus.com/count.js" async></script>
 
 
 

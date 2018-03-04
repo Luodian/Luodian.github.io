@@ -1,3 +1,0 @@
-https://www.luodian.ink/2017-12-12/软件工程-复习总结/
-https://www.luodian.ink/2017-12-07/机器学习-拉格朗日函数与KKT条件/
-https://www.luodian.ink/2017-12-05/天算计划-为什么使用Docker/
