@@ -270,9 +270,9 @@
     ga('create', 'UA-110144268-1', 'auto');ga('send', 'pageview');
 </script>
 
-    <!-- Custom Head -->
+    <!-- Custom Head --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
-<link rel="stylesheet" href="/css/prism-xonokai.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+</head>
 
 
     
@@ -449,105 +449,56 @@
 <p><strong>错误收集</strong></p>
 <ol>
 <li><p>如果遇到<code>sign_and_send_pubkey: signing failed: agent refused operation</code>的错误，原因是因为ssh-agent并没有真正的工作，输入下列命令：</p>
-<pre class=" language-lang-shell"><code class="language-lang-shell">eval `ssh-agent -s` 
-ssh-add
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">eval `ssh-agent -s` </span><br><span class="line">ssh-add</span><br></pre></td></tr></table></figure>
 <p>​</p>
 </li>
 </ol>
 <h3 id="统一化HOSTNAME"><a href="#统一化HOSTNAME" class="headerlink" title="统一化HOSTNAME"></a>统一化HOSTNAME</h3><ol>
 <li><p>对于不同的电脑有可能有不同的用户名，我们这里针对于hadoop统一设置一下我们每个人的用户名。</p>
 <p>为了更好的在Shell中区分三台主机，修改其显示的主机名，执行如下命令</p>
-<pre class=" language-lang-shell"><code class="language-lang-shell">sudo vim /etc/hostname
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/hostname</span><br></pre></td></tr></table></figure>
 <p>master的/etc/hostname添加如下配置：</p>
-<pre class=" language-lang-shell"><code class="language-lang-shell">master
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">master</span><br></pre></td></tr></table></figure>
 <p>同样slave01的/etc/hostname添加如下配置：</p>
-<pre class=" language-lang-shell"><code class="language-lang-shell">slave01
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slave01</span><br></pre></td></tr></table></figure>
 <p>同样slave02的/etc/hostname添加如下配置：</p>
-<pre class=" language-lang-shell"><code class="language-lang-shell">slave02
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slave02</span><br></pre></td></tr></table></figure>
 <p>重启三台电脑，重启后在终端Shell中才会看到机器名的变化,如下图：</p>
 <p><img src="http://7xjnip.com1.z0.glb.clouddn.com/20161205_005.png" alt="img"></p>
 </li>
 <li><p>到<code>/etc/hosts</code>路径下修改<code>ip - 缩写</code>，如当前阿臻是<code>master</code>用户，那么我在<code>hosts</code>下面加入了<code>172.20.0.39   master</code>这行语句之后，我再使用<code>ping master</code>实际上是<code>ping 172.20.0.39</code> 。</p>
 <p>因此我们最好把<code>hosts</code>文件修改为如下的形式：</p>
 <p>使用</p>
-<pre class=" language-lang-shell"><code class="language-lang-shell">sudo vim /etc/hosts
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/hosts</span><br></pre></td></tr></table></figure>
 <p>配置如下：</p>
-<pre class=" language-lang-shell"><code class="language-lang-shell">127.0.0.1 localhost
-172.20.0.39 master
-172.20.0.38 slave01
-172.20.0.37 slave02
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 localhost</span><br><span class="line">172.20.0.39 master</span><br><span class="line">172.20.0.38 slave01</span><br><span class="line">172.20.0.37 slave02</span><br></pre></td></tr></table></figure>
 <p>然后master需要修改~/.ssh/config文件，如果没有此文件，自己创建文件。</p>
-<pre class=" language-lang-shell"><code class="language-lang-shell">Host master
-  user elrond // 阿臻的电脑
-Host slave01
-  user hadoop // 丹丹的电脑
-Host slave02
-  user yuhongzhong  // 宇宏的电脑
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Host master</span><br><span class="line">  user elrond // 阿臻的电脑</span><br><span class="line">Host slave01</span><br><span class="line">  user hadoop // 丹丹的电脑</span><br><span class="line">Host slave02</span><br><span class="line">  user yuhongzhong  // 宇宏的电脑</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>注：这里的user和host对应的是命令行下的elrond@master，等于在master主机下的elrond用户。</p>
 </blockquote>
 <p>这时我们尝试下面操作，应该就能登录到丹丹的电脑上了。</p>
-<pre class=" language-lang-shell"><code class="language-lang-shell">ssh slave01
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh slave01</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h3 id="Hadoop配置"><a href="#Hadoop配置" class="headerlink" title="Hadoop配置"></a>Hadoop配置</h3><ol>
 <li><p>修改master主机修改Hadoop如下配置文件，这些配置文件都位于/usr/local/hadoop/etc/hadoop目录下。</p>
 <ol>
 <li><p>slaves<br>这里把DataNode的主机名写入该文件，每行一个。这里让master节点主机仅作为NameNode使用。</p>
-<pre><code>slave01
-slave02
-</code></pre></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">slave01</span><br><span class="line">slave02</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>core-site.xml</p>
-<pre><code>&lt;configuration&gt;
-    &lt;property&gt;
-        &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;
-        &lt;value&gt;file:/usr/local/hadoop/tmp&lt;/value&gt;
-        &lt;description&gt;Abase for other temporary directories.&lt;/description&gt;
-    &lt;/property&gt;
-    &lt;property&gt;
-        &lt;name&gt;fs.defaultFS&lt;/name&gt;
-        &lt;value&gt;hdfs://master:9000&lt;/value&gt;
-    &lt;/property&gt;
-&lt;/configuration&gt;
-</code></pre></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;file:/usr/local/hadoop/tmp&lt;/value&gt;</span><br><span class="line">        &lt;description&gt;Abase for other temporary directories.&lt;/description&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;fs.defaultFS&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;hdfs://master:9000&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>hdfs-site.xml</p>
-<pre><code>&lt;configuration&gt;
-  &lt;property&gt;
-      &lt;name&gt;dfs.replication&lt;/name&gt;
-      &lt;value&gt;3&lt;/value&gt; //注：这里只能是奇数，代表当前允许的datanode个数，即slaver个数。
-  &lt;/property&gt;
-  &lt;/configuration&gt;
-</code></pre></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">  &lt;property&gt;</span><br><span class="line">      &lt;name&gt;dfs.replication&lt;/name&gt;</span><br><span class="line">      &lt;value&gt;3&lt;/value&gt; //注：这里只能是奇数，代表当前允许的datanode个数，即slaver个数。</span><br><span class="line">  &lt;/property&gt;</span><br><span class="line">  &lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>mapred-site.xml(复制mapred-site.xml.template,再修改文件名)</p>
-<pre><code>&lt;configuration&gt;
-  &lt;property&gt;
-      &lt;name&gt;mapreduce.framework.name&lt;/name&gt;
-      &lt;value&gt;yarn&lt;/value&gt;
-  &lt;/property&gt;
-&lt;/configuration&gt;
-</code></pre></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">  &lt;property&gt;</span><br><span class="line">      &lt;name&gt;mapreduce.framework.name&lt;/name&gt;</span><br><span class="line">      &lt;value&gt;yarn&lt;/value&gt;</span><br><span class="line">  &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>yarn-site.xml</p>
-<pre><code>&lt;configuration&gt;
-&lt;!-- Site specific YARN configuration properties --&gt;
-    &lt;property&gt;
-        &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;
-        &lt;value&gt;mapreduce_shuffle&lt;/value&gt;
-    &lt;/property&gt;
-    &lt;property&gt;
-        &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;
-        &lt;value&gt;master&lt;/value&gt;
-    &lt;/property&gt;
-&lt;/configuration&gt;
-</code></pre></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">&lt;!-- Site specific YARN configuration properties --&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;mapreduce_shuffle&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;master&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 </li>
 <li><p>此时阿臻的电脑上 /usr/local 文件夹下面有一个hadoop.tar文件，我们使用<code>scp</code>指令将其传送到其他的slave结点上。</p>
@@ -556,10 +507,7 @@ slave02
 <li><p>传送完毕文件之后（丹丹和宇宏的电脑都已经有了），解压，在 slave01，slave02 节点上执行 <code>sudo chown -R hadoop /usr/local/hadoop</code>，以保证 master 有权限去修改 slaver 的这个目录。</p>
 </li>
 <li><p>在 master 主机上执行如下命令：</p>
-<pre class=" language-lang-shell"><code class="language-lang-shell">cd /usr/local/hadoop
-bin/hdfs namenode -format
-sbin/start-dfs.sh
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/hadoop</span><br><span class="line">bin/hdfs namenode -format</span><br><span class="line">sbin/start-dfs.sh</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>运行过程中理论上不应该输入密码，如果要输入密码，重回 SSH 的步骤，检查 SSH 是否能够相互无密码登录。</p>
 <ul>
@@ -704,6 +652,10 @@ sbin/start-dfs.sh
 </script>
 
 
+
+    
+        <script>lsloader.load("js/smoothscroll.js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==")</script>
+    
 
 
 

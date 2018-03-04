@@ -270,9 +270,9 @@
     ga('create', 'UA-110144268-1', 'auto');ga('send', 'pageview');
 </script>
 
-    <!-- Custom Head -->
+    <!-- Custom Head --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
-<link rel="stylesheet" href="/css/prism-xonokai.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+</head>
 
 
     
@@ -445,108 +445,7 @@
 <p>如果原来的区间里含有m个逆序对，区间外逆序对个数为 $p$ 个，那么反转之后，逆序对会变成顺序对，原有顺序对会变成逆序对，同样总共会有新的 $\frac{(len(l,r) <em> len(l,r) - 1)}{2} - m$ 个逆序对产生，总的逆序对数变为 $\frac{(len(l,r) </em> len(l,r) - 1)}{2} - m + p$ 个，原逆序对数为 $m + p$ 个，怎么在只知道 $m + p$ ，不知道 $m$ 的情况下，推出的奇偶 $\frac{(len(l,r) * len(l,r) - 1)}{2} - m + p$ 性呢？</p>
 <p>可以利用  $\frac{(len(l,r) <em> len(l,r) - 1)}{2} - m + p =  \frac{(len(l,r) </em> len(l,r) - 1)}{2} + m + p - 2m$ ，然后就可以利用 $m + p$ 的奇偶性，以及 $\frac{(len(l,r) <em> len(l,r) - 1)}{2}$ 的奇偶性，推出 $\frac{(len(l,r) </em> len(l,r) - 1)}{2} - m + p$ 的奇偶性了。</p>
 <p>代码很简单：</p>
-<pre class=" language-lang-cpp"><code class="language-lang-cpp">#include <iostream>
-#include <cstdio>
-#include <iomanip>
-#include <string>
-#include <cstring>
-#include <algorithm>
-#include <cstdlib>
-#include <vector>
-#include <queue>
-#include <stack>
-#include <cmath>
-#include <bitset>
-#include <unordered_set>
-#include <numeric>
-#include <set>
-#include <list>
-#include <map>
-
-using namespace std;
-#define lower_bound LB
-#define upper_bound UB
-#define mem(a,x) memset(a,x,sizeof(a))
-#define rep(i,a,n) for (int i=a;i<n;i++)
-#define per(i,a,n) for (int i=n-1;i>=a;i--)
-#define mp make_pair
-#define all(x) (x).begin(),(x).end()
-#define SZ(x) ((int)(x).size())
-#define IT iterator
-#define test puts("OK")
-#define lowbit(x) x & -x
-#define PRQ priority_queue
-#define PB push_back
-#define gcd(a,b) _gcd(a,b)
-
-
-typedef long long LL;
-typedef unsigned long long uLL;
-typedef pair<int,int> pii;
-typedef vector<int> VI;
-typedef pair<int,int> PII;
-typedef vector<PII> VPII;
-
-const LL mod=1000000007;
-const double PI = acos(-1.0);
-const double eps = 1e-8;
-const int INF = 0x3f3f3f3f;
-
-int main()
-{
-    #ifndef ONLINE_JUDGE
-        freopen("D.txt","r",stdin);
-    #endif
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
-    int n,m;
-    int l,r;
-    vector<int> ar;
-    ar.clear();
-    while(cin>>n)
-    {
-        ar.clear();
-        for (int i = 0; i < n; ++i)
-        {
-            int temp;
-            cin>>temp;
-            ar.PB(temp);
-        }
-        bool ret = 0;
-        for (int i = 0; i < n; ++i)
-        {
-            for (int j = i; j < n; ++j)
-            {
-                if (ar[j] < ar[i])
-                {
-                    ret ^= 1;
-                }
-            }
-        }
-//        cout<<ret<<endl;
-        cin>>m;
-        for (int i = 0; i < m; ++i)
-        {
-            cin>>l>>r;
-            int permutations = (r - l) * (r - l + 1) / 2;
-            if (permutations & 1)
-            {
-                ret ^= 1;
-            }
-            if (ret & 1)
-            {
-                cout<<"odd\n";
-            }
-            else
-            {
-                cout<<"even\n";
-            }
-        }
-    }
-    return 0;
-}
-</code></pre>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bitset&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unordered_set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;numeric&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;list&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lower_bound LB</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> upper_bound UB</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mem(a,x) memset(a,x,sizeof(a))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,a,n) for (int i=a;i&lt;n;i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> per(i,a,n) for (int i=n-1;i&gt;=a;i--)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mp make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> all(x) (x).begin(),(x).end()</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SZ(x) ((int)(x).size())</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IT iterator</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> test puts(<span class="meta-string">"OK"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lowbit(x) x &amp; -x</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PRQ priority_queue</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PB push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> gcd(a,b) _gcd(a,b)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> uLL;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; pii;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; VI;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; PII;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;PII&gt; VPII;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> LL mod=<span class="number">1000000007</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> PI = <span class="built_in">acos</span>(<span class="number">-1.0</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> eps = <span class="number">1e-8</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="meta">#<span class="meta-keyword">ifndef</span> ONLINE_JUDGE</span></span><br><span class="line">        freopen(<span class="string">"D.txt"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">    <span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);</span><br><span class="line">    <span class="built_in">cout</span>.tie(<span class="literal">nullptr</span>);</span><br><span class="line">	<span class="keyword">int</span> n,m;</span><br><span class="line">	<span class="keyword">int</span> l,r;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; ar;</span><br><span class="line">	ar.clear();</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)</span><br><span class="line">	&#123;</span><br><span class="line">		ar.clear();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">int</span> temp;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;temp;</span><br><span class="line">			ar.PB(temp);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">bool</span> ret = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt; n; ++j)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (ar[j] &lt; ar[i])</span><br><span class="line">				&#123;</span><br><span class="line">					ret ^= <span class="number">1</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"><span class="comment">//		cout&lt;&lt;ret&lt;&lt;endl;</span></span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;m;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;l&gt;&gt;r;</span><br><span class="line">			<span class="keyword">int</span> permutations = (r - l) * (r - l + <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">if</span> (permutations &amp; <span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				ret ^= <span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (ret &amp; <span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">"odd\n"</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">"even\n"</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         </div>
     
@@ -679,6 +578,10 @@ int main()
 </script>
 
 
+
+    
+        <script>lsloader.load("js/smoothscroll.js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==")</script>
+    
 
 
 
