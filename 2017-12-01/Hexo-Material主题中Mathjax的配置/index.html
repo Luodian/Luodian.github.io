@@ -443,22 +443,51 @@
 <p>在重建的过程中，最头疼的就是 Mathjax 的配置了，实现这个效果的插件似乎有很多个版本，有些也有时效性，而且挺多插件，针对于我当前使用的Material主题并无效果，如果使用最出名的Next主题似乎就要好很多。</p>
 <p>下面简单记录下配置Mathjax的过程。</p>
 <h3 id="修改默认的render"><a href="#修改默认的render" class="headerlink" title="修改默认的render"></a>修改默认的render</h3><p><code>hexo</code> 默认的渲染引擎是 <code>marked</code>，但是 <code>marked</code> 不支持 <code>mathjax</code>。 <code>kramed</code> 是在 <code>marked</code>的基础上进行修改。我们在工程目录下执行以下命令来安装 <code>kramed</code>。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br><span class="line">npm uninstall hexo-math --save</span><br><span class="line">npm install hexo-renderer-mathjax --save //这个使用来代替hexo-math的</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-shell">npm uninstall hexo-renderer-marked --save
+npm install hexo-renderer-kramed --save
+npm uninstall hexo-math --save
+npm install hexo-renderer-mathjax --save //这个使用来代替hexo-math的
+</code></pre>
 <p>执行了这两个操作这个，不用去<code>_config.yml</code>文件中改什么plugin之类的东西（这些是之前使用hexo-math才需要的操作）。</p>
 <h3 id="修改kramed的渲染细节"><a href="#修改kramed的渲染细节" class="headerlink" title="修改kramed的渲染细节"></a>修改kramed的渲染细节</h3><p>这一步不做其实也可以，但是会出现一些转义的bug.</p>
 <ol>
 <li><p>接下来在 <code>/node_modules/hexo-renderer-kramed/lib/renderer.js</code>，修改</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatText</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Fit kramed's rule: $$ + \1 + $$</span></span><br><span class="line">    <span class="keyword">return</span> text.replace(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">'$$$$$1$$$$'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 将上面的修改为如下的</span></span><br><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatText</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-javascript">// Change inline math rule
+function formatText(text) {
+    // Fit kramed&#39;s rule: $$ + \1 + $$
+    return text.replace(/`\$(.*?)\$`/g, &#39;$$$$$1$$$$&#39;);
+}
+// 将上面的修改为如下的
+// Change inline math rule
+function formatText(text) {
+    return text;
+}
+</code></pre>
 </li>
 <li><p>到<code>&lt;path-to-your-project/node_modules/kramed/lib/rules/inline.js</code>，将11行的</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">escape</span>: <span class="regexp">/^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/</span></span><br><span class="line">修改为</span><br><span class="line"><span class="built_in">escape</span>: <span class="regexp">/^\\([`*\[\]()# +\-.!_&gt;])/</span>,</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-js">escape: /^\\([\\`*{}\[\]()#$+\-.!_&gt;])/
+修改为
+escape: /^\\([`*\[\]()# +\-.!_&gt;])/,
+</code></pre>
 <p>将20行的：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">em: <span class="regexp">/^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span>,</span><br><span class="line">修改为</span><br><span class="line">em: <span class="regexp">/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span>,</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-js">em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
+修改为
+em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
+</code></pre>
 <p>​</p>
 </li>
 <li><p>配置Material主题的Mathjax加载的CDN链接：</p>
 <p>在<code>material/_config.yml</code>下添加如下的链接</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">vendors:</span><br><span class="line"># MaterialCDN</span><br><span class="line">#   You can load theme unique files from your private cdn or oss.</span><br><span class="line">#   The new src will have the base domain you configured below.</span><br><span class="line">#   For example</span><br><span class="line">#       materialcdn: https://cdn.jsdelivr.net/npm/hexo-material@1.4.0/source</span><br><span class="line">    materialcdn: https:<span class="comment">//cdn.jsdelivr.net/npm/hexo-material@1.4.0/source</span></span><br><span class="line">    # MathJax 2.7.0-2.7.1</span><br><span class="line">    mathjax: https:<span class="comment">//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js</span></span><br></pre></td></tr></table></figure>
+<pre><code class="lang-js">vendors:
+# MaterialCDN
+#   You can load theme unique files from your private cdn or oss.
+#   The new src will have the base domain you configured below.
+#   For example
+#       materialcdn: https://cdn.jsdelivr.net/npm/hexo-material@1.4.0/source
+    materialcdn: https://cdn.jsdelivr.net/npm/hexo-material@1.4.0/source
+    # MathJax 2.7.0-2.7.1
+    mathjax: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js
+</code></pre>
 <p>​</p>
 </li>
 </ol>

@@ -479,15 +479,36 @@
 <p>也可以使用tf-idf schema对其进行计数。</p>
 <h5 id="Bags-of-words-model"><a href="#Bags-of-words-model" class="headerlink" title="Bags of words model"></a>Bags of words model</h5><p>下列文件可用词袋表示:</p>
 <p>以下是两个简单的文件:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(1) John likes to watch movies. Mary likes movies too.</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(2) John also likes to watch football games.</span><br></pre></td></tr></table></figure>
-<p>基于以上两个文件，可以建构出下列清单:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    <span class="string">"John"</span>,</span><br><span class="line">    <span class="string">"likes"</span>,</span><br><span class="line">    <span class="string">"to"</span>,</span><br><span class="line">    <span class="string">"watch"</span>,</span><br><span class="line">    <span class="string">"movies"</span>,</span><br><span class="line">    <span class="string">"also"</span>,</span><br><span class="line">    <span class="string">"football"</span>,</span><br><span class="line">    <span class="string">"games"</span>,</span><br><span class="line">    <span class="string">"Mary"</span>,</span><br><span class="line">    <span class="string">"too"</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<pre><code>(1) John likes to watch movies. Mary likes movies too.
+</code></pre><pre><code>(2) John also likes to watch football games.
+</code></pre><p>基于以上两个文件，可以建构出下列清单:</p>
+<pre><code class="lang-python">[
+    &quot;John&quot;,
+    &quot;likes&quot;,
+    &quot;to&quot;,
+    &quot;watch&quot;,
+    &quot;movies&quot;,
+    &quot;also&quot;,
+    &quot;football&quot;,
+    &quot;games&quot;,
+    &quot;Mary&quot;,
+    &quot;too&quot;
+]
+</code></pre>
 <p>此处有10个不同的词，使用清单的索引表示长度为10的向量:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[1, 2, 1, 1, 2, 0, 0, 0, 1, 1] (2) [1, 1, 1, 1, 0, 1, 1, 1, 0, 0]</span><br></pre></td></tr></table></figure>
-<p>每个向量的索引内容对应到清单中词出现的次数。</p>
+<pre><code>[1, 2, 1, 1, 2, 0, 0, 0, 1, 1] (2) [1, 1, 1, 1, 0, 1, 1, 1, 0, 0]
+</code></pre><p>每个向量的索引内容对应到清单中词出现的次数。</p>
 <h3 id="标签二值化"><a href="#标签二值化" class="headerlink" title="标签二值化"></a>标签二值化</h3><p><a href="http://sklearn.lzjqsdd.com/modules/generated/sklearn.preprocessing.LabelBinarizer.html#sklearn.preprocessing.LabelBinarizer" target="_blank" rel="noopener"><code>LabelBinarizer</code></a> 是一个用来从多类别列表创建标签矩阵的工具类:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>lb = preprocessing.LabelBinarizer()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>lb.fit([<span class="number">1</span>, <span class="number">2</span>, <span class="number">6</span>, <span class="number">4</span>, <span class="number">2</span>])</span><br><span class="line">LabelBinarizer(neg_label=<span class="number">0</span>, pos_label=<span class="number">1</span>, sparse_output=<span class="keyword">False</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>lb.classes_</span><br><span class="line">array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>lb.transform([<span class="number">1</span>, <span class="number">6</span>])</span><br><span class="line">array([[<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>],</span><br><span class="line">       [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>]])</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-python">&gt;&gt;&gt; from sklearn import preprocessing
+&gt;&gt;&gt; lb = preprocessing.LabelBinarizer()
+&gt;&gt;&gt; lb.fit([1, 2, 6, 4, 2])
+LabelBinarizer(neg_label=0, pos_label=1, sparse_output=False)
+&gt;&gt;&gt; lb.classes_
+array([1, 2, 4, 6])
+&gt;&gt;&gt; lb.transform([1, 6])
+array([[1, 0, 0, 0],
+       [0, 0, 0, 1]])
+</code></pre>
 <p>在 <code>mecari</code> 中我们对 <code>brand_name</code> 进行二值化处理，生成了一个<code>item * brand_count</code> 大小的矩阵。</p>
 <h3 id="One-hot-编码和-get-dummies"><a href="#One-hot-编码和-get-dummies" class="headerlink" title="One-hot 编码和 get_dummies"></a>One-hot 编码和 get_dummies</h3><p>离散特征的编码分为两种情况：</p>
 <ol>
@@ -495,13 +516,30 @@
 <li>离散特征的取值有大小的意义，比如size:[X,XL,XXL],那么就使用数值的映射{X：1,XL：2,XXL：3}</li>
 </ol>
 <p>使用pandas可以很方便的对离散型特征进行one-hot编码。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd  </span><br><span class="line">df = pd.DataFrame([  </span><br><span class="line">            [<span class="string">'green'</span>, <span class="string">'M'</span>, <span class="number">10.1</span>, <span class="string">'class1'</span>],   </span><br><span class="line">            [<span class="string">'red'</span>, <span class="string">'L'</span>, <span class="number">13.5</span>, <span class="string">'class2'</span>],   </span><br><span class="line">            [<span class="string">'blue'</span>, <span class="string">'XL'</span>, <span class="number">15.3</span>, <span class="string">'class1'</span>]])  </span><br><span class="line">  </span><br><span class="line">df.columns = [<span class="string">'color'</span>, <span class="string">'size'</span>, <span class="string">'prize'</span>, <span class="string">'class label'</span>]  </span><br><span class="line">  </span><br><span class="line">size_mapping = &#123;  </span><br><span class="line">           <span class="string">'XL'</span>: <span class="number">3</span>,  </span><br><span class="line">           <span class="string">'L'</span>: <span class="number">2</span>,  </span><br><span class="line">           <span class="string">'M'</span>: <span class="number">1</span>&#125;  </span><br><span class="line">df[<span class="string">'size'</span>] = df[<span class="string">'size'</span>].map(size_mapping)  </span><br><span class="line">  </span><br><span class="line">class_mapping = &#123;label:idx <span class="keyword">for</span> idx,label <span class="keyword">in</span> enumerate(set(df[<span class="string">'class label'</span>]))&#125;  </span><br><span class="line">df[<span class="string">'class label'</span>] = df[<span class="string">'class label'</span>].map(class_mapping)</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-python">import pandas as pd  
+df = pd.DataFrame([  
+            [&#39;green&#39;, &#39;M&#39;, 10.1, &#39;class1&#39;],   
+            [&#39;red&#39;, &#39;L&#39;, 13.5, &#39;class2&#39;],   
+            [&#39;blue&#39;, &#39;XL&#39;, 15.3, &#39;class1&#39;]])  
+
+df.columns = [&#39;color&#39;, &#39;size&#39;, &#39;prize&#39;, &#39;class label&#39;]  
+
+size_mapping = {  
+           &#39;XL&#39;: 3,  
+           &#39;L&#39;: 2,  
+           &#39;M&#39;: 1}  
+df[&#39;size&#39;] = df[&#39;size&#39;].map(size_mapping)  
+
+class_mapping = {label:idx for idx,label in enumerate(set(df[&#39;class label&#39;]))}  
+df[&#39;class label&#39;] = df[&#39;class label&#39;].map(class_mapping)
+</code></pre>
 <blockquote>
 <p>对于有大小意义的离散特征，直接使用映射就可以了，{‘XL’:3,’L’:2,’M’:1}</p>
 </blockquote>
 <p><img src="http://img.blog.csdn.net/20161017092849112?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="img"></p>
 <p>Using the <code>get_dummies</code> will create a new column for every unique string in a certain column.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.get_dummies(df)</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-python">pd.get_dummies(df)
+</code></pre>
 <p><img src="http://img.blog.csdn.net/20161017092944347?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="img"></p>
 <h2 id="Tf-idf"><a href="#Tf-idf" class="headerlink" title="Tf-idf"></a>Tf-idf</h2><p><strong>TF</strong>：Term Frequency.</p>
 <p>单词在文章中出现的频率。</p>
@@ -592,7 +630,26 @@
 <li>the resulting model is validated on the remaining part of the data (i.e., it is used as a test set to compute a performance measure such as accuracy). </li>
 </ol>
 <p>The performance measure reported by k-fold cross-validation is then the average of the values computed in the loop.</p>
-<h4 id="Grid-Search"><a href="#Grid-Search" class="headerlink" title="Grid Search"></a>Grid Search</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> svm, datasets</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> GridSearchCV</span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> classification_report</span><br><span class="line"></span><br><span class="line">iris = datasets.load_iris()</span><br><span class="line">parameters = &#123;<span class="string">'kernel'</span>:(<span class="string">'linear'</span>, <span class="string">'rbf'</span>), <span class="string">'C'</span>:[<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>], <span class="string">'gamma'</span>:[<span class="number">0.125</span>, <span class="number">0.25</span>, <span class="number">0.5</span> ,<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>]&#125;</span><br><span class="line">svr = svm.SVC()</span><br><span class="line">clf = GridSearchCV(svr, parameters, n_jobs=<span class="number">-1</span>)</span><br><span class="line">clf.fit(iris.data, iris.target)</span><br><span class="line">cv_result = pd.DataFrame.from_dict(clf.cv_results_)</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'cv_result.csv'</span>,<span class="string">'w'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    cv_result.to_csv(f)</span><br><span class="line">    </span><br><span class="line">print(<span class="string">'The parameters of the best model are: '</span>)</span><br><span class="line">print(clf.best_params_)</span><br><span class="line"></span><br><span class="line">y_pred = clf.predict(iris.data)</span><br><span class="line">print(classification_report(y_true=iris.target, y_pred=y_pred))</span><br></pre></td></tr></table></figure>
+<h4 id="Grid-Search"><a href="#Grid-Search" class="headerlink" title="Grid Search"></a>Grid Search</h4><pre><code class="lang-python">import pandas as pd
+from sklearn import svm, datasets
+from sklearn.model_selection import GridSearchCV
+from sklearn.metrics import classification_report
+
+iris = datasets.load_iris()
+parameters = {&#39;kernel&#39;:(&#39;linear&#39;, &#39;rbf&#39;), &#39;C&#39;:[1, 2, 4], &#39;gamma&#39;:[0.125, 0.25, 0.5 ,1, 2, 4]}
+svr = svm.SVC()
+clf = GridSearchCV(svr, parameters, n_jobs=-1)
+clf.fit(iris.data, iris.target)
+cv_result = pd.DataFrame.from_dict(clf.cv_results_)
+with open(&#39;cv_result.csv&#39;,&#39;w&#39;) as f:
+    cv_result.to_csv(f)
+
+print(&#39;The parameters of the best model are: &#39;)
+print(clf.best_params_)
+
+y_pred = clf.predict(iris.data)
+print(classification_report(y_true=iris.target, y_pred=y_pred))
+</code></pre>
 <h2 id="Konstantin的建议"><a href="#Konstantin的建议" class="headerlink" title="Konstantin的建议"></a>Konstantin的建议</h2><p>Sure, let me give some examples:</p>
 <ul>
 <li>after looking at explained predictions, I see that “t-“ in word “t-shirt” is not highlighted, then I can check how scikit-learn vectorizer processes such words and see that it discards “t-“, so the model sees “shirt” - which may or may not be the problem, but it’s worth checking</li>
