@@ -1,3 +1,0 @@
-https://www.luodian.ink/2018-03-04/异常检测-面向大数据的异常检测算法设计分析/
-https://www.luodian.ink/2018-01-24/Contest-911-D-Inversion-Counting/
-https://www.luodian.ink/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/
