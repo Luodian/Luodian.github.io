@@ -103,17 +103,17 @@
   <meta name="keywords" content="Hexo, my world." />
 
 
-<meta name="description" content="目前在做一个分布式计算的应用，使用当下很新的Apache Ignite框架，因为没有什么相关文档，就写一点文字用于记录啦。 昨天在写前端摄像头获取图像，后端处理图像识别人脸的过程中，在后端从DataGrid的cache中获取opencv的特定图像数据类型Mat时遇到了问题，总是无法获取，提醒为null的情况。 Igni">
+<meta name="description" content="作者：落点  目前在做一个分布式计算的应用，使用当下很新的Apache Ignite框架，因为中文相关博客几乎没有，我们的开发小组计划着写一点文字用于记录啦，希望能够帮助到后人。 昨天在写前端摄像头获取图像，后端处理图像识别人脸的过程中，在后端从DataGrid的cache中获取opencv的特定图像数据类型Mat时遇">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在Ignite框架下解决Opencv中Mat类型传递的问题">
 <meta property="og:url" content="https://www.luodian.ink/2018-03-08/在Ignite框架下解决Opencv中Mat类型传递的问题/index.html">
 <meta property="og:site_name" content="Luodian.ink">
-<meta property="og:description" content="目前在做一个分布式计算的应用，使用当下很新的Apache Ignite框架，因为没有什么相关文档，就写一点文字用于记录啦。 昨天在写前端摄像头获取图像，后端处理图像识别人脸的过程中，在后端从DataGrid的cache中获取opencv的特定图像数据类型Mat时遇到了问题，总是无法获取，提醒为null的情况。 Ignite并没有详细的对异常原因作出提示，我们经过排查之后发现了可能是序列化的问题（因">
+<meta property="og:description" content="作者：落点  目前在做一个分布式计算的应用，使用当下很新的Apache Ignite框架，因为中文相关博客几乎没有，我们的开发小组计划着写一点文字用于记录啦，希望能够帮助到后人。 昨天在写前端摄像头获取图像，后端处理图像识别人脸的过程中，在后端从DataGrid的cache中获取opencv的特定图像数据类型Mat时遇到了问题，总是无法获取，提醒为null的情况。 Ignite并没有详细的对异常">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-07T16:36:36.145Z">
+<meta property="og:updated_time" content="2018-03-07T16:45:25.622Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在Ignite框架下解决Opencv中Mat类型传递的问题">
-<meta name="twitter:description" content="目前在做一个分布式计算的应用，使用当下很新的Apache Ignite框架，因为没有什么相关文档，就写一点文字用于记录啦。 昨天在写前端摄像头获取图像，后端处理图像识别人脸的过程中，在后端从DataGrid的cache中获取opencv的特定图像数据类型Mat时遇到了问题，总是无法获取，提醒为null的情况。 Ignite并没有详细的对异常原因作出提示，我们经过排查之后发现了可能是序列化的问题（因">
+<meta name="twitter:description" content="作者：落点  目前在做一个分布式计算的应用，使用当下很新的Apache Ignite框架，因为中文相关博客几乎没有，我们的开发小组计划着写一点文字用于记录啦，希望能够帮助到后人。 昨天在写前端摄像头获取图像，后端处理图像识别人脸的过程中，在后端从DataGrid的cache中获取opencv的特定图像数据类型Mat时遇到了问题，总是无法获取，提醒为null的情况。 Ignite并没有详细的对异常">
 
 
 
@@ -417,7 +417,10 @@
       
 
       
-        <p>目前在做一个分布式计算的应用，使用当下很新的Apache Ignite框架，因为没有什么相关文档，就写一点文字用于记录啦。</p>
+        <blockquote>
+<p>作者：落点</p>
+</blockquote>
+<p>目前在做一个分布式计算的应用，使用当下很新的Apache Ignite框架，因为中文相关博客几乎没有，我们的开发小组计划着写一点文字用于记录啦，希望能够帮助到后人。</p>
 <p>昨天在写前端摄像头获取图像，后端处理图像识别人脸的过程中，在后端从<code>DataGrid</code>的<code>cache</code>中获取<code>opencv</code>的特定图像数据类型<code>Mat</code>时遇到了问题，总是无法获取，提醒为<code>null</code>的情况。</p>
 <p><code>Ignite</code>并没有详细的对异常原因作出提示，我们经过排查之后发现了可能是序列化的问题（因为java内置的许多数据类型如<code>string</code>,<code>int</code>等都可以传输）。</p>
 <p>而<code>Mat</code>类型的实现中是没有序列化的，因此我们需要手动的序列化。</p>
@@ -473,6 +476,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018-03-08/在Ignite框架下解决Opencv中Mat类型传递的问题~/" rel="prev" title="在Ignite框架下解决Opencv中Mat类型传递的问题">
+                在Ignite框架下解决Opencv中Mat类型传递的问题 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -551,7 +558,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">25</span>
+                    <span class="site-state-item-count">26</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
