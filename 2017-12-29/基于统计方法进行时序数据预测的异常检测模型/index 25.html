@@ -107,27 +107,35 @@
   <meta name="keywords" content="Hexo, my world." />
 
 
-<meta name="description" content="本文原载于 nytimes，作者 Tim Wu，由 ONES Piece 翻译计划翻译。ONES Piece 是一个由 ONES Ventures 发起的非营利翻译计划，聚焦科技创新、生活方式和未来商业。  当今之世，「方便」是最被低估，也是最少被理解的力量。作为人类决策中的驱动力之一，它或许没法提供弗洛依德笔下的无意">
+<meta name="description" content="时间序列数据异常检测报告 15级-李博 2017-12-29  基于统计方法进行时序数据预测的异常检测模型简述基于统计的预测，无非是根据收集过去时间的数据，建立一个模型，来计算未来时间的数据，建立的是一种数学或者统计模型，它能表现出已有数据的变化规律，因为大数定理的存在，定义了世间所有的行为都可以通过数字表示，并且存在">
 <meta property="og:type" content="article">
-<meta property="og:title" content="随想-「方便」的暴政">
-<meta property="og:url" content="https://www.luodian.ink/2018-03-09/随想-方便的暴政/index.html">
+<meta property="og:title" content="基于统计方法进行时序数据预测的异常检测模型">
+<meta property="og:url" content="https://www.luodian.ink/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/index.html">
 <meta property="og:site_name" content="Luodian.ink">
-<meta property="og:description" content="本文原载于 nytimes，作者 Tim Wu，由 ONES Piece 翻译计划翻译。ONES Piece 是一个由 ONES Ventures 发起的非营利翻译计划，聚焦科技创新、生活方式和未来商业。  当今之世，「方便」是最被低估，也是最少被理解的力量。作为人类决策中的驱动力之一，它或许没法提供弗洛依德笔下的无意识性渴求那般背德的刺激，也缺少经济学动因分析那种数理式的优雅。「方便」很无聊，">
+<meta property="og:description" content="时间序列数据异常检测报告 15级-李博 2017-12-29  基于统计方法进行时序数据预测的异常检测模型简述基于统计的预测，无非是根据收集过去时间的数据，建立一个模型，来计算未来时间的数据，建立的是一种数学或者统计模型，它能表现出已有数据的变化规律，因为大数定理的存在，定义了世间所有的行为都可以通过数字表示，并且存在一定的客观规律。 对于股票市场中存在的量化交易这一概念，即是指以先进的数学模型替">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fp6efvg7dkj312w0pwn1r.jpg">
-<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79ly1fp6eiy6r6rj30go0b474m.jpg">
-<meta property="og:updated_time" content="2018-03-09T03:25:09.953Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fmxgr3umhej30vy0iwq2z.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fmvmepv069j31hc140772.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fmxhde15csj31hc140wgw.jpg">
+<meta property="og:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/d113484745294ddf53ff5589762d9565d63b7c36">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fmxkgfdm6wj30je0fgmxo.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fmxkmds0frj30me0asmx7.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fmxkr5mywfg30f009qwel.gif">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fmxkzutsmwj31hc140n0g.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fmxl1rstxaj31hc140whb.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fmxgr0c6roj30y20m674f.jpg">
+<meta property="og:updated_time" content="2017-12-29T05:57:58.448Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="随想-「方便」的暴政">
-<meta name="twitter:description" content="本文原载于 nytimes，作者 Tim Wu，由 ONES Piece 翻译计划翻译。ONES Piece 是一个由 ONES Ventures 发起的非营利翻译计划，聚焦科技创新、生活方式和未来商业。  当今之世，「方便」是最被低估，也是最少被理解的力量。作为人类决策中的驱动力之一，它或许没法提供弗洛依德笔下的无意识性渴求那般背德的刺激，也缺少经济学动因分析那种数理式的优雅。「方便」很无聊，">
-<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fp6efvg7dkj312w0pwn1r.jpg">
+<meta name="twitter:title" content="基于统计方法进行时序数据预测的异常检测模型">
+<meta name="twitter:description" content="时间序列数据异常检测报告 15级-李博 2017-12-29  基于统计方法进行时序数据预测的异常检测模型简述基于统计的预测，无非是根据收集过去时间的数据，建立一个模型，来计算未来时间的数据，建立的是一种数学或者统计模型，它能表现出已有数据的变化规律，因为大数定理的存在，定义了世间所有的行为都可以通过数字表示，并且存在一定的客观规律。 对于股票市场中存在的量化交易这一概念，即是指以先进的数学模型替">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fmxgr3umhej30vy0iwq2z.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="https://www.luodian.ink/2018-03-09/随想-方便的暴政/"/>
+  <link rel="canonical" href="https://www.luodian.ink/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/"/>
 
 
 
@@ -136,7 +144,7 @@
     sidebar: "",
   };
 </script>
-  <title>随想-「方便」的暴政 | Luodian.ink</title>
+  <title>基于统计方法进行时序数据预测的异常检测模型 | Luodian.ink</title>
   
 
 
@@ -329,7 +337,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.luodian.ink/2018-03-09/随想-方便的暴政/">
+    <link itemprop="mainEntityOfPage" href="https://www.luodian.ink/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Luodian">
@@ -346,7 +354,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">随想-「方便」的暴政</h1>
+          <h1 class="post-title" itemprop="name headline">基于统计方法进行时序数据预测的异常检测模型</h1>
         
 
         <div class="post-meta">
@@ -358,7 +366,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-09T11:15:04+08:00">2018-03-09</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-29T13:57:30+08:00">2017-12-29</time>
             
 
             
@@ -379,7 +387,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/随想/" itemprop="url" rel="index"><span itemprop="name">随想</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/时间序列/" itemprop="url" rel="index"><span itemprop="name">时间序列</span></a></span>
 
                 
                 
@@ -394,9 +402,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018-03-09/随想-方便的暴政/#comments" itemprop="discussionUrl">
+                <a href="/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018-03-09/随想-方便的暴政/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017-12-29/基于统计方法进行时序数据预测的异常检测模型/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -404,7 +412,7 @@
 
           
           
-             <span id="/2018-03-09/随想-方便的暴政/" class="leancloud_visitors" data-flag-title="随想-「方便」的暴政">
+             <span id="/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/" class="leancloud_visitors" data-flag-title="基于统计方法进行时序数据预测的异常检测模型">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -435,41 +443,92 @@
       
 
       
-        <blockquote>
-<p>本文原载于 <a href="https://link.jianshu.com/?t=https%3A%2F%2Fwww.nytimes.com%2F2018%2F02%2F16%2Fopinion%2Fsunday%2Ftyranny-convenience.html" target="_blank" rel="noopener">nytimes</a>，作者 Tim Wu，由 ONES Piece 翻译计划翻译。ONES Piece 是一个由 ONES Ventures 发起的非营利翻译计划，聚焦科技创新、生活方式和未来商业。</p>
+        <h1 id="时间序列数据异常检测报告"><a href="#时间序列数据异常检测报告" class="headerlink" title="时间序列数据异常检测报告"></a>时间序列数据异常检测报告</h1><blockquote>
+<p>15级-李博</p>
+<p>2017-12-29</p>
 </blockquote>
-<p>当今之世，「方便」是最被低估，也是最少被理解的力量。作为人类决策中的驱动力之一，它或许没法提供弗洛依德笔下的无意识性渴求那般背德的刺激，也缺少经济学动因分析那种数理式的优雅。「方便」很无聊，可无聊并不意味着无足轻重。</p>
-<p>在二十一世纪的发达诸国，方便——亦即更高效简单地完成个人事项的方式——可能渐已成为塑造个人生活乃至整体经济的最强大力量。在美国尤其如此。虽然欢颂自由与独立的赞歌于美国四处可闻，但你也许会怀疑是否方便才是事实上的王道。</p>
-<p>正如 Twitter 的联合创始人伊文 · 威廉姆斯（Evan Williams）近日所指的那样：「方便决定一切。」鼓吹着「人们的想象揭示了他们真正想要的东西」，「方便」似乎已令我们别无选择。（我喜欢手冲咖啡，但星巴克速溶是如此方便，以至我几乎从不去做我「喜欢」的选择。）简单就是好。简单至极，则再好不过。</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fp6efvg7dkj312w0pwn1r.jpg" alt=""></p>
-<p>「方便」有着令其他选项变得不堪设想的能力。一旦用过洗衣机，再去手洗衣物便显得匪夷所思，就算它也许更便宜。一经体验流播电视，则守着特定时间看剧的做法就似乎蠢得有点不像样。要抵制「方便」——不拥有手机，不使用谷歌搜索——所需的牺牲，是常被认作举止乖僻，甚至走火入魔。</p>
-<p>「方便」对个体决策形成过程的影响力，生发自日积月累的集体决策过程，也源于它在现代经济构建中的诸多所为。特别是在技术相关行业，打赢「方便」之战就意味着市场占有率的胜利。</p>
-<p>美国人总把他们嘉勉竞争、选择极大丰富、「小人物梦想」之类的话挂在口上。而在规模经济和习惯的力量互相加成下，我们对方便的胃口会招致来更多的「方便」。亚马逊用起来越方便，它即会变得越强大——因此亚马逊用起来就愈加方便了。「方便」与垄断，似天然乃一丘之貉。</p>
-<p>既然「方便」作为一种理想、一派价值观、一类生活方式业已风生水起，那么就值得一问，我们对它的固恋，于我们自己和我们的国家有何影响。我并不想把「方便」说成是邪恶的力量，「省烦从简」本身亦无可指摘。恰恰相反，它时常开启那些过去令人目迷五色的可能性。而对那些不堪挑起人生重担的人而言，「方便」总能让日子过得不那么费劲些。</p>
-<p>可我们错就错在，只因它与我们所珍视的其他理想之间关系错综复杂，便假定「方便」永远都是好的。固然「方便」总被理解、被宣传为平权解放的工具，但其亦有昏昧的一面。它应许我们以顺畅无阻和事半功倍，可也威胁到了那些给予生活以意义的挣扎与挑战。「方便」被创造出来给予我们自由，但它也限制了我们的意愿，由此微妙地奴役了我们。</p>
-<p>将拥抱「不便」作为处世原则诚然会有悖常理，可当我们纵容「方便」做出一切决定之时，我们妥协得委实太多。</p>
-<p>我们现在所知的「方便」，乃十九世纪末二十世纪初，节约劳力的家用设备被创造并推向市场时的产物。个中重要节点，包括首批「方便食品」的发明（例如罐装猪肉焗豆子和桂格即食麦片）、第一代电动洗衣机、「老荷兰」去污粉之类的清洁产品以及其他新奇事物，比如电动吸尘器、蛋糕预拌粉和微波炉。</p>
-<p>「方便」是另一个十九世纪末的概念「工业效率」的家用版本，且多与「科学管理」一齐出现。它代表着工厂时代的精神风貌对家庭生活的浸染。</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1fp6eiy6r6rj30go0b474m.jpg" alt=""></p>
-<p>别瞧它眼下何等稀松平常，「方便」这位免人类于劳作的解放者，曾经还是个乌托邦式的理想。通过节约时间和消除苦役，它替休闲创造了空间。而正因有了休闲，我们方有可能去花时间于学习、兴趣或其他什么我们真正在意的事物上。「方便」让普罗大众也可享从前贵族独占的、提高自我修养的自由。以此看来，方便也极大抹平了社会差距。</p>
-<p>「方便即解放」这个概念令人沉醉。而那些对其忘乎所以的刻画，也出现在科幻作品以及未来学家对二十世纪中叶的想象中。从《大众机械》（Popular Mechanics）这类严肃杂志到动画片《杰森一家》（The Jetsons）这种无脑娱乐里，我们皆可窥见未来生活将是百分百的「方便」光景。按下电钮，美食上桌；自动人行道可免去走路之烦；衣服将会清洁自己，甚至在穿过一天后自我解体。至少在这副如意算盘里，人存于世的奋斗早已不复存在。</p>
-<p>「方便」的美梦，乃建立于「体力劳动」的噩梦之上。但劳动永远都是噩梦么？我们真想「不劳永逸」么？有时，或许那些不便而耗时的行为和追求反而更能展现人性。或许这也就是为什么，「方便」纵有万般好处，但总有些人将其拒之门外。这些人诚然有其顽固刻板的一面（还由于他们有这份奢侈去抵制），可也因为他们看到了它对人之为人的威胁，看到了「方便」对他们在意之事的掌控。</p>
-<p>到上世纪六十年代，第一次「方便革命」开始星火燎原。充斥着「方便」的前景已不再是全社会的热望所在。方便意味一致性，而反文化运动则恰恰关乎民众表达自我、发挥个人潜能的需求，关乎与自然和谐共处而非寻求力克自然带来的不适。弹吉他并不方便，自己种菜或自己修理摩托车也并不方便。但它们本身作为结果被视作有价值的事情。彼时的人们，正在重新开始追求个人趣味。</p>
-<p>而也许是大势所趋，第二波「方便技术」的浪潮（也就是我们生活的这个时间阶段）袭来，将这种理想裹挟了进去。个人趣味，被「方便化」了。</p>
-<p>你或可将索尼随身听问世的 1979 年认作这个时间阶段的元年。由随身听，我们可知「方便」在方法论上一个微妙但根本的转变。若第一次方便革命的纲领是让你的生活和工作更轻松简单，第二次的目的，则是让「做你自己」更轻松简单。新科技成了个性的催化剂，赐予自我表达以效率。</p>
-<p>想象一个八十年代初期的人，带着随身听，塞着耳机，在街上晃荡。他被自己选择的音乐环境隔绝于世，正在当众享受那种曾经只能于自家陋室中体验的自我表达。新的科技让他更容易地就能展示自己，哪怕是只对自己展示。他在天地间高视阔步。他是自己专属的电影里的大明星。</p>
-<p>这幻象是如此诱人，以至于它支配了我们的存在，以至于过去几十年内我们创造的那些重要而强大的技术，多数都是为个性化与个人趣味服务的。想想看吧——录像机、音乐播放列表、Facebook 页面，以及 Instagram 账号——这些「方便」与费不费劲无关，反正我们也多半不会经常做这些事。它关乎的是精神资源的节省，免却的是面对诸多自我表达的选项时难以抉择的精神操劳。「方便」是「一键某某」，是一站式购物，是即插即用的无缝体验。新的理想状态，是不费吹灰之力就实现个人偏好。</p>
-<p>我们当然心甘情愿为方便支付溢价——并且付得比我们自以为乐意的还多。举例来说，在上世纪九十年代末，Napster 之类的音乐发行技术使得从网上免费下载音乐成为可能，而许多人也的确对此利用颇多。但现在，尽管不花钱就能搞到音乐的办法依旧简单，却绝少有人这么干了。为什么？因为 2003 年 iTunes 商店的出现让购买音乐比非法下载还要方便。「方便」打败了「免费」。</p>
-<p>随着各科事项桩桩件件地变得简单，对「方便」日益增长的期待也让这样一种压力水涨船高：要么继续将其他东西也简单化，要么便被时代抛弃。我们被即时性宠溺坏了，碰到还停留在老旧时效水平的事情就不胜其烦。当你可以无需陷于窗口长龙而在手机上买演唱会门票时，要排队等待为选举投票简直就令人无名火起，对那些从来不必排队的人来说尤其如此。（这也许有助于解释年轻人的低投票参与率。）</p>
-<p>实际情况的吊诡之处在于，今日之个性化技术，乃是一种「群体个性化」的技术。定制化的产物也可能会出人意料地面目均匀。例如，所有人（或几乎所有人）都在 Facebook 上，这是与亲友——也就是理论上代表了你和你的人生独特之处的这群人——保持联系最方便的方式。但 Facebook 似乎把我们弄得毫无差别。它的固定格式和习惯套路将我们剥离得只剩下最肤浅的那层个性表达，比如将哪张沙滩或山峦的美图设为页面背景这类琐事。</p>
-<p>我无意否认让事情变得简单能对我们起重大作用，能推动我们在餐厅、打车服务、开源百科上的选择变得从无到有，从少到多。但我们的人生不只是「拥有并做出选择」这一件事。我们还要处理突如其来的情况，还要克服值得面对的挑战，完成困难的任务——这些奋斗，有助于塑造我们成为自己。当此等障碍、吃力、限制和准备门槛都消失不见，人生体验会变成何等模样？</p>
-<p>今天的方便文化无法坦然面对人生体验的基本特点——「困难」，因为「方便」只在乎终点，不关心旅途。但哪怕你最后都立于同一海拔，攀援一座高峰与乘缆车登顶的过程依然存在天壤之别。我们正在成为那种仅仅（或者主要）在意结果的家伙，正冒着把人生变成一连串痴苶的缆车观光的风险。</p>
-<p>为了不使「方便」的唯一导向是更多的方便，它必须为更大的目标服务。贝蒂 · 弗里丹（Betty Friedan）在她 1963 年的经典著作《女性的奥秘》（The Feminine Mystique）里曾观察了家庭科技对女性的影响，并且得出了它们只是创造了更多需求这样的结论。「就算是用上所有那些节省劳力的电器，」她写道，「一位现代美国家庭主妇花在家务上的时间也或许比她祖母还要多。」当事情变得简单，我们会用其他「简单」的事情填补空白的时间。在某些时刻，无关痛痒的细小琐事已经取代奋斗，专制统治着我们的人生。</p>
-<p>生活在一个什么东西都是「简单」的世界里的一个令人厌恶的结果，就是唯一重要的技能只剩下多任务同时处理。在极端情况下，我们其实没做任何事，只是排列了要做之事的顺序罢了。而基于此的人生，则无异于沙上之塔。</p>
-<p>我们须在更多时间（虽不至于每时每刻）里树立去主动拥抱「不便」的自觉。至少做若干个「不便」的选择吧，在这个时代，只有这样，你才能寻获真正的个人趣味。不是说你非得自己做黄油或者去打猎，但如果你想要成就点什么，你不能让「方便」凌驾于其他价值之上。有时「麻烦」并不是问题，而是答案：它可以成为「你是谁」这个问题的答案。</p>
-<p>而「拥抱不便」或许听起来古怪，但其实我们在不自知的情况下已经在这么做了。只是仿佛为了掩盖这点，我们替那些不便的选择起了其他名字：爱好、副业、内心的召唤和热情。这些非工具性的行为有助于定义我们。我们能从中收获自己的人格——因为它们都包含了人类区区肉身与自然法则之间充满意义的抗衡，例如制作木雕、组装原材料、修理家电、写代码、记录海浪的规律，或者直面长跑时腿和肺开始不听使唤的那一刻。</p>
-<p>这样的行动需要时间，可它们终能使人受益。它们将我们暴露在沮丧与失败的风险之下，但它们亦将教会我们理解世界，以及我们在其中的角色。</p>
-<p>让我们审思这场「方便」治下的暴政，更积极地尝试抵御它的愚民威力吧，且看结果如何。我们不可忘记缓慢与艰苦的乐趣所在，不可忘记不用「最方便」的办法带来的成就感。能保全我们于完全高效率同质化人生的，也许惟有那些灿若繁星的、「不方便」的选择。</p>
+<h2 id="基于统计方法进行时序数据预测的异常检测模型"><a href="#基于统计方法进行时序数据预测的异常检测模型" class="headerlink" title="基于统计方法进行时序数据预测的异常检测模型"></a>基于统计方法进行时序数据预测的异常检测模型</h2><h3 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h3><p>基于统计的预测，无非是根据收集过去时间的数据，建立一个模型，来计算未来时间的数据，建立的是一种数学或者统计模型，它能表现出已有数据的变化规律，因为大数定理的存在，定义了世间所有的行为都可以通过数字表示，并且存在一定的客观规律。</p>
+<p>对于股票市场中存在的量化交易这一概念，即是指以先进的数学模型替代人为的主观判断，利用计算机技术从庞大的历史数据中海选能带来超额收益的多种『大概率』事件以制定策略，极大地减少了投资者情绪波动的影响，避免在市场极度狂热或悲观的情况下作出非理性的投资决策。</p>
+<p>在这里我们从这个方向入手，通过传统股票市场的预测分析工具来进行我们的工业传感器数据分析，首先我简要分析其关联性：</p>
+<ol>
+<li>股票数据和传感器数据都具有趋势性，以及一定程度的随机性，趋势性保证了两者的数值会按照一定的规律变化，并且从长时间数据的角度看，其是较为连续的，因此我们可以使用ARIMA，EA等模型进行平滑处理，分析异常点。</li>
+<li>股票数据根据金融因素，考虑通货膨胀等原因，可能会存在不断起伏，但是大趋势增长的情况。但是对于传感器数据，大多会在一定范围内震荡（如温度，湿度等数据因为物理因素的原因，不会高出一定范围），所以我们可以在EA（适用于渐进上升型数据）或者是ARIMA模型（适用于周期波动性数据）中进行决策。</li>
+<li>传感器数据可能存在一定的周期，但是股票数据不一定存在明显周期性，这一点也是需要对模型进行修正调整的考虑因素之一。</li>
+</ol>
+<h2 id="模型方法介绍"><a href="#模型方法介绍" class="headerlink" title="模型方法介绍"></a>模型方法介绍</h2><p>在上一次周报中，我详细介绍了这种方法，现在在这里简单略过。</p>
+<p>基于预测的异常检测模型如下图所示，$O_{data}$ 是真实数据，通过预测器得到预测数据，然后 $O_{data}$ 和 $P_{data}$分别作为比较器的输入，比较器输出的是真实数据中被判别为异常值的下标 $Index$。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fmxgr3umhej30vy0iwq2z.jpg" alt=""></p>
+<h3 id="预测器"><a href="#预测器" class="headerlink" title="预测器"></a>预测器</h3><p>时间序列分析一般假设我们获得的数据在时域上具有一定的相互依赖关系，通常，如果传感器数值在 $t$ 时刻很高，那么在 $t+1$ 时刻价格也有一定的概率会比较高，而时间序列分析的目的包含以下两个方面：</p>
+<ul>
+<li>发现这种隐含的依赖关系，并增加我们对此类时间序列的理解；</li>
+<li>对未观测到的或者尚未发生的时间序列进行预测。</li>
+</ul>
+<p>在接下来的分析中，我们认为时间序列 $X$ 由两部分组成，即 $X_t=\hat{X}_t+\epsilon_t$. 其中$\hat{X}_t$ 是有规律的序列而$ \epsilon_t$ 则无规律的噪声。有规律的 $X_t$ 包含我们想要发现的依赖关系（pattern），而 $\epsilon_t$ 我们认为在时间域内不存在相互依赖的关系，即 $\epsilon_t$ 和 $\epsilon_{t+1}$ 之间是相互独立的。</p>
+<p>一个最简单的模型就是我们假设 $\epsilon_t$ 是一个随机数，服从一定的概率分布 $f_t(\epsilon)$。</p>
+<p>可以发现，我们想要找到 $\hat{X}_t$ 而对 $ϵ_t$不怎么感兴趣。为了使有规律的 $\hat{X}_t$ 更加明显，我们通常希望能过滤到噪声，而最简单的过滤噪声的方法就是『取平均』。</p>
+<p>而问题来了，对于时间序列信号来说，我们该如何取平均呢？这里便引出了我们的基于历史数据平滑曲线的几种方法，也即我们的预测期。</p>
+<p>我们使用的预测器主要有以下几种（还在等待其余方法的补充）。</p>
+<h4 id="对于时序数据的-F-t-m-的预测方法"><a href="#对于时序数据的-F-t-m-的预测方法" class="headerlink" title="对于时序数据的 $F_{t+m}$ 的预测方法"></a>对于时序数据的 $F_{t+m}$ 的预测方法</h4><h5 id="MA-滑动平均模型"><a href="#MA-滑动平均模型" class="headerlink" title="MA(滑动平均模型)"></a>MA(滑动平均模型)</h5><p>这种方法并不考虑数据的趋势性，单纯根据历史信息来求得当前点的滑动平均数值，参数 T（也即WindowSize） 决定了依赖历史的程度。</p>
+<p>我们用 $S$ 表示处理后的序列，那么 $S_t$ 等于 $X_{t−T+1}$ 到 $X_t$ 的平均值，即</p>
+<p> $S_t=\frac{1}{T}\Sigma^t_{i=t−T+1}X_i$</p>
+<p>我们使用 $S_t \simeq \hat{X_t}$，下面我们使用滑动平均来预测 windmachine 的第一列的数据，并根据预测值进行异常检测。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fmvmepv069j31hc140772.jpg" alt=""></p>
+<h5 id="EA-指数平均模型"><a href="#EA-指数平均模型" class="headerlink" title="EA(指数平均模型)"></a>EA(指数平均模型)</h5><p>在这里我们使用二阶指数平均，二阶在一阶的基础上增加了对于趋势的考量，更符合我们的数据要求，而三阶需要依赖于周期性，这点和上述的 ARIMA 模型所依赖的周期性也是相同的，下一步我们也需要加入周期性的考量。</p>
+<p>我们可以看到，虽然指数平均在产生新的数列的时候考虑了所有的历史数据，但是仅仅考虑其静态值，即没有考虑时间序列当前的变化趋势。如果当前的股票处于<strong>上升趋势</strong>，那么当我们对明天的股票进行预测的时候，好的预测值不仅仅是对历史数据进行『平均』，而且要考虑到当前数据变化的<em>上升趋势</em>。同时考虑历史平均和变化趋势，这边是<strong>二阶指数平均</strong>。<br>我们先给出二阶指数平均的两种方法，如下</p>
+<ol>
+<li><p>$initialize$<br>$S_1 = X_1$<br>$b_1 = X_1−X_0$<br>$for  t &gt; 1$<br>$S_t = αX_t + (1−α) ( S_t−1+b_t−1)$<br>$b_t = β(S_t−S_t−1)+(1−β)b_t−1$<br>$end  for$</p>
+<p>如果我们对 $X_{t+m}$ 之后的数值进行预测，那么我们的预测值为<br>$\hat{X}_{t+m} = S_t + mb_t$</p>
+</li>
+<li><p>$S′_0=X_0$<br>$S^{′′}_0=X_0$<br>$for  t \geq 1$<br>$\quad S^{‘}_t = \alpha X_t+(1-\alpha)S_{t-1}^{‘} \quad S^{‘’}_t = \alpha S^{‘}_t +(1-\alpha)S_{t-1}^{‘’}\quad S_t = 2S^{‘}_t-S^{‘’}_t$</p>
+<p>end for</p>
+<p>在方法二中，只有一个参数 $α$ 。其中$S^{‘}_t$为最基本的指数平均得到的结果，而 $S^{‘}_t - S^{“}_t$ 为变化的趋势.</p>
+<p>如果我们对 $X_{t+m}$ 之后的数值进行预测，那么我们的预测值为<br>$\hat{X}_{t+m} = S_t +(m\frac{\alpha}{1-\alpha})(S^{‘}_t-S^{‘’}_{t})$</p>
+</li>
+</ol>
+<p>我们利用二阶指数平均对于数据进行处理及异常检测的结果如下：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fmxhde15csj31hc140wgw.jpg" alt=""></p>
+<h4 id="用于修正的方法"><a href="#用于修正的方法" class="headerlink" title="用于修正的方法"></a>用于修正的方法</h4><h5 id="布林通道"><a href="#布林通道" class="headerlink" title="布林通道"></a>布林通道</h5><p>布林通道是一个在股票市场中经常使用的概念，它在应用上结合了移动平均和标准差的概念，其基本的型态是由三条轨道线组成的带状通道（中轨和上、下轨各一条）。上下轨分别由平均值加减二倍标准差（<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d113484745294ddf53ff5589762d9565d63b7c36" alt="\pm 2\sigma ">）得到，<strong>中轨</strong>为股价的平均成本，<strong>上轨</strong>和<strong>下轨</strong>可分别视为股价的压力线和支撑线。</p>
+<blockquote>
+<p>下图中红线为上轨，绿线为下轨，蓝线为滑动平均值。</p>
+</blockquote>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fmxkgfdm6wj30je0fgmxo.jpg" alt=""></p>
+<p>由大数定律以及高斯分布模型，我们可以获知在上下二倍标准差基本涵盖了数据变化的95%左右的情况，如果超出这个分布，那么极有可能是异常点，因此在我们的模型中我们结合布林通道进行了异常点的修正。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fmxkmds0frj30me0asmx7.jpg" alt=""></p>
+<h5 id="RSI指数"><a href="#RSI指数" class="headerlink" title="RSI指数"></a>RSI指数</h5><p>RSI指数在证券市场中适用于衡量一段周期内增长和下降强弱对比的一个指标，其计算公式如下：</p>
+<ol>
+<li>RSI = 100×RS / (1+RS)</li>
+<li>RS = X天的平均上涨点数 / X天的平均下跌点数</li>
+</ol>
+<p>通俗的讲，RSI 指数过高代表上涨明显（超买现象），意味着有可能会存在潜在的下跌，RSI指数过低则反之。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fmxkr5mywfg30f009qwel.gif" alt=""></p>
+<p>下面是我们使用布林通道进行异常检测的测试：</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fmxkzutsmwj31hc140n0g.jpg" alt=""></p>
+<p>下面是我们使用修正之后的模型结合EA方法进行异常检测的情况：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fmxl1rstxaj31hc140whb.jpg" alt=""></p>
+<h3 id="比较器"><a href="#比较器" class="headerlink" title="比较器"></a>比较器</h3><p>预测器预测出当前时刻传感器的预测值后，还需要与真实值比较来判断当前时刻数据是否异常。一般的比较器都是通过阈值法，比如实际值超过预测值的一定比例就认为该点出现异常，进行报警。这种方式错误率比较大。在传感器数值模型的报警检测中没有使用这种方式，而是使用了两个串联的 Filter，只有当两个 Fliter 都认为该点异常时，才进行报警，下面简单介绍一下两个 Filter 的实现。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fmxgr0c6roj30y20m674f.jpg" alt="@图4.1 比较器模型 | center | 500x0"></p>
+<h4 id="离散度Filter"><a href="#离散度Filter" class="headerlink" title="离散度Filter"></a>离散度Filter</h4><p>根据预测误差曲线离散程度过滤出可能的异常点。一个序列的方差表示该序列离散的程度，方差越大，表明该序列波动越大。如果一个预测误差序列方差比较大，那么我们认为预测误差的报警阈值相对大一些才比较合理。离散度 filter 利用了这一特性，我们对于这个真实数据点的前 $N$ 个点求方差，下一步阈值 filter 的输入为方差 $\sigma$.</p>
+<h4 id="阈值Filter"><a href="#阈值Filter" class="headerlink" title="阈值Filter"></a>阈值Filter</h4><p>根据误差绝对值是否超过某个阈值过滤出可能的异常点。利用离散度 Filter 进行过滤时，报警阈值随着误差序列波动程度变大而变大，但是在输入数据比较小时，误差序列方差比较小，报警阈值也很小，容易出现误报。所以设计了根据方差 $\sigma$ 进行过滤的阈值 filter。阈值 filter 设计了一个分段阈值函数 $y=f(x)$，对于实际值 $x$ 和预测值 $p$ ，只有当 $|x-p|&gt;f(x)$ 时报警。实际使用中，可以根据数据寻找一个对数函数替换分段阈值函数，更易于参数调优。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="创新性"><a href="#创新性" class="headerlink" title="创新性"></a>创新性</h3><p>目前少见有人使用预测器 + 判别器的方式结合金融统计方法进行异常检测，这种方式本身比较新颖。主要优势有如下几点：</p>
+<ol>
+<li>相对于我们之前采用的机器学习的方法，这种方法即使在大数据的情况下也能够顺利完成，因为根据选取方法的不同，基本都是在 $O(N)$ 级别的方法。</li>
+<li>可以实现在线实时预测，可以将成套的算法写入传感器芯片内作为硬件级别的预测，芯片内只需要存储规定 $N$ 日内的数据即可。</li>
+</ol>
+<h3 id="不足"><a href="#不足" class="headerlink" title="不足"></a>不足</h3><ol>
+<li>在预测器中其实我们也应该考虑ARIMA或者是三阶指数平滑（即Holt-winters）模型，但是对于传感器数据的先验信息我们并不了解，导致我们不能够手动的设置其周期值，对于周期性不明确的情况，我们暂时使用 fix 方法作为补偿。</li>
+<li>下一步我计划使用RNN作为预测器，使用LSTM方法，直接对数据进行预测，但是这种方法可能会比现有的方法更耗时，但是有可能会有更高的准确性，而且目前我已经在尝试使用 LSTM 提取数据的周期性，效果还不错。</li>
+</ol>
+<h4 id="困难点分析"><a href="#困难点分析" class="headerlink" title="困难点分析"></a>困难点分析</h4><ol>
+<li>对数据的先验知识不够，这近似于一个非监督学习，如果要对效率有更高的要求可能需要更多的标记。</li>
+<li>对未来这个系统的使用方法，使用对象和项目雏形不是很了解。</li>
+<li>目前尚未完成对于数据的周期性提取的高效算法（LSTM相对来说比较耗时，对于大数据可能不太适用）。</li>
+<li>目前尚未完成对于模式异常的识别。</li>
+</ol>
+<h4 id="研究方向"><a href="#研究方向" class="headerlink" title="研究方向"></a>研究方向</h4><ol>
+<li>正在学习使用 RNN 进行序列的预测，到时候会根据正确性以及效率来和现有的方法进行选择以及比较。</li>
+<li>正在考虑是否需要将大段的点异常归类为段异常，从而进行模式异常的识别。</li>
+<li>在目前我们的实验中，主要使用了两种预测方法+两种修正方法，但实际上时序数据还有许多可以增加的模型和修正方法（我们倾向于使用多修正方法进行参数投票，最终用拟合的方式找出一个最适合我们训练数据的函数），这些方法的最终目的就是能够更加根据历史信息平滑的预测变化量，从而为我们的异常检测提出建议的值。</li>
+</ol>
 
       
     </div>
@@ -497,8 +556,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018-03-08/Next主题下如何让图片自动居中/" rel="next" title="Next主题下如何让图片自动居中">
-                <i class="fa fa-chevron-left"></i> Next主题下如何让图片自动居中
+              <a href="/2017-12-24/17周周报-使用Holt-Winters模型通过比对预测值进行异常检测/" rel="next" title="17周周报-使用Holt-Winters模型通过比对预测值进行异常检测">
+                <i class="fa fa-chevron-left"></i> 17周周报-使用Holt-Winters模型通过比对预测值进行异常检测
               </a>
             
           </div>
@@ -506,6 +565,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018-01-24/Contest-911-D-Inversion-Counting/" rel="prev" title="Contest-911-D-Inversion Counting">
+                Contest-911-D-Inversion Counting <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -564,8 +627,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -684,6 +756,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#时间序列数据异常检测报告"><span class="nav-number">1.</span> <span class="nav-text">时间序列数据异常检测报告</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基于统计方法进行时序数据预测的异常检测模型"><span class="nav-number">1.1.</span> <span class="nav-text">基于统计方法进行时序数据预测的异常检测模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简述"><span class="nav-number">1.1.1.</span> <span class="nav-text">简述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型方法介绍"><span class="nav-number">1.2.</span> <span class="nav-text">模型方法介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#预测器"><span class="nav-number">1.2.1.</span> <span class="nav-text">预测器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#对于时序数据的-F-t-m-的预测方法"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">对于时序数据的 $F_{t+m}$ 的预测方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#MA-滑动平均模型"><span class="nav-number">1.2.1.1.1.</span> <span class="nav-text">MA(滑动平均模型)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#EA-指数平均模型"><span class="nav-number">1.2.1.1.2.</span> <span class="nav-text">EA(指数平均模型)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用于修正的方法"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">用于修正的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#布林通道"><span class="nav-number">1.2.1.2.1.</span> <span class="nav-text">布林通道</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#RSI指数"><span class="nav-number">1.2.1.2.2.</span> <span class="nav-text">RSI指数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#比较器"><span class="nav-number">1.2.2.</span> <span class="nav-text">比较器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#离散度Filter"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">离散度Filter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#阈值Filter"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">阈值Filter</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.3.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创新性"><span class="nav-number">1.3.1.</span> <span class="nav-text">创新性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不足"><span class="nav-number">1.3.2.</span> <span class="nav-text">不足</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#困难点分析"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">困难点分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#研究方向"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">研究方向</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -839,9 +927,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'https://www.luodian.ink/2018-03-09/随想-方便的暴政/';
-        this.page.identifier = '2018-03-09/随想-方便的暴政/';
-        this.page.title = '随想-「方便」的暴政';
+        this.page.url = 'https://www.luodian.ink/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/';
+        this.page.identifier = '2017-12-29/基于统计方法进行时序数据预测的异常检测模型/';
+        this.page.title = '基于统计方法进行时序数据预测的异常检测模型';
       };
       function loadComments () {
         var d = document, s = d.createElement('script');

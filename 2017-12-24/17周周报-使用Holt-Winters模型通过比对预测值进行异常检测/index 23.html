@@ -107,27 +107,32 @@
   <meta name="keywords" content="Hexo, my world." />
 
 
-<meta name="description" content="本文原载于 nytimes，作者 Tim Wu，由 ONES Piece 翻译计划翻译。ONES Piece 是一个由 ONES Ventures 发起的非营利翻译计划，聚焦科技创新、生活方式和未来商业。  当今之世，「方便」是最被低估，也是最少被理解的力量。作为人类决策中的驱动力之一，它或许没法提供弗洛依德笔下的无意">
+<meta name="description" content="基于预测比较模型的异常检测 16周时，开始尝试一些新的思路与原有方法的对比，在比较了传统的滑动平均和现有的指数平均方法之后，我们采用Holt Winters方法从预测的角度来做误差分析。  新的方法在序列数据的异常检测过程中，我们既可以直接使用对序列进行异常检测的算法，也可以先对序列数据进行特征提取然后转化为传统的离群">
 <meta property="og:type" content="article">
-<meta property="og:title" content="随想-「方便」的暴政">
-<meta property="og:url" content="https://www.luodian.ink/2018-03-09/随想-方便的暴政/index.html">
+<meta property="og:title" content="17周周报-使用Holt-Winters模型通过比对预测值进行异常检测">
+<meta property="og:url" content="https://www.luodian.ink/2017-12-24/17周周报-使用Holt-Winters模型通过比对预测值进行异常检测/index.html">
 <meta property="og:site_name" content="Luodian.ink">
-<meta property="og:description" content="本文原载于 nytimes，作者 Tim Wu，由 ONES Piece 翻译计划翻译。ONES Piece 是一个由 ONES Ventures 发起的非营利翻译计划，聚焦科技创新、生活方式和未来商业。  当今之世，「方便」是最被低估，也是最少被理解的力量。作为人类决策中的驱动力之一，它或许没法提供弗洛依德笔下的无意识性渴求那般背德的刺激，也缺少经济学动因分析那种数理式的优雅。「方便」很无聊，">
+<meta property="og:description" content="基于预测比较模型的异常检测 16周时，开始尝试一些新的思路与原有方法的对比，在比较了传统的滑动平均和现有的指数平均方法之后，我们采用Holt Winters方法从预测的角度来做误差分析。  新的方法在序列数据的异常检测过程中，我们既可以直接使用对序列进行异常检测的算法，也可以先对序列数据进行特征提取然后转化为传统的离群点检测。     离群点检测方法 方法描述 方法特点     基于统计 大部分的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fp6efvg7dkj312w0pwn1r.jpg">
-<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79ly1fp6eiy6r6rj30go0b474m.jpg">
-<meta property="og:updated_time" content="2018-03-09T03:25:09.953Z">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79ly1fmroslheqbj31d00m2jrh.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fmroz08dq2j30a207ua9x.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79ly1fmrozw8uuij309s07e745.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fmrp7xumw7j309u07k745.jpg">
+<meta property="og:image" content="https://tech.meituan.com/img/holtwinter/p1.png">
+<meta property="og:image" content="https://tech.meituan.com/img/holtwinter/compaire.png">
+<meta property="og:image" content="https://tech.meituan.com/img/holtwinter/jiegoutu.png">
+<meta property="og:updated_time" content="2017-12-28T07:50:09.486Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="随想-「方便」的暴政">
-<meta name="twitter:description" content="本文原载于 nytimes，作者 Tim Wu，由 ONES Piece 翻译计划翻译。ONES Piece 是一个由 ONES Ventures 发起的非营利翻译计划，聚焦科技创新、生活方式和未来商业。  当今之世，「方便」是最被低估，也是最少被理解的力量。作为人类决策中的驱动力之一，它或许没法提供弗洛依德笔下的无意识性渴求那般背德的刺激，也缺少经济学动因分析那种数理式的优雅。「方便」很无聊，">
-<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fp6efvg7dkj312w0pwn1r.jpg">
+<meta name="twitter:title" content="17周周报-使用Holt-Winters模型通过比对预测值进行异常检测">
+<meta name="twitter:description" content="基于预测比较模型的异常检测 16周时，开始尝试一些新的思路与原有方法的对比，在比较了传统的滑动平均和现有的指数平均方法之后，我们采用Holt Winters方法从预测的角度来做误差分析。  新的方法在序列数据的异常检测过程中，我们既可以直接使用对序列进行异常检测的算法，也可以先对序列数据进行特征提取然后转化为传统的离群点检测。     离群点检测方法 方法描述 方法特点     基于统计 大部分的">
+<meta name="twitter:image" content="https://ws3.sinaimg.cn/large/006tNc79ly1fmroslheqbj31d00m2jrh.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="https://www.luodian.ink/2018-03-09/随想-方便的暴政/"/>
+  <link rel="canonical" href="https://www.luodian.ink/2017-12-24/17周周报-使用Holt-Winters模型通过比对预测值进行异常检测/"/>
 
 
 
@@ -136,7 +141,7 @@
     sidebar: "",
   };
 </script>
-  <title>随想-「方便」的暴政 | Luodian.ink</title>
+  <title>17周周报-使用Holt-Winters模型通过比对预测值进行异常检测 | Luodian.ink</title>
   
 
 
@@ -329,7 +334,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.luodian.ink/2018-03-09/随想-方便的暴政/">
+    <link itemprop="mainEntityOfPage" href="https://www.luodian.ink/2017-12-24/17周周报-使用Holt-Winters模型通过比对预测值进行异常检测/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Luodian">
@@ -346,7 +351,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">随想-「方便」的暴政</h1>
+          <h1 class="post-title" itemprop="name headline">17周周报-使用Holt-Winters模型通过比对预测值进行异常检测</h1>
         
 
         <div class="post-meta">
@@ -358,7 +363,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-09T11:15:04+08:00">2018-03-09</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-24T20:43:29+08:00">2017-12-24</time>
             
 
             
@@ -379,7 +384,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/随想/" itemprop="url" rel="index"><span itemprop="name">随想</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/异常检测/" itemprop="url" rel="index"><span itemprop="name">异常检测</span></a></span>
 
                 
                 
@@ -394,9 +399,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018-03-09/随想-方便的暴政/#comments" itemprop="discussionUrl">
+                <a href="/2017-12-24/17周周报-使用Holt-Winters模型通过比对预测值进行异常检测/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018-03-09/随想-方便的暴政/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017-12-24/17周周报-使用Holt-Winters模型通过比对预测值进行异常检测/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -404,7 +409,7 @@
 
           
           
-             <span id="/2018-03-09/随想-方便的暴政/" class="leancloud_visitors" data-flag-title="随想-「方便」的暴政">
+             <span id="/2017-12-24/17周周报-使用Holt-Winters模型通过比对预测值进行异常检测/" class="leancloud_visitors" data-flag-title="17周周报-使用Holt-Winters模型通过比对预测值进行异常检测">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -435,41 +440,88 @@
       
 
       
-        <blockquote>
-<p>本文原载于 <a href="https://link.jianshu.com/?t=https%3A%2F%2Fwww.nytimes.com%2F2018%2F02%2F16%2Fopinion%2Fsunday%2Ftyranny-convenience.html" target="_blank" rel="noopener">nytimes</a>，作者 Tim Wu，由 ONES Piece 翻译计划翻译。ONES Piece 是一个由 ONES Ventures 发起的非营利翻译计划，聚焦科技创新、生活方式和未来商业。</p>
+        <h1 id="基于预测比较模型的异常检测"><a href="#基于预测比较模型的异常检测" class="headerlink" title="基于预测比较模型的异常检测"></a>基于预测比较模型的异常检测</h1><blockquote>
+<p>16周时，开始尝试一些新的思路与原有方法的对比，在比较了传统的滑动平均和现有的指数平均方法之后，我们采用Holt Winters方法从预测的角度来做误差分析。</p>
 </blockquote>
-<p>当今之世，「方便」是最被低估，也是最少被理解的力量。作为人类决策中的驱动力之一，它或许没法提供弗洛依德笔下的无意识性渴求那般背德的刺激，也缺少经济学动因分析那种数理式的优雅。「方便」很无聊，可无聊并不意味着无足轻重。</p>
-<p>在二十一世纪的发达诸国，方便——亦即更高效简单地完成个人事项的方式——可能渐已成为塑造个人生活乃至整体经济的最强大力量。在美国尤其如此。虽然欢颂自由与独立的赞歌于美国四处可闻，但你也许会怀疑是否方便才是事实上的王道。</p>
-<p>正如 Twitter 的联合创始人伊文 · 威廉姆斯（Evan Williams）近日所指的那样：「方便决定一切。」鼓吹着「人们的想象揭示了他们真正想要的东西」，「方便」似乎已令我们别无选择。（我喜欢手冲咖啡，但星巴克速溶是如此方便，以至我几乎从不去做我「喜欢」的选择。）简单就是好。简单至极，则再好不过。</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fp6efvg7dkj312w0pwn1r.jpg" alt=""></p>
-<p>「方便」有着令其他选项变得不堪设想的能力。一旦用过洗衣机，再去手洗衣物便显得匪夷所思，就算它也许更便宜。一经体验流播电视，则守着特定时间看剧的做法就似乎蠢得有点不像样。要抵制「方便」——不拥有手机，不使用谷歌搜索——所需的牺牲，是常被认作举止乖僻，甚至走火入魔。</p>
-<p>「方便」对个体决策形成过程的影响力，生发自日积月累的集体决策过程，也源于它在现代经济构建中的诸多所为。特别是在技术相关行业，打赢「方便」之战就意味着市场占有率的胜利。</p>
-<p>美国人总把他们嘉勉竞争、选择极大丰富、「小人物梦想」之类的话挂在口上。而在规模经济和习惯的力量互相加成下，我们对方便的胃口会招致来更多的「方便」。亚马逊用起来越方便，它即会变得越强大——因此亚马逊用起来就愈加方便了。「方便」与垄断，似天然乃一丘之貉。</p>
-<p>既然「方便」作为一种理想、一派价值观、一类生活方式业已风生水起，那么就值得一问，我们对它的固恋，于我们自己和我们的国家有何影响。我并不想把「方便」说成是邪恶的力量，「省烦从简」本身亦无可指摘。恰恰相反，它时常开启那些过去令人目迷五色的可能性。而对那些不堪挑起人生重担的人而言，「方便」总能让日子过得不那么费劲些。</p>
-<p>可我们错就错在，只因它与我们所珍视的其他理想之间关系错综复杂，便假定「方便」永远都是好的。固然「方便」总被理解、被宣传为平权解放的工具，但其亦有昏昧的一面。它应许我们以顺畅无阻和事半功倍，可也威胁到了那些给予生活以意义的挣扎与挑战。「方便」被创造出来给予我们自由，但它也限制了我们的意愿，由此微妙地奴役了我们。</p>
-<p>将拥抱「不便」作为处世原则诚然会有悖常理，可当我们纵容「方便」做出一切决定之时，我们妥协得委实太多。</p>
-<p>我们现在所知的「方便」，乃十九世纪末二十世纪初，节约劳力的家用设备被创造并推向市场时的产物。个中重要节点，包括首批「方便食品」的发明（例如罐装猪肉焗豆子和桂格即食麦片）、第一代电动洗衣机、「老荷兰」去污粉之类的清洁产品以及其他新奇事物，比如电动吸尘器、蛋糕预拌粉和微波炉。</p>
-<p>「方便」是另一个十九世纪末的概念「工业效率」的家用版本，且多与「科学管理」一齐出现。它代表着工厂时代的精神风貌对家庭生活的浸染。</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1fp6eiy6r6rj30go0b474m.jpg" alt=""></p>
-<p>别瞧它眼下何等稀松平常，「方便」这位免人类于劳作的解放者，曾经还是个乌托邦式的理想。通过节约时间和消除苦役，它替休闲创造了空间。而正因有了休闲，我们方有可能去花时间于学习、兴趣或其他什么我们真正在意的事物上。「方便」让普罗大众也可享从前贵族独占的、提高自我修养的自由。以此看来，方便也极大抹平了社会差距。</p>
-<p>「方便即解放」这个概念令人沉醉。而那些对其忘乎所以的刻画，也出现在科幻作品以及未来学家对二十世纪中叶的想象中。从《大众机械》（Popular Mechanics）这类严肃杂志到动画片《杰森一家》（The Jetsons）这种无脑娱乐里，我们皆可窥见未来生活将是百分百的「方便」光景。按下电钮，美食上桌；自动人行道可免去走路之烦；衣服将会清洁自己，甚至在穿过一天后自我解体。至少在这副如意算盘里，人存于世的奋斗早已不复存在。</p>
-<p>「方便」的美梦，乃建立于「体力劳动」的噩梦之上。但劳动永远都是噩梦么？我们真想「不劳永逸」么？有时，或许那些不便而耗时的行为和追求反而更能展现人性。或许这也就是为什么，「方便」纵有万般好处，但总有些人将其拒之门外。这些人诚然有其顽固刻板的一面（还由于他们有这份奢侈去抵制），可也因为他们看到了它对人之为人的威胁，看到了「方便」对他们在意之事的掌控。</p>
-<p>到上世纪六十年代，第一次「方便革命」开始星火燎原。充斥着「方便」的前景已不再是全社会的热望所在。方便意味一致性，而反文化运动则恰恰关乎民众表达自我、发挥个人潜能的需求，关乎与自然和谐共处而非寻求力克自然带来的不适。弹吉他并不方便，自己种菜或自己修理摩托车也并不方便。但它们本身作为结果被视作有价值的事情。彼时的人们，正在重新开始追求个人趣味。</p>
-<p>而也许是大势所趋，第二波「方便技术」的浪潮（也就是我们生活的这个时间阶段）袭来，将这种理想裹挟了进去。个人趣味，被「方便化」了。</p>
-<p>你或可将索尼随身听问世的 1979 年认作这个时间阶段的元年。由随身听，我们可知「方便」在方法论上一个微妙但根本的转变。若第一次方便革命的纲领是让你的生活和工作更轻松简单，第二次的目的，则是让「做你自己」更轻松简单。新科技成了个性的催化剂，赐予自我表达以效率。</p>
-<p>想象一个八十年代初期的人，带着随身听，塞着耳机，在街上晃荡。他被自己选择的音乐环境隔绝于世，正在当众享受那种曾经只能于自家陋室中体验的自我表达。新的科技让他更容易地就能展示自己，哪怕是只对自己展示。他在天地间高视阔步。他是自己专属的电影里的大明星。</p>
-<p>这幻象是如此诱人，以至于它支配了我们的存在，以至于过去几十年内我们创造的那些重要而强大的技术，多数都是为个性化与个人趣味服务的。想想看吧——录像机、音乐播放列表、Facebook 页面，以及 Instagram 账号——这些「方便」与费不费劲无关，反正我们也多半不会经常做这些事。它关乎的是精神资源的节省，免却的是面对诸多自我表达的选项时难以抉择的精神操劳。「方便」是「一键某某」，是一站式购物，是即插即用的无缝体验。新的理想状态，是不费吹灰之力就实现个人偏好。</p>
-<p>我们当然心甘情愿为方便支付溢价——并且付得比我们自以为乐意的还多。举例来说，在上世纪九十年代末，Napster 之类的音乐发行技术使得从网上免费下载音乐成为可能，而许多人也的确对此利用颇多。但现在，尽管不花钱就能搞到音乐的办法依旧简单，却绝少有人这么干了。为什么？因为 2003 年 iTunes 商店的出现让购买音乐比非法下载还要方便。「方便」打败了「免费」。</p>
-<p>随着各科事项桩桩件件地变得简单，对「方便」日益增长的期待也让这样一种压力水涨船高：要么继续将其他东西也简单化，要么便被时代抛弃。我们被即时性宠溺坏了，碰到还停留在老旧时效水平的事情就不胜其烦。当你可以无需陷于窗口长龙而在手机上买演唱会门票时，要排队等待为选举投票简直就令人无名火起，对那些从来不必排队的人来说尤其如此。（这也许有助于解释年轻人的低投票参与率。）</p>
-<p>实际情况的吊诡之处在于，今日之个性化技术，乃是一种「群体个性化」的技术。定制化的产物也可能会出人意料地面目均匀。例如，所有人（或几乎所有人）都在 Facebook 上，这是与亲友——也就是理论上代表了你和你的人生独特之处的这群人——保持联系最方便的方式。但 Facebook 似乎把我们弄得毫无差别。它的固定格式和习惯套路将我们剥离得只剩下最肤浅的那层个性表达，比如将哪张沙滩或山峦的美图设为页面背景这类琐事。</p>
-<p>我无意否认让事情变得简单能对我们起重大作用，能推动我们在餐厅、打车服务、开源百科上的选择变得从无到有，从少到多。但我们的人生不只是「拥有并做出选择」这一件事。我们还要处理突如其来的情况，还要克服值得面对的挑战，完成困难的任务——这些奋斗，有助于塑造我们成为自己。当此等障碍、吃力、限制和准备门槛都消失不见，人生体验会变成何等模样？</p>
-<p>今天的方便文化无法坦然面对人生体验的基本特点——「困难」，因为「方便」只在乎终点，不关心旅途。但哪怕你最后都立于同一海拔，攀援一座高峰与乘缆车登顶的过程依然存在天壤之别。我们正在成为那种仅仅（或者主要）在意结果的家伙，正冒着把人生变成一连串痴苶的缆车观光的风险。</p>
-<p>为了不使「方便」的唯一导向是更多的方便，它必须为更大的目标服务。贝蒂 · 弗里丹（Betty Friedan）在她 1963 年的经典著作《女性的奥秘》（The Feminine Mystique）里曾观察了家庭科技对女性的影响，并且得出了它们只是创造了更多需求这样的结论。「就算是用上所有那些节省劳力的电器，」她写道，「一位现代美国家庭主妇花在家务上的时间也或许比她祖母还要多。」当事情变得简单，我们会用其他「简单」的事情填补空白的时间。在某些时刻，无关痛痒的细小琐事已经取代奋斗，专制统治着我们的人生。</p>
-<p>生活在一个什么东西都是「简单」的世界里的一个令人厌恶的结果，就是唯一重要的技能只剩下多任务同时处理。在极端情况下，我们其实没做任何事，只是排列了要做之事的顺序罢了。而基于此的人生，则无异于沙上之塔。</p>
-<p>我们须在更多时间（虽不至于每时每刻）里树立去主动拥抱「不便」的自觉。至少做若干个「不便」的选择吧，在这个时代，只有这样，你才能寻获真正的个人趣味。不是说你非得自己做黄油或者去打猎，但如果你想要成就点什么，你不能让「方便」凌驾于其他价值之上。有时「麻烦」并不是问题，而是答案：它可以成为「你是谁」这个问题的答案。</p>
-<p>而「拥抱不便」或许听起来古怪，但其实我们在不自知的情况下已经在这么做了。只是仿佛为了掩盖这点，我们替那些不便的选择起了其他名字：爱好、副业、内心的召唤和热情。这些非工具性的行为有助于定义我们。我们能从中收获自己的人格——因为它们都包含了人类区区肉身与自然法则之间充满意义的抗衡，例如制作木雕、组装原材料、修理家电、写代码、记录海浪的规律，或者直面长跑时腿和肺开始不听使唤的那一刻。</p>
-<p>这样的行动需要时间，可它们终能使人受益。它们将我们暴露在沮丧与失败的风险之下，但它们亦将教会我们理解世界，以及我们在其中的角色。</p>
-<p>让我们审思这场「方便」治下的暴政，更积极地尝试抵御它的愚民威力吧，且看结果如何。我们不可忘记缓慢与艰苦的乐趣所在，不可忘记不用「最方便」的办法带来的成就感。能保全我们于完全高效率同质化人生的，也许惟有那些灿若繁星的、「不方便」的选择。</p>
+<h3 id="新的方法"><a href="#新的方法" class="headerlink" title="新的方法"></a>新的方法</h3><p>在序列数据的异常检测过程中，我们既可以直接使用对序列进行异常检测的算法，也可以先对序列数据进行特征提取然后转化为传统的离群点检测。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>离群点检测方法</th>
+<th>方法描述</th>
+<th>方法特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基于统计</td>
+<td>大部分的基于统计的离群点检测方法是构建一个概率分布模型，并计算对象符合该模型的概率，把具有低概率的对象视为离群点</td>
+<td>基于统计模型的离群点检测方法的前提是必须知道数据集服从什么分布；而对于高维的数据，可能每一维度服从的分布都不太一致，所以通常对高维数据来讲通常效果较差。</td>
+</tr>
+<tr>
+<td>基于邻近度</td>
+<td>通常可以在数据对象之间定义邻近性度量，把远离大部分点的对象视为离群点。</td>
+<td>算法假定离群点是离散的，低维数据我们可以作图观察，而高维数据我们无法观察，所以难以确定有效的参数和全局阈值，效果较差。</td>
+</tr>
+<tr>
+<td>基于聚类</td>
+<td>一种利用聚类检测离群点的方法是直接丢弃远离其他簇的小簇；另一种是对数据点属于簇的程度进行评价，去除得分较低的点。</td>
+<td>聚类算法产生的簇的质量对该算法产生的离群点的质量影响非常大，对数据的可分类性要求较高</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>之前考虑的算法方向主要是在『基于统计』+『基于聚类』的这个方向来考量。</p>
+<p>而如今我发现了一种新的方法可以作为采用与尝试，即上图中『基于临近度』，也是一种使用历史数据判断当前数据的方法。</p>
+<p>基于预测的异常检测模型如下图所示，$x_t$ 是真实数据，通过预测器得到预测数据，然后 $x_t$ 和 $p_t$ 分别作为比较器的输入，最终得到输出 $y_t$，$y_t$ 是一个二元值，可以用+1（+1表示输入数据正常），-1（-1表示输入数据异常）表示。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1fmroslheqbj31d00m2jrh.jpg" alt=""></p>
+<p>如果说我们设置异常检测的模型如此，那么我们可以从两个以下方面入手，一是预测器的优化，二是比较器的优化。</p>
+<h4 id="预测器优化"><a href="#预测器优化" class="headerlink" title="预测器优化"></a>预测器优化</h4><h5 id="同比环比预测器"><a href="#同比环比预测器" class="headerlink" title="同比环比预测器"></a>同比环比预测器</h5><p>同比环比是比较常用的异常检测方式，它是将当前时刻数据和前一时刻数据（环比）或者前一天同一时刻数据（同比）比较，超过一定阈值即认为该点异常。如果用图模型来表示，那么预测器就可以表示为用当前时刻前一时刻或者前一天同一时刻数据作为当前时刻的预测数据。</p>
+<p>如果将不同日期、时刻的监控数据以矩阵方式存储，每一行表示一天内不同时刻的监控数据，每一列表示同一时刻不同日期的监控数据，那么存储矩阵如下图所示：</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fmroz08dq2j30a207ua9x.jpg" alt=""></p>
+<p>假如需要预测图中黄色数据，那么环比使用图中的蓝色数据作为预测黄点的源数据，同比使用图中红色数据作为预测黄点的源数据。</p>
+<h5 id="基线预测器（MA方法）"><a href="#基线预测器（MA方法）" class="headerlink" title="基线预测器（MA方法）"></a>基线预测器（MA方法）</h5><p>同比环比使用历史上的单点数据来预测当前数据，误差比较大。$t$ 时刻的监控数据，与<br>$t-1,t-2,…$ 时刻的监控数据存在相关性。同时，与$t-k,t-2k,…$ 时刻的数据也存在相关性（<em>k</em>为周期），如果能利用上这些相关数据对<em>t</em>时刻进行预测，预测结果的误差将会更小。</p>
+<p>比较常用的方式是对历史数据求平均，然后过滤噪声，可以得到一个平滑的曲线（基线），使用基线数据来预测当前时刻的数据。该方法预测 $t$ 时刻数据（图中黄色数据）使用到的历史数据如下图所示（图中红色数据）：</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1fmrozw8uuij309s07e745.jpg" alt=""></p>
+<h5 id="Holt-Winters预测器"><a href="#Holt-Winters预测器" class="headerlink" title="Holt-Winters预测器"></a>Holt-Winters预测器</h5><p>同比环比预测到基线数据预测，使用的相关数据变多，预测的效果也较好。但是基线数据预测器只使用了周期相关的历史数据，没有使用上同周期相邻时刻的历史数据，相邻时刻的历史数据对于当前时刻的预测影响是比较大的。对于 <strong>Holt-winters </strong>预测期模型，它建议使用黄色点左上方的所有数据。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fmrp7xumw7j309u07k745.jpg" alt=""></p>
+<p>Holt-Winters是三次指数滑动平均算法，它将时间序列数据分为三部分：残差数据 $a(t)$，趋势性数据 $b(t)$，周期性数据 $s(t)$。使用Holt-Winters预测 $t$ 时刻数据，需要 $t$ 时刻前包含多个周期的历史数据。</p>
+<p>详细信息看这里：<a href="https://www.otexts.org/fpp/7/5" target="_blank" rel="noopener">https://www.otexts.org/fpp/7/5</a></p>
+<p>在实际的异常检测模型中，我们对Holt-Winters预测器进行了简化。预测器的趋势数据表示的是时间序列的总体变化趋势，经过分析，如果以天/小时为周期看待传感器数据的订单量时间序列，是没有明显的趋势性的，如下的分解图也证明了这一点。因此，我们可以去掉其中的趋势数据部分。</p>
+<p>各部分迭代的简化计算公式如（其中 $k$ 为周期）：</p>
+<ol>
+<li>$a[t] = \alpha(Y[t] - s[t-k]) + (1-\alpha) a[t-1]$</li>
+<li>$s[t] = \gamma(Y[t] - a[t]) + (1 - \gamma)(s[t-k])$</li>
+</ol>
+<p>预测值：$Y[t+h] = a[t] + s[t-k+1 + (h-1)  mod  k]$</p>
+<p>为了将算法应用到线上的实时预测，我们可以将 Holt-Winters 算法拆分为两个独立的计算过程：</p>
+<ol>
+<li><p>定时任务计算序列的周期数 $s(t)$。</p>
+<p>$S(t)$ 不需要实时计算，只用按照周期性更新即可，使用 Holt-Winters 公式计算出时间序列的周期性数据。</p>
+</li>
+<li><p>对残差序列做实时预测。</p>
+<p>计算出周期数据后，下一个目标就是对残差数据的预测。使用下面的公式，实际监控数据与周期数据相减得到残差数据，对残差数据做一次滑动平均，预测出下一刻的残差，将该时刻的残差、周期数据相加即可得到该时刻的预测数据。对于分钟数据，则将残差序列的长度设为60，即可以得到比较准确的预测效果。</p>
+<blockquote>
+<p>红线为预测数据，蓝线为真实数据</p>
+</blockquote>
+<p><img src="https://tech.meituan.com/img/holtwinter/p1.png" alt="@ 图3.8a) | center | 500x0"></p>
+<p>​</p>
+</li>
+</ol>
+<h3 id="比较器优化"><a href="#比较器优化" class="headerlink" title="比较器优化"></a>比较器优化</h3><p>预测器预测出当前时刻传感器的预测值后，还需要与真实值比较来判断当前时刻数据是否异常。一般的比较器都是通过阈值法，比如实际值超过预测值的一定比例就认为该点出现异常，进行报警。这种方式错误率比较大。在传感器数值模型的报警检测中没有使用这种方式，而是使用了两个串联的Filter，只有当两个Fliter都认为该点异常时，才进行报警，下面简单介绍一下两个Filter的实现。</p>
+<p><img src="https://tech.meituan.com/img/holtwinter/compaire.png" alt="@图4.1 比较器模型 | center | 500x0"></p>
+<h4 id="离散度Filter"><a href="#离散度Filter" class="headerlink" title="离散度Filter"></a>离散度Filter</h4><p>根据预测误差曲线离散程度过滤出可能的异常点。一个序列的方差表示该序列离散的程度，方差越大，表明该序列波动越大。如果一个预测误差序列方差比较大，那么我们认为预测误差的报警阈值相对大一些才比较合理。离散度 Filter 利用了这一特性，取连续 15 分钟的预测误差序列，分为首尾两个序列（e1,e2），如果两个序列的均值差大于 e1 序列方差的某个倍数，我们就认为该点可能是异常点。</p>
+<h4 id="阈值Filter"><a href="#阈值Filter" class="headerlink" title="阈值Filter"></a>阈值Filter</h4><p>根据误差绝对值是否超过某个阈值过滤出可能的异常点。利用离散度 Filter 进行过滤时，报警阈值随着误差序列波动程度变大而变大，但是在输入数据比较小时，误差序列方差比较小，报警阈值也很小，容易出现误报。所以设计了根据误差绝对值进行过滤的阈值 Filter。阈值 Filter 设计了一个分段阈值函数 $y=f(x)$，对于实际值 $x$ 和预测值 $p$ ，只有当 $|x-p|&gt;f(x)$ 时报警。实际使用中，可以寻找一个对数函数替换分段阈值函数，更易于参数调优。</p>
+<h3 id="模型最终架构"><a href="#模型最终架构" class="headerlink" title="模型最终架构"></a>模型最终架构</h3><p>每天定时抽取历史10天数据，经过预处理模块，去除异常数据，经过周期数据计算模块得到周期性数据。对当前时刻预测时，取60分钟的真实数据和周期性数据，经过实时预测模块，预测出当前传感器数值。将连续15分钟的预测值和真实值通过比较器，判断当前时刻是否异常。</p>
+<p><img src="https://tech.meituan.com/img/holtwinter/jiegoutu.png" alt="@图4.2 分段阈值filter | center | 500x0"></p>
+<blockquote>
+<p>参考来源：</p>
+<ol>
+<li><a href="https://www.jianshu.com/p/6fb0408b3f54" target="_blank" rel="noopener">https://www.jianshu.com/p/6fb0408b3f54</a></li>
+<li><a href="https://www.otexts.org/fpp/7/5" target="_blank" rel="noopener">https://www.otexts.org/fpp/7/5</a></li>
+</ol>
+</blockquote>
 
       
     </div>
@@ -497,8 +549,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018-03-08/Next主题下如何让图片自动居中/" rel="next" title="Next主题下如何让图片自动居中">
-                <i class="fa fa-chevron-left"></i> Next主题下如何让图片自动居中
+              <a href="/2017-12-23/Mecari-Analysis-LB-0-4229-rank-17-1090/" rel="next" title="Mecari-Analysis(LB=0.4229~rank 17 / 1090)">
+                <i class="fa fa-chevron-left"></i> Mecari-Analysis(LB=0.4229~rank 17 / 1090)
               </a>
             
           </div>
@@ -506,6 +558,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/" rel="prev" title="基于统计方法进行时序数据预测的异常检测模型">
+                基于统计方法进行时序数据预测的异常检测模型 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -564,8 +620,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -684,6 +749,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基于预测比较模型的异常检测"><span class="nav-number">1.</span> <span class="nav-text">基于预测比较模型的异常检测</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新的方法"><span class="nav-number">1.0.1.</span> <span class="nav-text">新的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#预测器优化"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">预测器优化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#同比环比预测器"><span class="nav-number">1.0.1.1.1.</span> <span class="nav-text">同比环比预测器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#基线预测器（MA方法）"><span class="nav-number">1.0.1.1.2.</span> <span class="nav-text">基线预测器（MA方法）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Holt-Winters预测器"><span class="nav-number">1.0.1.1.3.</span> <span class="nav-text">Holt-Winters预测器</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#比较器优化"><span class="nav-number">1.0.2.</span> <span class="nav-text">比较器优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#离散度Filter"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">离散度Filter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#阈值Filter"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">阈值Filter</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型最终架构"><span class="nav-number">1.0.3.</span> <span class="nav-text">模型最终架构</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -839,9 +920,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'https://www.luodian.ink/2018-03-09/随想-方便的暴政/';
-        this.page.identifier = '2018-03-09/随想-方便的暴政/';
-        this.page.title = '随想-「方便」的暴政';
+        this.page.url = 'https://www.luodian.ink/2017-12-24/17周周报-使用Holt-Winters模型通过比对预测值进行异常检测/';
+        this.page.identifier = '2017-12-24/17周周报-使用Holt-Winters模型通过比对预测值进行异常检测/';
+        this.page.title = '17周周报-使用Holt-Winters模型通过比对预测值进行异常检测';
       };
       function loadComments () {
         var d = document, s = d.createElement('script');
