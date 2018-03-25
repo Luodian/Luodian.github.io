@@ -1,3 +1,3 @@
+https://www.luodian.ink/2018-03-25/Latex书写伪代码的模板-algorithmic和algorithmicx/
 https://www.luodian.ink/2018-03-22/LeetCode-Add-Two-Numbers/
 https://www.luodian.ink/2018-03-11/Network-Week1-Questions/
-https://www.luodian.ink/2018-03-09/随想-方便的暴政/
