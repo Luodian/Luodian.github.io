@@ -104,30 +104,27 @@
 
 
   
-  <meta name="keywords" content="机器学习," />
+  <meta name="keywords" content="Hexo, my world." />
 
 
-<meta name="description" content="在这里我记录下在学习决策树之后，我自己的思考以及重点，不会包含太多介绍性的内容。 新手入门的话推荐周志华的《机器学习》和李航的《统计学习方法》。 信息熵，基尼系数，分类误差定义关于过拟合决策树十分容易产生过拟合的情况，也就是说当前的决策树有很多的节点，整个决策树很大，此时会把样本中一些并不需要拿来作为分类的属性学习到，">
-<meta name="keywords" content="机器学习">
+<meta name="description" content="有人称香港回归，有人称香港沦陷。  皇后大道東-公視 閃亮的年代 - 羅大佑音樂特輯 序言找到这首歌的原因是因为偶然了解到，在香港中文大学的讲座中，林夕称自己后悔写《北京欢迎你》这首歌。 作为从小听这首歌长大的我，深喜爱其旋律，歌词，和倾举国之力参与的演员阵容。当然随着我慢慢的长大，我也渐渐的明白，这首歌背后投射出的更">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习复习-第一章-决策树（Updating）">
-<meta property="og:url" content="https://www.luodian.ink/2017-11-24/机器学习-第一章-决策树/index.html">
+<meta property="og:title" content="随想-皇后大道东">
+<meta property="og:url" content="https://www.luodian.ink/2018-03-30/随想-皇后大道东/index.html">
 <meta property="og:site_name" content="Luodian.ink">
-<meta property="og:description" content="在这里我记录下在学习决策树之后，我自己的思考以及重点，不会包含太多介绍性的内容。 新手入门的话推荐周志华的《机器学习》和李航的《统计学习方法》。 信息熵，基尼系数，分类误差定义关于过拟合决策树十分容易产生过拟合的情况，也就是说当前的决策树有很多的节点，整个决策树很大，此时会把样本中一些并不需要拿来作为分类的属性学习到，因此学习的决策树模型并不是最优的模型，这就是机器学习中的过拟合现象，与此相关的概">
+<meta property="og:description" content="有人称香港回归，有人称香港沦陷。  皇后大道東-公視 閃亮的年代 - 羅大佑音樂特輯 序言找到这首歌的原因是因为偶然了解到，在香港中文大学的讲座中，林夕称自己后悔写《北京欢迎你》这首歌。 作为从小听这首歌长大的我，深喜爱其旋律，歌词，和倾举国之力参与的演员阵容。当然随着我慢慢的长大，我也渐渐的明白，这首歌背后投射出的更是，整个中国在2008年举办奥运会的过程所展示出来的巨大的政治能量。 要知道">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fltohlpn1aj315o0pmgwf.jpg">
-<meta property="og:updated_time" content="2018-03-04T05:20:35.122Z">
+<meta property="og:updated_time" content="2018-03-30T08:26:44.236Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="机器学习复习-第一章-决策树（Updating）">
-<meta name="twitter:description" content="在这里我记录下在学习决策树之后，我自己的思考以及重点，不会包含太多介绍性的内容。 新手入门的话推荐周志华的《机器学习》和李航的《统计学习方法》。 信息熵，基尼系数，分类误差定义关于过拟合决策树十分容易产生过拟合的情况，也就是说当前的决策树有很多的节点，整个决策树很大，此时会把样本中一些并不需要拿来作为分类的属性学习到，因此学习的决策树模型并不是最优的模型，这就是机器学习中的过拟合现象，与此相关的概">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fltohlpn1aj315o0pmgwf.jpg">
+<meta name="twitter:title" content="随想-皇后大道东">
+<meta name="twitter:description" content="有人称香港回归，有人称香港沦陷。  皇后大道東-公視 閃亮的年代 - 羅大佑音樂特輯 序言找到这首歌的原因是因为偶然了解到，在香港中文大学的讲座中，林夕称自己后悔写《北京欢迎你》这首歌。 作为从小听这首歌长大的我，深喜爱其旋律，歌词，和倾举国之力参与的演员阵容。当然随着我慢慢的长大，我也渐渐的明白，这首歌背后投射出的更是，整个中国在2008年举办奥运会的过程所展示出来的巨大的政治能量。 要知道">
 
 
 
 
 
 
-  <link rel="canonical" href="https://www.luodian.ink/2017-11-24/机器学习-第一章-决策树/"/>
+  <link rel="canonical" href="https://www.luodian.ink/2018-03-30/随想-皇后大道东/"/>
 
 
 
@@ -136,7 +133,7 @@
     sidebar: "",
   };
 </script>
-  <title>机器学习复习-第一章-决策树（Updating） | Luodian.ink</title>
+  <title>随想-皇后大道东 | Luodian.ink</title>
   
 
 
@@ -329,7 +326,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.luodian.ink/2017-11-24/机器学习-第一章-决策树/">
+    <link itemprop="mainEntityOfPage" href="https://www.luodian.ink/2018-03-30/随想-皇后大道东/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Luodian">
@@ -346,7 +343,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">机器学习复习-第一章-决策树（Updating）</h1>
+          <h1 class="post-title" itemprop="name headline">随想-皇后大道东</h1>
         
 
         <div class="post-meta">
@@ -358,7 +355,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-24T19:00:13+08:00">2017-11-24</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-30T15:31:14+08:00">2018-03-30</time>
             
 
             
@@ -379,7 +376,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/机器学习/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/随想/" itemprop="url" rel="index"><span itemprop="name">随想</span></a></span>
 
                 
                 
@@ -394,9 +391,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017-11-24/机器学习-第一章-决策树/#comments" itemprop="discussionUrl">
+                <a href="/2018-03-30/随想-皇后大道东/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017-11-24/机器学习-第一章-决策树/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018-03-30/随想-皇后大道东/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -404,7 +401,7 @@
 
           
           
-             <span id="/2017-11-24/机器学习-第一章-决策树/" class="leancloud_visitors" data-flag-title="机器学习复习-第一章-决策树（Updating）">
+             <span id="/2018-03-30/随想-皇后大道东/" class="leancloud_visitors" data-flag-title="随想-皇后大道东">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -435,33 +432,37 @@
       
 
       
-        <p>在这里我记录下在学习决策树之后，我自己的思考以及重点，不会包含太多介绍性的内容。</p>
-<p>新手入门的话推荐周志华的《机器学习》和李航的《统计学习方法》。</p>
-<h3 id="信息熵，基尼系数，分类误差定义"><a href="#信息熵，基尼系数，分类误差定义" class="headerlink" title="信息熵，基尼系数，分类误差定义"></a>信息熵，基尼系数，分类误差定义</h3><h3 id="关于过拟合"><a href="#关于过拟合" class="headerlink" title="关于过拟合"></a>关于过拟合</h3><p>决策树十分容易产生<strong>过拟合</strong>的情况，也就是说当前的决策树有很多的节点，整个决策树很大，此时会把样本中一些并不需要拿来作为分类的属性学习到，因此学习的决策树模型并不是最优的模型，这就是机器学习中的过拟合现象，与此相关的概念就是欠拟合，欠拟合主要是因为当前的样本不够，导致实际在学习的时候可以用来学习的信息很少，因此也会出现学习不好的现象。</p>
-<h3 id="预处理（Pre-Prunning）"><a href="#预处理（Pre-Prunning）" class="headerlink" title="预处理（Pre-Prunning）"></a>预处理（Pre-Prunning）</h3><ol>
-<li>在树已经成长成为完全树之后停止算法。</li>
-<li>对于结点的剪枝规则<ul>
-<li>当所有类可以被分到一个类别时。</li>
-<li>当某些类别的数量小于用户设定的阈值。</li>
-<li>当某个结点并不能带来显著（高于阈值）的基尼系数（这里可以参考CART算法）或者信息熵的增长时。</li>
-</ul>
-</li>
-</ol>
-<h3 id="后处理（Post-Prunning）"><a href="#后处理（Post-Prunning）" class="headerlink" title="后处理（Post-Prunning）"></a>后处理（Post-Prunning）</h3><p>使用MDL的思想，对于决策树自底向上逐层扫描剪枝。</p>
-<p>注意预剪枝和后剪枝都可以使用验证集作为是否分裂的标准，与决策树的构建先后无关。<br>但两者所获得的结果是有区别的，往往后剪枝获得的决策树要比预剪枝获得的大，且欠拟合风险很小，泛化性能往往更优，但毫无疑问的是，后剪枝的开销更大。</p>
-<h3 id="斜决策树"><a href="#斜决策树" class="headerlink" title="斜决策树"></a>斜决策树</h3><p>单变量决策树的每个节点都是使用一个属性，这样生成的决策树如果用坐标空间来刻画（属性即坐标轴），划分的边界都是平行于坐标轴的。 但有时候单一的属性很难刻画分类的边缘，会造成抖动，而这个抖动只需要一条斜边就可以很好的解决了，其实所谓的斜边就是属性的线性组合，即节点使用多个属性的线性表达式来作为评判标准。</p>
-<h3 id="缺失值"><a href="#缺失值" class="headerlink" title="缺失值"></a>缺失值</h3><p>对于缺失值需要考虑两个问题： </p>
+        <blockquote>
+<p> 有人称香港回归，有人称香港沦陷。</p>
+</blockquote>
+<p><a href="https://www.youtube.com/watch?v=FVqvH9qOLqI" target="_blank" rel="noopener">皇后大道東-公視 閃亮的年代 - 羅大佑音樂特輯</a></p>
+<h3 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h3><p>找到这首歌的原因是因为偶然了解到，在香港中文大学的讲座中，林夕称自己后悔写《北京欢迎你》这首歌。</p>
+<p>作为从小听这首歌长大的我，深喜爱其旋律，歌词，和倾举国之力参与的演员阵容。当然随着我慢慢的长大，我也渐渐的明白，这首歌背后投射出的更是，整个中国在2008年举办奥运会的过程所展示出来的巨大的政治能量。</p>
+<p>要知道那一年的南方雪灾，汶川地震，又逢首次举办夏季奥运会。多难虽不一定能推导出兴邦，但是经历过大的磨炼，确实能够锻炼出人与国，共同的韧性。</p>
+<p>所以自然我是不能理解林夕的话的。</p>
+<p>但林夕说，『文学创作追求的最高境界是绝对自由的意志，「北京欢迎你」虽非什么作奸犯科之作，并非在出卖什么，但是做了一次官方喉舌之后，却也给了自己很多反省。』</p>
+<h3 id="皇后大道东"><a href="#皇后大道东" class="headerlink" title="皇后大道东"></a>皇后大道东</h3><p>这首歌的演唱者为罗大佑，很巧合的是，罗大佑也正好有两首态度相反的歌，一首便是官方用作宣传的『东方之珠』，而另一首便是这首恨不得处处封禁的『皇后大道东』。</p>
+<p>『皇后大道东』是一首显然的带有政治讽刺色彩的作品。</p>
+<p>政治在中国是一个敏感的话题。从政治上要打倒一个人也是最容易的。就像是历史上发生过的那么多的事情和今天也在发生的事情，我个人认为国家是不应该试图从政治上清算一个文人的，他写的东西是他的思考，他反对的是他不喜欢的政治。当然今天的国家在思想言论上所做的事情，也是出于国家层级的考虑，因为迷茫的大众看不清世界，容易被文人的东西给误导。</p>
+<p>『皇后大道东』中写道：</p>
 <ol>
-<li><p>样本集属性缺失，如何根据缺失的属性来选择划分节点？</p>
-<p>在不做缺失值填充的情况下，显然只能使用在该节点没有确实值的子样本集进行计算，然后信息增益的计算最后需要乘上一个不缺失系数（即该节点不缺失的样本集数与总样本的比） 。</p>
-<p>假如你使用 ID3 算法，那么选择分类属性时，就要计算所有属性的熵增(信息增益，Gain)。假设10个样本，属性是 $a,b,c$。在计算 $a$ 属性熵时发现，第10个样本的 $a$ 属性缺失，那么就把第10个样本去掉，前9个样本组成新的样本集，在新样本集上按正常方法计算 $a$ 属性的熵增。然后结果乘 0.9（新样本占raw样本的比例），就是 $a$ 属性最终的熵。</p>
-<p>这里给出一个课程 handouts 中的图示。</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fltohlpn1aj315o0pmgwf.jpg" alt=""></p>
-</li>
-<li><p>预测集属性缺失 </p>
-<p>若预测时，某个属性缺失，则以一定概率将该样本划分到该节点的各个取值中。至于这个概率如何选取，参考资料决策树是如何处理不完整数据的？</p>
-</li>
+<li>有个贵族朋友在硬币背后，青春不变名字叫做皇后（香港硬币背面是英女皇）。</li>
+<li>到了那日同庆个个要鼓掌，硬币上那尊容变烈士铜像（按时硬币上会换成毛主席的头像）。</li>
+<li>会有铁路城巴也会有的士，但是路线可能要问问何事（97之后路线方向未知，表达作为港人的迷茫）。</li>
 </ol>
+<p>我在知乎上看人写道，<a href="https://www.zhihu.com/people/aurababy" target="_blank" rel="noopener">安拉大神的答案</a></p>
+<blockquote>
+<p>硬币上那尊容变烈士铜像，一句概括足矣。</p>
+<p>最矛盾的地方，就是歌名皇后大道东。取名来自英女王，回归后，这种大逆不道的名字会否被改？硬币上的英女王头像，会否被变成烈士头像？（最后证实变了紫荆花）</p>
+<p>回归对于香港人，并不是那么普天同庆的事情，时至今日，还依稀可见矛盾。<br>记得看过李碧华的书，很多都映射临近回归的那些年，是香港的移民潮，有能力移民的人，全都移民国外。</p>
+<p>人类天生对未知的事物恐惧，天生害怕改变，更何况是一个崭新的政体，这种特区形式，在以前从未有过。</p>
+<p>彷徨、担忧、疑问。充满自由意识的香港人，选择在文艺作品中体现自己的体会和诉求。</p>
+</blockquote>
+<p>歌词中有碎碎念的片段，色即是空，空即是色。对于97年的香港，皇后大道中五光十<strong>色</strong>的夜景，那么<strong>这种色</strong>经过97回归以后，会不会变成像97年的大陆的景象，繁华全部变成<strong>一场空</strong>呢？</p>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>20年后发生的事情，我们都已然知晓。</p>
+<p>虽然也总是发生各种『港独』的事件，但作为一个认知能力已经达到成年的我来说，我也逐渐理解他们在争取什么，他们在渴望着什么。</p>
+<p>走过了很多地方，中国的日渐强大与繁荣是能够让世界和我们共同感受到的，虽然还是各种各样的精日精美，低素质的游客等等。但我认为国人的主核力量和思想在逐步的提升，当你做的好的时候，你会骄傲与你来自哪里。</p>
+<p>无论你来自香港，台湾，还是大陆，在历史的各种危难时刻，我们的命运都是相通的，因为每一张黄色面孔下血脉相连的搏动频率，其实正扣连着整个种族在大时代的归属渴求。</p>
 
       
     </div>
@@ -480,12 +481,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
-          
-        </div>
-      
 
       
       
@@ -495,8 +490,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017-11-24/11-24-异常检测周报/" rel="next" title="11-24-异常检测周报">
-                <i class="fa fa-chevron-left"></i> 11-24-异常检测周报
+              <a href="/2018-03-25/2018-Week4-Anomaly-Detection-Review/" rel="next" title="2018-Week4-Anomaly Detection Review">
+                <i class="fa fa-chevron-left"></i> 2018-Week4-Anomaly Detection Review
               </a>
             
           </div>
@@ -504,10 +499,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017-11-25/机器学习-第二章-概率/" rel="prev" title="机器学习复习-第二章-概率">
-                机器学习复习-第二章-概率 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -705,7 +696,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#信息熵，基尼系数，分类误差定义"><span class="nav-number">1.</span> <span class="nav-text">信息熵，基尼系数，分类误差定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于过拟合"><span class="nav-number">2.</span> <span class="nav-text">关于过拟合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预处理（Pre-Prunning）"><span class="nav-number">3.</span> <span class="nav-text">预处理（Pre-Prunning）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后处理（Post-Prunning）"><span class="nav-number">4.</span> <span class="nav-text">后处理（Post-Prunning）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#斜决策树"><span class="nav-number">5.</span> <span class="nav-text">斜决策树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缺失值"><span class="nav-number">6.</span> <span class="nav-text">缺失值</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#序言"><span class="nav-number">1.</span> <span class="nav-text">序言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#皇后大道东"><span class="nav-number">2.</span> <span class="nav-text">皇后大道东</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后记"><span class="nav-number">3.</span> <span class="nav-text">后记</span></a></li></ol></div>
             
 
           </div>
@@ -866,9 +857,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'https://www.luodian.ink/2017-11-24/机器学习-第一章-决策树/';
-        this.page.identifier = '2017-11-24/机器学习-第一章-决策树/';
-        this.page.title = '机器学习复习-第一章-决策树（Updating）';
+        this.page.url = 'https://www.luodian.ink/2018-03-30/随想-皇后大道东/';
+        this.page.identifier = '2018-03-30/随想-皇后大道东/';
+        this.page.title = '随想-皇后大道东';
       };
       function loadComments () {
         var d = document, s = d.createElement('script');
