@@ -451,7 +451,7 @@
 <p>使用<code>-cat</code>指令查看文件内容</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/hdfs dfs -cat ./&lt;filename&gt;</span><br></pre></td></tr></table></figure>
 <p>现在，让我们切换回到spark-shell窗口，编写语句从HDFS中加载word.txt文件，并显示第一行文本内容：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">scala&gt;</span><span class="bash"> val textFile = sc.textFile(<span class="string">"hdfs://localhost:9000/user/hadoop/&lt;filename&gt;"</span>)</span></span><br><span class="line"><span class="meta">scala&gt;</span><span class="bash"> textFile.first()</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">scala&gt;</span> val textFile = sc.textFile("hdfs://localhost:9000/user/hadoop/&lt;filename&gt;")</span><br><span class="line"><span class="meta">scala&gt;</span> textFile.first()</span><br></pre></td></tr></table></figure>
 <p>如下三条语句也等价</p>
 <figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> textFile = sc.textFile(<span class="string">"hdfs://localhost:9000/user/hadoop/word.txt"</span>)</span><br><span class="line"><span class="keyword">val</span> textFile = sc.textFile(<span class="string">"/user/hadoop/word.txt"</span>)</span><br><span class="line"><span class="keyword">val</span> textFile = sc.textFile(<span class="string">"word.txt"</span>)</span><br></pre></td></tr></table></figure>
 
@@ -581,7 +581,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">30</span>
+                    <span class="site-state-item-count">33</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -614,7 +614,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">10</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>

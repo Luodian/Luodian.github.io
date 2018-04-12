@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.5" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.5">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.5">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.5">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.5" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.0.5',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  
+  <meta name="keywords" content="Hexo, my world." />
+
+
+<meta name="description" content="时间序列数据异常检测报告 15级-李博 2017-12-29  基于统计方法进行时序数据预测的异常检测模型简述基于统计的预测，无非是根据收集过去时间的数据，建立一个模型，来计算未来时间的数据，建立的是一种数学或者统计模型，它能表现出已有数据的变化规律，因为大数定理的存在，定义了世间所有的行为都可以通过数字表示，并且存在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于统计方法进行时序数据预测的异常检测模型">
+<meta property="og:url" content="https://www.luodian.ink/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/index.html">
+<meta property="og:site_name" content="Luodian.ink">
+<meta property="og:description" content="时间序列数据异常检测报告 15级-李博 2017-12-29  基于统计方法进行时序数据预测的异常检测模型简述基于统计的预测，无非是根据收集过去时间的数据，建立一个模型，来计算未来时间的数据，建立的是一种数学或者统计模型，它能表现出已有数据的变化规律，因为大数定理的存在，定义了世间所有的行为都可以通过数字表示，并且存在一定的客观规律。 对于股票市场中存在的量化交易这一概念，即是指以先进的数学模型替">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fmxgr3umhej30vy0iwq2z.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fmvmepv069j31hc140772.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fmxhde15csj31hc140wgw.jpg">
+<meta property="og:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/d113484745294ddf53ff5589762d9565d63b7c36">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fmxkgfdm6wj30je0fgmxo.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fmxkmds0frj30me0asmx7.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fmxkr5mywfg30f009qwel.gif">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fmxkzutsmwj31hc140n0g.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fmxl1rstxaj31hc140whb.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fmxgr0c6roj30y20m674f.jpg">
+<meta property="og:updated_time" content="2017-12-29T05:57:58.448Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="基于统计方法进行时序数据预测的异常检测模型">
+<meta name="twitter:description" content="时间序列数据异常检测报告 15级-李博 2017-12-29  基于统计方法进行时序数据预测的异常检测模型简述基于统计的预测，无非是根据收集过去时间的数据，建立一个模型，来计算未来时间的数据，建立的是一种数学或者统计模型，它能表现出已有数据的变化规律，因为大数定理的存在，定义了世间所有的行为都可以通过数字表示，并且存在一定的客观规律。 对于股票市场中存在的量化交易这一概念，即是指以先进的数学模型替">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fmxgr3umhej30vy0iwq2z.jpg">
+
+
+
+
+
+
+  <link rel="canonical" href="https://www.luodian.ink/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+  <title>基于统计方法进行时序数据预测的异常检测模型 | Luodian.ink</title>
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110144268-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110144268-1');
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Luodian.ink</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+  
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.luodian.ink/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Luodian">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/my_face.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Luodian.ink">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">基于统计方法进行时序数据预测的异常检测模型</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-29T13:57:30+08:00">2017-12-29</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/时间序列/" itemprop="url" rel="index"><span itemprop="name">时间序列</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017-12-29/基于统计方法进行时序数据预测的异常检测模型/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/" class="leancloud_visitors" data-flag-title="基于统计方法进行时序数据预测的异常检测模型">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="时间序列数据异常检测报告"><a href="#时间序列数据异常检测报告" class="headerlink" title="时间序列数据异常检测报告"></a>时间序列数据异常检测报告</h1><blockquote>
+<p>15级-李博</p>
+<p>2017-12-29</p>
+</blockquote>
+<h2 id="基于统计方法进行时序数据预测的异常检测模型"><a href="#基于统计方法进行时序数据预测的异常检测模型" class="headerlink" title="基于统计方法进行时序数据预测的异常检测模型"></a>基于统计方法进行时序数据预测的异常检测模型</h2><h3 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h3><p>基于统计的预测，无非是根据收集过去时间的数据，建立一个模型，来计算未来时间的数据，建立的是一种数学或者统计模型，它能表现出已有数据的变化规律，因为大数定理的存在，定义了世间所有的行为都可以通过数字表示，并且存在一定的客观规律。</p>
+<p>对于股票市场中存在的量化交易这一概念，即是指以先进的数学模型替代人为的主观判断，利用计算机技术从庞大的历史数据中海选能带来超额收益的多种『大概率』事件以制定策略，极大地减少了投资者情绪波动的影响，避免在市场极度狂热或悲观的情况下作出非理性的投资决策。</p>
+<p>在这里我们从这个方向入手，通过传统股票市场的预测分析工具来进行我们的工业传感器数据分析，首先我简要分析其关联性：</p>
+<ol>
+<li>股票数据和传感器数据都具有趋势性，以及一定程度的随机性，趋势性保证了两者的数值会按照一定的规律变化，并且从长时间数据的角度看，其是较为连续的，因此我们可以使用ARIMA，EA等模型进行平滑处理，分析异常点。</li>
+<li>股票数据根据金融因素，考虑通货膨胀等原因，可能会存在不断起伏，但是大趋势增长的情况。但是对于传感器数据，大多会在一定范围内震荡（如温度，湿度等数据因为物理因素的原因，不会高出一定范围），所以我们可以在EA（适用于渐进上升型数据）或者是ARIMA模型（适用于周期波动性数据）中进行决策。</li>
+<li>传感器数据可能存在一定的周期，但是股票数据不一定存在明显周期性，这一点也是需要对模型进行修正调整的考虑因素之一。</li>
+</ol>
+<h2 id="模型方法介绍"><a href="#模型方法介绍" class="headerlink" title="模型方法介绍"></a>模型方法介绍</h2><p>在上一次周报中，我详细介绍了这种方法，现在在这里简单略过。</p>
+<p>基于预测的异常检测模型如下图所示，$O_{data}$ 是真实数据，通过预测器得到预测数据，然后 $O_{data}$ 和 $P_{data}$分别作为比较器的输入，比较器输出的是真实数据中被判别为异常值的下标 $Index$。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fmxgr3umhej30vy0iwq2z.jpg" alt=""></p>
+<h3 id="预测器"><a href="#预测器" class="headerlink" title="预测器"></a>预测器</h3><p>时间序列分析一般假设我们获得的数据在时域上具有一定的相互依赖关系，通常，如果传感器数值在 $t$ 时刻很高，那么在 $t+1$ 时刻价格也有一定的概率会比较高，而时间序列分析的目的包含以下两个方面：</p>
+<ul>
+<li>发现这种隐含的依赖关系，并增加我们对此类时间序列的理解；</li>
+<li>对未观测到的或者尚未发生的时间序列进行预测。</li>
+</ul>
+<p>在接下来的分析中，我们认为时间序列 $X$ 由两部分组成，即 $X_t=\hat{X}_t+\epsilon_t$. 其中$\hat{X}_t$ 是有规律的序列而$ \epsilon_t$ 则无规律的噪声。有规律的 $X_t$ 包含我们想要发现的依赖关系（pattern），而 $\epsilon_t$ 我们认为在时间域内不存在相互依赖的关系，即 $\epsilon_t$ 和 $\epsilon_{t+1}$ 之间是相互独立的。</p>
+<p>一个最简单的模型就是我们假设 $\epsilon_t$ 是一个随机数，服从一定的概率分布 $f_t(\epsilon)$。</p>
+<p>可以发现，我们想要找到 $\hat{X}_t$ 而对 $ϵ_t$不怎么感兴趣。为了使有规律的 $\hat{X}_t$ 更加明显，我们通常希望能过滤到噪声，而最简单的过滤噪声的方法就是『取平均』。</p>
+<p>而问题来了，对于时间序列信号来说，我们该如何取平均呢？这里便引出了我们的基于历史数据平滑曲线的几种方法，也即我们的预测期。</p>
+<p>我们使用的预测器主要有以下几种（还在等待其余方法的补充）。</p>
+<h4 id="对于时序数据的-F-t-m-的预测方法"><a href="#对于时序数据的-F-t-m-的预测方法" class="headerlink" title="对于时序数据的 $F_{t+m}$ 的预测方法"></a>对于时序数据的 $F_{t+m}$ 的预测方法</h4><h5 id="MA-滑动平均模型"><a href="#MA-滑动平均模型" class="headerlink" title="MA(滑动平均模型)"></a>MA(滑动平均模型)</h5><p>这种方法并不考虑数据的趋势性，单纯根据历史信息来求得当前点的滑动平均数值，参数 T（也即WindowSize） 决定了依赖历史的程度。</p>
+<p>我们用 $S$ 表示处理后的序列，那么 $S_t$ 等于 $X_{t−T+1}$ 到 $X_t$ 的平均值，即</p>
+<p> $S_t=\frac{1}{T}\Sigma^t_{i=t−T+1}X_i$</p>
+<p>我们使用 $S_t \simeq \hat{X_t}$，下面我们使用滑动平均来预测 windmachine 的第一列的数据，并根据预测值进行异常检测。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fmvmepv069j31hc140772.jpg" alt=""></p>
+<h5 id="EA-指数平均模型"><a href="#EA-指数平均模型" class="headerlink" title="EA(指数平均模型)"></a>EA(指数平均模型)</h5><p>在这里我们使用二阶指数平均，二阶在一阶的基础上增加了对于趋势的考量，更符合我们的数据要求，而三阶需要依赖于周期性，这点和上述的 ARIMA 模型所依赖的周期性也是相同的，下一步我们也需要加入周期性的考量。</p>
+<p>我们可以看到，虽然指数平均在产生新的数列的时候考虑了所有的历史数据，但是仅仅考虑其静态值，即没有考虑时间序列当前的变化趋势。如果当前的股票处于<strong>上升趋势</strong>，那么当我们对明天的股票进行预测的时候，好的预测值不仅仅是对历史数据进行『平均』，而且要考虑到当前数据变化的<em>上升趋势</em>。同时考虑历史平均和变化趋势，这边是<strong>二阶指数平均</strong>。<br>我们先给出二阶指数平均的两种方法，如下</p>
+<ol>
+<li><p>$initialize$<br>$S_1 = X_1$<br>$b_1 = X_1−X_0$<br>$for  t &gt; 1$<br>$S_t = αX_t + (1−α) ( S_t−1+b_t−1)$<br>$b_t = β(S_t−S_t−1)+(1−β)b_t−1$<br>$end  for$</p>
+<p>如果我们对 $X_{t+m}$ 之后的数值进行预测，那么我们的预测值为<br>$\hat{X}_{t+m} = S_t + mb_t$</p>
+</li>
+<li><p>$S′_0=X_0$<br>$S^{′′}_0=X_0$<br>$for  t \geq 1$<br>$\quad S^{‘}_t = \alpha X_t+(1-\alpha)S_{t-1}^{‘} \quad S^{‘’}_t = \alpha S^{‘}_t +(1-\alpha)S_{t-1}^{‘’}\quad S_t = 2S^{‘}_t-S^{‘’}_t$</p>
+<p>end for</p>
+<p>在方法二中，只有一个参数 $α$ 。其中$S^{‘}_t$为最基本的指数平均得到的结果，而 $S^{‘}_t - S^{“}_t$ 为变化的趋势.</p>
+<p>如果我们对 $X_{t+m}$ 之后的数值进行预测，那么我们的预测值为<br>$\hat{X}_{t+m} = S_t +(m\frac{\alpha}{1-\alpha})(S^{‘}_t-S^{‘’}_{t})$</p>
+</li>
+</ol>
+<p>我们利用二阶指数平均对于数据进行处理及异常检测的结果如下：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fmxhde15csj31hc140wgw.jpg" alt=""></p>
+<h4 id="用于修正的方法"><a href="#用于修正的方法" class="headerlink" title="用于修正的方法"></a>用于修正的方法</h4><h5 id="布林通道"><a href="#布林通道" class="headerlink" title="布林通道"></a>布林通道</h5><p>布林通道是一个在股票市场中经常使用的概念，它在应用上结合了移动平均和标准差的概念，其基本的型态是由三条轨道线组成的带状通道（中轨和上、下轨各一条）。上下轨分别由平均值加减二倍标准差（<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d113484745294ddf53ff5589762d9565d63b7c36" alt="\pm 2\sigma ">）得到，<strong>中轨</strong>为股价的平均成本，<strong>上轨</strong>和<strong>下轨</strong>可分别视为股价的压力线和支撑线。</p>
+<blockquote>
+<p>下图中红线为上轨，绿线为下轨，蓝线为滑动平均值。</p>
+</blockquote>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fmxkgfdm6wj30je0fgmxo.jpg" alt=""></p>
+<p>由大数定律以及高斯分布模型，我们可以获知在上下二倍标准差基本涵盖了数据变化的95%左右的情况，如果超出这个分布，那么极有可能是异常点，因此在我们的模型中我们结合布林通道进行了异常点的修正。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fmxkmds0frj30me0asmx7.jpg" alt=""></p>
+<h5 id="RSI指数"><a href="#RSI指数" class="headerlink" title="RSI指数"></a>RSI指数</h5><p>RSI指数在证券市场中适用于衡量一段周期内增长和下降强弱对比的一个指标，其计算公式如下：</p>
+<ol>
+<li>RSI = 100×RS / (1+RS)</li>
+<li>RS = X天的平均上涨点数 / X天的平均下跌点数</li>
+</ol>
+<p>通俗的讲，RSI 指数过高代表上涨明显（超买现象），意味着有可能会存在潜在的下跌，RSI指数过低则反之。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fmxkr5mywfg30f009qwel.gif" alt=""></p>
+<p>下面是我们使用布林通道进行异常检测的测试：</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fmxkzutsmwj31hc140n0g.jpg" alt=""></p>
+<p>下面是我们使用修正之后的模型结合EA方法进行异常检测的情况：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fmxl1rstxaj31hc140whb.jpg" alt=""></p>
+<h3 id="比较器"><a href="#比较器" class="headerlink" title="比较器"></a>比较器</h3><p>预测器预测出当前时刻传感器的预测值后，还需要与真实值比较来判断当前时刻数据是否异常。一般的比较器都是通过阈值法，比如实际值超过预测值的一定比例就认为该点出现异常，进行报警。这种方式错误率比较大。在传感器数值模型的报警检测中没有使用这种方式，而是使用了两个串联的 Filter，只有当两个 Fliter 都认为该点异常时，才进行报警，下面简单介绍一下两个 Filter 的实现。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fmxgr0c6roj30y20m674f.jpg" alt="@图4.1 比较器模型 | center | 500x0"></p>
+<h4 id="离散度Filter"><a href="#离散度Filter" class="headerlink" title="离散度Filter"></a>离散度Filter</h4><p>根据预测误差曲线离散程度过滤出可能的异常点。一个序列的方差表示该序列离散的程度，方差越大，表明该序列波动越大。如果一个预测误差序列方差比较大，那么我们认为预测误差的报警阈值相对大一些才比较合理。离散度 filter 利用了这一特性，我们对于这个真实数据点的前 $N$ 个点求方差，下一步阈值 filter 的输入为方差 $\sigma$.</p>
+<h4 id="阈值Filter"><a href="#阈值Filter" class="headerlink" title="阈值Filter"></a>阈值Filter</h4><p>根据误差绝对值是否超过某个阈值过滤出可能的异常点。利用离散度 Filter 进行过滤时，报警阈值随着误差序列波动程度变大而变大，但是在输入数据比较小时，误差序列方差比较小，报警阈值也很小，容易出现误报。所以设计了根据方差 $\sigma$ 进行过滤的阈值 filter。阈值 filter 设计了一个分段阈值函数 $y=f(x)$，对于实际值 $x$ 和预测值 $p$ ，只有当 $|x-p|&gt;f(x)$ 时报警。实际使用中，可以根据数据寻找一个对数函数替换分段阈值函数，更易于参数调优。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="创新性"><a href="#创新性" class="headerlink" title="创新性"></a>创新性</h3><p>目前少见有人使用预测器 + 判别器的方式结合金融统计方法进行异常检测，这种方式本身比较新颖。主要优势有如下几点：</p>
+<ol>
+<li>相对于我们之前采用的机器学习的方法，这种方法即使在大数据的情况下也能够顺利完成，因为根据选取方法的不同，基本都是在 $O(N)$ 级别的方法。</li>
+<li>可以实现在线实时预测，可以将成套的算法写入传感器芯片内作为硬件级别的预测，芯片内只需要存储规定 $N$ 日内的数据即可。</li>
+</ol>
+<h3 id="不足"><a href="#不足" class="headerlink" title="不足"></a>不足</h3><ol>
+<li>在预测器中其实我们也应该考虑ARIMA或者是三阶指数平滑（即Holt-winters）模型，但是对于传感器数据的先验信息我们并不了解，导致我们不能够手动的设置其周期值，对于周期性不明确的情况，我们暂时使用 fix 方法作为补偿。</li>
+<li>下一步我计划使用RNN作为预测器，使用LSTM方法，直接对数据进行预测，但是这种方法可能会比现有的方法更耗时，但是有可能会有更高的准确性，而且目前我已经在尝试使用 LSTM 提取数据的周期性，效果还不错。</li>
+</ol>
+<h4 id="困难点分析"><a href="#困难点分析" class="headerlink" title="困难点分析"></a>困难点分析</h4><ol>
+<li>对数据的先验知识不够，这近似于一个非监督学习，如果要对效率有更高的要求可能需要更多的标记。</li>
+<li>对未来这个系统的使用方法，使用对象和项目雏形不是很了解。</li>
+<li>目前尚未完成对于数据的周期性提取的高效算法（LSTM相对来说比较耗时，对于大数据可能不太适用）。</li>
+<li>目前尚未完成对于模式异常的识别。</li>
+</ol>
+<h4 id="研究方向"><a href="#研究方向" class="headerlink" title="研究方向"></a>研究方向</h4><ol>
+<li>正在学习使用 RNN 进行序列的预测，到时候会根据正确性以及效率来和现有的方法进行选择以及比较。</li>
+<li>正在考虑是否需要将大段的点异常归类为段异常，从而进行模式异常的识别。</li>
+<li>在目前我们的实验中，主要使用了两种预测方法+两种修正方法，但实际上时序数据还有许多可以增加的模型和修正方法（我们倾向于使用多修正方法进行参数投票，最终用拟合的方式找出一个最适合我们训练数据的函数），这些方法的最终目的就是能够更加根据历史信息平滑的预测变化量，从而为我们的异常检测提出建议的值。</li>
+</ol>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017-12-24/17周周报-使用Holt-Winters模型通过比对预测值进行异常检测/" rel="next" title="17周周报-使用Holt-Winters模型通过比对预测值进行异常检测">
+                <i class="fa fa-chevron-left"></i> 17周周报-使用Holt-Winters模型通过比对预测值进行异常检测
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018-01-24/Contest-911-D-Inversion-Counting/" rel="prev" title="Contest-911-D-Inversion Counting">
+                Contest-911-D-Inversion Counting <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/my_face.png"
+                alt="Luodian" />
+            
+              <p class="site-author-name" itemprop="name">Luodian</p>
+              <p class="site-description motion-element" itemprop="description">Hello, my world.</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">27</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/Luodian" target="_blank" title="GitHub"><i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://twitter.com/naidoul" target="_blank" title="Twitter"><i class="fa fa-fw fa-globe"></i>Twitter</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://weibo.com/2657993174/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" title="Weibo"><i class="fa fa-fw fa-globe"></i>Weibo</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.zhihu.com/people/luo-dian-zhu-84/activities" target="_blank" title="zhihu"><i class="fa fa-fw fa-globe"></i>zhihu</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#时间序列数据异常检测报告"><span class="nav-number">1.</span> <span class="nav-text">时间序列数据异常检测报告</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基于统计方法进行时序数据预测的异常检测模型"><span class="nav-number">1.1.</span> <span class="nav-text">基于统计方法进行时序数据预测的异常检测模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简述"><span class="nav-number">1.1.1.</span> <span class="nav-text">简述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型方法介绍"><span class="nav-number">1.2.</span> <span class="nav-text">模型方法介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#预测器"><span class="nav-number">1.2.1.</span> <span class="nav-text">预测器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#对于时序数据的-F-t-m-的预测方法"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">对于时序数据的 $F_{t+m}$ 的预测方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#MA-滑动平均模型"><span class="nav-number">1.2.1.1.1.</span> <span class="nav-text">MA(滑动平均模型)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#EA-指数平均模型"><span class="nav-number">1.2.1.1.2.</span> <span class="nav-text">EA(指数平均模型)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用于修正的方法"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">用于修正的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#布林通道"><span class="nav-number">1.2.1.2.1.</span> <span class="nav-text">布林通道</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#RSI指数"><span class="nav-number">1.2.1.2.2.</span> <span class="nav-text">RSI指数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#比较器"><span class="nav-number">1.2.2.</span> <span class="nav-text">比较器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#离散度Filter"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">离散度Filter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#阈值Filter"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">阈值Filter</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.3.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创新性"><span class="nav-number">1.3.1.</span> <span class="nav-text">创新性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不足"><span class="nav-number">1.3.2.</span> <span class="nav-text">不足</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#困难点分析"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">困难点分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#研究方向"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">研究方向</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Luodian</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Mist</a> v6.0.5</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.5"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.5"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.5"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.5"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.5"></script>
+
+
+
+  
+
+  
+    <script id="dsq-count-scr" src="https://luodian-ink.disqus.com/count.js" async></script>
+  
+
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'https://www.luodian.ink/2017-12-29/基于统计方法进行时序数据预测的异常检测模型/';
+        this.page.identifier = '2017-12-29/基于统计方法进行时序数据预测的异常检测模型/';
+        this.page.title = '基于统计方法进行时序数据预测的异常检测模型';
+      };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://luodian-ink.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
+  
+
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("P3KDAQ4HdXF3uAgiKSHuWo12-gzGzoHsz", "zmMRXMn5P4sO2kcK5UBY6F6g");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text(counter.get('time'));
+            
+            counter.save(null, {
+              success: function(counter) {
+                
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
+              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set 'security' option to 'false'.');
+            
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="custom_mathjax_source">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+    
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
