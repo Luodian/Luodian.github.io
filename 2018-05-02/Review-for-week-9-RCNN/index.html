@@ -109,7 +109,7 @@
 
 <meta name="description" content="从RCNN开始接触目标检测，这个东西起源于Rich feature hierarchies for Accurate Object Detection and Segmentation，在2014年的CVPR上发布，不得不感慨，发展的好快啊。 论文链接如下：  https://www.cv-foundation.org">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Review for Week-9:RCNN(Regions With CNN Features)">
+<meta property="og:title" content="Review for Week-9：RCNN(Regions With CNN Features)">
 <meta property="og:url" content="https://www.luodian.ink/2018-05-02/Review-for-week-9-RCNN/index.html">
 <meta property="og:site_name" content="Luodian.ink">
 <meta property="og:description" content="从RCNN开始接触目标检测，这个东西起源于Rich feature hierarchies for Accurate Object Detection and Segmentation，在2014年的CVPR上发布，不得不感慨，发展的好快啊。 论文链接如下：  https://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Gir">
@@ -117,9 +117,9 @@
 <meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fqwbsajcs0j30bw073dfq.jpg">
 <meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fqwbyfvqbgj30kd06u0ti.jpg">
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79ly1fqwc4pieqaj307x09h3yr.jpg">
-<meta property="og:updated_time" content="2018-05-01T17:27:30.081Z">
+<meta property="og:updated_time" content="2018-05-01T23:52:05.511Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Review for Week-9:RCNN(Regions With CNN Features)">
+<meta name="twitter:title" content="Review for Week-9：RCNN(Regions With CNN Features)">
 <meta name="twitter:description" content="从RCNN开始接触目标检测，这个东西起源于Rich feature hierarchies for Accurate Object Detection and Segmentation，在2014年的CVPR上发布，不得不感慨，发展的好快啊。 论文链接如下：  https://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Gir">
 <meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fqwbsajcs0j30bw073dfq.jpg">
 
@@ -137,7 +137,7 @@
     sidebar: "",
   };
 </script>
-  <title>Review for Week-9:RCNN(Regions With CNN Features) | Luodian.ink</title>
+  <title>Review for Week-9：RCNN(Regions With CNN Features) | Luodian.ink</title>
   
 
 
@@ -347,7 +347,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Review for Week-9:RCNN(Regions With CNN Features)</h1>
+          <h1 class="post-title" itemprop="name headline">Review for Week-9：RCNN(Regions With CNN Features)</h1>
         
 
         <div class="post-meta">
@@ -405,7 +405,7 @@
 
           
           
-             <span id="/2018-05-02/Review-for-week-9-RCNN/" class="leancloud_visitors" data-flag-title="Review for Week-9:RCNN(Regions With CNN Features)">
+             <span id="/2018-05-02/Review-for-week-9-RCNN/" class="leancloud_visitors" data-flag-title="Review for Week-9：RCNN(Regions With CNN Features)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -492,7 +492,7 @@
 <p>理想情况是，只有当bounding box把整量车都包含在内，那才叫正样本。如果bounding box 没有包含到车辆，那么我们就可以把它当做负样本。</p>
 <p>但是我们还存在很多非理想的case，因此需要使用到IOU，作者测试了IOU阈值各种方案数0,0.1,0.2,0.3,0.4,0.5。最后我们通过训练发现选择<strong>IOU阈值为0.3</strong>效果最好。</p>
 <p>输入是f7的特征，f7的输出维度是2000 x 4096，输出的是是否属于该类别，训练结果是得到SVM的权重矩阵W，W的维度是4096 x N，N是特征类别数目.</p>
-<p>最近比较忙，未完待续~</p>
+<p>最近比较忙，未完待续~争取接下来做下实现。</p>
 
       
     </div>
@@ -895,7 +895,7 @@
       var disqus_config = function () {
         this.page.url = 'https://www.luodian.ink/2018-05-02/Review-for-week-9-RCNN/';
         this.page.identifier = '2018-05-02/Review-for-week-9-RCNN/';
-        this.page.title = 'Review for Week-9:RCNN(Regions With CNN Features)';
+        this.page.title = 'Review for Week-9：RCNN(Regions With CNN Features)';
       };
       function loadComments () {
         var d = document, s = d.createElement('script');
