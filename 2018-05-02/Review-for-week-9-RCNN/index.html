@@ -104,30 +104,31 @@
 
 
   
-  <meta name="keywords" content="机器学习," />
+  <meta name="keywords" content="Hexo, my world." />
 
 
-<meta name="description" content="几个公式 贝叶斯公式：$P(B \mid A) = \frac{P(B)  \cdot  P(A \mid B)}{P(A)}$ 全概率公式：$P(A) = \Sigma_{n} P(A \mid B_n) \cdot P(B_n)$.  生成模型与判别模型监督学习的任务就是学习一个模型，应用这一模型，对给定的输入预测">
-<meta name="keywords" content="机器学习">
+<meta name="description" content="从RCNN开始接触目标检测，这个东西起源于Rich feature hierarchies for Accurate Object Detection and Segmentation，在2014年的CVPR上发布，不得不感慨，发展的好快啊。 论文链接如下：  https://www.cv-foundation.org">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习复习-第二章-概率">
-<meta property="og:url" content="https://www.luodian.ink/2017-11-25/机器学习-第二章-概率/index.html">
+<meta property="og:title" content="Review for Week-9:RCNN(Regions With CNN Features)">
+<meta property="og:url" content="https://www.luodian.ink/2018-05-02/Review-for-week-9-RCNN/index.html">
 <meta property="og:site_name" content="Luodian.ink">
-<meta property="og:description" content="几个公式 贝叶斯公式：$P(B \mid A) = \frac{P(B)  \cdot  P(A \mid B)}{P(A)}$ 全概率公式：$P(A) = \Sigma_{n} P(A \mid B_n) \cdot P(B_n)$.  生成模型与判别模型监督学习的任务就是学习一个模型，应用这一模型，对给定的输入预测相应的输出，这个模型的一般形式为决策函数：$Y = f(x)$，或者条件概率分布">
+<meta property="og:description" content="从RCNN开始接触目标检测，这个东西起源于Rich feature hierarchies for Accurate Object Detection and Segmentation，在2014年的CVPR上发布，不得不感慨，发展的好快啊。 论文链接如下：  https://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Gir">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1flvkhkdjluj315o0m20wb.jpg">
-<meta property="og:updated_time" content="2017-12-12T12:52:22.616Z">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fqwbsajcs0j30bw073dfq.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fqwbyfvqbgj30kd06u0ti.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79ly1fqwc4pieqaj307x09h3yr.jpg">
+<meta property="og:updated_time" content="2018-05-01T17:27:30.081Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="机器学习复习-第二章-概率">
-<meta name="twitter:description" content="几个公式 贝叶斯公式：$P(B \mid A) = \frac{P(B)  \cdot  P(A \mid B)}{P(A)}$ 全概率公式：$P(A) = \Sigma_{n} P(A \mid B_n) \cdot P(B_n)$.  生成模型与判别模型监督学习的任务就是学习一个模型，应用这一模型，对给定的输入预测相应的输出，这个模型的一般形式为决策函数：$Y = f(x)$，或者条件概率分布">
-<meta name="twitter:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1flvkhkdjluj315o0m20wb.jpg">
+<meta name="twitter:title" content="Review for Week-9:RCNN(Regions With CNN Features)">
+<meta name="twitter:description" content="从RCNN开始接触目标检测，这个东西起源于Rich feature hierarchies for Accurate Object Detection and Segmentation，在2014年的CVPR上发布，不得不感慨，发展的好快啊。 论文链接如下：  https://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Gir">
+<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fqwbsajcs0j30bw073dfq.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="https://www.luodian.ink/2017-11-25/机器学习-第二章-概率/"/>
+  <link rel="canonical" href="https://www.luodian.ink/2018-05-02/Review-for-week-9-RCNN/"/>
 
 
 
@@ -136,7 +137,7 @@
     sidebar: "",
   };
 </script>
-  <title>机器学习复习-第二章-概率 | Luodian.ink</title>
+  <title>Review for Week-9:RCNN(Regions With CNN Features) | Luodian.ink</title>
   
 
 
@@ -329,7 +330,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.luodian.ink/2017-11-25/机器学习-第二章-概率/">
+    <link itemprop="mainEntityOfPage" href="https://www.luodian.ink/2018-05-02/Review-for-week-9-RCNN/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Luodian">
@@ -346,7 +347,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">机器学习复习-第二章-概率</h1>
+          <h1 class="post-title" itemprop="name headline">Review for Week-9:RCNN(Regions With CNN Features)</h1>
         
 
         <div class="post-meta">
@@ -358,7 +359,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-25T10:22:10+08:00">2017-11-25</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-02T00:32:07+08:00">2018-05-02</time>
             
 
             
@@ -379,7 +380,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/机器学习/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a></span>
 
                 
                 
@@ -394,9 +395,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017-11-25/机器学习-第二章-概率/#comments" itemprop="discussionUrl">
+                <a href="/2018-05-02/Review-for-week-9-RCNN/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017-11-25/机器学习-第二章-概率/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018-05-02/Review-for-week-9-RCNN/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -404,7 +405,7 @@
 
           
           
-             <span id="/2017-11-25/机器学习-第二章-概率/" class="leancloud_visitors" data-flag-title="机器学习复习-第二章-概率">
+             <span id="/2018-05-02/Review-for-week-9-RCNN/" class="leancloud_visitors" data-flag-title="Review for Week-9:RCNN(Regions With CNN Features)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -435,53 +436,63 @@
       
 
       
-        <h3 id="几个公式"><a href="#几个公式" class="headerlink" title="几个公式"></a>几个公式</h3><ul>
-<li>贝叶斯公式：$P(B \mid A) = \frac{P(B)  \cdot  P(A \mid B)}{P(A)}$</li>
-<li>全概率公式：$P(A) = \Sigma_{n} P(A \mid B_n) \cdot P(B_n)$.</li>
-</ul>
-<h3 id="生成模型与判别模型"><a href="#生成模型与判别模型" class="headerlink" title="生成模型与判别模型"></a>生成模型与判别模型</h3><p>监督学习的任务就是学习一个模型，应用这一模型，对给定的输入预测相应的输出，这个模型的一般形式为决策函数：$Y = f(x)$，或者条件概率分布：$P(Y \mid X)$</p>
-<p>监督学习方法又可以分为生成方法（Generative Approach）和判别方法（Discriminative Approach），所学习到的模型分别称为生成模型和判别模型。</p>
-<h4 id="生成方法"><a href="#生成方法" class="headerlink" title="生成方法"></a><strong>生成方法</strong></h4><p>生成方法由数据学习联合概率分布 $P(X,Y)$，然后求出条件概率分布 $P(Y \mid X)$ 作为预测的模型.</p>
-<p>即生成模型：$P(Y \mid X) = \frac{P(X,Y)}{P(X)}$</p>
-<p>这样的方法之所以称为生成方法，是因为模型表示了给定输入 $X$ 产生输出 $Y$ 的生成关系，典型的生成模型有：朴素贝叶斯方法和隐马尔科夫模型。</p>
-<h4 id="判别方法"><a href="#判别方法" class="headerlink" title="判别方法"></a><strong>判别方法</strong></h4><p>判别方法由数据直接学习决策函数 $f(X)$ 或者条件概率分布 $P(Y \mid X)$ 作为预测的模型，即判别模型。判别方法关心的是对给定的输入 $X$，应该预测什么样的输出 $Y$。典型的判别模型包括：$k$ 近邻法，感知机，决策树，逻辑斯蒂回归模型，最大熵模型，支持向量机，提升方法和条件随机场等。</p>
-<h4 id="评价分类指标"><a href="#评价分类指标" class="headerlink" title="评价分类指标"></a>评价分类指标</h4><p><strong>准确率（accuracy）</strong></p>
-<p><strong>精确率（precision）</strong></p>
-<p><strong>召回率（recall）</strong></p>
-<h3 id="朴素贝叶斯"><a href="#朴素贝叶斯" class="headerlink" title="朴素贝叶斯"></a>朴素贝叶斯</h3><p>医生对病人进行诊断就是一个典型的分类过程，任何一个医生都无法直接看到病人的病情，只能观察病人表现出的症状和各种化验检测数据来推断病情，这时医生就好比一个分类器，而这个医生诊断的准确率，与他当初受到的教育方式（构造方法）、病人的症状是否突出（待分类数据的特性）以及医生的经验多少（训练样本数量）都有密切关系。</p>
-<p>回忆朴素贝叶斯中的公式 $P(Y = y_k \mid X_1,X_2,\ldots X_n) = \frac{P(Y = y_k)\prod_i P(X_i \mid Y = y_k)}{\Sigma_j ( P(Y = y_j)\prod_i P(X_i \mid Y = y_j))}$</p>
-<p>对比与医生看病，就是医生利用他已知的发病的征兆，结合病人的征兆去获取这个 $\prod_i P(X_i \mid Y = y_k)$，然后再结合发病的概率，去推断病人现在身上的征兆，有多大的可能发病。</p>
-<p>朴素贝叶斯学习和分类器与其他相比可以非常快。在条件独立的假设下，类条件特征分布的解耦意味着 每个分布可以独立估计为一个一维分布，这反过来又有助于缓解维灾难问题。</p>
-<p><strong>高斯朴素贝叶斯的训练过程</strong></p>
-<ul>
-<li><p>训练：对于每个 $y_k$：</p>
+        <p>从RCNN开始接触目标检测，这个东西起源于<code>Rich feature hierarchies for Accurate Object Detection and Segmentation</code>，在2014年的<code>CVPR</code>上发布，不得不感慨，发展的好快啊。</p>
+<p>论文链接如下：</p>
+<blockquote>
+<p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Girshick_Rich_Feature_Hierarchies_2014_CVPR_paper.pdf?spm=5176.100239.blogcont55892.8.pm8zm1&amp;file=Girshick_Rich_Feature_Hierarchies_2014_CVPR_paper.pdf" target="_blank" rel="noopener">https://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Girshick_Rich_Feature_Hierarchies_2014_CVPR_paper.pdf?spm=5176.100239.blogcont55892.8.pm8zm1&amp;file=Girshick_Rich_Feature_Hierarchies_2014_CVPR_paper.pdf</a></p>
+</blockquote>
+<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="无监督预训练"><a href="#无监督预训练" class="headerlink" title="无监督预训练"></a>无监督预训练</h3><p>网络越深，需要的训练样本数越多。</p>
+<p>若用监督则需大量标注样本，不然小规模样本容易造成过拟合，深层网络意味着特征比较多，机器学习里面临多特征：1、多样本. 2、规则化. 3、特征选择.</p>
+<p><strong>无监督预训练（unsupervised pre-training）</strong>即训练网络的第一个隐藏层，再训练第二个…最后用这些训练好的网络参数值作为整体网络参数的初始值。</p>
+<p>常用的方法有：<code>stacked sparse-autoencoder</code>，<code>stacked denoise-autoencoder</code></p>
+<h4 id="AutoEncoder"><a href="#AutoEncoder" class="headerlink" title="AutoEncoder"></a>AutoEncoder</h4><p>什么是<code>autoencoder</code>：自编码器尝试学习出一个 $h_{w,b}(x) = x$ 的函数。</p>
+<blockquote>
+<p>Autoencoder 可以学习到数据的一些压缩表示：例如如果输入数据为100维，隐藏层为50个，那么就需要从这50维的数据中重构出100维的输出，使这个输出接近于100维的输入。因此这个隐藏层的50维的数据就必然会包含着输入数据的一些相关性。所以说autoencoder就是为了学习到输入数据的相关性表示的一种方法。</p>
+</blockquote>
+<h3 id="监督下的Fine-tuning"><a href="#监督下的Fine-tuning" class="headerlink" title="监督下的Fine-tuning"></a>监督下的Fine-tuning</h3><p>利用已有模型训练其他数据集，去掉最后一层，然后其它的网络层参数就直接复制过来，继续进行训练。</p>
+<blockquote>
+<p>有点像迁移学习</p>
+</blockquote>
+<h3 id="IOU的定义"><a href="#IOU的定义" class="headerlink" title="IOU的定义"></a>IOU的定义</h3><p>IOU定义了两个bounding box的重叠度，计算公式为重叠面积占并集面积的比例，如下图所示：</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fqwbsajcs0j30bw073dfq.jpg" alt=""></p>
+<h3 id="非极大值抑制"><a href="#非极大值抑制" class="headerlink" title="非极大值抑制"></a>非极大值抑制</h3><p>这个还是很有意思的，RCNN会从一张图片中找出n多个可能是物体的矩形框，然后为每个矩形框为做类别分类概率。</p>
+<p>先假设有6个矩形框，根据分类器类别分类概率做排序，从小到大分别属于车辆的概率分别为A、B、C、D、E、F。</p>
 <ol>
-<li>估计 $\pi_k (即P(Y = y_k))$</li>
-<li>对于 $X$ 的每一个属性 $X_i$，估计类条件均值和方差 $\mu_{i,k},\sigma_{i,k}$.</li>
+<li>从最大概率矩形框F开始，分别判断A~E与F的重叠度IOU是否大于某个设定的阈值.</li>
+<li>假设B、D与F的重叠度超过阈值，那么就扔掉B、D；并标记第一个矩形框F，是我们保留下来的。</li>
+<li>从剩下的矩形框A、C、E中，选择概率最大的E，然后判断E与A、C的重叠度，重叠度大于一定的阈值，那么就扔掉；并标记E是我们保留下来的第二个矩形框。</li>
 </ol>
-</li>
-<li><p>分类：</p>
+<p>就这样一直重复，找到所有被保留下来的矩形框。</p>
+<h2 id="RCNN"><a href="#RCNN" class="headerlink" title="RCNN"></a>RCNN</h2><p>对于物体检测，其需要定位出物体的位置，把它看做是一个回归问题：求解一个包含物体的方框。</p>
+<p>简述RCNN所作的事情就是。</p>
 <ol>
-<li><p>$Y_{new} \leftarrow argmax_{y_k} \prod_i {P(X^{new}_i \mid Y = y_k)}$</p>
-</li>
-<li><p>$Y_{new} \leftarrow argmax_{y_k} \pi_k \prod_i N(X^{new}_i,\mu_{i,k},\sigma_{i,k}) $</p>
-</li>
-<li><p>对于均值和方差的计算如下：</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flvkhkdjluj315o0m20wb.jpg" alt=""><strong>一些问题</strong></p>
-<ol>
-<li>怎么对两组数据进行独立性检验？<ul>
-<li>皮尔森卡方检验</li>
-</ul>
-</li>
-<li>标准的朴素贝叶斯分类器的决策面看起来是什么样的？<ul>
-<li>对于高斯分布的话，如果两个类的协方差相同，决策面是线性的超平面</li>
-</ul>
-</li>
+<li>首先输入一张图片，我们先定位出2000个物体候选框。</li>
+<li>采用CNN提取每个候选框中图片的特征向量，特征向量的维度为4096维。</li>
+<li>采用svm算法对各个候选框中的物体进行分类识别。</li>
 </ol>
-</li>
-</ol>
-</li>
-</ul>
+<p>流程如图所示</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fqwbyfvqbgj30kd06u0ti.jpg" alt=""></p>
+<h4 id="候选框搜索"><a href="#候选框搜索" class="headerlink" title="候选框搜索"></a>候选框搜索</h4><p>搜索出所有可能是物体的区域，采用传统文献的算法<code>search for object recognition</code>，通过这个算法我们搜索出2000个候选框。</p>
+<p>因为候选框长宽不一定相等，因此我们接下来进行缩放。</p>
+<p><strong>各向异性缩放</strong></p>
+<p>这种方法很简单，就是不管图片的长宽比例，管它是否扭曲，进行缩放就是了，全部缩放到CNN输入的大小227*227，如下图(D)所示；</p>
+<p><strong>各向同性缩放</strong></p>
+<p>因为图片扭曲后，估计会对后续CNN的训练精度有影响，于是作者也测试了<code>各向同性缩放</code>方案。这个又分两种做法：</p>
+<p>A、直接在原始图片中，把bounding box的边界进行扩展延伸成正方形，然后再进行裁剪；如果已经延伸到了原始图片的外边界，那么就用bounding box中的颜色均值填充，如下图(B)所示;</p>
+<p>B、先把bounding box图片裁剪出来，然后用固定的背景颜色填充成正方形图片(背景颜色也是采用bounding box的像素颜色均值)，如下图(C)所示;</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1fqwc4pieqaj307x09h3yr.jpg" alt=""></p>
+<h4 id="IOU评价候选框位置"><a href="#IOU评价候选框位置" class="headerlink" title="IOU评价候选框位置"></a>IOU评价候选框位置</h4><p>在CNN阶段，如果用<code>selective search</code>挑选出来的候选框与物体的人工标注矩形框的重叠区域IoU大于0.5，那么我们就把这个候选框标注成物体类别，否则我们就把它当做背景类别。</p>
+<h3 id="网络结构"><a href="#网络结构" class="headerlink" title="网络结构"></a>网络结构</h3><p>文章是直接用Alexnet的网络，初始的参数值也是Alexnet已经训练好的模型参数，然后再fine-tuning训练。Alexnet特征提取部分包含了5个卷积层、2个全连接层，在Alexnet中p5层神经元个数为9216、 f6、f7的神经元个数都是4096，通过这个网络训练完毕后，最后提取特征每个输入候选框图片都能得到一个4096维的特征向量。</p>
+<p>在<code>Fine-Tuning</code>阶段：假设要检测的物体类别有N类，那么我们就需要把上面预训练阶段的CNN模型的最后一层给替换掉，替换成N+1个输出的神经元(加1是表示还有一个背景)。</p>
+<p>开始的时候，SGD学习率选择0.001，在每次训练的时候，我们batch size大小选择128，其中32个正样本、96个负样本。</p>
+<h3 id="SVM"><a href="#SVM" class="headerlink" title="SVM"></a>SVM</h3><p>训练完CNN之后（仅用作特征提取），最后加一层SVM用作分类。</p>
+<blockquote>
+<p>CNN在训练的时候，对训练数据做了比较宽松的标注，比如一个bounding box可能只包含物体的一部分，那么我也把它标注为正样本，用于训练cnn；采用这个方法的主要原因在于因为CNN容易过拟合，所以需要大量的训练数据，所以在CNN训练阶段我们是对Bounding box的位置限制条件限制的比较松(IOU只要大于0.5都被标注为正样本了)。</p>
+</blockquote>
+<p>理想情况是，只有当bounding box把整量车都包含在内，那才叫正样本。如果bounding box 没有包含到车辆，那么我们就可以把它当做负样本。</p>
+<p>但是我们还存在很多非理想的case，因此需要使用到IOU，作者测试了IOU阈值各种方案数0,0.1,0.2,0.3,0.4,0.5。最后我们通过训练发现选择<strong>IOU阈值为0.3</strong>效果最好。</p>
+<p>输入是f7的特征，f7的输出维度是2000 x 4096，输出的是是否属于该类别，训练结果是得到SVM的权重矩阵W，W的维度是4096 x N，N是特征类别数目.</p>
+<p>最近比较忙，未完待续~</p>
 
       
     </div>
@@ -500,12 +511,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
-          
-        </div>
-      
 
       
       
@@ -515,8 +520,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017-11-24/机器学习-第一章-决策树/" rel="next" title="机器学习复习-第一章-决策树（Updating）">
-                <i class="fa fa-chevron-left"></i> 机器学习复习-第一章-决策树（Updating）
+              <a href="/2018-05-02/Review for week-9：cs231n-Lecture-3/" rel="next" title="Review for Week-9：cs231n-Lecture-3">
+                <i class="fa fa-chevron-left"></i> Review for Week-9：cs231n-Lecture-3
               </a>
             
           </div>
@@ -524,10 +529,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017-11-26/机器学习-第三章-逻辑回归/" rel="prev" title="机器学习复习-第三章-逻辑回归（Updating）">
-                机器学习复习-第三章-逻辑回归（Updating） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -731,7 +732,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#几个公式"><span class="nav-number">1.</span> <span class="nav-text">几个公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成模型与判别模型"><span class="nav-number">2.</span> <span class="nav-text">生成模型与判别模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#生成方法"><span class="nav-number">2.1.</span> <span class="nav-text">生成方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#判别方法"><span class="nav-number">2.2.</span> <span class="nav-text">判别方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#评价分类指标"><span class="nav-number">2.3.</span> <span class="nav-text">评价分类指标</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#朴素贝叶斯"><span class="nav-number">3.</span> <span class="nav-text">朴素贝叶斯</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础知识"><span class="nav-number">1.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#无监督预训练"><span class="nav-number">1.1.</span> <span class="nav-text">无监督预训练</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#AutoEncoder"><span class="nav-number">1.1.1.</span> <span class="nav-text">AutoEncoder</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#监督下的Fine-tuning"><span class="nav-number">1.2.</span> <span class="nav-text">监督下的Fine-tuning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IOU的定义"><span class="nav-number">1.3.</span> <span class="nav-text">IOU的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非极大值抑制"><span class="nav-number">1.4.</span> <span class="nav-text">非极大值抑制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RCNN"><span class="nav-number">2.</span> <span class="nav-text">RCNN</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#候选框搜索"><span class="nav-number">2.0.1.</span> <span class="nav-text">候选框搜索</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IOU评价候选框位置"><span class="nav-number">2.0.2.</span> <span class="nav-text">IOU评价候选框位置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络结构"><span class="nav-number">2.1.</span> <span class="nav-text">网络结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SVM"><span class="nav-number">2.2.</span> <span class="nav-text">SVM</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -892,9 +893,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'https://www.luodian.ink/2017-11-25/机器学习-第二章-概率/';
-        this.page.identifier = '2017-11-25/机器学习-第二章-概率/';
-        this.page.title = '机器学习复习-第二章-概率';
+        this.page.url = 'https://www.luodian.ink/2018-05-02/Review-for-week-9-RCNN/';
+        this.page.identifier = '2018-05-02/Review-for-week-9-RCNN/';
+        this.page.title = 'Review for Week-9:RCNN(Regions With CNN Features)';
       };
       function loadComments () {
         var d = document, s = d.createElement('script');

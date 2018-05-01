@@ -104,30 +104,34 @@
 
 
   
-  <meta name="keywords" content="机器学习," />
+  <meta name="keywords" content="Hexo, my world." />
 
 
-<meta name="description" content="几个公式 贝叶斯公式：$P(B \mid A) = \frac{P(B)  \cdot  P(A \mid B)}{P(A)}$ 全概率公式：$P(A) = \Sigma_{n} P(A \mid B_n) \cdot P(B_n)$.  生成模型与判别模型监督学习的任务就是学习一个模型，应用这一模型，对给定的输入预测">
-<meta name="keywords" content="机器学习">
+<meta name="description" content="Lec-1是纯入门，就不做记录了。 Lec-2回顾Challenges of recongnition illumination deformation occlusion clutter intraclass variation   Nearest Neighbors一种很神奇的初级思路，train只需要$O(1)$">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习复习-第二章-概率">
-<meta property="og:url" content="https://www.luodian.ink/2017-11-25/机器学习-第二章-概率/index.html">
+<meta property="og:title" content="Review for Week-9：cs231n-Lecture-2">
+<meta property="og:url" content="https://www.luodian.ink/2018-05-01/Review for week-9：cs231n-Lecture-2/index.html">
 <meta property="og:site_name" content="Luodian.ink">
-<meta property="og:description" content="几个公式 贝叶斯公式：$P(B \mid A) = \frac{P(B)  \cdot  P(A \mid B)}{P(A)}$ 全概率公式：$P(A) = \Sigma_{n} P(A \mid B_n) \cdot P(B_n)$.  生成模型与判别模型监督学习的任务就是学习一个模型，应用这一模型，对给定的输入预测相应的输出，这个模型的一般形式为决策函数：$Y = f(x)$，或者条件概率分布">
+<meta property="og:description" content="Lec-1是纯入门，就不做记录了。 Lec-2回顾Challenges of recongnition illumination deformation occlusion clutter intraclass variation   Nearest Neighbors一种很神奇的初级思路，train只需要$O(1)$，predict需要$O(N)$. 需要被预测的对象与训练集根据Metric作差">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1flvkhkdjluj315o0m20wb.jpg">
-<meta property="og:updated_time" content="2017-12-12T12:52:22.616Z">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fqvwsp21r1j315u0iutfh.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fqvx2j2tzvj313k0h8q4v.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fqvx5mog94j30ym0jct9x.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fqvx4ead7cj30jy0gkaem.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fqvx7o8oe4j311y0hymy5.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fqvxbcsnhwj313i0jaagd.jpg">
+<meta property="og:updated_time" content="2018-05-01T16:27:30.443Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="机器学习复习-第二章-概率">
-<meta name="twitter:description" content="几个公式 贝叶斯公式：$P(B \mid A) = \frac{P(B)  \cdot  P(A \mid B)}{P(A)}$ 全概率公式：$P(A) = \Sigma_{n} P(A \mid B_n) \cdot P(B_n)$.  生成模型与判别模型监督学习的任务就是学习一个模型，应用这一模型，对给定的输入预测相应的输出，这个模型的一般形式为决策函数：$Y = f(x)$，或者条件概率分布">
-<meta name="twitter:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1flvkhkdjluj315o0m20wb.jpg">
+<meta name="twitter:title" content="Review for Week-9：cs231n-Lecture-2">
+<meta name="twitter:description" content="Lec-1是纯入门，就不做记录了。 Lec-2回顾Challenges of recongnition illumination deformation occlusion clutter intraclass variation   Nearest Neighbors一种很神奇的初级思路，train只需要$O(1)$，predict需要$O(N)$. 需要被预测的对象与训练集根据Metric作差">
+<meta name="twitter:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fqvwsp21r1j315u0iutfh.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="https://www.luodian.ink/2017-11-25/机器学习-第二章-概率/"/>
+  <link rel="canonical" href="https://www.luodian.ink/2018-05-01/Review for week-9：cs231n-Lecture-2/"/>
 
 
 
@@ -136,7 +140,7 @@
     sidebar: "",
   };
 </script>
-  <title>机器学习复习-第二章-概率 | Luodian.ink</title>
+  <title>Review for Week-9：cs231n-Lecture-2 | Luodian.ink</title>
   
 
 
@@ -329,7 +333,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.luodian.ink/2017-11-25/机器学习-第二章-概率/">
+    <link itemprop="mainEntityOfPage" href="https://www.luodian.ink/2018-05-01/Review for week-9：cs231n-Lecture-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Luodian">
@@ -346,7 +350,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">机器学习复习-第二章-概率</h1>
+          <h1 class="post-title" itemprop="name headline">Review for Week-9：cs231n-Lecture-2</h1>
         
 
         <div class="post-meta">
@@ -358,7 +362,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-25T10:22:10+08:00">2017-11-25</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-01T16:11:58+08:00">2018-05-01</time>
             
 
             
@@ -379,7 +383,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/机器学习/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a></span>
 
                 
                 
@@ -394,9 +398,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017-11-25/机器学习-第二章-概率/#comments" itemprop="discussionUrl">
+                <a href="/2018-05-01/Review for week-9：cs231n-Lecture-2/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017-11-25/机器学习-第二章-概率/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018-05-01/Review for week-9：cs231n-Lecture-2/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -404,7 +408,7 @@
 
           
           
-             <span id="/2017-11-25/机器学习-第二章-概率/" class="leancloud_visitors" data-flag-title="机器学习复习-第二章-概率">
+             <span id="/2018-05-01/Review for week-9：cs231n-Lecture-2/" class="leancloud_visitors" data-flag-title="Review for Week-9：cs231n-Lecture-2">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -435,53 +439,35 @@
       
 
       
-        <h3 id="几个公式"><a href="#几个公式" class="headerlink" title="几个公式"></a>几个公式</h3><ul>
-<li>贝叶斯公式：$P(B \mid A) = \frac{P(B)  \cdot  P(A \mid B)}{P(A)}$</li>
-<li>全概率公式：$P(A) = \Sigma_{n} P(A \mid B_n) \cdot P(B_n)$.</li>
+        <p>Lec-1是纯入门，就不做记录了。</p>
+<h2 id="Lec-2回顾"><a href="#Lec-2回顾" class="headerlink" title="Lec-2回顾"></a>Lec-2回顾</h2><h3 id="Challenges-of-recongnition"><a href="#Challenges-of-recongnition" class="headerlink" title="Challenges of recongnition"></a>Challenges of recongnition</h3><ul>
+<li>illumination</li>
+<li>deformation</li>
+<li>occlusion</li>
+<li>clutter</li>
+<li>intraclass variation</li>
 </ul>
-<h3 id="生成模型与判别模型"><a href="#生成模型与判别模型" class="headerlink" title="生成模型与判别模型"></a>生成模型与判别模型</h3><p>监督学习的任务就是学习一个模型，应用这一模型，对给定的输入预测相应的输出，这个模型的一般形式为决策函数：$Y = f(x)$，或者条件概率分布：$P(Y \mid X)$</p>
-<p>监督学习方法又可以分为生成方法（Generative Approach）和判别方法（Discriminative Approach），所学习到的模型分别称为生成模型和判别模型。</p>
-<h4 id="生成方法"><a href="#生成方法" class="headerlink" title="生成方法"></a><strong>生成方法</strong></h4><p>生成方法由数据学习联合概率分布 $P(X,Y)$，然后求出条件概率分布 $P(Y \mid X)$ 作为预测的模型.</p>
-<p>即生成模型：$P(Y \mid X) = \frac{P(X,Y)}{P(X)}$</p>
-<p>这样的方法之所以称为生成方法，是因为模型表示了给定输入 $X$ 产生输出 $Y$ 的生成关系，典型的生成模型有：朴素贝叶斯方法和隐马尔科夫模型。</p>
-<h4 id="判别方法"><a href="#判别方法" class="headerlink" title="判别方法"></a><strong>判别方法</strong></h4><p>判别方法由数据直接学习决策函数 $f(X)$ 或者条件概率分布 $P(Y \mid X)$ 作为预测的模型，即判别模型。判别方法关心的是对给定的输入 $X$，应该预测什么样的输出 $Y$。典型的判别模型包括：$k$ 近邻法，感知机，决策树，逻辑斯蒂回归模型，最大熵模型，支持向量机，提升方法和条件随机场等。</p>
-<h4 id="评价分类指标"><a href="#评价分类指标" class="headerlink" title="评价分类指标"></a>评价分类指标</h4><p><strong>准确率（accuracy）</strong></p>
-<p><strong>精确率（precision）</strong></p>
-<p><strong>召回率（recall）</strong></p>
-<h3 id="朴素贝叶斯"><a href="#朴素贝叶斯" class="headerlink" title="朴素贝叶斯"></a>朴素贝叶斯</h3><p>医生对病人进行诊断就是一个典型的分类过程，任何一个医生都无法直接看到病人的病情，只能观察病人表现出的症状和各种化验检测数据来推断病情，这时医生就好比一个分类器，而这个医生诊断的准确率，与他当初受到的教育方式（构造方法）、病人的症状是否突出（待分类数据的特性）以及医生的经验多少（训练样本数量）都有密切关系。</p>
-<p>回忆朴素贝叶斯中的公式 $P(Y = y_k \mid X_1,X_2,\ldots X_n) = \frac{P(Y = y_k)\prod_i P(X_i \mid Y = y_k)}{\Sigma_j ( P(Y = y_j)\prod_i P(X_i \mid Y = y_j))}$</p>
-<p>对比与医生看病，就是医生利用他已知的发病的征兆，结合病人的征兆去获取这个 $\prod_i P(X_i \mid Y = y_k)$，然后再结合发病的概率，去推断病人现在身上的征兆，有多大的可能发病。</p>
-<p>朴素贝叶斯学习和分类器与其他相比可以非常快。在条件独立的假设下，类条件特征分布的解耦意味着 每个分布可以独立估计为一个一维分布，这反过来又有助于缓解维灾难问题。</p>
-<p><strong>高斯朴素贝叶斯的训练过程</strong></p>
-<ul>
-<li><p>训练：对于每个 $y_k$：</p>
-<ol>
-<li>估计 $\pi_k (即P(Y = y_k))$</li>
-<li>对于 $X$ 的每一个属性 $X_i$，估计类条件均值和方差 $\mu_{i,k},\sigma_{i,k}$.</li>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fqvwsp21r1j315u0iutfh.jpg" alt=""></p>
+<h3 id="Nearest-Neighbors"><a href="#Nearest-Neighbors" class="headerlink" title="Nearest Neighbors"></a>Nearest Neighbors</h3><p>一种很神奇的初级思路，<code>train</code>只需要$O(1)$，<code>predict</code>需要$O(N)$. 需要被预测的对象与训练集根据<code>Metric</code>作差，值最小的那个训练集对象的类别即是所预测的类别。</p>
+<p>进一步采用KNN，K个最近邻的对象，对类别投票。</p>
+<p>以特征维度划分空间，其中可能存在空白区域，这些地方是算法的短板，做随机的预测。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fqvx2j2tzvj313k0h8q4v.jpg" alt=""></p>
+<h4 id="Distance-Metric"><a href="#Distance-Metric" class="headerlink" title="Distance Metric"></a>Distance Metric</h4><ol>
+<li>L1，就是曼哈顿距离</li>
+<li>L2，几何距离</li>
 </ol>
-</li>
-<li><p>分类：</p>
-<ol>
-<li><p>$Y_{new} \leftarrow argmax_{y_k} \prod_i {P(X^{new}_i \mid Y = y_k)}$</p>
-</li>
-<li><p>$Y_{new} \leftarrow argmax_{y_k} \pi_k \prod_i N(X^{new}_i,\mu_{i,k},\sigma_{i,k}) $</p>
-</li>
-<li><p>对于均值和方差的计算如下：</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flvkhkdjluj315o0m20wb.jpg" alt=""><strong>一些问题</strong></p>
-<ol>
-<li>怎么对两组数据进行独立性检验？<ul>
-<li>皮尔森卡方检验</li>
-</ul>
-</li>
-<li>标准的朴素贝叶斯分类器的决策面看起来是什么样的？<ul>
-<li>对于高斯分布的话，如果两个类的协方差相同，决策面是线性的超平面</li>
-</ul>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ul>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fqvx5mog94j30ym0jct9x.jpg" alt=""></p>
+<p>其中关于这两个距离需要注意的是它们的衡量对象，课程中强调了，L1距离所代表的是一维尺度（提到depends on coordinates）上的距离，比如一个老师对象，拥有很多一维属性。比较老师和老师的不同可以采用L1距离。</p>
+<p>L2距离则考量的是二维上尺度，较适合图片这种点与点关联属性比较大的对象。</p>
+<p>至于效果嘛，显而易见，随缘。课程也提到了，希望设计的机器学习算法，将predict和train分开，将load放在train这个环节，服务商自己使用服务器做，不去麻烦使用服务的客户。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fqvx4ead7cj30jy0gkaem.jpg" alt=""></p>
+<h3 id="Curse-of-Dimensionality"><a href="#Curse-of-Dimensionality" class="headerlink" title="Curse of Dimensionality"></a>Curse of Dimensionality</h3><p>维度灾难，上ML课的时候一直没听懂，现在好像有点感觉了。</p>
+<p>维度的增加，导致KNN这种方法的运算量呈指数倍增。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fqvx7o8oe4j311y0hymy5.jpg" alt=""></p>
+<h3 id="Linear-Classfication"><a href="#Linear-Classfication" class="headerlink" title="Linear Classfication"></a>Linear Classfication</h3><p>课程暂时没细说，但应该就是Logistic Regression, SVM做多分类。</p>
+<p>线性分类器和神经网络是可以组合的，当做lego brick一样使用，怎么组合暂时还不是太理解。</p>
+<p>Li Fei Fei做的图片的语义理解，这个真的厉害。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fqvxbcsnhwj313i0jaagd.jpg" alt=""></p>
 
       
     </div>
@@ -500,12 +486,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
-          
-        </div>
-      
 
       
       
@@ -515,8 +495,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017-11-24/机器学习-第一章-决策树/" rel="next" title="机器学习复习-第一章-决策树（Updating）">
-                <i class="fa fa-chevron-left"></i> 机器学习复习-第一章-决策树（Updating）
+              <a href="/2018-04-12/2018Spring-Week7-Anomaly-Detection-Review/" rel="next" title="2018Spring-Week7-Anomaly Detection Review">
+                <i class="fa fa-chevron-left"></i> 2018Spring-Week7-Anomaly Detection Review
               </a>
             
           </div>
@@ -525,8 +505,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017-11-26/机器学习-第三章-逻辑回归/" rel="prev" title="机器学习复习-第三章-逻辑回归（Updating）">
-                机器学习复习-第三章-逻辑回归（Updating） <i class="fa fa-chevron-right"></i>
+              <a href="/2018-05-02/Review for week-9：cs231n-Lecture-3/" rel="prev" title="Review for Week-9：cs231n-Lecture-3">
+                Review for Week-9：cs231n-Lecture-3 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -731,7 +711,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#几个公式"><span class="nav-number">1.</span> <span class="nav-text">几个公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成模型与判别模型"><span class="nav-number">2.</span> <span class="nav-text">生成模型与判别模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#生成方法"><span class="nav-number">2.1.</span> <span class="nav-text">生成方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#判别方法"><span class="nav-number">2.2.</span> <span class="nav-text">判别方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#评价分类指标"><span class="nav-number">2.3.</span> <span class="nav-text">评价分类指标</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#朴素贝叶斯"><span class="nav-number">3.</span> <span class="nav-text">朴素贝叶斯</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Lec-2回顾"><span class="nav-number">1.</span> <span class="nav-text">Lec-2回顾</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Challenges-of-recongnition"><span class="nav-number">1.1.</span> <span class="nav-text">Challenges of recongnition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nearest-Neighbors"><span class="nav-number">1.2.</span> <span class="nav-text">Nearest Neighbors</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Distance-Metric"><span class="nav-number">1.2.1.</span> <span class="nav-text">Distance Metric</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Curse-of-Dimensionality"><span class="nav-number">1.3.</span> <span class="nav-text">Curse of Dimensionality</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linear-Classfication"><span class="nav-number">1.4.</span> <span class="nav-text">Linear Classfication</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -892,9 +872,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'https://www.luodian.ink/2017-11-25/机器学习-第二章-概率/';
-        this.page.identifier = '2017-11-25/机器学习-第二章-概率/';
-        this.page.title = '机器学习复习-第二章-概率';
+        this.page.url = 'https://www.luodian.ink/2018-05-01/Review for week-9：cs231n-Lecture-2/';
+        this.page.identifier = '2018-05-01/Review for week-9：cs231n-Lecture-2/';
+        this.page.title = 'Review for Week-9：cs231n-Lecture-2';
       };
       function loadComments () {
         var d = document, s = d.createElement('script');
