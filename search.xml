@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Joseph Sifakis-如何保障自动驾驶系统的安全性]]></title>
+    <url>%2F2018-06-24%2FJoseph-Sifakis-%E5%A6%82%E4%BD%95%E4%BF%9D%E9%9A%9C%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7%2F</url>
+    <content type="text"><![CDATA[被抓壮丁去参与的一次讲座，去之前任何信息未知。 到场才发现是关于自动驾驶的内容，于是很感兴趣的开始记笔记。 因为自己到的比较迟（主要是很嫌弃这种抓壮丁的行为），在最后一排不太看得清楚，但应该是系统容错检测的一些东西，查资料发现lecturer Joseph Sifakis是2007年的图灵奖得主，获奖工作是model checking，现在他在自动驾驶方向上的研究也是和整车系统有关的。 讲课的过程很匆匆，估计他发现听众都不太明白他的深意，很多细节性的东西都很快的跳过了，我及时拍照做了一下记录（或者是纪念把）。 这是匆匆记下的一些笔记 最后交流过程还蛮长的，我留下来听了很久Joseph的答疑，问了一些关于当今自动驾驶技术的挑战和难点。 他强调的重点是data based learning，以及如何让每一台车及时获得更新的数据或者是模型，来减少这辆车还未遇见过的bad situations。 席间有个一同问问题的EE的女生口语真的很好，对比起来我都不太好意思开口，不过Joseph是个法国人，说英语也挺含糊的。 讲座时坐我旁边的一个哥斯达黎加的小哥，最后也留下来等Joseph，他是一个很年轻的教授，头发也很长。来的目的主要是想邀请Joseph去哥斯达黎加做演讲，最后Joseph表示有意愿。 一直接话的印度人有所耳闻，很牛逼的一个人，在工大做研究，但是同时和MIT在合作一个项目，未来会去硅谷。 真是羡慕死了！ 最后快要走的时候我又问了Joseph，世界上除了Tesla和Waymo还有哪家自动驾驶技术研究的很牛逼，他给出的答案也符合我的预期，就是关注传统车企，他比较看好Volvo. 然后关于学校和国家，回答是美国or欧洲的名校，显然他的领域里似乎加澳已经被抛弃了。]]></content>
+      <categories>
+        <category>Autonomous Car</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Review for Week-9：RCNN(Regions With CNN Features)]]></title>
     <url>%2F2018-05-02%2FReview-for-week-9-RCNN%2F</url>
     <content type="text"><![CDATA[从RCNN开始接触目标检测，这个东西起源于Rich feature hierarchies for Accurate Object Detection and Segmentation，在2014年的CVPR上发布，不得不感慨，发展的好快啊。 论文链接如下： https://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Girshick_Rich_Feature_Hierarchies_2014_CVPR_paper.pdf?spm=5176.100239.blogcont55892.8.pm8zm1&amp;file=Girshick_Rich_Feature_Hierarchies_2014_CVPR_paper.pdf 基础知识无监督预训练网络越深，需要的训练样本数越多。 若用监督则需大量标注样本，不然小规模样本容易造成过拟合，深层网络意味着特征比较多，机器学习里面临多特征：1、多样本. 2、规则化. 3、特征选择. 无监督预训练（unsupervised pre-training）即训练网络的第一个隐藏层，再训练第二个…最后用这些训练好的网络参数值作为整体网络参数的初始值。 常用的方法有：stacked sparse-autoencoder，stacked denoise-autoencoder AutoEncoder什么是autoencoder：自编码器尝试学习出一个 $h_{w,b}(x) = x$ 的函数。 Autoencoder 可以学习到数据的一些压缩表示：例如如果输入数据为100维，隐藏层为50个，那么就需要从这50维的数据中重构出100维的输出，使这个输出接近于100维的输入。因此这个隐藏层的50维的数据就必然会包含着输入数据的一些相关性。所以说autoencoder就是为了学习到输入数据的相关性表示的一种方法。 监督下的Fine-tuning利用已有模型训练其他数据集，去掉最后一层，然后其它的网络层参数就直接复制过来，继续进行训练。 有点像迁移学习 IOU的定义IOU定义了两个bounding box的重叠度，计算公式为重叠面积占并集面积的比例，如下图所示： 非极大值抑制这个还是很有意思的，RCNN会从一张图片中找出n多个可能是物体的矩形框，然后为每个矩形框为做类别分类概率。 先假设有6个矩形框，根据分类器类别分类概率做排序，从小到大分别属于车辆的概率分别为A、B、C、D、E、F。 从最大概率矩形框F开始，分别判断A~E与F的重叠度IOU是否大于某个设定的阈值. 假设B、D与F的重叠度超过阈值，那么就扔掉B、D；并标记第一个矩形框F，是我们保留下来的。 从剩下的矩形框A、C、E中，选择概率最大的E，然后判断E与A、C的重叠度，重叠度大于一定的阈值，那么就扔掉；并标记E是我们保留下来的第二个矩形框。 就这样一直重复，找到所有被保留下来的矩形框。 RCNN对于物体检测，其需要定位出物体的位置，把它看做是一个回归问题：求解一个包含物体的方框。 简述RCNN所作的事情就是。 首先输入一张图片，我们先定位出2000个物体候选框。 采用CNN提取每个候选框中图片的特征向量，特征向量的维度为4096维。 采用svm算法对各个候选框中的物体进行分类识别。 流程如图所示 候选框搜索搜索出所有可能是物体的区域，采用传统文献的算法search for object recognition，通过这个算法我们搜索出2000个候选框。 因为候选框长宽不一定相等，因此我们接下来进行缩放。 各向异性缩放 这种方法很简单，就是不管图片的长宽比例，管它是否扭曲，进行缩放就是了，全部缩放到CNN输入的大小227*227，如下图(D)所示； 各向同性缩放 因为图片扭曲后，估计会对后续CNN的训练精度有影响，于是作者也测试了各向同性缩放方案。这个又分两种做法： A、直接在原始图片中，把bounding box的边界进行扩展延伸成正方形，然后再进行裁剪；如果已经延伸到了原始图片的外边界，那么就用bounding box中的颜色均值填充，如下图(B)所示; B、先把bounding box图片裁剪出来，然后用固定的背景颜色填充成正方形图片(背景颜色也是采用bounding box的像素颜色均值)，如下图(C)所示; IOU评价候选框位置在CNN阶段，如果用selective search挑选出来的候选框与物体的人工标注矩形框的重叠区域IoU大于0.5，那么我们就把这个候选框标注成物体类别，否则我们就把它当做背景类别。 网络结构文章是直接用Alexnet的网络，初始的参数值也是Alexnet已经训练好的模型参数，然后再fine-tuning训练。Alexnet特征提取部分包含了5个卷积层、2个全连接层，在Alexnet中p5层神经元个数为9216、 f6、f7的神经元个数都是4096，通过这个网络训练完毕后，最后提取特征每个输入候选框图片都能得到一个4096维的特征向量。 在Fine-Tuning阶段：假设要检测的物体类别有N类，那么我们就需要把上面预训练阶段的CNN模型的最后一层给替换掉，替换成N+1个输出的神经元(加1是表示还有一个背景)。 开始的时候，SGD学习率选择0.001，在每次训练的时候，我们batch size大小选择128，其中32个正样本、96个负样本。 SVM训练完CNN之后（仅用作特征提取），最后加一层SVM用作分类。 CNN在训练的时候，对训练数据做了比较宽松的标注，比如一个bounding box可能只包含物体的一部分，那么我也把它标注为正样本，用于训练cnn；采用这个方法的主要原因在于因为CNN容易过拟合，所以需要大量的训练数据，所以在CNN训练阶段我们是对Bounding box的位置限制条件限制的比较松(IOU只要大于0.5都被标注为正样本了)。 理想情况是，只有当bounding box把整量车都包含在内，那才叫正样本。如果bounding box 没有包含到车辆，那么我们就可以把它当做负样本。 但是我们还存在很多非理想的case，因此需要使用到IOU，作者测试了IOU阈值各种方案数0,0.1,0.2,0.3,0.4,0.5。最后我们通过训练发现选择IOU阈值为0.3效果最好。 输入是f7的特征，f7的输出维度是2000 x 4096，输出的是是否属于该类别，训练结果是得到SVM的权重矩阵W，W的维度是4096 x N，N是特征类别数目. 最近比较忙，未完待续~争取接下来做下实现。]]></content>
@@ -66,16 +74,16 @@
   </entry>
   <entry>
     <title><![CDATA[Network-Week1-Questions]]></title>
+    <url>%2F2018-03-11%2FNetwork-Week1-Questions~%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Network-Week1-Questions]]></title>
     <url>%2F2018-03-11%2FNetwork-Week1-Questions%2F</url>
     <content type="text"><![CDATA[每次Coursera上最难完成的就是周末习题。 这次的计网习题涵盖了第一周各种小的知识点，记下来方便回顾。 A network segment where only one device can communicate at a time is known as a collsion domain. A device that knows how to forward traffic between independent networks is known as a router. When data can flow across a cable in both directions, this is known as duplex communication. MAC address stands for media access control address. The number system that has 16 numerals is known as hexadecimal. The transmission method that sends data to every device on a LAN is known as a broadcast transmission. The technique that allows you to have multiple logical LANs operating on the same physical equipment is known as a VLAN. The most common data link layer protocol for wired connections is ethernet. Something that requests data from a server is known as a client. A device that connects lots of devices and remembers which ones are connected to each interface is known as a switch. When an electrical pulse on one wire is accidentally detected on another nearby wire, this is known as crosstalk. The first part of an Ethernet frame is known as the preamble. A defined set of standards that computers must follow in order to communicate properly is known as a protocol.]]></content>
       <categories>
         <category>Network</category>
       </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[Network-Week1-Questions]]></title>
-    <url>%2F2018-03-11%2FNetwork-Week1-Questions~%2F</url>
-    <content type="text"></content>
   </entry>
   <entry>
     <title><![CDATA[随想-「方便」的暴政]]></title>
