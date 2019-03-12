@@ -107,23 +107,30 @@
   <meta name="keywords" content="Hexo, my world." />
 
 
-<meta name="description" content="Hello, my world.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Luodian.ink">
-<meta property="og:url" content="https://www.luodian.ink/categories/Apache-Ignite/index.html">
+<meta name="description" content="Trident Network本名：Scale-Aware Trident Networks for Object Detection 这篇论文的作者自己分析了这篇论文，我自己写这个单纯出于两个想法：  自己记录笔记，督促自己总结并且再精读一遍。 把笔记公开，让更多的人看到不同的文字的分析，我自己经常会搜不同的论文解读">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Trident Network 阅读笔记">
+<meta property="og:url" content="https://www.luodian.ink/2019-03-12/Trident-Network-阅读笔记/index.html">
 <meta property="og:site_name" content="Luodian.ink">
-<meta property="og:description" content="Hello, my world.">
+<meta property="og:description" content="Trident Network本名：Scale-Aware Trident Networks for Object Detection 这篇论文的作者自己分析了这篇论文，我自己写这个单纯出于两个想法：  自己记录笔记，督促自己总结并且再精读一遍。 把笔记公开，让更多的人看到不同的文字的分析，我自己经常会搜不同的论文解读，往往只看一个人的解读还是会存在疑惑，而不同的解读针对的侧重点不同，融合之后会让">
 <meta property="og:locale" content="_en">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1g10d06yo5mj31pg0du478.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1g10d5fp1icj30sk0e2763.jpg">
+<meta property="og:image" content="https://www.luodian.ink/Users/luodian/Library/Application%20Support/typora-user-images/image-20190312222405986.png">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1g10dsgzytyj31n00sun66.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1g10e8vah50j30w20bugnh.jpg">
+<meta property="og:updated_time" content="2019-03-12T14:48:07.565Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Luodian.ink">
-<meta name="twitter:description" content="Hello, my world.">
+<meta name="twitter:title" content="Trident Network 阅读笔记">
+<meta name="twitter:description" content="Trident Network本名：Scale-Aware Trident Networks for Object Detection 这篇论文的作者自己分析了这篇论文，我自己写这个单纯出于两个想法：  自己记录笔记，督促自己总结并且再精读一遍。 把笔记公开，让更多的人看到不同的文字的分析，我自己经常会搜不同的论文解读，往往只看一个人的解读还是会存在疑惑，而不同的解读针对的侧重点不同，融合之后会让">
+<meta name="twitter:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1g10d06yo5mj31pg0du478.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="https://www.luodian.ink/categories/Apache-Ignite/"/>
+  <link rel="canonical" href="https://www.luodian.ink/2019-03-12/Trident-Network-阅读笔记/"/>
 
 
 
@@ -132,7 +139,7 @@
     sidebar: "",
   };
 </script>
-  <title>Category: Apache Ignite | Luodian.ink</title>
+  <title>Trident Network 阅读笔记 | Luodian.ink</title>
   
 
 
@@ -188,7 +195,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -309,59 +316,215 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Apache Ignite<small>Category</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.luodian.ink/2019-03-12/Trident-Network-阅读笔记/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Luodian">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/my_face.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Luodian.ink">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018-03-08/在Ignite框架下解决Opencv中Mat类型传递的问题/" itemprop="url">
-              
-                <span itemprop="name">在Ignite框架下解决Opencv中Mat类型传递的问题</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Trident Network 阅读笔记</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-08T00:21:01+08:00"
-              content="2018-03-08" >
-          03-08
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-12T21:22:07+08:00">2019-03-12</time>
+            
 
-    </header>
-  </article>
+            
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Object-detection/" itemprop="url" rel="index"><span itemprop="name">Object detection</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019-03-12/Trident-Network-阅读笔记/" class="leancloud_visitors" data-flag-title="Trident Network 阅读笔记">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Views&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Trident Network本名：<a href="https://arxiv.org/abs/1901.01892" target="_blank" rel="noopener">Scale-Aware Trident Networks for Object Detection</a></p>
+<p>这篇论文的作者自己分析了这篇<a href="https://zhuanlan.zhihu.com/p/54334986" target="_blank" rel="noopener">论文</a>，我自己写这个单纯出于两个想法：</p>
+<ol>
+<li>自己记录笔记，督促自己总结并且再精读一遍。</li>
+<li>把笔记公开，让更多的人看到不同的文字的分析，我自己经常会搜不同的论文解读，往往只看一个人的解读还是会存在疑惑，而不同的解读针对的侧重点不同，融合之后会让我有更全面的理解。</li>
+</ol>
+<blockquote>
+<p>其实想更通透肯定得看原文，看分析没有提升的，只能起到一个快速浏览的作用，万一我在瞎解读呢~</p>
+</blockquote>
+<p>本文一开始即分析了，在目标检测中尺度变化（Scale Variation）通常是我们面临的最大的问题。本文首先对尺度问题做了实验分析，并且针对于实验分析中的结果，提出了Trident Network这种网络结构来产生在不同尺度上表达能力都相同的feature map.</p>
+<p>解决尺度变化（Scale Variation），<strong>即小目标难以在小尺寸图像中检测，单纯放大图像又会很不memory efficient</strong>（这基本算是一个共识性的难题），这样一个基本目前还没有很好的解决的问题。在这个痛点上，TN提出了它们的方法并且刷出了目前ResNet 101+Deformable Conv的单模型在COCO上的新的SOTA：48.4。</p>
+<p>在这之前其实有一些尝试去解决这个问题的方法，比如：</p>
+<ol>
+<li><p>Multi Scale Image Pyramid</p>
+<p>单纯的通过尺度变换放缩图像其实是非常暴力的做法，让固定尺度的感受野去识别不同尺度的物体，简单有效，刷比赛的时候基本都会用上。</p>
+</li>
+<li><p>FPN</p>
+<p>同样在固定尺度的感受野上，使用不同尺度的feature map，不同的层负责不同尺度的anchor，和1同理，也很有效，在小物体上效果明显。</p>
+</li>
+<li><p>SNIP, SNIPER</p>
+<p>这两者是同一个组先后做出来的结果，后者比前者效率高很多，使用了新颖的方法做数据预处理，在不同尺度上挑选出和GT相近的框，切图之后作为新的训练集。解决了单纯放大图像所带来的memory inefficient的问题。新生成的chips尺度为：512x512，能够在同等情况下使用更大的batchsize来进行训练，更大的bs意味着更robust的batch normalization，好处多多。</p>
+</li>
+</ol>
+<p>本文解决尺度变化问题采取的方法是变换在backbone的卷积操作，增加dilation conv来增加感受野，因为使用了并行的三个不同尺度（0，1，2）的dilation conv，因此称为Trident Network（三叉戟网络）。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1g10d06yo5mj31pg0du478.jpg" alt=""></p>
+<p>本文针对这个现象做了一组实验，发现dilation rate和不同尺度的检测性能正相关，即大的dilation rate对应大物体的检测性能更好，这个也是比较容易理解的。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1g10d5fp1icj30sk0e2763.jpg" alt=""></p>
+<p>在有了这个实验结果的基础上，作者就开始考虑将这几个分支的优点并行起来，并且参照了SNIP系列的思想，将不同尺度范围的框分开使用不同感受野的conv进行训练，同时这几个分支还是weight sharing的，因为它们所负责的检测任务除了尺度不一样之外都是一致的（类别，变换的操作等）。</p>
+<p>作者同时也尝试了在backbone不同的stage加入trident blocks所带来的影响，在conv4上做效果是最好的，因为此时已经具有了全局语义信息的感受能力。在conv4中的trident blocks增加到15个时，性能会达到饱和。（不得不说实验做的很充分）</p>
+<p><img src="/Users/luodian/Library/Application Support/typora-user-images/image-20190312222405986.png" alt=""></p>
+<p>各类目标检测算法的一个对比图，图森居然做了这么多实验，真厉害啊。不过这里要说明的是，TridentNet*是融合了multiscale training/testing, soft-nms, dcn, large-batch BN的最终版本才取得了48.4的SOTA。（突然想起来ECCV上看到何恺明看我们poster的时候，说了一句『改了改backbone就能这么大提升么？』）</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1g10dsgzytyj31n00sun66.jpg" alt=""></p>
+<p>最后在inference的阶段中，作者发现如果让所有尺度的样本都在三个分支上进行充分的训练，那么可以只使用中间的分支便能获得不错的效果，使用single branch的Trident Network*最终能够取得47.6的mAP。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1g10e8vah50j30w20bugnh.jpg" alt=""></p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018-06-25/Car-Pedestrian-Detection-Paper-Reviews/" rel="next" title="Car/Pedestrian Detection Paper Reviews">
+                <i class="fa fa-chevron-left"></i> Car/Pedestrian Detection Paper Reviews
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -640,6 +803,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.5"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.5"></script>
+
+
 
   
 
