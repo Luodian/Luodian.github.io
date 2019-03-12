@@ -116,10 +116,10 @@
 <meta property="og:locale" content="_en">
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1g10d06yo5mj31pg0du478.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1g10d5fp1icj30sk0e2763.jpg">
-<meta property="og:image" content="https://www.luodian.ink/Users/luodian/Library/Application%20Support/typora-user-images/image-20190312222405986.png">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1g10eevbv81j30pa0dqmz4.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1g10dsgzytyj31n00sun66.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1g10e8vah50j30w20bugnh.jpg">
-<meta property="og:updated_time" content="2019-03-12T14:48:07.565Z">
+<meta property="og:updated_time" content="2019-03-12T14:51:42.332Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Trident Network 阅读笔记">
 <meta name="twitter:description" content="Trident Network本名：Scale-Aware Trident Networks for Object Detection 这篇论文的作者自己分析了这篇论文，我自己写这个单纯出于两个想法：  自己记录笔记，督促自己总结并且再精读一遍。 把笔记公开，让更多的人看到不同的文字的分析，我自己经常会搜不同的论文解读，往往只看一个人的解读还是会存在疑惑，而不同的解读针对的侧重点不同，融合之后会让">
@@ -456,7 +456,7 @@
 <p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1g10d5fp1icj30sk0e2763.jpg" alt=""></p>
 <p>在有了这个实验结果的基础上，作者就开始考虑将这几个分支的优点并行起来，并且参照了SNIP系列的思想，将不同尺度范围的框分开使用不同感受野的conv进行训练，同时这几个分支还是weight sharing的，因为它们所负责的检测任务除了尺度不一样之外都是一致的（类别，变换的操作等）。</p>
 <p>作者同时也尝试了在backbone不同的stage加入trident blocks所带来的影响，在conv4上做效果是最好的，因为此时已经具有了全局语义信息的感受能力。在conv4中的trident blocks增加到15个时，性能会达到饱和。（不得不说实验做的很充分）</p>
-<p><img src="/Users/luodian/Library/Application Support/typora-user-images/image-20190312222405986.png" alt=""></p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1g10eevbv81j30pa0dqmz4.jpg" alt=""></p>
 <p>各类目标检测算法的一个对比图，图森居然做了这么多实验，真厉害啊。不过这里要说明的是，TridentNet*是融合了multiscale training/testing, soft-nms, dcn, large-batch BN的最终版本才取得了48.4的SOTA。（突然想起来ECCV上看到何恺明看我们poster的时候，说了一句『改了改backbone就能这么大提升么？』）</p>
 <p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1g10dsgzytyj31n00sun66.jpg" alt=""></p>
 <p>最后在inference的阶段中，作者发现如果让所有尺度的样本都在三个分支上进行充分的训练，那么可以只使用中间的分支便能获得不错的效果，使用single branch的Trident Network*最终能够取得47.6的mAP。</p>
