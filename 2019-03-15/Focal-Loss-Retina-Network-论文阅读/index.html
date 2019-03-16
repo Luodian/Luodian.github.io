@@ -107,28 +107,31 @@
   <meta name="keywords" content="Hexo, my world." />
 
 
-<meta name="description" content="被抓壮丁去参与的一次讲座，去之前任何信息未知。  到场才发现是关于自动驾驶的内容，于是很感兴趣的开始记笔记。  因为自己到的比较迟（主要是很嫌弃这种抓壮丁的行为），在最后一排不太看得清楚，但应该是系统容错检测的一些东西，查资料发现lecturer Joseph Sifakis是2007年的图灵奖得主，获奖工作是mode">
+<meta name="description" content="因为CVPR 2019出了一篇新的FSAF，看那个的时候根据需求就补了Retina Network和SSD，跟组里的同学们讨论了之后也算是有些感慨，另外这篇论文是ICCV 2017的best student paper。 先放上两篇论文的链接 Focal Loss: https://arxiv.org/abs/1708">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Joseph Sifakis-如何保障自动驾驶系统的安全性">
-<meta property="og:url" content="https://www.luodian.ink/2018-06-24/Joseph-Sifakis-如何保障自动驾驶系统的安全性/index.html">
+<meta property="og:title" content="Focal Loss&#x2F;Retina Network 论文阅读">
+<meta property="og:url" content="https://www.luodian.ink/2019-03-15/Focal-Loss-Retina-Network-论文阅读/index.html">
 <meta property="og:site_name" content="Luodian.ink">
-<meta property="og:description" content="被抓壮丁去参与的一次讲座，去之前任何信息未知。  到场才发现是关于自动驾驶的内容，于是很感兴趣的开始记笔记。  因为自己到的比较迟（主要是很嫌弃这种抓壮丁的行为），在最后一排不太看得清楚，但应该是系统容错检测的一些东西，查资料发现lecturer Joseph Sifakis是2007年的图灵奖得主，获奖工作是model checking，现在他在自动驾驶方向上的研究也是和整车系统有关的。 讲">
+<meta property="og:description" content="因为CVPR 2019出了一篇新的FSAF，看那个的时候根据需求就补了Retina Network和SSD，跟组里的同学们讨论了之后也算是有些感慨，另外这篇论文是ICCV 2017的best student paper。 先放上两篇论文的链接 Focal Loss: https://arxiv.org/abs/1708.02002 FSAF: https://arxiv.org/abs/1903.">
 <meta property="og:locale" content="_en">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fsm2v5h4tsj31kw16o4as.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fsm2vh6jhyj31kw16ona4.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fsm2xrz0jyj317w0x4dgu.jpg">
-<meta property="og:updated_time" content="2018-06-24T02:58:31.000Z">
+<meta property="og:image" content="https://www.luodian.ink/Users/luodian/Library/Application%20Support/typora-user-images/image-20190316003158133.png">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1g13y801k9lj30u00retf4.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1g13yhxcpjcj30ic04k0sp.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1g14fcsm5m4j31r60q015b.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1g14fph2daqj31bm0u0gz9.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1g14fsfpq1cj31nu0mkzrq.jpg">
+<meta property="og:updated_time" content="2019-03-16T03:03:04.872Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Joseph Sifakis-如何保障自动驾驶系统的安全性">
-<meta name="twitter:description" content="被抓壮丁去参与的一次讲座，去之前任何信息未知。  到场才发现是关于自动驾驶的内容，于是很感兴趣的开始记笔记。  因为自己到的比较迟（主要是很嫌弃这种抓壮丁的行为），在最后一排不太看得清楚，但应该是系统容错检测的一些东西，查资料发现lecturer Joseph Sifakis是2007年的图灵奖得主，获奖工作是model checking，现在他在自动驾驶方向上的研究也是和整车系统有关的。 讲">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fsm2v5h4tsj31kw16o4as.jpg">
+<meta name="twitter:title" content="Focal Loss&#x2F;Retina Network 论文阅读">
+<meta name="twitter:description" content="因为CVPR 2019出了一篇新的FSAF，看那个的时候根据需求就补了Retina Network和SSD，跟组里的同学们讨论了之后也算是有些感慨，另外这篇论文是ICCV 2017的best student paper。 先放上两篇论文的链接 Focal Loss: https://arxiv.org/abs/1708.02002 FSAF: https://arxiv.org/abs/1903.">
+<meta name="twitter:image" content="https://www.luodian.ink/Users/luodian/Library/Application%20Support/typora-user-images/image-20190316003158133.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://www.luodian.ink/2018-06-24/Joseph-Sifakis-如何保障自动驾驶系统的安全性/"/>
+  <link rel="canonical" href="https://www.luodian.ink/2019-03-15/Focal-Loss-Retina-Network-论文阅读/"/>
 
 
 
@@ -137,7 +140,7 @@
     sidebar: "",
   };
 </script>
-  <title>Joseph Sifakis-如何保障自动驾驶系统的安全性 | Luodian.ink</title>
+  <title>Focal Loss/Retina Network 论文阅读 | Luodian.ink</title>
   
 
 
@@ -330,7 +333,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.luodian.ink/2018-06-24/Joseph-Sifakis-如何保障自动驾驶系统的安全性/">
+    <link itemprop="mainEntityOfPage" href="https://www.luodian.ink/2019-03-15/Focal-Loss-Retina-Network-论文阅读/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Luodian">
@@ -347,7 +350,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Joseph Sifakis-如何保障自动驾驶系统的安全性</h1>
+          <h1 class="post-title" itemprop="name headline">Focal Loss/Retina Network 论文阅读</h1>
         
 
         <div class="post-meta">
@@ -359,7 +362,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-24T10:47:55+08:00">2018-06-24</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-15T23:47:48+08:00">2019-03-15</time>
             
 
             
@@ -380,7 +383,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Autonomous-Car/" itemprop="url" rel="index"><span itemprop="name">Autonomous Car</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Object-Detection/" itemprop="url" rel="index"><span itemprop="name">Object Detection</span></a></span>
 
                 
                 
@@ -394,7 +397,7 @@
 
           
           
-             <span id="/2018-06-24/Joseph-Sifakis-如何保障自动驾驶系统的安全性/" class="leancloud_visitors" data-flag-title="Joseph Sifakis-如何保障自动驾驶系统的安全性">
+             <span id="/2019-03-15/Focal-Loss-Retina-Network-论文阅读/" class="leancloud_visitors" data-flag-title="Focal Loss/Retina Network 论文阅读">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -425,23 +428,54 @@
       
 
       
-        <blockquote>
-<p> 被抓壮丁去参与的一次讲座，去之前任何信息未知。</p>
+        <p>因为CVPR 2019出了一篇新的FSAF，看那个的时候根据需求就补了Retina Network和SSD，跟组里的同学们讨论了之后也算是有些感慨，另外这篇论文是ICCV 2017的best student paper。</p>
+<p>先放上两篇论文的链接</p>
+<p>Focal Loss: <a href="https://arxiv.org/abs/1708.02002" target="_blank" rel="noopener">https://arxiv.org/abs/1708.02002</a></p>
+<p>FSAF: <a href="https://arxiv.org/abs/1903.00621" target="_blank" rel="noopener">https://arxiv.org/abs/1903.00621</a></p>
+<p>回到正题，文章主要有两个方法组成，Focal Loss和Retina Network，这两个方法都非常简明但却有效，在论文中做出了和比Faster RCNN更好的效果，但似乎两者不是公平对比，不过这也算是写论文的一个方式啦？让人一看就觉得『喔？Single Stage的超过了Two Stage的』，给人一种不明觉厉的感觉。</p>
+<p><img src="/Users/luodian/Library/Application Support/typora-user-images/image-20190316003158133.png" alt=""></p>
+<p>论文的效果是这样的，当然后续被yolo v3以非常风骚的方式超过了…具体可以去看论文，挺皮。</p>
+<p>另外我看focal loss时没有借助知乎和博客的帮助，但写之前也搜了搜大概有多少人在写这个东西，就看到很多人说这是Kaiming和RBG的工作，为什么忽略 Tsung-Yi Lin，这个人可是搞出了FPN的大佬，COCO主页排在第一位的人…难道连科研也带着吃瓜心理吗？</p>
+<p>下面的整理会分为两个部分</p>
+<h2 id="Focal-Loss"><a href="#Focal-Loss" class="headerlink" title="Focal Loss"></a>Focal Loss</h2><h3 id="Class-Imbalance"><a href="#Class-Imbalance" class="headerlink" title="Class Imbalance"></a>Class Imbalance</h3><p>文章首先分析了为什么 single stage 的网络会比 two stage 的效果差，其原因在于 single stage 没有像 two stage 那样对proposals的筛选能力（faster rcnn在训练阶段会对RPN输出的rois按照1:3的比例提取正负样本，送往fast head进行进一步的回归和分类）</p>
+<p>对于 single stage 的网络，其在最后的feature map中逐点采样 anchor，会生成大约200k个anchor，而这其中大部分都是 negative proposals, 即这些样本的类别为bg，能够包裹住目标的 positive proposals 比例很少。这样的类别不均衡是导致单阶段网络学习效率低的重要因素，其具体还指出了两点问题：</p>
+<ol>
+<li>training is inefficient as most locations are easy negatives that contribute no useful learning signal.</li>
+<li>the easy negatives can overwhelm training and lead to degenerate models.</li>
+</ol>
+<blockquote>
+<ol>
+<li>大部分区域都是负样本，在这些区域的学习是无意义的。</li>
+<li>过多的负样本让模型不能很好地学会什么是一个好的正样本。</li>
+</ol>
 </blockquote>
-<p>到场才发现是关于自动驾驶的内容，于是很感兴趣的开始记笔记。 </p>
-<p>因为自己到的比较迟（主要是很嫌弃这种抓壮丁的行为），在最后一排不太看得清楚，但应该是系统容错检测的一些东西，查资料发现lecturer Joseph Sifakis是2007年的图灵奖得主，获奖工作是model checking，现在他在自动驾驶方向上的研究也是和整车系统有关的。</p>
-<p>讲课的过程很匆匆，估计他发现听众都不太明白他的深意，很多细节性的东西都很快的跳过了，我及时拍照做了一下记录（或者是纪念把）。</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fsm2v5h4tsj31kw16o4as.jpg" alt=""></p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fsm2vh6jhyj31kw16ona4.jpg" alt=""></p>
-<p>这是匆匆记下的一些笔记</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fsm2xrz0jyj317w0x4dgu.jpg" alt=""></p>
-<p>最后交流过程还蛮长的，我留下来听了很久Joseph的答疑，问了一些关于当今自动驾驶技术的挑战和难点。</p>
-<p>他强调的重点是data based learning，以及如何让每一台车及时获得更新的数据或者是模型，来减少这辆车还未遇见过的bad situations。 </p>
-<p>席间有个一同问问题的EE的女生口语真的很好，对比起来我都不太好意思开口，不过Joseph是个法国人，说英语也挺含糊的。 </p>
-<p>讲座时坐我旁边的一个哥斯达黎加的小哥，最后也留下来等Joseph，他是一个很年轻的教授，头发也很长。来的目的主要是想邀请Joseph去哥斯达黎加做演讲，最后Joseph表示有意愿。</p>
-<p>一直接话的印度人有所耳闻，很牛逼的一个人，在工大做研究，但是同时和MIT在合作一个项目，未来会去硅谷。 真是羡慕死了！</p>
-<p>最后快要走的时候我又问了Joseph，世界上除了Tesla和Waymo还有哪家自动驾驶技术研究的很牛逼，他给出的答案也符合我的预期，就是关注传统车企，他比较看好Volvo.</p>
-<p>然后关于学校和国家，回答是美国or欧洲的名校，显然他的领域里似乎加澳已经被抛弃了。</p>
+<p>这个道理是很明确的，即使我们在最后对object进行分类的时候，也希望各个类别在train中出现尽量均衡，不然就会出现对于量少的类别检测效果不好的情况。</p>
+<p>Two Stage 有自己的分配的方法，也有人提出Online Hard Example Mining，将分类错的样本设置更高的loss权重使得模型在正负样本数量不均衡的情况下，最后的loss能够平衡。而本文是对loss直接下手，在传统的Cross Entropy上面增添了一个modulationg factor。</p>
+<p>由下图可以看到，<strong>在well-classfied examples的区域，FL相比于CE的loss更小，也即其能够更好地忽略掉容易学习的负样本。</strong></p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1g13y801k9lj30u00retf4.jpg" alt=""></p>
+<p>当然作者也提到了，之前也有人考虑到了这个类别不均衡的问题，然后提出了可以把CE改写成这样的格式，其中$\alpha \in [0,1]$ for class 1, $1 - \alpha$ for class 0.</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1g13yhxcpjcj30ic04k0sp.jpg" alt=""></p>
+<p>但是这样的话，其实是利用 $\alpha$ 这个参数来平衡正负样本数量上的类别不均衡，而FL的方式则是更进一步的进行难以样本的区分，其中论文提到对于 $p = 0.9$ 时loss会比原来CE计算出来的小100倍，$p = 0.986$ 时loss会比原来计算的小1000倍，这就很好的做到了对 well-classified 的样本给予更小的loss。</p>
+<p>作者实验结论显示 $\gamma = 2$ 时，并且加入前人的系数 $\alpha_t = 0.25$ 进行的实验效果最好，超参数可能和具体的anchor的参数和数据集类型有关。</p>
+<h3 id="Model-Initialization"><a href="#Model-Initialization" class="headerlink" title="Model Initialization"></a>Model Initialization</h3><p>文章中也谈到了对于模型初始化的一些问题，说实话这点细节我是想不到的。具体来说就是，模型的二分类分支传统以来的方式都是$\mu = 0, \sigma = 0.1$ 来进行初始化的（因为模型要输出1，-1这两个结果），现在样本这么不均衡，那么就要考虑给参数进行一个 $\mu = \pi$ 的初始化，以便于让模型输出的 $p$ 是靠近类别较多的那部分样本。</p>
+<h2 id="RetinaNet-Detector"><a href="#RetinaNet-Detector" class="headerlink" title="RetinaNet Detector"></a>RetinaNet Detector</h2><p>RetinaNet结合了FPN，其实可以想到的是，使用FPN，以及FPN类似于RPN或者是DeepMask式的Anchors对RetinaNet可能是其涨点最多的存在，文中有这么一句话。</p>
+<blockquote>
+<p>While many design choices are not crucial, we emphasize the use of the FPN backbone is; preliminary experiments using features from only the final ResNet layer yielded low AP.</p>
+</blockquote>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1g14fcsm5m4j31r60q015b.jpg" alt=""></p>
+<p>从底层到上层（$P_3…P_7$）Anchor的采样设置分别为：$32^2, ….,512^2$. 每层anchor的采样比例为 $\{0.5,1,2\}$，同时为了更dense的去覆盖（同时也会增加计算量叭），文章还在每一层anchor的基础上使用了 $\{2^0, 2^{\frac{1}{3}}, 2^{\frac{2}{3}}\}$，这样每层的每个点就会有9个尺寸的anchor，可以很好地覆盖数据集中各种大小的图片。</p>
+<p>接下来是FPN的每层都会外接两个FCN分支，分别用来做cls和bbox reg的工作，这两个分支之间是不share weights的，但是每个单独的分支在FPN的各层之间共享权重。FL就是用在cls branch上面的，在最后计算FL的时候会针对于assigned anchor（即被挑出来用于下一步回归的anchor）的loss进行一次normalization，这样的操作主要是让模型在回归正样本是的能力也更robust.</p>
+<p>最后作者对于本文中提到的很多参数做了尝试：</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1g14fph2daqj31bm0u0gz9.jpg" alt=""></p>
+<p>文中最后和各种检测模型的比较：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1g14fsfpq1cj31nu0mkzrq.jpg" alt="image-20190316104128402"></p>
+<h3 id="Architecture-Design"><a href="#Architecture-Design" class="headerlink" title="Architecture Design"></a>Architecture Design</h3><p>最后作者还针对于 <strong>anchor density</strong> 和 <strong>speed versus accurancy</strong> 进行了一些讨论。</p>
+<h4 id="Anchor-Density"><a href="#Anchor-Density" class="headerlink" title="Anchor Density"></a>Anchor Density</h4><p>作者提到，对于single stage detector，最重要的一个设计就是anchor density，要让anchor覆盖到更多不同尺寸的目标存在的区域才能更有效地提高精度，对于two stage detector，其proposals可以依赖于后面的roi pooling等操作让其重新获得更大的感受野，更好的获知目标的信息。</p>
+<p>本文对anchor density进行了一系列的测试：在同样使用resnet-50作为backbone，对于每个位置产生1个anchor的情况可以获得30.3的mAP，而按照比例在一个位置产生9个anchor，可以很惊人的提高到34.0的mAP（这点之前在做比赛的时候我也感受到了密集anchor的作用，retina的名称我想可能一部分是来源于此的）</p>
+<p>最后再增加6-9个anchors不会获得更多的提升，说明anchor的作用在这里就趋于饱和了。</p>
+<h4 id="Speed-versus-Accuracy"><a href="#Speed-versus-Accuracy" class="headerlink" title="Speed versus Accuracy"></a>Speed versus Accuracy</h4><p>图标在table 1e（上上个图）可以看到.</p>
+<p>众所周知，更深更复杂的backbone可以提高精度，但是却会降低速度。这里对比了RetineNet-R101-FPN-600能够和RestNet-101-FPN-FR-CNN达到同等的精度，但是Retina每张图片用时122ms，FR-CNN用时172ms。同样作者承认，如果需要更快的速度，就需要在整体的设计上进行新的改进（如yolo）。</p>
+<p>总的来说，本文观察到了一个大家可能已知但是并没有很好解决的class imbalance这一点，然后提出了FL的解决思路，最后再结合自己之前论文中的FPN，成功做出了一个很好的结果。简洁又有效，果然配得起best student paper这个称号。</p>
 
       
     </div>
@@ -469,8 +503,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018-05-02/Review-for-week-9-RCNN/" rel="next" title="Review for Week-9：RCNN(Regions With CNN Features)">
-                <i class="fa fa-chevron-left"></i> Review for Week-9：RCNN(Regions With CNN Features)
+              <a href="/2019-03-12/Trident-Network-阅读笔记/" rel="next" title="Trident Network 阅读笔记">
+                <i class="fa fa-chevron-left"></i> Trident Network 阅读笔记
               </a>
             
           </div>
@@ -478,10 +512,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018-06-25/Car-Pedestrian-Detection-Paper-Reviews/" rel="prev" title="Car/Pedestrian Detection Paper Reviews">
-                Car/Pedestrian Detection Paper Reviews <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -530,8 +560,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -662,6 +701,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Focal-Loss"><span class="nav-number">1.</span> <span class="nav-text">Focal Loss</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Class-Imbalance"><span class="nav-number">1.1.</span> <span class="nav-text">Class Imbalance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Model-Initialization"><span class="nav-number">1.2.</span> <span class="nav-text">Model Initialization</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RetinaNet-Detector"><span class="nav-number">2.</span> <span class="nav-text">RetinaNet Detector</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Architecture-Design"><span class="nav-number">2.1.</span> <span class="nav-text">Architecture Design</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Anchor-Density"><span class="nav-number">2.1.1.</span> <span class="nav-text">Anchor Density</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Speed-versus-Accuracy"><span class="nav-number">2.1.2.</span> <span class="nav-text">Speed versus Accuracy</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
