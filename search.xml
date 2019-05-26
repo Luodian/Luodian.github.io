@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Inside Huawei and 5G - BBC Click]]></title>
-    <url>%2F2019-05-26%2FInside-Huawei-And-5G-BBC-Click%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[Huawei's Recently Affairs]]></title>
     <url>%2F2019-05-26%2FHuawei's%20Recently%20Affairs%2F</url>
     <content type="text"><![CDATA[BBC Click: Inside Huawei and 5G https://www.youtube.com/watch?v=_8HqbPBRiS4 第一个视频是BBC Click对华为近况以及受到美国制裁的原因的一个简介，时间很短，态度很中立。其中一部分表明了任正非创立华为的艰辛历程，把其比作中国的乔布斯，给足了respect的态度。第二部分则分析了为什么全世界对于华为存在怀疑甚至敌视的态度，其中任正非之前是军队的背景，并且其品牌名字华为表明了其有较为强烈的民族立场。华为目前在5G的设备供应商领域处于世界一流的水平，英国方面既依赖于华为的5G设备建立起新一代的网络设施，但是也惧怕其受中国政府的操作，在销售往国外的芯片和设备中藏有黑客后门，从而在战争阶段可以利用这些后门发起攻击。其中提到了在2017年，中国政府通过了一项法令要求所有的中国公司和中国公民都有义务协助国家保障网络信息安全，这其中暗藏了中国政府有能力控制华为公司要求它们在芯片中藏进后门。 Mr. Ren was once a member of the Chinese Army. In 2017, China passed the national intelligence law, which means that all chinese companies and citizens must help government to assist national intelligence security. The problem is, if Huawei supplies any country’s 5G network, Chinese government could exploit it. Many people think that Chinese government would likely to eavesdrop on other countries. The most important threat is in the future, our own economy and even our lives are run by computers over 5G. China could order Huawei to set backdoor in its 5G devices. Huawei 5G LIES https://www.youtube.com/watch?v=IfxfdHJ3k9Y 火锅大王的一个视频，这个视频因为主要是放在中文社区，所以言论是挺华为一派的，不过中间很多论点说的很有道理。 华为和中国军队有关系？那你知道有多少美国公司和美国军队有关系吗？ Apple, Google, Microsoft… 大王指出，从2007年布什在位时，美国曾指出华为和中国政府有所合作，但这种指控十分的weak，因为任何一个国家的政府都需要和自己国家的大公司进行合作，难道政府需要自己研究手机吗？此后美国曾联合西方世界不断地对华为进行审查和指控，但是所有的指控都没有证据。 有证据表明，华为曾对德国和英国的安全部门开放源码进行审查，审查得出的结论是华为并未有后门行为。任正非本人也在采访中声称”如果被世界发现我们藏有后门，那么我们的生意就没办法做下去了，我们不会做这么傻的决策。” 接着火锅大王指出，美国敢承认自己对美国和其他国家进行了多久的监听吗？ 当华为利用优质的5G技术逐渐进入西方市场时，以美国为首的西方国家开始严厉指责华为是一个危险的大型间谍黑客公司。在棱镜门事件曝光之后，美国被证明为拥有世界上最彻底的黑客攻击产业和活动，大量依赖于软件中的漏洞进行监听，在wiki leaks中记录了美国CIA发现并掌握了全世界许多软硬件漏洞，却不将其公开，而是利用其监听公众的隐私。 https://wikileaks.org/ciav7p1/ 我们能够理解CIA要为了国家安全和防止恐怖主义等原因监控其公民，同时中国也有其理由让华为以及其他中国企业监控中国公民。 既然中国政府都容忍民众使用苹果手机，微软的系统，为什么美国要一直指责华为作为间谍公司？ 火锅大王指出了一个来自华为的Eric Xu提出的一针见血的公开质疑。 “他们是否真的在考虑其他国家人民的网络安全和隐私保护？或者有其他的背后的动机，有人说美国正在努力的寻找中美贸易谈判的筹码。” “如果华为的设备在西方国家被使用，美国的机构会发现更难获取民众们的隐私信息，更难拦截他们的移动通信。” 特朗普示意，作为交易协商的一部分，他将考虑撤销对华为的控诉。]]></content>
@@ -139,16 +134,16 @@
   </entry>
   <entry>
     <title><![CDATA[Network-Week1-Questions]]></title>
-    <url>%2F2018-03-11%2FNetwork-Week1-Questions~%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
-    <title><![CDATA[Network-Week1-Questions]]></title>
     <url>%2F2018-03-11%2FNetwork-Week1-Questions%2F</url>
     <content type="text"><![CDATA[每次Coursera上最难完成的就是周末习题。 这次的计网习题涵盖了第一周各种小的知识点，记下来方便回顾。 A network segment where only one device can communicate at a time is known as a collsion domain. A device that knows how to forward traffic between independent networks is known as a router. When data can flow across a cable in both directions, this is known as duplex communication. MAC address stands for media access control address. The number system that has 16 numerals is known as hexadecimal. The transmission method that sends data to every device on a LAN is known as a broadcast transmission. The technique that allows you to have multiple logical LANs operating on the same physical equipment is known as a VLAN. The most common data link layer protocol for wired connections is ethernet. Something that requests data from a server is known as a client. A device that connects lots of devices and remembers which ones are connected to each interface is known as a switch. When an electrical pulse on one wire is accidentally detected on another nearby wire, this is known as crosstalk. The first part of an Ethernet frame is known as the preamble. A defined set of standards that computers must follow in order to communicate properly is known as a protocol.]]></content>
       <categories>
         <category>Network</category>
       </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Network-Week1-Questions]]></title>
+    <url>%2F2018-03-11%2FNetwork-Week1-Questions~%2F</url>
+    <content type="text"></content>
   </entry>
   <entry>
     <title><![CDATA[随想-「方便」的暴政]]></title>
