@@ -36,7 +36,7 @@
   <entry>
     <title><![CDATA[Conclusion-ROAD-Reality Oriented Adaptation Network]]></title>
     <url>%2F2019-04-18%2FConclusion-ROAD-Reality-Oriented-Adaptation-Network%2F</url>
-    <content type="text"><![CDATA[ROAD-Reality Oriented Adaption For Semantic Segmentation of Urban Scenes.Motivation Overfitting to synthetic dataset. domain shift between synthetic and real world. Work Propose a target guided distillation approach to learn the real image style. Distill from a pretrained model on real data, let synthetic model imitate the result of real model. Propose a spatial-aware adaption scheme to effectively align the distribution of two domains. Results]]></content>
+    <content type="text"><![CDATA[ROAD-Reality Oriented Adaption For Semantic Segmentation of Urban Scenes.Motivation Traditional methods overfitting to synthetic dataset. Domain shift between synthetic and real world. Work Propose a target guided distillation approach to learn the real image style. Distill from a pretrained model on real data, let synthetic model imitate the result of real model. Propose a spatial-aware adaption scheme to effectively align the distribution of two domains. Results]]></content>
       <categories>
         <category>Computer Vision</category>
       </categories>
