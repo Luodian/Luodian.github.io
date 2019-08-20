@@ -328,7 +328,7 @@ aside {
   position: relative;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 400px) {
   aside {
     height: 100vh;
     position: fixed;
